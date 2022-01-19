@@ -1,0 +1,735 @@
+const burl =' https://api3.binance.com';
+const query = '/api/v3/ticker/24hr'; //'/vapi/v1/ping';
+//query += ''; //'?symbol=BTCUSDT&interval=15m&limit=2';
+const url = burl+query;
+let objData = {};
+let objData2 = {};
+let objData3 = {};
+let percquery= 0;
+let data = {}
+let result={"id":"","value":""};
+result.id = '';
+
+//Primeira chamada API
+fetch(url)
+.then(res =>{
+    res.json().then(json =>{
+        json.filter(o => o.symbol.endsWith('USDT')  && !/^.{2,}(DOWN|UP)USDT$/.test(o.symbol)) //BLVT
+        .map(o=> {
+            objData[o.symbol]= o.priceChangePercent
+            objData2[o.symbol]=o.lastPrice
+            objData3[o.symbol]=o.quoteVolume
+        })
+        result = Object.keys(objData).map(symbol =>{
+            return{
+                id:symbol.replace('USDT', ''), value: objData[symbol], pro:objData2[symbol], vol:objData3[symbol]
+            }
+        })
+        .filter(o => Math.abs(o.value) > percquery)    
+        data = JSON.stringify(result)
+        console.log(`Temos ${result.length} pares USDT disponíveis (${data.length} total)`)
+        
+        //PRIMEIRO FOR
+        for(let i =0; i<result.length; i++){
+
+            let voll = (result[i].vol/1000000).toFixed(3);
+
+            let td1 = document.createElement("td")
+            td1.setAttribute('id', `mo_${result[i].id}`)
+            td1.setAttribute("class","td")
+
+            let td11 = document.createElement("td")
+            td11.setAttribute('id', `vol_${result[i].id}`)
+            td11.setAttribute("class","td")
+
+
+            let td2 = document.createElement("td")
+            td2.setAttribute('id',`in_${result[i].id}`)
+            td2.setAttribute("class","td")
+
+            let td22 = document.createElement("td")
+            td22.setAttribute('id',`at_${result[i].id}`)
+            td22.setAttribute("class","td")
+
+            let td23 = document.createElement("td")
+            td23.setAttribute('id',`dif_${result[i].id}`)
+            td23.setAttribute("class","td")
+
+            
+            let td3 = document.createElement("td")
+            td3.setAttribute('id',`pe_${result[i].id}`)
+            td3.setAttribute("class","tdp")
+    
+            let td4 = document.createElement("td")
+            td4.setAttribute('id',result[i].id)
+            td4.setAttribute("class","tdp")
+
+            let tdac = document.createElement("td")
+            tdac.setAttribute('id',`acu_${result[i].id}`)
+            tdac.setAttribute("class","td")
+            tdac.addEventListener('click',()=>{
+                let valpz= document.getElementById(`${result[i].id}`).innerHTML
+                document.getElementById(`pe_${result[i].id}`).innerHTML= valpz
+                tdac.innerHTML='0.000'
+                tdac.style.backgroundColor= '#ffffff'
+                let azul = document.getElementById(`max_${result[i].id}`)
+                azul.style.backgroundColor= '#8d8ec4'
+            })
+
+            let tdmx = document.createElement("td")
+            tdmx.setAttribute('id',`max_${result[i].id}`)
+            tdmx.setAttribute("class","td")
+
+            let tdmn = document.createElement("td")
+            tdmn.setAttribute('id',`min_${result[i].id}`)
+            tdmn.setAttribute("class","td")
+    
+            let td5 = document.createElement("td")
+            td5.setAttribute('id',`au_${result[i].id}`)
+            td5.setAttribute("class","td")
+    
+            let tr = document.createElement("tr")
+            tr.setAttribute('id', `tr_${result[i].id}`)
+
+            setTimeout(500)
+
+            tr.appendChild(td1)
+            tr.appendChild(td11)
+            tr.appendChild(td2)
+            tr.appendChild(td22)
+            tr.appendChild(td23)
+            tr.appendChild(td3)
+            tr.appendChild(td4)
+            tr.appendChild(tdac)
+            tr.appendChild(tdmx)
+            tr.appendChild(tdmn)
+            tr.appendChild(td5)
+            
+            let tab = document.getElementById('tbody')
+
+            tab.appendChild(tr)
+
+            let campvoll= document.getElementById(`vol_${result[i].id}`)
+            document.getElementById(`mo_${result[i].id}`).innerHTML= result[i].id;
+            campvoll.innerHTML= voll
+            document.getElementById(`in_${result[i].id}`).innerHTML= result[i].value;
+            document.getElementById(`at_${result[i].id}`).innerHTML= '0.000';
+            document.getElementById(`dif_${result[i].id}`).innerHTML= '0.000';
+            document.getElementById(`pe_${result[i].id}`).innerHTML= result[i].pro;
+            document.getElementById(result[i].id).innerHTML= result[i].pro;
+            document.getElementById(`acu_${result[i].id}`).innerHTML= '0.000';
+            document.getElementById(`max_${result[i].id}`).innerHTML= '0.000';
+            document.getElementById(`min_${result[i].id}`).innerHTML= '0.000';
+            document.getElementById(`au_${result[i].id}`).innerHTML= '0.000';
+
+            //colocando cor na coluna Volume vol_XXX
+            if(voll < 1.0){
+                campvoll.style.backgroundColor = "#b51717"; //vermelho escuro
+
+            }else if(voll >= 1.0 && voll < 2.0){
+                campvoll.style.backgroundColor = "#f7281d"; //vermelho medio
+
+            }else if(voll >=2.0 && voll < 3.0){
+                campvoll.style.backgroundColor = "#f9645c"; //vermelho claro
+
+            }else if(voll >= 3.0 && voll < 4.0){
+                campvoll.style.backgroundColor = "#f9a29d"; //laranja-vermelho
+
+            }else if(voll >=4.0 && voll < 5.0){
+                campvoll.style.backgroundColor = "#fcdcd1"; //laranja
+
+            }else if(voll >=5.0 && voll <10.0){
+                campvoll.style.backgroundColor = "#c5f271"; //amarelo
+
+            }else if(voll >=10.0 && voll <50.0){
+                campvoll.style.backgroundColor = "#d2dd54"; //amarelo esverdeado
+
+            }else if(voll >=50.0 && voll <100.0){
+                campvoll.style.backgroundColor = "#9db541"; // verde claro
+
+            }else if(voll >=100.0 && voll <500.0){
+                campvoll.style.backgroundColor = "#1da548"; // verde medio
+
+            }else if(voll >=500.0 && voll < 1300.0){
+                campvoll.style.backgroundColor = "#138437"; // verde escuro
+
+            }else if(voll >= 1300.0){
+                campvoll.style.backgroundColor = "#0b5623"; // verde escurao
+
+            }
+            
+
+
+        }
+
+    })
+})
+.catch(err=> console.error('Algo deu errado',err))
+
+
+// SEGUNDA PARTE
+const btnZerar = document.querySelector(".btn");
+btnZerar.addEventListener("click", ativar);
+
+//declarando tag audio
+let audio = document.querySelector('audio')
+
+function ativar(){
+    btnZerar.innerHTML = 'Iniciado'
+    btnZerar.style.backgroundColor='#fff'
+    let urll=url;
+    let apisel=''
+    function selecapi(){
+        apisel= document.querySelector('input[name="htapi"]:checked').value
+        urll= `${apisel}binance.com/api/v3/ticker/24hr`
+    }
+    selecapi()
+
+    //hora de inicio do botao
+    let interval =30000;
+    let timais = 1000;
+    let agora = new Date();
+    let hora = agora.getHours()
+    let min = agora.getMinutes()
+    let seg = agora.getSeconds()
+    let input = document.getElementById('input');
+    let quase = input.value
+    let inter = parseInt(quase)
+    if(inter){
+        interval= inter*1000;
+    }
+
+    //aplicando funcão cronometro
+    let duration = interval/1000; //60 * 5; // Converter para segundos
+    let display = document.querySelector('#timer'); // selecionando o timer
+    startTimer(duration, display);// iniciando o timer
+    document.getElementById('time').innerHTML=` ${hora}h ${min}m ${seg}s`
+
+    //repetindo... chamadas API
+    let c = 0;
+    let cresc ='';
+    let i =0;
+    let v=0;
+    console.log(`Bom dia. Iniciando com intervalo de ${duration} segundos pela ${apisel}`)
+    setInterval(() => {
+        fetch(urll)
+        .then(res =>{
+            res.json().then(json =>{
+                json.filter(o => o.symbol.endsWith('USDT')  && !/^.{2,}(DOWN|UP)USDT$/.test(o.symbol)) //BLVT
+                .map(o=> {
+                    objData[o.symbol]= o.priceChangePercent
+                    objData2[o.symbol]=o.lastPrice
+                    objData3[o.symbol]=o.quoteVolume
+                })
+                result = Object.keys(objData).map(symbol =>{
+                    return{
+                        id:symbol.replace('USDT', ''), value: objData[symbol], pro:objData2[symbol], vol:objData3[symbol]
+                    }
+                })
+                .filter(o => Math.abs(o.value) > percquery)    
+                data = JSON.stringify(result)
+                //console.log(data)
+                console.log(`chegando ${result.length} pares  (${data.length})`)
+
+                //Zerando campos 2 p alertas
+                document.getElementById('max2').innerHTML='0.000'
+                document.getElementById('min2').innerHTML='0.000'
+                document.getElementById('maxac2').innerHTML='0.000'
+                document.getElementById('minac2').innerHTML='0.000'
+                
+                //SEGUNDO FOR
+                for(i =0; i<result.length-1; i++){
+                    let moe = result[i].id
+                    let preco = result[i].pro
+                    let valperc= result[i].value
+                    let valvol =result[i].vol
+
+                    
+                    //calculo do aumento
+                    let qubas= 1;
+                    let base = 1;
+                    let aumento, aum;
+                    if(document.getElementById(`${moe}`)){
+                        qubas= document.getElementById(`${moe}`)
+                        base = qubas.innerHTML
+                        aum = (parseFloat(result[i].pro) - parseFloat(base))/parseFloat(base);
+                        aumento = aum*100
+                        cresc = aumento.toFixed(3)
+
+                        //aiaiai
+                        //1 aumento (cresc) indo p coluna aumento
+                        let campcr=   document.getElementById(`au_${moe}`)
+                        campcr.innerHTML = cresc;
+
+                        let docfor = document.getElementById(`${result[i].id}`);
+                        docfor.innerHTML= preco
+        
+                        //colocando cor coluna aumento campcr cresc
+                        if(cresc<= -4.0){
+                            campcr.style.backgroundColor = "#700b0b"; //vermelho escurao
+
+                        }else if(cresc > -4.0 && cresc <= -3.0){
+                            campcr.style.backgroundColor = "#b51717"; //vermelho escuro
+
+                        }else if(cresc > -3.0 && cresc <= -2.0){
+                            campcr.style.backgroundColor = "#f7281d"; //vermelho medio
+
+                        }else if(cresc >-2.0 && cresc <= -1.0){
+                            campcr.style.backgroundColor = "#f9645c"; //vermelho claro
+
+                        }else if(cresc > -1 && cresc <= -0.1){
+                            campcr.style.backgroundColor = "#f9a29d"; //laranja-vermelho
+
+                        }else if(cresc >-0.1 && cresc <= -0.01){
+                            campcr.style.backgroundColor = "#fcdcd1"; //laranja
+
+                        }else if(cresc >-0.01 && cresc <0.01){
+                            campcr.style.backgroundColor = "#ffffff"; //branco
+
+                        }else if(cresc >=0.01 && cresc <0.1){
+                            campcr.style.backgroundColor = "#c5f271"; //amarelo
+
+                        }else if(cresc >=0.1 && cresc <1.0){
+                            campcr.style.backgroundColor = "#d2dd54"; //amarelo esverdeado
+
+                        }else if(cresc >=1.0 && cresc <2.0){
+                            campcr.style.backgroundColor = "#9db541"; // verde claro
+
+                        }else if(cresc >=2.0 && cresc <3.0){
+                            campcr.style.backgroundColor = "#1da548"; // verde medio
+
+                        }else if(cresc >=3.0 && cresc < 4.0){
+                            campcr.style.backgroundColor = "#138437"; // verde escuro
+
+                        }else if(cresc > 4.0){
+                            campcr.style.backgroundColor = "#0b5623"; // verde escurao
+
+                        }
+
+
+                        //2 acumulado (cracum) indo p coluna acumulado
+                        let inip= document.getElementById(`pe_${moe}`).innerHTML
+                        let acumu=(parseFloat(result[i].pro) - parseFloat(inip))/parseFloat(inip);
+                        crac = (acumu*100)
+                        cracum = crac.toFixed(3)
+                        let campacu=   document.getElementById(`acu_${moe}`)
+                        campacu.innerHTML = cracum;
+                        
+
+                        //4 verificando acumulado p coluna MAXIMO e MINIMO 
+                        let maxvlr= document.getElementById(`max_${moe}`).innerHTML
+                        let minvlr= document.getElementById(`min_${moe}`).innerHTML
+                        
+                        if(Math.sign(cracum)=== -1 && Math.abs(cracum)>Math.abs(minvlr)){
+                            document.getElementById(`min_${moe}`).innerHTML=cracum
+                        }else if(cracum>maxvlr){
+                            document.getElementById(`max_${moe}`).innerHTML=cracum
+                        }
+                        
+
+                        //colocando cor coluna acumulado campacu cracum
+                        if(cracum<= -4.0){
+                            campacu.style.backgroundColor = "#700b0b"; //vermelho escurao
+
+                        }else if(cracum > -4.0 && cracum <= -3.0){
+                            campacu.style.backgroundColor = "#b51717"; //vermelho escuro
+
+                        }else if(cracum > -3.0 && cracum <= -2.0){
+                            campacu.style.backgroundColor = "#f7281d"; //vermelho medio
+
+                        }else if(cracum >-2.0 && cracum <= -1.0){
+                            campacu.style.backgroundColor = "#f9645c"; //vermelho claro
+
+                        }else if(cracum > -1 && cracum <= -0.1){
+                            campacu.style.backgroundColor = "#f9a29d"; //laranja-vermelho
+
+                        }else if(cracum >-0.1 && cracum <= -0.01){
+                            campacu.style.backgroundColor = "#fcdcd1"; //laranja
+
+                        }else if(cracum >-0.01 && cracum <0.01){
+                            campacu.style.backgroundColor = "#ffffff"; //branco
+
+                        }else if(cracum >=0.01 && cracum <0.1){
+                            campacu.style.backgroundColor = "#c5f271"; //amarelo
+
+                        }else if(cracum >=0.1 && cracum <1.0){
+                            campacu.style.backgroundColor = "#d2dd54"; //amarelo esverdeado
+
+                        }else if(cracum >=1.0 && cracum <2.0){
+                            campacu.style.backgroundColor = "#9db541"; // verde claro
+
+                        }else if(cracum >=2.0 && cracum <3.0){
+                            campacu.style.backgroundColor = "#1da548"; // verde medio
+
+                        }else if(cracum >=3.0 && cracum < 4.0){
+                            campacu.style.backgroundColor = "#138437"; // verde escuro
+
+                        }else if(cracum > 4.0){
+                            campacu.style.backgroundColor = "#0b5623"; // verde escurao
+
+                        }
+
+
+                    }else{
+                        console.log(`Nova moeda nao cadastrada: ${moe}`)
+                    }
+
+        
+                    setTimeout(500)   //timeout
+
+                    grafico(moe, c, cresc)
+
+                    //preparando campo max min - Aumento rodada ?? Record
+                    let maxperc=document.getElementById('max').innerHTML
+                    let maxperc2=document.getElementById('max2').innerHTML
+
+                    let minperc=document.getElementById('min').innerHTML
+                    let minperc2=document.getElementById('min2').innerHTML
+
+
+                    //preparando input max min Aumento
+                    let inpmaxcamp= document.getElementById('inpmax')
+                    let inpmax= inpmaxcamp.value
+                    let inpmin= document.getElementById('inpmin').value
+                    let audio = document.querySelector('audio')
+
+                    // 5 aqui entra os recordes da rodada
+                    if(cresc>maxperc){
+                        document.getElementById('max').innerHTML= cresc
+                        document.getElementById('moemax').innerHTML= moe
+                    }
+                    if(cresc>maxperc2){
+                        document.getElementById('max2').innerHTML= cresc
+                        document.getElementById('moemax2').innerHTML= moe
+                    }
+                    if(cresc[0]==='-'&& Math.abs(cresc)>Math.abs(minperc)){
+                        document.getElementById('min').innerHTML=cresc
+                        document.getElementById('moemin').innerHTML= moe
+                    }
+                    if(cresc[0]==='-'&& Math.abs(cresc)>Math.abs(minperc2)) {
+                        document.getElementById('min2').innerHTML=cresc
+                        document.getElementById('moemin2').innerHTML= moe
+                    }
+
+                    //aqui compara input max recorde / aumento ???
+                    if(inpmax){
+                        if(cresc>=parseFloat(inpmax)){
+                            console.log(`ALERTA! Moeda ${moe} atingiu alta de ${cresc}% na rodada`)
+                            audio.play()
+                            document.getElementById('butmax').style.backgroundColor = "#138437"
+                        }
+                    }
+
+                    //aqui compara input min recorde/ aumento ???
+                    if(inpmin){
+                        if(cresc[0]==='-'&& Math.abs(cresc)>=Math.abs(inpmin)){
+                            console.log(`ALERTA! Moeda ${moe} atingiu baixa de ${cresc}% na rodada`)
+                            audio.play()
+                            document.getElementById('butmin').style.backgroundColor = "#138437"
+                        }
+                    }
+
+
+
+                    //Alerta max min Acumulado - 
+                    let itemacum= '';
+                    if(document.getElementById(`acu_${moe}`)){
+                        itemacum= document.getElementById(`acu_${moe}`).innerHTML
+                       
+                    }
+                    let minpercac= document.getElementById('minac').innerHTML
+                    let minpercac2= document.getElementById('minac2').innerHTML
+                    let maxpercac= document.getElementById('maxac').innerHTML
+                    let maxpercac2= document.getElementById('maxac2').innerHTML
+                    let inpmaxactst= document.getElementById('inpmaxac').value
+                    let inpmaxac= parseFloat(inpmaxactst)
+                    let inpminac= document.getElementById('inpminac').value
+                    
+                    
+                    if(itemacum>maxpercac){
+                        document.getElementById('maxac').innerHTML= itemacum
+                        document.getElementById('moemaxac').innerHTML= moe
+                    }
+                    if(itemacum>maxpercac2){
+                        document.getElementById('maxac2').innerHTML= itemacum
+                        document.getElementById('moemaxac2').innerHTML= moe
+                    }
+                    if(itemacum[0]==='-'&& Math.abs(itemacum)>Math.abs(minpercac)){
+                        document.getElementById('minac').innerHTML= itemacum
+                        document.getElementById('moeminac').innerHTML= moe
+                    }
+                    if(itemacum[0]==='-'&& Math.abs(itemacum)>Math.abs(minpercac2)) {
+                        document.getElementById('minac2').innerHTML= itemacum
+                        document.getElementById('moeminac2').innerHTML= moe
+                    }
+                    if(inpmaxac){
+                        if(itemacum>=inpmaxac){
+                            console.log(`ALERTA! Moeda ${moe} atingiu alta de ${itemacum}% no acumulado`)
+                            audio.play()
+                            document.getElementById('butmaxac').style.backgroundColor = "#138437"
+                        }
+                    }
+                    if(inpminac){
+                        if(itemacum[0]==='-'&& Math.abs(itemacum)>=Math.abs(inpminac)){
+                            console.log(`ALERTA! Moeda ${moe} atingiu baixa de ${cresc}% no acumulado`)
+                            audio.play()
+                            document.getElementById('butminac').style.backgroundColor = "#138437"
+                        }
+                    }
+
+                    let perbas =''
+                    if(document.getElementById(`in_${moe}`)){
+                        perbas=document.getElementById(`in_${moe}`).innerHTML
+
+                        let difer= (valperc - perbas).toFixed(3)
+                        let campdif= document.getElementById(`dif_${moe}`)
+                        campdif.innerHTML= difer
+                        document.getElementById(`at_${moe}`).innerHTML= valperc
+
+                        // coluna dif %24h recebendo cor
+                        if(difer<= -4.0){
+                            campdif.style.backgroundColor = "#700b0b"; //vermelho escurao
+
+                        }else if(difer > -4.0 && difer <= -3.0){
+                            campdif.style.backgroundColor = "#b51717"; //vermelho escuro
+
+                        }else if(difer > -3.0 && difer <= -2.0){
+                            campdif.style.backgroundColor = "#f7281d"; //vermelho medio
+
+                        }else if(difer >-2.0 && difer <= -1.0){
+                            campdif.style.backgroundColor = "#f9645c"; //vermelho claro
+
+                        }else if(difer > -1 && difer <= -0.1){
+                            campdif.style.backgroundColor = "#f9a29d"; //laranja-vermelho
+
+                        }else if(difer >-0.1 && difer <= -0.01){
+                            campdif.style.backgroundColor = "#fcdcd1"; //laranja
+
+                        }else if(difer >-0.01 && difer <0.01){
+                            campdif.style.backgroundColor = "#ffffff"; //branco
+
+                        }else if(difer >=0.01 && difer <0.1){
+                            campdif.style.backgroundColor = "#c5f271"; //amarelo
+
+                        }else if(difer >=0.1 && difer <1.0){
+                            campdif.style.backgroundColor = "#d2dd54"; //amarelo esverdeado
+
+                        }else if(difer >=1.0 && difer <2.0){
+                            campdif.style.backgroundColor = "#9db541"; // verde claro
+
+                        }else if(difer >=2.0 && difer <3.0){
+                            campdif.style.backgroundColor = "#1da548"; // verde medio
+
+                        }else if(difer >=3.0 && difer < 4.0){
+                            campdif.style.backgroundColor = "#138437"; // verde escuro
+
+                        }else if(difer > 4.0){
+                            campdif.style.backgroundColor = "#0b5623"; // verde escurao
+
+                        }
+                    }
+                    
+                }
+            })
+            
+        })
+        .catch(err=> console.error('Algo deu errado',err))
+        
+        v+=i
+        document.getElementById('qtatul').innerHTML= i
+        document.getElementById('render').innerHTML= c
+        document.getElementById('ttteste').innerHTML= v
+        let tot= parseFloat(v/c)
+        document.getElementById('ttrela').innerHTML= parseInt(tot)
+        
+        if(c>4){
+            if(tot<200){
+                automatic()
+            }
+            
+        }
+        
+        c= c+1;
+    
+    }, interval);
+    
+}
+
+//ZERAR Alerta max min Aumento--Recorde
+let btnZMax =document.getElementById('rodamax')
+btnZMax.addEventListener("click", ()=>{
+    document.getElementById('max').innerHTML= '0.000'
+    document.getElementById('moemax').innerHTML= 'MOE'
+});
+let btnZMin =document.getElementById('rodamin')
+btnZMin.addEventListener("click", ()=>{
+    document.getElementById('min').innerHTML= '0.000'
+    document.getElementById('moemin').innerHTML= 'MOE'
+});
+
+//ZERAR Alerta max min Acumulado --Recorde
+let btnZMaxac =document.getElementById('rodamaxac')
+btnZMaxac.addEventListener("click", ()=>{
+    document.getElementById('maxac').innerHTML= '0.000'
+    document.getElementById('moemaxac').innerHTML= 'MOE'
+});
+let btnZMinac =document.getElementById('rodaminac')
+btnZMinac.addEventListener("click", ()=>{
+    document.getElementById('minac').innerHTML= '0.000'
+    document.getElementById('moeminac').innerHTML= 'MOE'
+});
+
+
+
+//iniciar cronometro
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        display.textContent = minutes + ":" + seconds;
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+//marcar o gráfico
+
+function grafico(moe, c, cresc){
+
+    //console.log(moe.length)
+    let tdg = document.createElement("td")
+    tdg.setAttribute("id",`gr_${moe}_${c}`)
+    tdg.setAttribute("class","tg")
+
+    let trg = '';
+    if(document.getElementById(`tr_${moe}`)){
+
+        trg = document.getElementById(`tr_${moe}`)
+        trg.appendChild(tdg)
+
+        let tabg = document.getElementById('tbody')
+        tabg.appendChild(trg)
+        let campgr= document.getElementById(`gr_${moe}_${c}`)
+
+
+            //colocando cor gráfico
+        if(cresc<= -4.0){
+            campgr.style.backgroundColor = "#700b0b"; //vermelho escurao
+
+        }else if(cresc > -4.0 && cresc <= -3.0){
+            campgr.style.backgroundColor = "#b51717"; //vermelho escuro
+
+        }else if(cresc > -3.0 && cresc <= -2.0){
+            campgr.style.backgroundColor = "#f7281d"; //vermelho medio
+
+        }else if(cresc >-2.0 && cresc <= -1.0){
+            campgr.style.backgroundColor = "#f9645c"; //vermelho claro
+
+        }else if(cresc > -1 && cresc <= -0.1){
+            campgr.style.backgroundColor = "#f9a29d"; //laranja-vermelho
+
+        }else if(cresc >-0.1 && cresc <= -0.01){
+            campgr.style.backgroundColor = "#fcdcd1"; //laranja
+
+        }else if(cresc >=0.01 && cresc <0.1){
+            campgr.style.backgroundColor = "#c5f271"; //amarelo
+
+        }else if(cresc >=0.1 && cresc <1.0){
+            campgr.style.backgroundColor = "#d2dd54"; //amarelo esverdeado
+
+        }else if(cresc >=1.0 && cresc <2.0){
+            campgr.style.backgroundColor = "#9db541"; // verde claro
+
+        }else if(cresc >=2.0 && cresc <3.0){
+            campgr.style.backgroundColor = "#1da548"; // verde medio
+
+        }else if(cresc >=3.0 && cresc < 4.0){
+            campgr.style.backgroundColor = "#138437"; // verde escuro
+
+        }else if(cresc > 4.0){
+            campgr.style.backgroundColor = "#0b5623"; // verde escurao
+
+        }
+
+    }else{
+        console.log(`sem grafico p ${moe}`)
+    }
+
+
+    let btnzeg= document.getElementById('zeragraf')
+    btnzeg.addEventListener('click', ()=>{
+        if(document.getElementById(`gr_${moe}_${c}`)){
+            let grapag= document.getElementById(`gr_${moe}_${c}`).remove()
+            
+        }
+        console.log(`Reiniciando marcações gráficas`)
+    })
+    
+
+}
+
+
+//Botao ALERTAS - pausar audio
+btnaux= document.getElementById('butmax')
+btnaux.addEventListener('click',()=>{
+    btnaux.style.backgroundColor= '#ffffff'
+    audio.pause()
+})
+
+btnaum= document.getElementById('butmin')
+btnaum.addEventListener('click',()=>{
+    btnaum.style.backgroundColor= '#ffffff'
+    audio.pause()
+})
+
+btnacx= document.getElementById('butmaxac')
+btnacx.addEventListener('click',()=>{
+    btnacx.style.backgroundColor= '#ffffff'
+    audio.pause()
+})
+
+btnacm= document.getElementById('butminac')
+btnacm.addEventListener('click',()=>{
+    btnacm.style.backgroundColor= '#ffffff'
+    audio.pause()
+})
+
+// 313 cryptos...
+function quantcry(){
+    setTimeout(() => {
+        let out= document.getElementsByTagName('tr')
+        document.getElementById('quantcry').innerHTML= out.length-1
+        
+    }, 5000);
+    
+}
+quantcry()
+
+//contar tr, td, gr_moe_1
+
+
+//FUNCAO AUTOMATIC
+function automatic(){
+    document.location.reload(true);
+    // Recarrega a página atual sem usar o cache
+}
+
+///////// botao reload -automatico -tem q setar/tirar checked no input
+
+function restart(){
+    let start = document.querySelector('input[name="autom"]:checked').value
+    if(start){
+    //window.addEventListener('load', reativar)
+    ativar()
+    document.getElementById('inpmaxac').value= '10'
+    document.getElementById('inpminac').value= '10'
+    document.getElementById('inpmin').value= '5'
+    document.getElementById('inpmax').value= '5'
+    }
+    console.log('(modo automático)')
+}
+restart()

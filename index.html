@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frinance 7</title>
+    <link rel="stylesheet" href="./src/tablesort.css">
+</head>
+
+<body id= "bod">
+    <div id="total">
+        <div class="linha">
+            <h1 id="tit" class="tit">Frinance 11 - Candles</h1>
+            <div class="divradio">
+                <h3>Selecione API (opcional)</h3>
+                <!--checked API-->
+                <input checked type="radio" name="htapi" value="https://api." id="myapi" >0<br>
+                <input type="radio" name="htapi" value="https://api1." id="myapi" >1<br>
+                <input type="radio" name="htapi" value="https://api2." id="myapi" >2<br>
+                <input type="radio" name="htapi" value="https://api3." id="myapi">3<br>
+            </div>
+            <div class="divdovertic">
+                <input type="text" class="inpvertic" style="background-color: #700b0b; font-size: 10px;" placeholder="<= -4.0%">
+                <input type="text" class="inpvertic" style="background-color: #b51717; font-size: 10px;" placeholder="-3 a -4%">
+                <input type="text" class="inpvertic" style="background-color: #f7281d; font-size: 10px;" placeholder="-2 a -3%">
+                <input type="text" class="inpvertic" style="background-color: #f9645c; font-size: 10px;" placeholder="<-1 a -2%">
+                <input type="text" class="inpvertic" style="background-color: #f9a29d; font-size: 10px;" placeholder="-0.1 a -1%">
+                <input type="text" class="inpvertic" style="background-color: #fcdcd1; font-size: 10px;" placeholder="-0.01 a -0.1%">
+                <input type="text" class="inpvertic" style="background-color: #ffffff; font-size: 10px;" placeholder="-0.01 a 0.01%">
+                <input type="text" class="inpvertic" style="background-color: #c5f271; font-size: 10px;" placeholder="0.01 a 0.1%">
+                <input type="text" class="inpvertic" style="background-color: #d2dd54; font-size: 10px;" placeholder="0.1 a 1%">
+                <input type="text" class="inpvertic" style="background-color: #9db541; font-size: 10px;" placeholder="1 a 2%">
+                <input type="text" class="inpvertic" style="background-color: #1da548; font-size: 10px;" placeholder="2 a 3%">
+                <input type="text" class="inpvertic" style="background-color: #138437; font-size: 10px;" placeholder="3 a 4%">
+                <input type="text" class="inpvertic" style="background-color: #0b5623; font-size: 10px;" placeholder=">= 4.0%">
+            </div>
+            <div>
+                <div class="divdtq">
+                    <h2>Destaques</h2>
+                    <p id="destaq">(erro ao renderizar)</p>
+                </div>
+                <div class="divaudio">
+                    <audio controls loop src="_O Pai das Crianças)_48k.mp3">
+                </div>
+            </div>
+        </div>
+        <div class="linha">
+            <div>
+                <div class="linha">
+                    <div>
+                        <label>Intervalo(seg)</label>
+                        <input type="text" id="input" class="input" placeholder= "30 (default)" >
+                    </div>
+                    <button class="btn"> iniciar</button>
+                    <h3 id="time" class="time">hora início</h3>
+                    <div>
+                        <h1 class="cron" id="timer">cron</h1>
+                    </div>
+                </div>
+                <div class="linhabtn">
+                    <div class="butauto">
+                        <!--checked automatico-->
+                        <input checked type="radio" name="autom" value="true" id="autom">auto<br>
+                    </div>
+                    <button class="mrma">Altas</button>
+                    <button class="mrb">Boas</button>
+                    <button class="mrl">later</button>
+                    <button class="mrq">Queda</button>
+                    <button class="mrc"> Ruins</button>
+                </div>
+                <div class="linha">
+                    <h3 class="render2">Cryptos</h3>
+                    <h3 id="quantcry" class="render">___</h3>
+                    <h3 class="render2">Rodada: </h3>
+                    <h3 id="render" class="render">..</h3>
+                    <h3 class="render2">Última</h3>
+                    <h3 id="qtatul" class="render">...</h3>
+                    <h3 class="render2">Total</h3>
+                    <h3 id="ttteste" class="render">...</h3>
+                    <h3 class="render2">Atual/rod:</h3>
+                    <h3 id="ttrela" class="render">...</h3>
+                </div>
+            </div>
+            <div>
+                <div class="divalerts">
+                    <h2 class="tital">Rodada(seg): </h2>
+                    <div class="divalert">
+                        <div class="divalerts2">
+                            <h2 class="maxmax">Máx: </h2>
+                            <h2 id="max2" class="maxperc2">0.000</h2>
+                            <h2 id="moemax2" class="moeal2">CRY</h2>
+                            <img class="trofeu" src="https://img.icons8.com/ios-glyphs/30/000000/trophy.png"/>
+                            <h2 id="max" class="maxperc">0.000</h2>
+                            <h2 id="moemax" class="moeal">CRY</h2>
+                        </div>
+                        <button id="butmax" class="butmax">alerta+</button>
+                        <input type="text" id="inpmax" class="input2" name="inpmax" placeholder=" %">
+                        <button id="rodamax" class="rodamax">zero</button>
+                    </div>
+                    <div class="divalert">
+                        <div class="divalerts2">
+                            <h2 class="maxmax">min: </h2>
+                            <h2 id="min2" class="maxperc2">0.000</h2>
+                            <h2 id="moemin2"  class="moeal2">CRY</h2>
+                            <img class="trofeu" src="https://img.icons8.com/ios-glyphs/30/000000/trophy.png"/>
+                            <h2 id="min" class="maxperc">0.000</h2>
+                            <h2 id="moemin"  class="moeal">CRY</h2>
+                        </div>
+                        <button id="butmin" class="butmax">alerta-</button>
+                        <input type="text" id="inpmin" class="input2" name="inpmin" placeholder=" %">
+                        <button id="rodamin" class="rodamax">zero</button>
+                    </div>
+                    
+                </div>
+                <div class="divalerts">
+                    <h2 class="tital">Acumulado:</h2>
+                    <div class="divalert">
+                        <div class="divalerts2">
+                            <h2 class="maxmax">Máx: </h2>
+                            <h2 id="maxac2" class="maxperc2">0.000</h2>
+                            <h2 id="moemaxac2" class="moeal2">CRY</h2>
+                            <img class="trofeu" src="https://img.icons8.com/ios-glyphs/30/000000/trophy.png"/>
+                            <h2 id="maxac" class="maxperc">0.000</h2>
+                            <h2 id="moemaxac" class="moeal">CRY</h2>
+                        </div>
+                        <button id="butmaxac" class="butmax">alerta+</button>
+                        <input type="text" id="inpmaxac" class="input2" name="inpmaxac" placeholder=" %">
+                        <button id="rodamaxac" class="rodamax">zero</button>
+                    </div>
+                    <div class="divalert2">
+                        <div class="divalerts2">
+                            <h2 class="maxmax">min: </h2>
+                            <h2 id="minac2" class="maxperc2">0.000</h2>
+                            <h2 id="moeminac2"  class="moeal2">CRY</h2>
+                            <img class="trofeu" src="https://img.icons8.com/ios-glyphs/30/000000/trophy.png"/>                      
+                            <h2 id="minac" class="maxperc">0.000</h2>
+                            <h2 id="moeminac"  class="moeal">CRY</h2>
+                        </div>
+                        <button id="butminac" class="butmax">alerta-</button>
+                        <input type="text" id="inpminac" class="input2" name="inpminac" placeholder=" %">
+                        <button id="rodaminac" class="rodamax">zero</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divtable">
+            <table id="table" class="table table-sortable">
+                <thead>
+                    <tr>
+                        <th class= "td">Crypto </th>
+                        <th class= "td">Volume </th>
+                        <th class= "td">%24h in </th>
+                        <th class= "td">%24h at </th>
+                        <th class= "td">dif %24h</th>
+                        <th class= "tdp">$ inic</th>
+                        <th class= "tdp">$ atual</th>
+                        <th class= "td">Acumul.</th>
+                        <th class= "td">Máximo </th>
+                        <th class= "td">Mínimo </th>
+                        <th class= "td">Rodada </th>
+                        <th class= "tg1">1</th>
+                        <th class= "tg1">2</th>
+                        <th class= "tg1">3</th>
+                        <th class= "tg1">4</th>
+                        <th class= "tg1">5</th>
+                        <th class= "tg1">6</th>
+                        <th class= "tg1">7</th>
+                        <th class= "tg1">8</th>
+                        <th class= "tg1">9</th>
+                        <th class= "tg1">0</th>
+                        <th class= "tg2">1</th>
+                        <th class= "tg2">2</th>
+                        <th class= "tg2">3</th>
+                        <th class= "tg2">4</th>
+                        <th class= "tg2">5</th>
+                        <th class= "tg2">6</th>
+                        <th class= "tg2">7</th>
+                        <th class= "tg2">8</th>
+                        <th class= "tg2">9</th>
+                        <th class= "tg2">0</th>
+                        <th class= "tg1">1</th>
+                        <th class= "tg1">2</th>
+                        <th class= "tg1">3</th>
+                        <th class= "tg1">4</th>
+                        <th class= "tg1">5</th>
+                        <th class= "tg1">6</th>
+                        <th class= "tg1">7</th>
+                        <th class= "tg1">8</th>
+                        <th class= "tg1">9</th>
+                        <th class= "tg1">0</th>
+                        <th class= "tg2">1</th>
+                        <th class= "tg2">2</th>
+                        <th class= "tg2">3</th>
+                        <th class= "tg2">4</th>
+                        <th class= "tg2">5</th>
+                        <th class= "tg2">6</th>
+                        <th class= "tg2">7</th>
+                        <th class= "tg2">8</th>
+                        <th class= "tg2">9</th>
+                        <th class= "tg2">0</th>
+                        <th class= "tg1">1</th>
+                        <th class= "tg1">2</th>
+                        <th class= "tg1">3</th>
+                        <th class= "tg1">4</th>
+                        <th class= "tg1">5</th>
+                        <th class= "tg1">6</th>
+                        <th class= "tg1">7</th>
+                        <th class= "tg1">8</th>
+                        <th class= "tg1">9</th>
+                        <th class= "tg1">0</th>
+                    </tr>
+                    
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+        <!--<div id="div"></div>-->
+        <div id="divagen">
+            <button id="zeragraf" class="rodamax">zerar gráfico</button>
+            <h1>Agenda:</h1>
+            <button id="integrac" class="rodamax">integracao</button>
+            <div class="linha2">
+                <h2>11/01/22</h2>
+                <h3 >alguma coisa acontece c a moeda BTC</h3> 
+            </div>
+            <div class="linha2">
+                <h2>12/01/22</h2>
+                <h3 >alguma coisa acontece c a moeda eth</h3> 
+            </div>
+            <div>
+                <h2>Listas</h2><br>
+                <h3>Muito altas</h3><br>
+                <p id="muitaltas" class="listcss"></p><br>
+                <h3>Boas</h3><br>
+                <p id="boas" class="listcss"></p><br>
+                <h3>Ruins</h3><br>
+                <p id="ruins" class="listcss"></p><br>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="app.js"> </script>
+    <script type="text/javascript" src="./src/tablesort.js"></script>
+    <script type="text/javascript" src="./listas.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script>
+        let btnInteg = document.getElementById("integrac");
+        btnInteg.addEventListener("click", integracao);
+    </script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+.table-sortable th {
+    cursor: pointer;
+}
+  
+.table-sortable .th-sort-asc::after {
+    content: "\25b4";
+}
+  
+.table-sortable .th-sort-desc::after {
+    content: "\25be";
+}
+  
+.table-sortable .th-sort-asc::after,
+.table-sortable .th-sort-desc::after {
+    margin-left: 5px;
+}
+  
+.table-sortable .th-sort-asc,
+.table-sortable .th-sort-desc {
+    background: rgba(26, 13, 141, 0.1);
+}
+
+th.td{
+    margin-left: 20px;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    padding-left: 0px;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid rgb(17, 17, 17);
+    border-width: 1px;
+    border-color: rgb(15, 15, 15);
+    background-color: rgb(146, 146, 168);
+
+}
+th.tdp{
+    margin-left: 20px;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    padding-left: 0px;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid rgb(17, 17, 17);
+    border-width: 1px;
+    border-color: rgb(15, 15, 15);
+    background-color: rgb(146, 146, 168);
+
+}
+
+
+
+.mrc, .mrb, .mrma, .mrl, .mrq{
+    margin-top: 0px;
+    margin-right: 4px;
+    width: 60px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+.mrc{
+    background-color: rgb(175, 70, 70);
+}
+.mrb{
+    background-color: rgb(99, 214, 128);
+}
+.mrma{
+    background-color: rgb(44, 124, 28);
+}
+.mrl{
+    background-color: #7576c2;
+}
+.mrq{
+    background-color: #cf821c;
+}
+
+.btn{
+    margin-bottom: 15px;
+    margin-right: 10px;
+    width: 90px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: bold;
+    border-width: 3px;
+    border-radius: 8px;
+    background-color: rgb(56, 163, 102);
+    
+}
+
+
+.td{
+    margin-left: 20px;
+    padding-left: 10px;
+    font-weight: 500;
+    border: 1px solid rgb(92, 88, 88);
+    border-width: 1px;
+    border-color: rgb(136, 130, 130);
+    width: 80px;
+    background-color: rgb(250, 249, 249);
+}
+
+.tdp{
+    margin-left: 20px;
+    padding-left: 10px;
+    font-weight: 500;
+    border: 1px solid rgb(92, 88, 88);
+    border-width: 1px;
+    border-color: rgb(136, 130, 130);
+    width: 200px;
+    background-color: rgb(250, 249, 249);
+}
+
+
+.tg{
+    margin: -6px;
+    padding: 1px;
+    font-size: 10px;
+    border: 1px solid rgb(92, 88, 88);
+    border-width: 1px;
+    border-color: rgb(136, 130, 130);
+    width: 1px;
+    background-color: rgb(246, 246, 248);
+}
+
+.tg1{
+    margin: -6px;
+    padding: 1px;
+    font-size: 10px;
+    border: 1px solid rgb(92, 88, 88);
+    border-width: 1px;
+    border-color: rgb(136, 130, 130);
+    width: 1px;
+    background-color: rgb(213, 213, 223);
+}
+.tg2{
+    margin: -6px;
+    padding: 1px;
+    font-size: 10px;
+    border: 1px solid rgb(92, 88, 88);
+    border-width: 1px;
+    border-color: rgb(136, 130, 130);
+    width: 1px;
+    background-color: rgb(146, 146, 168);
+}
+
+#total{
+    margin-left: 20px;
+    
+}
+.linha{
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    padding-top: 2px;
+    margin-bottom: 4px;
+}
+.linhabtn{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.butauto{
+    margin-right: 50px;
+    font-size: 20px;
+    
+}
+.inpvertic{
+    width: 300px;
+    height: 9px;
+    border-width: 0px;
+    display: flex;
+    flex-direction: column;
+}
+.divdovertic{
+    margin-left: 20px;
+    margin-top: 10px;
+    
+}
+.divdtq{
+    margin-left: 30px;
+}
+
+.input{
+    width: 70px;
+    height: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    border-radius: 3px;
+    border-style: hidden;
+}
+.input2{
+    width: 30px;
+    height: 20px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    border-radius: 3px;
+    border-style: hidden;
+}
+
+.time{
+    margin-left: 5px;
+    margin-bottom: 2px;
+    font-size: 18px;
+}
+.cron{
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 24px;
+
+}
+
+.divtable{
+    margin-top: 0px;
+}
+.linha2{
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+#bod{
+    background-color: rgb(155, 151, 151);
+}
+
+#divagen{
+    background-color: white;
+    margin: 5px;
+    padding-left: 15px;
+    padding-top: 1px;
+}
+
+.tit{
+    color: rgb(255, 253, 253);
+    font-size: 38px;
+    margin-top: 34px;
+    padding-top: 10px;
+    margin-left: 5px;
+   
+}
+.maxmax{
+    margin-left: -1px;
+    margin-top: 0px;
+    text-align: right;
+    font-size: 17px;
+}
+.maxperc{
+    margin-left: 5px;
+    margin-top: 0px;
+    text-align: right;
+    font-size: 18px;
+    color: #2c2b2b;
+}
+.maxperc2{
+    margin-left: 5px;
+    margin-top: 0px;
+    text-align: right;
+    font-size: 22px;
+    color: #030303;
+}
+.divradio{
+    margin-left: 70px;
+}
+.divalert{
+    margin-left: 40px;
+    margin-bottom: 8px;
+}
+.divalert2{
+    margin-left: 30px;
+    margin-top: 8px;
+}
+
+.whaud{
+    margin-left: -20px;
+    margin-right: -2x;
+    padding-right: 0px;
+    
+}
+.listcss{
+    width: 300px;
+    font-size: 5px;
+
+}
+.divalerts{
+    display: flex;
+    margin-left: 20px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+.divalerts2{
+    display: flex;
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.tital{
+    margin-left: 50px;
+    margin-bottom: 2px;
+    font-size: 18px;
+}
+.moeal{
+    font-size: 10px;
+    margin-top: 20px;
+    margin-left: 1px;
+    color: #2c2b2b;
+}
+.moeal2{
+    font-size: 12px;
+    margin-top: 20px;
+    margin-left: 1px;
+}
+
+
+audio
+{
+-webkit-box-shadow: 5px 5px 10px rgba(0,0, 0, 0.4);
+-moz-box-shadow: 5px 5px 10px rgba(0,0, 0, 0.4);
+box-shadow: 5px 5px 10px rgba(0,0, 0, 0.4);
+-webkit-transform: scale(0.70);
+-moz-transform: scale(0.70);
+transform: scale(0.70);
+
+}
+.divaudio{
+    text-align: right;
+}
+.rodamax{
+    margin-left: 40px;
+    border-radius: 4px;
+    
+}
+
+.butmax{
+    width: 50px;
+    height: 25px;
+    border-radius: 3px;
+    border-style: hidden;
+    margin-right: 2px;
+    margin-top: -6px;
+    margin-bottom: 6px;
+}
+.trofeu{
+    height: 20px;
+}
+.render{
+    margin-left: 7px;
+    font-size: 19px;
+    
+}
+.render2{
+    margin-left: 30px;
+    font-size: 16px;
+
+}
