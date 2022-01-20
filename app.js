@@ -463,10 +463,14 @@ function ativar(){
                         document.getElementById('moeminac2').innerHTML= moe
                     }
                     if(inpmaxac){
-                        if(itemacum>=inpmaxac){
+                        if(itemacum>=inpmaxac){//primeiro play
                             console.log(`ALERTA! Moeda ${moe} atingiu alta de ${itemacum}% no acumulado`)
                             audio.play()
                             document.getElementById('butmaxac').style.backgroundColor = "#138437"
+                            let moelis=[]
+                            moelis=moe
+                            integracao(moelis)
+                            
                         }
                     }
                     if(inpminac){
@@ -733,3 +737,113 @@ function restart(){
     console.log('(modo automático)')
 }
 restart()
+
+
+/////////////////////////
+
+function integracao(par){
+    
+    //let cryalt= document.getElementById('cryalt').innerHTML
+    //let resmes= document.getElementById('resmes').innerHTML
+    //let ressem= document.getElementById('ressem').innerHTML
+    //let resdia= document.getElementById('resdia').innerHTML
+    //let resqth= document.getElementById('resqth').innerHTML
+    //let resumh= document.getElementById('resumh').innerHTML
+    //let resqzm= document.getElementById('resqzm').innerHTML
+    //let rescim= document.getElementById('rescim').innerHTML
+    //let resumi= document.getElementById('resumi').innerHTML
+    
+    //if(newpar ==! par){
+
+        console.log(`O par é ${par}`)
+        console.log(`O parlength ${par.length}`)
+        //console.log(`O par 1 ${par[0]}`)
+
+        
+        let td1 = document.createElement("td")
+        td1.setAttribute('id', `cryalt_${par}`) //cry cryalt
+        td1.setAttribute("class","td")
+        
+
+        td1.addEventListener('click',()=>{
+            let crycam= document.getElementById(`cryalt_${par}`)
+            crycam.style.backgroundColor= '#8d8ec4'
+            rechamar(par)
+            //document.getElementById(`pe_${result[i].id}`).innerHTML= valpz
+            //tdac.innerHTML='0.000'
+            //tdac.style.backgroundColor= '#ffffff'
+            //let azul = document.getElementById(`max_${result[i].id}`)
+            
+        })
+
+
+
+        let td2 = document.createElement("td")
+        td2.setAttribute('id', `resmes_${par}`)//mes resmes
+        td2.setAttribute("class","td")
+
+        let td3 = document.createElement("td")
+        td3.setAttribute('id', `ressem_${par}`)//sem ressem
+        td3.setAttribute("class","td")
+
+        let td4 = document.createElement("td")
+        td4.setAttribute('id', `resdia_${par}`)//dia resdia
+        td4.setAttribute("class","td")
+
+        let td5 = document.createElement("td")
+        td5.setAttribute('id', `resqth_${par}`)//4h resqth
+        td5.setAttribute("class","td")
+
+        let td6 = document.createElement("td")
+        td6.setAttribute('id', `resumh_${par}`)//1h resumh
+        td6.setAttribute("class","td")
+
+        let td7 = document.createElement("td")
+        td7.setAttribute('id', `resqzm_${par}`)//15m resqzm
+        td7.setAttribute("class","td")
+
+        let td8 = document.createElement("td")
+        td8.setAttribute('id', `rescim_${par}`)//5m rescim
+        td8.setAttribute("class","td")
+
+        let td9 = document.createElement("td")
+        td9.setAttribute('id', `resumi_${par}`)//1m resumi
+        td9.setAttribute("class","td")
+
+        let tr = document.createElement("tr") //produzindo o tr
+        tr.setAttribute('id', `trres_${par}`)
+
+        tr.appendChild(td1)
+        tr.appendChild(td2)
+        tr.appendChild(td3)
+        tr.appendChild(td4)
+        tr.appendChild(td5)
+        tr.appendChild(td6)
+        tr.appendChild(td7)
+        tr.appendChild(td8)
+        tr.appendChild(td9)
+
+        let tab = document.getElementById('tbody22')
+
+    tab.appendChild(tr)
+    ///////////////////////////////////
+    document.getElementById(`cryalt_${par}`).innerHTML= par;
+    document.getElementById(`resmes_${par}`).innerHTML= 'pts';
+    document.getElementById(`ressem_${par}`).innerHTML= 'pts';
+    document.getElementById(`resdia_${par}`).innerHTML= 'pts';
+    document.getElementById(`resqth_${par}`).innerHTML= 'pts';
+    document.getElementById(`resumh_${par}`).innerHTML= 'pts';
+    document.getElementById(`resqzm_${par}`).innerHTML= 'pts';
+    document.getElementById(`rescim_${par}`).innerHTML= 'pts';
+    document.getElementById(`resumi_${par}`).innerHTML= 'pts';
+
+
+    //////////////////////////////////////////}
+    
+
+    //setTimeout(200)
+    //rechamar(par)
+    
+
+}
+/////////////////////////

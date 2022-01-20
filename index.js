@@ -6,30 +6,44 @@ const goodBuy = process.env.GOOD_BUY;
 const goodSell = process.env.GOOD_SELL;
 //const limite =process.env.LIMIT_CANDLE
 
-let interval= '1w'
-let symbol='ATOMUSDT'
+//let interval= ''
+let symbol='MITHUSDT'
 let limit=200
 
-let listart=["1M","1w", "1d", "4h", "1h"]//, "15m", "5m", "1m"] // INTERVAL P LOOP
+function entsymb(symboll){
+    symbol=symboll+'USDT'
+}
+entsymb('ADA')
+
+
+
+let listart=["1M","1w", "1d", "4h", "1h", "15m", "5m", "1m"] // INTERVAL P LOOP  ]//
 
 let list=[{"mes":15, "val":0},{"mes":15, "val":500000},{"mes":15, "val":0}] // 0 -max 1 -min 2-atual
 
-let colec=[{"rod":0, "val":0}, {"rod":0, "val":0}, {"rod":0, "val":0}, {"rod":0, "val":0},{"rod":0, "val":0}, {"rod":0, "val":0}, {"rod":0, "val":0}, {"rod":0, "val":0}, {"rod":0, "val":""}]// pontos p cada cry
+let colec=[{"int":"","rod":0, "val":[]}, {"int":"","rod":0, "val":[]}, {"int":"","rod":0, "val":[]}, {"int":"","rod":0, "val":[]},{"int":"","rod":0, "val":[]}, {"int":"","rod":0, "val":[]}, {"int":"","rod":0, "val":[]}, {"int":"","rod":0, "val":[]}, {"int":"","rod":0, "val":[]}]// pontos p cada cry
 
 
 colec[8].val= symbol
 
 for(let cont=0; cont<=listart.length-1; cont++){
     //console.log(`${listart[cont]}`)
-    interval = listart[cont]
+    
+    
 
     async function chamar(limit){
-
-        
-        
         colec[cont].rod++
+        colec[8].rod ++ // colec[8].rod +colec[cont].rod
+        
         //colec[cont].rod++ 
-    
+        let interval = listart[cont]
+        colec[cont].int = interval
+        console.log(`Rodada Geral ${colec[8].rod}.  Interv. ${colec[cont].int}. ${colec[cont].rod}ª rod. ${limit} velas`)
+        console.log(`intervalo: ${interval}`)
+        //console.log(`cont +1 ${cont+1}`)
+        
+        
+        
         
         let result = await api.candle(symbol,interval,limit);
         //console.log('result.length '+result.length);
@@ -57,6 +71,8 @@ for(let cont=0; cont<=listart.length-1; cont++){
     
         let rlcmxtd= parseFloat((i-list[0].mes)/i).toFixed(2)    //relação Máximo Todo
         let rlcmnin= parseFloat(list[1].mes/i).toFixed(2)//relação Mínimo-Início
+
+
         console.log('..............................')
         console.log(`Moeda ${symbol}  - ${interval}/${interval}`)
         //console.log('..............................')
@@ -80,27 +96,27 @@ for(let cont=0; cont<=listart.length-1; cont++){
         if(parseFloat(list[0].val)>parseFloat(list[2].val)){ //só caindo curvou p baixo ou parou de só subir...caindo
             
             if(list[1].mes>list[0].mes){ //mínimo antes do maximo.  (II)
-                colec[cont].val+= 6 
-                console.log(`-->PAROU DE SUBIR, EM QUEDA HÁ ${list[0].mes} MESES (6 pontos)<--`)
-                console.log(`Em queda de ${list[0].val-list[2].val} USDT (${quedamamMat*100}%) desde então`) 
+                colec[cont].val.push(6) 
+                console.log(`-->PAROU DE SUBIR, EM QUEDA HÁ ${list[0].mes} ${colec[cont].int} (6 pontos)<--`)
+                console.log(`Em queda de ${list[0].val-list[2].val} USDT (${(quedamamMat*100).toFixed(2)}%) desde então`) 
                 console.log(`Antes o mínimo foi ${list[1].val} USDT há ${list[1].mes} meses`)
-                console.log(`Falta cair ${falpsup.toFixed(8)} USDT (${falpsupper*100}%) para atingir o pior mínimo que teve em ${i} meses `)
+                console.log(`Falta cair ${falpsup.toFixed(8)} USDT (${falpsupper*100}%) para atingir o pior mínimo que teve em ${i} ${colec[cont].int} `)
             }else{ //mínimo depois do maximo
                 if(parseFloat(list[1].val)<parseFloat(list[2].val)){ // min < atual ? (III)
-                    colec[cont].val+= 3
+                    colec[cont].val.push(3)
                     console.log(`--> RECUPERANDO APÓS QUEDA (3 pontos) <--`) //teve buraco, min<attual
-                    console.log(` Há ${list[0].mes} meses, perdeu  ${perMmper*100}% por ${list[0].mes-list[1].mes} meses,`) //Ha x meses, perdeu x% por n meses
-                    console.log(`Subindo ${alta*100}% há ${list[1].mes} meses desde que atingiu o min de ${list[1].val} USDT`)// quanto % subiu ha quanto tempo desde queda
+                    console.log(` Há ${list[0].mes} ${colec[cont].int}, perdeu  ${perMmper*100}% por ${list[0].mes-list[1].mes} ${colec[cont].int},`) //Ha x meses, perdeu x% por n meses
+                    console.log(`Subindo ${alta*100}% há ${list[1].mes} ${colec[cont].int} desde que atingiu o min de ${list[1].val} USDT`)// quanto % subiu ha quanto tempo desde queda
                     console.log(`Se subir ${list[0].val-list[2].val} USDT (${falpresamdm*100}%) atinge o máximo`) // quanto falta USDT (%) p resistencia
                     console.log(`Se voltar a cair ${falpsup} USDT (${falpsupper*100}%) reatinge o mínimo`) // voltar a cair ...USDT (%) p minimo
     
                 }else if(parseFloat(list[1].val)>parseFloat(list[2].val)){ //min > atual so caindo  (I)
-                    colec[cont].val+= 1
-                    console.log(`--> SÓ CAINDO HÁ ${list[0].mes} MESES (1 ponto)<--`) // não teve buraco, min >=atual
+                    colec[cont].val.push(1)
+                    console.log(`--> SÓ CAINDO HÁ ${list[0].mes} ${colec[cont].int} (1 ponto)<--`) // não teve buraco, min >=atual
                     console.log(`Precisa subir ${falpresamdm*100}% para atingir o máximo`)// quantos % do atual p atingir o max se subir (M-A/A)
                 }else{ //  min === atual lateralizado
                     console.log(`--> PAROU DE CAIR (2 pontos)<--`) //(IV)
-                    colec[cont].val+= 2
+                    colec[cont].val.push(2)
                 }
     
             }
@@ -108,53 +124,62 @@ for(let cont=0; cont<=listart.length-1; cont++){
     
             
             if(list[1].mes>list[0].mes){// se o minimo é mais anterior mais antigo o maximo (V)
-                colec[cont].val+= 8
+                colec[cont].val.push(8)
                     console.log(`--> SÓ SUBINDO ou RECUPEROU DE QUEDA COM LOUVOR 4 (SEM TOCAR O MÍNIMO) (8 pontos) <--`)
                     console.log(`Mínimo há ${list[1].mes} meses.`)
                     console.log(`Subiu ${alta}%  desde este mínimo`) //quanto subiu (A-m/m)
                 
             }else{//se o minimo é posterior ao max - mais recente que o maximo (VI)
-                colec[cont].val+= 5
+                colec[cont].val.push(5)
                 console.log(`--> RECUPERADA DE QUEDA COM LOUVOR 2, atual>max (5 pontos) <--`)
-                console.log(`Caiu ${list[0].val-list[1].val} USDT (${quedmdmMm*100}%) por ${list[0].mes -list[1].mes} meses`) //% - caiu M-m USDT (M-m/M)% por n meses
-                console.log(`Recuperando ${alta}% há ${list[1].mes-list[2].mes} meses`)//recuperando % (A-m/m) ha n meses
+                console.log(`Caiu ${list[0].val-list[1].val} USDT (${quedmdmMm*100}%) por ${list[0].mes -list[1].mes} ${colec[cont].int}`) //% - caiu M-m USDT (M-m/M)% por n meses
+                console.log(`Recuperando ${alta}% há ${list[1].mes-list[2].mes} ${colec[cont].int}`)//recuperando % (A-m/m) ha n meses
             }
         }else{ // atual=max,
             if(list[1].mes>list[0].mes){// se o minimo é mais anterior mais antigo o maximo  , com atual ===max  (VII)
-                colec[cont].val+= 7
+                colec[cont].val.push(7)
                     console.log(`--> SÓ SUBINDO COM LOUVOR 3 (min antes do maximo e do atual)(7 pontos) <--`)
-                    console.log(`Mínimo há ${list[1].mes} meses.`)
+                    console.log(`Mínimo há ${list[1].mes} ${colec[cont].int}.`)
                     console.log(`"Subindo" ${alta}%  desde este mínimo`) //quanto subiu (A-m/m)
                 
             }else{//se o minimo é posterior ao max - mais recente que o maximo ,  com atual ===max  (VIII)
-                colec[cont].val+= 4
+                colec[cont].val.push(4)
                 console.log(`--> RECUPERANDO DE QUEDA COM LOUVOR 1,atual=max (4 pontos) <--`)
-                console.log(`Caiu ${list[0].val-list[1].val} USDT (${quedmdmMm*100}%) por ${list[0].mes -list[1].mes} meses`) //% - caiu M-m USDT (M-m/M)% por n meses
-                console.log(`"Recuperando" ${alta}% há ${list[1].mes-list[2].mes} meses`)//recuperando % (A-m/m) há n meses
+                console.log(`Caiu ${list[0].val-list[1].val} USDT (${quedmdmMm*100}%) por ${list[0].mes -list[1].mes} ${colec[cont].int}`) //% - caiu M-m USDT (M-m/M)% por n meses
+                console.log(`"Recuperando" ${alta}% há ${list[1].mes-list[2].mes} ${colec[cont].int}`)//recuperando % (A-m/m) há n meses
             }
             
             
         }
         //console.log('...........................')
         
-        limit =parseInt(list[0].mes-1) // -1
-        if(parseInt(limit)>2){        // >=2
+        limit =parseInt(list[0].mes-1) // -1 tirando 1 ou 2 do Maximo p proxima chamada
+        if(parseInt(limit)>=2){        // >=2 chegando a chamada até num minimo de velas
             chamar(limit)
         }else{
-            colec[8].rod = colec[8].rod +colec[cont].rod
-            console.log(`ÚLTIMA RODADA`)
-            colec[cont].val = parseFloat(colec[cont].val/colec[cont].rod).toFixed(1)
-
-            console.log(`Crypto: ${colec[8].val}: Rodadas: ${colec[8].rod}`)
-            console.log(`Ponto mês: ${colec[0].val}  Rodadas: ${colec[0].rod}`)
-            console.log(`Ponto semana: ${colec[1].val} Rodadas: ${colec[1].rod}`)
-            console.log(`Ponto dia: ${colec[2].val}  Rodadas: ${colec[2].rod}`)
-            console.log(`Ponto 4h: ${colec[3].val}  Rodadas: ${colec[3].rod}`)
-            console.log(`Ponto 1h: ${colec[4].val}  Rodadas: ${colec[4].rod}`)
-            console.log(`Ponto 15p: ${colec[5].val}  Rodadas: ${colec[5].rod}`)
-            console.log(`Ponto 5p: ${colec[6].val}  Rodadas: ${colec[6].rod}`)
-            console.log(`Ponto 1p: ${colec[7].val}  Rodadas: ${colec[7].rod}`)
-            console.log(`Intervalos: ${listart.length}`)
+            
+            console.log(`ÚLTIMA RODADA do interv. ${colec[cont].int}`)
+            //colec[cont].val = parseFloat(colec[cont].val/colec[cont].rod).toFixed(1)
+            //colec[cont].tot = soma dos colec[cont].val/colec[cont].rod
+            console.log('..............................................')
+            console.log(`Crypto: ${colec[8].val}  Intervalos:${listart.length}  Rodadas:${colec[8].rod} `)
+            console.log('..............................................')
+            console.log(` ${colec[0].int}: Rodadas:${colec[0].rod}  Classif. ${colec[0].val}   IMT1-    IMI1   `)//1M
+            console.log('..............................................')
+            console.log(` ${colec[1].int}: Rodadas:${colec[1].rod}  Classif. ${colec[1].val}  `)//1w
+            console.log('..............................................')
+            console.log(` ${colec[2].int}: Rodadas:${colec[2].rod}  Classif. ${colec[2].val}  `)//1d
+            console.log('..............................................')
+            console.log(` ${colec[3].int}: Rodadas:${colec[3].rod}  Classif. ${colec[3].val}  `)//4h
+            console.log('..............................................')
+            console.log(` ${colec[4].int}: Rodadas:${colec[4].rod}  Classif. ${colec[4].val}  `)//1h
+            console.log('..............................................')
+            console.log(` ${colec[5].int}: Rodadas:${colec[5].rod}  Classif. ${colec[5].val}   IMT2-    IMI2    `)//15p
+            console.log('..............................................')
+            console.log(` ${colec[6].int}: Rodadas:${colec[6].rod}  Classif. ${colec[6].val}   IMT3-    IMI3    `)//5p
+            console.log('..............................................')
+            console.log(` ${colec[7].int}: Rodadas:${colec[7].rod}  Classif. ${colec[7].val}   IMT4-    IMI4    `)//1p
+            console.log('..............................................')
         }
             
     
