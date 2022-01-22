@@ -34,10 +34,10 @@ fetch(url)
             console.log(`Temos ${result.length} pares USDT disponíveis (${data.length} total)`)
         }, 3000);
         
-        
+        //let ajudaa=[]
         //PRIMEIRO FOR
         for(let i =0; i<result.length; i++){
-
+            //ajudaa.push(result[i].id)
             let voll = (result[i].vol/1000000).toFixed(3);
 
             let td1 = document.createElement("td")
@@ -203,6 +203,9 @@ fetch(url)
 
 
         }
+        //ajudaa.sort()
+        //let jss= JSON.stringify(ajudaa)
+        //console.log(jss)
 
     })
 })
@@ -246,7 +249,8 @@ function ativar(){
     let display = document.querySelector('#timer'); // selecionando o timer
     startTimer(duration, display);// iniciando o timer
     document.getElementById('time').innerHTML=` ${hora}h ${min}m ${seg}s`
-
+    let displaydo = document.querySelector('#timerdo');
+    startTimer(duration, displaydo);// iniciando o timer dois
     //repetindo... chamadas API
     let c = 0;
     let cresc ='';
@@ -296,7 +300,7 @@ function ativar(){
                         document.getElementById(`auvol_${result[i].id}`).innerHTML= aumvol
                     }
 
-                    //calculo da DIFSUP diferença entre valor atual e suporte
+                    //calculo da DIFSUP diferença entre valor atual e suporte Tabela Principal
                     let supmom = 0
                     let difsup=999.999
                     if(document.getElementById(`sup_${moe}`)){
@@ -310,9 +314,9 @@ function ativar(){
                     //let difsup = document.getElementById(`difsup_${result[i].id}`).innerHTML
                     
 
+                    if(Mathsign(difsup)==! 1){
                     
-                    
-                    if(parseFloat(difsup)<=0){
+                        //if(parseFloat(difsup)<=0){
 
                         if(document.getElementById(`cryalt_${moe}`)){
 
@@ -321,7 +325,6 @@ function ativar(){
                             document.getElementById(`resqzm_${moe}`).innerHTML= difsup.toFixed(8); //DifSup
 
                         }else{
-
 
                             //integracao(result[i].id)
                             console.log(`O par difsup zero é ${moe}`)
@@ -417,21 +420,18 @@ function ativar(){
 
                         }
                         
+                    }else{
+                        if(document.getElementById(`cryalt_${moe}`)){
 
-
-
-                    }else if(document.getElementById(`cryalt_${moe}`)){
-
+                            //atual - sup = difsup
+                            document.getElementById(`resqth_${moe}`).innerHTML= preco; //preço atual
+                            document.getElementById(`resumh_${moe}`).innerHTML= supmom; //suporte
+                            document.getElementById(`resqzm_${moe}`).innerHTML= difsup.toFixed(8); //DifSup
+                            
                             let trques = document.getElementById(`trres_${moe}`)
                             trques.style.backgroundColor = "#1da548"
-
-                        
-
+                        }
                     }
-
-
-
-
 
 
                     //calculo do aumento
