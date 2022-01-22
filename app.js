@@ -5,6 +5,7 @@ const url = burl+query;
 let objData = {};
 let objData2 = {};
 let objData3 = {};
+let objData4 = {};
 let percquery= 0;
 let data = {}
 let result={"id":"","value":""};
@@ -19,15 +20,20 @@ fetch(url)
             objData[o.symbol]= o.priceChangePercent
             objData2[o.symbol]=o.lastPrice
             objData3[o.symbol]=o.quoteVolume
+            objData4[o.symbol]=o.openPrice
+
         })
         result = Object.keys(objData).map(symbol =>{
             return{
-                id:symbol.replace('USDT', ''), value: objData[symbol], pro:objData2[symbol], vol:objData3[symbol]
+                id:symbol.replace('USDT', ''), value: objData[symbol], pro:objData2[symbol], vol:objData3[symbol], open:objData4[symbol]
             }
         })
         .filter(o => Math.abs(o.value) > percquery)    
         data = JSON.stringify(result)
-        console.log(`Temos ${result.length} pares USDT disponíveis (${data.length} total)`)
+        setTimeout(() => {
+            console.log(`Temos ${result.length} pares USDT disponíveis (${data.length} total)`)
+        }, 3000);
+        
         
         //PRIMEIRO FOR
         for(let i =0; i<result.length; i++){
@@ -42,6 +48,10 @@ fetch(url)
             td11.setAttribute('id', `vol_${result[i].id}`)
             td11.setAttribute("class","td")
 
+            let td12 = document.createElement("td")
+            td12.setAttribute('id', `auvol_${result[i].id}`)
+            td12.setAttribute("class","td")
+
 
             let td2 = document.createElement("td")
             td2.setAttribute('id',`in_${result[i].id}`)
@@ -55,6 +65,10 @@ fetch(url)
             td23.setAttribute('id',`dif_${result[i].id}`)
             td23.setAttribute("class","td")
 
+            let td24 = document.createElement("td")
+            td24.setAttribute('id',`ope_${result[i].id}`)
+            td24.setAttribute("class","td")
+
             
             let td3 = document.createElement("td")
             td3.setAttribute('id',`pe_${result[i].id}`)
@@ -63,6 +77,22 @@ fetch(url)
             let td4 = document.createElement("td")
             td4.setAttribute('id',result[i].id)
             td4.setAttribute("class","tdp")
+
+            let td41 = document.createElement("td")
+            td41.setAttribute('id',`sup_${result[i].id}`)
+            td41.setAttribute("class","tdp")
+
+            let td42 = document.createElement("td")
+            td42.setAttribute('id',`difsup_${result[i].id}`)
+            td42.setAttribute("class","tdp")
+
+            let td43 = document.createElement("td")
+            td43.setAttribute('id',`qualymes_${result[i].id}`)
+            td43.setAttribute("class","tdp")
+
+            let td44 = document.createElement("td")
+            td44.setAttribute('id',`rmaxtu_${result[i].id}`)
+            td44.setAttribute("class","td")
 
             let tdac = document.createElement("td")
             tdac.setAttribute('id',`acu_${result[i].id}`)
@@ -95,11 +125,17 @@ fetch(url)
 
             tr.appendChild(td1)
             tr.appendChild(td11)
+            tr.appendChild(td12)
             tr.appendChild(td2)
             tr.appendChild(td22)
             tr.appendChild(td23)
+            tr.appendChild(td24)
             tr.appendChild(td3)
             tr.appendChild(td4)
+            tr.appendChild(td41)
+            tr.appendChild(td42)
+            tr.appendChild(td43)
+            tr.appendChild(td44)
             tr.appendChild(tdac)
             tr.appendChild(tdmx)
             tr.appendChild(tdmn)
@@ -112,11 +148,17 @@ fetch(url)
             let campvoll= document.getElementById(`vol_${result[i].id}`)
             document.getElementById(`mo_${result[i].id}`).innerHTML= result[i].id;
             campvoll.innerHTML= voll
+            document.getElementById(`auvol_${result[i].id}`).innerHTML= '000.000';
             document.getElementById(`in_${result[i].id}`).innerHTML= result[i].value;
             document.getElementById(`at_${result[i].id}`).innerHTML= '0.000';
             document.getElementById(`dif_${result[i].id}`).innerHTML= '0.000';
+            document.getElementById(`ope_${result[i].id}`).innerHTML= result[i].open;
             document.getElementById(`pe_${result[i].id}`).innerHTML= result[i].pro;
             document.getElementById(result[i].id).innerHTML= result[i].pro;
+            document.getElementById(`sup_${result[i].id}`).innerHTML= '000.000';
+            document.getElementById(`difsup_${result[i].id}`).innerHTML= '999.999';
+            document.getElementById(`qualymes_${result[i].id}`).innerHTML= '0,0,0';
+            document.getElementById(`rmaxtu_${result[i].id}`).innerHTML= '0.00';
             document.getElementById(`acu_${result[i].id}`).innerHTML= '0.000';
             document.getElementById(`max_${result[i].id}`).innerHTML= '0.000';
             document.getElementById(`min_${result[i].id}`).innerHTML= '0.000';
@@ -237,14 +279,161 @@ function ativar(){
                 document.getElementById('maxac2').innerHTML='0.000'
                 document.getElementById('minac2').innerHTML='0.000'
                 
+                
                 //SEGUNDO FOR
                 for(i =0; i<result.length-1; i++){
                     let moe = result[i].id
                     let preco = result[i].pro
                     let valperc= result[i].value
-                    let valvol =result[i].vol
+                    let valvol = (result[i].vol/1000000).toFixed(3);
+
+                    let audio = document.querySelector('audio')
+
+                    //calculo do auento do Volume
+                    if(document.getElementById(`vol_${result[i].id}`)){
+                        let basvol = document.getElementById(`vol_${result[i].id}`).innerHTML
+                        let aumvol = parseFloat(valvol-basvol).toFixed(3)
+                        document.getElementById(`auvol_${result[i].id}`).innerHTML= aumvol
+                    }
+
+                    //calculo da DIFSUP diferença entre valor atual e suporte
+                    let supmom = 0
+                    let difsup=999.999
+                    if(document.getElementById(`sup_${moe}`)){
+                        supmom =  parseFloat(document.getElementById(`sup_${moe}`).innerHTML)
+
+                        difsup = parseFloat(result[i].pro)- parseFloat(supmom) 
+                        document.getElementById(`difsup_${result[i].id}`).innerHTML= difsup.toFixed(8)
+                    }
+                    
+                    
+                    //let difsup = document.getElementById(`difsup_${result[i].id}`).innerHTML
+                    
 
                     
+                    
+                    if(parseFloat(difsup)<=0){
+
+                        if(document.getElementById(`cryalt_${moe}`)){
+
+                            document.getElementById(`resqth_${moe}`).innerHTML= preco; //preço atual
+                            document.getElementById(`resumh_${moe}`).innerHTML= supmom; //suporte
+                            document.getElementById(`resqzm_${moe}`).innerHTML= difsup.toFixed(8); //DifSup
+
+                        }else{
+
+
+                            //integracao(result[i].id)
+                            console.log(`O par difsup zero é ${moe}`)
+                            //console.log(`O parlength ${par.length}`)
+                            //console.log(`O par 1 ${par[0]}`)
+
+                            let td1 = document.createElement("td")
+                            td1.setAttribute('id', `cryalt_${moe}`) //cry cryalt
+                            td1.setAttribute("class","td")
+                        
+                            td1.addEventListener('click',()=>{
+                                let crycam= document.getElementById(`cryalt_${moe}`)
+                                crycam.style.backgroundColor= '#8d8ec4'
+                                //rechamar(par)
+                                //document.getElementById(`pe_${result[i].id}`).innerHTML= valpz
+                                //tdac.innerHTML='0.000'
+                                //tdac.style.backgroundColor= '#ffffff'
+                                //let azul = document.getElementById(`max_${result[i].id}`)
+                                
+                            })
+
+                            let td2 = document.createElement("td")
+                            td2.setAttribute('id', `resmes_${moe}`)//mes resmes
+                            td2.setAttribute("class","td")
+
+                            let td3 = document.createElement("td")
+                            td3.setAttribute('id', `ressem_${moe}`)//sem ressem
+                            td3.setAttribute("class","td")
+
+                            let td4 = document.createElement("td")
+                            td4.setAttribute('id', `resdia_${moe}`)//dia resdia
+                            td4.setAttribute("class","td")
+
+                            let td5 = document.createElement("td")
+                            td5.setAttribute('id', `resqth_${moe}`)//4h resqth
+                            td5.setAttribute("class","td")
+
+                            let td6 = document.createElement("td")
+                            td6.setAttribute('id', `resumh_${moe}`)//1h resumh
+                            td6.setAttribute("class","td")
+
+                            let td7 = document.createElement("td")
+                            td7.setAttribute('id', `resqzm_${moe}`)//15m resqzm
+                            td7.setAttribute("class","td")
+
+                            let td8 = document.createElement("td")
+                            td8.setAttribute('id', `rescim_${moe}`)//5m rescim
+                            td8.setAttribute("class","td")
+
+                            let td9 = document.createElement("td")
+                            td9.setAttribute('id', `resumi_${moe}`)//1m resumi
+                            td9.setAttribute("class","td")
+
+                            let tr = document.createElement("tr") //produzindo o tr
+                            tr.setAttribute('id', `trres_${moe}`)
+
+                            tr.appendChild(td1)
+                            tr.appendChild(td2)
+                            tr.appendChild(td3)
+                            tr.appendChild(td4)
+                            tr.appendChild(td5)
+                            tr.appendChild(td6)
+                            tr.appendChild(td7)
+                            tr.appendChild(td8)
+                            tr.appendChild(td9)
+
+                            let tab = document.getElementById('tbody22')
+
+                            tab.appendChild(tr)
+                            ///////////////////////////////////
+                            document.getElementById(`cryalt_${moe}`).innerHTML= moe; //crypto
+                            document.getElementById(`resmes_${moe}`).innerHTML= valvol ; //volume
+                            document.getElementById(`ressem_${moe}`).innerHTML= valperc; //%24h
+
+                            let opesu = document.getElementById(`ope_${moe}`).innerHTML
+
+                            document.getElementById(`resdia_${moe}`).innerHTML= opesu; //open
+                            document.getElementById(`resqth_${moe}`).innerHTML= preco; //preço atual
+                            document.getElementById(`resumh_${moe}`).innerHTML= supmom; //suporte
+                            document.getElementById(`resqzm_${moe}`).innerHTML= difsup.toFixed(8); //DifSup
+
+                            let qualymsu = document.getElementById(`qualymes_${moe}`).innerHTML
+                            let rmaxsu = document.getElementById(`rmaxtu_${moe}`).innerHTML
+
+                            document.getElementById(`rescim_${moe}`).innerHTML= qualymsu; //Qualymes
+                            document.getElementById(`resumi_${moe}`).innerHTML= rmaxsu;// RMT 1
+
+                            document.getElementById('destaq').innerHTML= 'Suporte!!!'
+                            
+                            //audio.play()
+
+
+
+                        }
+                        
+
+
+
+                    }else if(document.getElementById(`cryalt_${moe}`)){
+
+                            let trques = document.getElementById(`trres_${moe}`)
+                            trques.style.backgroundColor = "#1da548"
+
+                        
+
+                    }
+
+
+
+
+
+
                     //calculo do aumento
                     let qubas= 1;
                     let base = 1;
@@ -256,7 +445,7 @@ function ativar(){
                         aumento = aum*100
                         cresc = aumento.toFixed(3)
 
-                        //aiaiai
+                        
                         //1 aumento (cresc) indo p coluna aumento
                         let campcr=   document.getElementById(`au_${moe}`)
                         campcr.innerHTML = cresc;
@@ -391,7 +580,7 @@ function ativar(){
                     let inpmaxcamp= document.getElementById('inpmax')
                     let inpmax= inpmaxcamp.value
                     let inpmin= document.getElementById('inpmin').value
-                    let audio = document.querySelector('audio')
+                    
 
                     // 5 aqui entra os recordes da rodada
                     if(cresc>maxperc){
@@ -469,7 +658,7 @@ function ativar(){
                             document.getElementById('butmaxac').style.backgroundColor = "#138437"
                             let moelis=[]
                             moelis=moe
-                            integracao(moelis)
+                            //integracao(moelis)
                             
                         }
                     }
@@ -545,6 +734,17 @@ function ativar(){
         document.getElementById('ttteste').innerHTML= v
         let tot= parseFloat(v/c)
         document.getElementById('ttrela').innerHTML= parseInt(tot)
+
+
+
+        
+
+
+
+
+
+
+
         
         if(c>4){
             if(tot<200){
@@ -740,7 +940,7 @@ restart()
 
 
 /////////////////////////
-
+/*
 function integracao(par){
     
     //let cryalt= document.getElementById('cryalt').innerHTML
@@ -768,15 +968,13 @@ function integracao(par){
         td1.addEventListener('click',()=>{
             let crycam= document.getElementById(`cryalt_${par}`)
             crycam.style.backgroundColor= '#8d8ec4'
-            rechamar(par)
+            //rechamar(par)
             //document.getElementById(`pe_${result[i].id}`).innerHTML= valpz
             //tdac.innerHTML='0.000'
             //tdac.style.backgroundColor= '#ffffff'
             //let azul = document.getElementById(`max_${result[i].id}`)
             
         })
-
-
 
         let td2 = document.createElement("td")
         td2.setAttribute('id', `resmes_${par}`)//mes resmes
@@ -828,7 +1026,7 @@ function integracao(par){
     tab.appendChild(tr)
     ///////////////////////////////////
     document.getElementById(`cryalt_${par}`).innerHTML= par;
-    document.getElementById(`resmes_${par}`).innerHTML= 'pts';
+    document.getElementById(`resmes_${par}`).innerHTML= ;
     document.getElementById(`ressem_${par}`).innerHTML= 'pts';
     document.getElementById(`resdia_${par}`).innerHTML= 'pts';
     document.getElementById(`resqth_${par}`).innerHTML= 'pts';
@@ -846,4 +1044,5 @@ function integracao(par){
     
 
 }
+*/
 /////////////////////////
