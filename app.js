@@ -37,7 +37,8 @@ fetch(url)
         //let ajudaa=[]
         //PRIMEIRO FOR
         for(let i =0; i<result.length; i++){
-            //ajudaa.push(result[i].id)
+            //let gelo= result[i].pro
+            //ajudaa.push(`{"cry":${result[i].id}, "gelo":${gelo}}`)
             let voll = (result[i].vol/1000000).toFixed(3);
 
             let td1 = document.createElement("td")
@@ -47,6 +48,10 @@ fetch(url)
             let td11 = document.createElement("td")
             td11.setAttribute('id', `vol_${result[i].id}`)
             td11.setAttribute("class","td")
+
+            let td13 = document.createElement("td")
+            td13.setAttribute('id',`gelo_${result[i].id}`)
+            td13.setAttribute("class","tdp")
 
             let td12 = document.createElement("td")
             td12.setAttribute('id', `auvol_${result[i].id}`)
@@ -67,7 +72,7 @@ fetch(url)
 
             let td24 = document.createElement("td")
             td24.setAttribute('id',`ope_${result[i].id}`)
-            td24.setAttribute("class","td")
+            td24.setAttribute("class","tdp")
 
             
             let td3 = document.createElement("td")
@@ -77,6 +82,7 @@ fetch(url)
             let td4 = document.createElement("td")
             td4.setAttribute('id',result[i].id)
             td4.setAttribute("class","tdp")
+            td4.style.backgroundColor='#d2dd54'
 
             let td41 = document.createElement("td")
             td41.setAttribute('id',`sup_${result[i].id}`)
@@ -121,10 +127,13 @@ fetch(url)
             let tr = document.createElement("tr")
             tr.setAttribute('id', `tr_${result[i].id}`)
 
+            
+
             setTimeout(500)
 
             tr.appendChild(td1)
             tr.appendChild(td11)
+            tr.appendChild(td13)
             tr.appendChild(td12)
             tr.appendChild(td2)
             tr.appendChild(td22)
@@ -148,7 +157,8 @@ fetch(url)
             let campvoll= document.getElementById(`vol_${result[i].id}`)
             document.getElementById(`mo_${result[i].id}`).innerHTML= result[i].id;
             campvoll.innerHTML= voll
-            document.getElementById(`auvol_${result[i].id}`).innerHTML= '000.000';
+            document.getElementById(`gelo_${result[i].id}`).innerHTML= '000.0000000';
+            document.getElementById(`auvol_${result[i].id}`).innerHTML= '0.00';
             document.getElementById(`in_${result[i].id}`).innerHTML= result[i].value;
             document.getElementById(`at_${result[i].id}`).innerHTML= '0.000';
             document.getElementById(`dif_${result[i].id}`).innerHTML= '0.000';
@@ -163,6 +173,10 @@ fetch(url)
             document.getElementById(`max_${result[i].id}`).innerHTML= '0.000';
             document.getElementById(`min_${result[i].id}`).innerHTML= '0.000';
             document.getElementById(`au_${result[i].id}`).innerHTML= '0.000';
+
+
+
+
 
             //colocando cor na coluna Volume vol_XXX
             if(voll < 1.0){
@@ -205,7 +219,7 @@ fetch(url)
         }
         //ajudaa.sort()
         //let jss= JSON.stringify(ajudaa)
-        //console.log(jss)
+        //console.log(ajudaa)
 
     })
 })
@@ -217,7 +231,8 @@ const btnZerar = document.querySelector(".btn");
 btnZerar.addEventListener("click", ativar);
 
 //declarando tag audio
-let audio = document.querySelector('audio')
+const audio = document.querySelector('audio')
+let qtsmoe=[]
 
 function ativar(){
     btnZerar.innerHTML = 'Iniciado'
@@ -266,10 +281,11 @@ function ativar(){
                     objData[o.symbol]= o.priceChangePercent
                     objData2[o.symbol]=o.lastPrice
                     objData3[o.symbol]=o.quoteVolume
+                    objData4[o.symbol]=o.openPrice
                 })
                 result = Object.keys(objData).map(symbol =>{
                     return{
-                        id:symbol.replace('USDT', ''), value: objData[symbol], pro:objData2[symbol], vol:objData3[symbol]
+                        id:symbol.replace('USDT', ''), value: objData[symbol], pro:objData2[symbol], vol:objData3[symbol], open:objData4[symbol]
                     }
                 })
                 .filter(o => Math.abs(o.value) > percquery)    
@@ -283,51 +299,58 @@ function ativar(){
                 document.getElementById('maxac2').innerHTML='0.000'
                 document.getElementById('minac2').innerHTML='0.000'
                 
-                
+                //let ajudaa =''
                 //SEGUNDO FOR
-                for(i =0; i<result.length-1; i++){
+                for(i =0; i<result.length; i++){
+                    //ajudaa= `{"cry":${result[i].id},"gelo":${result[i].pro}},`
+                    //console.log(ajudaa)
                     let moe = result[i].id
                     let preco = result[i].pro
-                    let valperc= result[i].value
-                    let valvol = (result[i].vol/1000000).toFixed(3);
+                    let voll = (result[i].vol/1000000).toFixed(3);
+                    //let valperc= result[i].value
+                
 
-                    let audio = document.querySelector('audio')
+                    
 
-                    //calculo do auento do Volume
-                    if(document.getElementById(`vol_${result[i].id}`)){
-                        let basvol = document.getElementById(`vol_${result[i].id}`).innerHTML
-                        let aumvol = parseFloat(valvol-basvol).toFixed(3)
-                        document.getElementById(`auvol_${result[i].id}`).innerHTML= aumvol
+                    //calculo do aumento %24 gelo---onde era aum vol auvol_
+                    let basgelo=''
+                    let aumgelo=''
+                    if(document.getElementById(`gelo_${result[i].id}`)){
+                        basgelo = document.getElementById(`gelo_${result[i].id}`).innerHTML
+                        aumgelo = parseFloat((preco-basgelo)/basgelo)
+                        
+                    }
+
+                    if(document.getElementById(`auvol_${result[i].id}`)){
+                        document.getElementById(`auvol_${result[i].id}`).innerHTML= (aumgelo*100).toFixed(2)
                     }
 
                     //calculo da DIFSUP diferença entre valor atual e suporte Tabela Principal
-                    let supmom = 0
+                    let supmom = ''
                     let difsup=999.999
                     if(document.getElementById(`sup_${moe}`)){
-                        supmom =  parseFloat(document.getElementById(`sup_${moe}`).innerHTML)
-
-                        difsup = parseFloat(result[i].pro)- parseFloat(supmom) 
-                        document.getElementById(`difsup_${result[i].id}`).innerHTML= difsup.toFixed(8)
+                        supmom = document.getElementById(`sup_${moe}`).innerHTML
+                        difsup = parseFloat(preco-supmom)/parseFloat(supmom)
+                        document.getElementById(`difsup_${result[i].id}`).innerHTML= (difsup*100).toFixed(2)
                     }
                     
                     
                     //let difsup = document.getElementById(`difsup_${result[i].id}`).innerHTML
                     
 
-                    if(Mathsign(difsup)==! 1){
-                    
-                        //if(parseFloat(difsup)<=0){
-
+                    //criando e/ou setando a tabela 2
+                    if(parseFloat(difsup)<=0){
+                        //if(Mathsign(difsup)==! 1){
                         if(document.getElementById(`cryalt_${moe}`)){
 
                             document.getElementById(`resqth_${moe}`).innerHTML= preco; //preço atual
                             document.getElementById(`resumh_${moe}`).innerHTML= supmom; //suporte
-                            document.getElementById(`resqzm_${moe}`).innerHTML= difsup.toFixed(8); //DifSup
+                            document.getElementById(`resqzm_${moe}`).innerHTML= (difsup*100).toFixed(2); //DifSup
 
                         }else{
 
                             //integracao(result[i].id)
-                            console.log(`O par difsup zero é ${moe}`)
+                            //console.log(`O par difsup zero é ${moe}`)
                             //console.log(`O parlength ${par.length}`)
                             //console.log(`O par 1 ${par[0]}`)
 
@@ -396,8 +419,8 @@ function ativar(){
                             tab.appendChild(tr)
                             ///////////////////////////////////
                             document.getElementById(`cryalt_${moe}`).innerHTML= moe; //crypto
-                            document.getElementById(`resmes_${moe}`).innerHTML= valvol ; //volume
-                            document.getElementById(`ressem_${moe}`).innerHTML= valperc; //%24h
+                            document.getElementById(`resmes_${moe}`).innerHTML= '000' ; //volume
+                            document.getElementById(`ressem_${moe}`).innerHTML= '000'; //%24h
 
                             let opesu = document.getElementById(`ope_${moe}`).innerHTML
 
@@ -426,15 +449,15 @@ function ativar(){
                             //atual - sup = difsup
                             document.getElementById(`resqth_${moe}`).innerHTML= preco; //preço atual
                             document.getElementById(`resumh_${moe}`).innerHTML= supmom; //suporte
-                            document.getElementById(`resqzm_${moe}`).innerHTML= difsup.toFixed(8); //DifSup
-                            
-                            let trques = document.getElementById(`trres_${moe}`)
+                            let trques = document.getElementById(`resqzm_${moe}`)
+                            trques.innerHTML= difsup.toFixed(8); //DifSup
                             trques.style.backgroundColor = "#1da548"
                         }
                     }
 
 
                     //calculo do aumento
+                    
                     let qubas= 1;
                     let base = 1;
                     let aumento, aum;
@@ -511,8 +534,10 @@ function ativar(){
                         
                         if(Math.sign(cracum)=== -1 && Math.abs(cracum)>Math.abs(minvlr)){
                             document.getElementById(`min_${moe}`).innerHTML=cracum
-                        }else if(cracum>maxvlr){
+                        }else {
+                            if(Math.sign(cracum)===1 && Math.abs(cracum)>Math.abs(maxvlr)){
                             document.getElementById(`max_${moe}`).innerHTML=cracum
+                            }
                         }
                         
 
@@ -560,10 +585,189 @@ function ativar(){
 
 
                     }else{
-                        console.log(`Nova moeda nao cadastrada: ${moe}`)
+                        
+                        qtsmoe.push(moe)
+                        //console.log(`Nova moeda nao cadastrada: ${moe}`)
+
+
+                        let td1 = document.createElement("td")
+                        td1.setAttribute('id', `mo_${result[i].id}`)
+                        td1.setAttribute("class","td")
+
+                        let td11 = document.createElement("td")
+                        td11.setAttribute('id', `vol_${result[i].id}`)
+                        td11.setAttribute("class","td")
+
+                        let td13 = document.createElement("td")
+                        td13.setAttribute('id',`gelo_${result[i].id}`)
+                        td13.setAttribute("class","tdp")
+
+                        let td12 = document.createElement("td")
+                        td12.setAttribute('id', `auvol_${result[i].id}`)
+                        td12.setAttribute("class","td")
+
+
+                        let td2 = document.createElement("td")
+                        td2.setAttribute('id',`in_${result[i].id}`)
+                        td2.setAttribute("class","td")
+
+                        let td22 = document.createElement("td")
+                        td22.setAttribute('id',`at_${result[i].id}`)
+                        td22.setAttribute("class","td")
+
+                        let td23 = document.createElement("td")
+                        td23.setAttribute('id',`dif_${result[i].id}`)
+                        td23.setAttribute("class","td")
+
+                        let td24 = document.createElement("td")
+                        td24.setAttribute('id',`ope_${result[i].id}`)
+                        td24.setAttribute("class","tdp")
+
+                        
+                        let td3 = document.createElement("td")
+                        td3.setAttribute('id',`pe_${result[i].id}`)
+                        td3.setAttribute("class","tdp")
+                
+                        let td4 = document.createElement("td")
+                        td4.setAttribute('id',result[i].id)
+                        td4.setAttribute("class","tdp")
+                        td4.style.backgroundColor='#d2dd54'
+
+                        let td41 = document.createElement("td")
+                        td41.setAttribute('id',`sup_${result[i].id}`)
+                        td41.setAttribute("class","tdp")
+
+                        let td42 = document.createElement("td")
+                        td42.setAttribute('id',`difsup_${result[i].id}`)
+                        td42.setAttribute("class","tdp")
+
+                        let td43 = document.createElement("td")
+                        td43.setAttribute('id',`qualymes_${result[i].id}`)
+                        td43.setAttribute("class","tdp")
+
+                        let td44 = document.createElement("td")
+                        td44.setAttribute('id',`rmaxtu_${result[i].id}`)
+                        td44.setAttribute("class","td")
+
+                        let tdac = document.createElement("td")
+                        tdac.setAttribute('id',`acu_${result[i].id}`)
+                        tdac.setAttribute("class","td")
+                        tdac.addEventListener('click',()=>{
+                            let valpz= document.getElementById(`${result[i].id}`).innerHTML
+                            document.getElementById(`pe_${result[i].id}`).innerHTML= valpz
+                            tdac.innerHTML='0.000'
+                            tdac.style.backgroundColor= '#ffffff'
+                            let azul = document.getElementById(`max_${result[i].id}`)
+                            azul.style.backgroundColor= '#8d8ec4'
+                        })
+
+                        let tdmx = document.createElement("td")
+                        tdmx.setAttribute('id',`max_${result[i].id}`)
+                        tdmx.setAttribute("class","td")
+
+                        let tdmn = document.createElement("td")
+                        tdmn.setAttribute('id',`min_${result[i].id}`)
+                        tdmn.setAttribute("class","td")
+                
+                        let td5 = document.createElement("td")
+                        td5.setAttribute('id',`au_${result[i].id}`)
+                        td5.setAttribute("class","td")
+                
+                        let tr = document.createElement("tr")
+                        tr.setAttribute('id', `tr_${result[i].id}`)
+
+                        setTimeout(500)
+
+                        tr.appendChild(td1)
+                        tr.appendChild(td11)
+                        tr.appendChild(td13)
+                        tr.appendChild(td12)
+                        tr.appendChild(td2)
+                        tr.appendChild(td22)
+                        tr.appendChild(td23)
+                        tr.appendChild(td24)
+                        tr.appendChild(td3)
+                        tr.appendChild(td4)
+                        tr.appendChild(td41)
+                        tr.appendChild(td42)
+                        tr.appendChild(td43)
+                        tr.appendChild(td44)
+                        tr.appendChild(tdac)
+                        tr.appendChild(tdmx)
+                        tr.appendChild(tdmn)
+                        tr.appendChild(td5)
+                        
+                        let tab = document.getElementById('tbody')
+
+                        tab.appendChild(tr)
+
+                        let campvoll= document.getElementById(`vol_${result[i].id}`)
+                        document.getElementById(`mo_${result[i].id}`).innerHTML= result[i].id;
+                        campvoll.innerHTML= voll
+                        document.getElementById(`gelo_${result[i].id}`).innerHTML= '000.0000000';
+                        document.getElementById(`auvol_${result[i].id}`).innerHTML= '0.00';
+                        document.getElementById(`in_${result[i].id}`).innerHTML= result[i].value;
+                        document.getElementById(`at_${result[i].id}`).innerHTML= '0.000';
+                        document.getElementById(`dif_${result[i].id}`).innerHTML= '0.000';
+                        document.getElementById(`ope_${result[i].id}`).innerHTML= result[i].open;
+                        document.getElementById(`pe_${result[i].id}`).innerHTML= result[i].pro;
+                        document.getElementById(result[i].id).innerHTML= result[i].pro;
+                        document.getElementById(`sup_${result[i].id}`).innerHTML= '000.000';
+                        document.getElementById(`difsup_${result[i].id}`).innerHTML= '999.999';
+                        document.getElementById(`qualymes_${result[i].id}`).innerHTML= '0,0,0';
+                        document.getElementById(`rmaxtu_${result[i].id}`).innerHTML= '0.00';
+                        document.getElementById(`acu_${result[i].id}`).innerHTML= '0.000';
+                        document.getElementById(`max_${result[i].id}`).innerHTML= '0.000';
+                        document.getElementById(`min_${result[i].id}`).innerHTML= '0.000';
+                        document.getElementById(`au_${result[i].id}`).innerHTML= '0.000';
+
+                        //colocando cor na coluna Volume vol_XXX
+                        if(voll < 1.0){
+                            campvoll.style.backgroundColor = "#b51717"; //vermelho escuro
+
+                        }else if(voll >= 1.0 && voll < 2.0){
+                            campvoll.style.backgroundColor = "#f7281d"; //vermelho medio
+
+                        }else if(voll >=2.0 && voll < 3.0){
+                            campvoll.style.backgroundColor = "#f9645c"; //vermelho claro
+
+                        }else if(voll >= 3.0 && voll < 4.0){
+                            campvoll.style.backgroundColor = "#f9a29d"; //laranja-vermelho
+
+                        }else if(voll >=4.0 && voll < 5.0){
+                            campvoll.style.backgroundColor = "#fcdcd1"; //laranja
+
+                        }else if(voll >=5.0 && voll <10.0){
+                            campvoll.style.backgroundColor = "#c5f271"; //amarelo
+
+                        }else if(voll >=10.0 && voll <50.0){
+                            campvoll.style.backgroundColor = "#d2dd54"; //amarelo esverdeado
+
+                        }else if(voll >=50.0 && voll <100.0){
+                            campvoll.style.backgroundColor = "#9db541"; // verde claro
+
+                        }else if(voll >=100.0 && voll <500.0){
+                            campvoll.style.backgroundColor = "#1da548"; // verde medio
+
+                        }else if(voll >=500.0 && voll < 1300.0){
+                            campvoll.style.backgroundColor = "#138437"; // verde escuro
+
+                        }else if(voll >= 1300.0){
+                            campvoll.style.backgroundColor = "#0b5623"; // verde escurao
+
+                        }
+
+                        //console.log(`Entrou ${moe}`)
+                        
+
                     }
 
-        
+                    //console.log(`Quantas moedas nao cadastrada: ${qtsmoe.length}`)
+                    //console.log(`São elas: ${qtsmoe}`)
+
+
+                    //Quarto FOR - OUTRAS CRYO QUE NAO ENTRARAM
+                   
                     setTimeout(500)   //timeout
 
                     grafico(moe, c, cresc)
@@ -636,11 +840,11 @@ function ativar(){
                     
                     
                     if(itemacum>maxpercac){
-                        document.getElementById('maxac').innerHTML= itemacum
+                        document.getElementById('maxac').innerHTML= parseFloat(itemacum)
                         document.getElementById('moemaxac').innerHTML= moe
                     }
                     if(itemacum>maxpercac2){
-                        document.getElementById('maxac2').innerHTML= itemacum
+                        document.getElementById('maxac2').innerHTML= parseFloat(itemacum)
                         document.getElementById('moemaxac2').innerHTML= moe
                     }
                     if(itemacum[0]==='-'&& Math.abs(itemacum)>Math.abs(minpercac)){
@@ -656,9 +860,7 @@ function ativar(){
                             console.log(`ALERTA! Moeda ${moe} atingiu alta de ${itemacum}% no acumulado`)
                             audio.play()
                             document.getElementById('butmaxac').style.backgroundColor = "#138437"
-                            let moelis=[]
-                            moelis=moe
-                            //integracao(moelis)
+                            
                             
                         }
                     }
@@ -670,14 +872,25 @@ function ativar(){
                         }
                     }
 
-                    let perbas =''
-                    if(document.getElementById(`in_${moe}`)){
-                        perbas=document.getElementById(`in_${moe}`).innerHTML
 
-                        let difer= (valperc - perbas).toFixed(3)
+                    //colocando valores na coluna %24at(atual-open)/atual e %24dif(%at-%ini/%ini)
+                    let percat =''
+                    if(document.getElementById(`ope_${moe}`)){
+                        opebas=document.getElementById(`ope_${moe}`).innerHTML
+                        //campo %24 at recebendo valor percat
+                        let parca=  parseFloat(((preco-opebas)/opebas))
+                        let percat= (parca*100).toFixed(2)
+                        document.getElementById(`at_${moe}`).innerHTML= percat
+                        //calculando diferença %24dif(%at-%ini/%ini)
+                        let percin= document.getElementById(`in_${moe}`).innerHTML
+                        let difer =parseFloat((percat- percin)/percin) 
                         let campdif= document.getElementById(`dif_${moe}`)
-                        campdif.innerHTML= difer
-                        document.getElementById(`at_${moe}`).innerHTML= valperc
+                        campdif.innerHTML= (difer*100).toFixed(2)
+                        
+
+
+
+
 
                         // coluna dif %24h recebendo cor
                         if(difer<= -4.0){
@@ -723,6 +936,9 @@ function ativar(){
                     }
                     
                 }
+                //ajudaa.sort()
+                //let jss= JSON.stringify(ajudaa)
+                //console.log(jss)
             })
             
         })
@@ -736,14 +952,18 @@ function ativar(){
         document.getElementById('ttrela').innerHTML= parseInt(tot)
 
 
-
+        if(parseInt(qtsmoe.length)>=1){
+            console.log(`Entraram + ${qtsmoe.length}: ${qtsmoe}`)
+            let qttem = document.getElementById('quantcry').innerHTML
+            let tottem = parseInt(qttem)+ parseInt(qtsmoe.length)
+            document.getElementById('quantcry').innerHTML= tottem
+            lissuporte()
+            gelar()  
+            console.log(`Total: ${tottem} pares/USDT`)
+            
+        }
         
-
-
-
-
-
-
+        
 
         
         if(c>4){
@@ -754,6 +974,8 @@ function ativar(){
         }
         
         c= c+1;
+
+        qtsmoe=[]
     
     }, interval);
     
@@ -906,7 +1128,7 @@ btnacm.addEventListener('click',()=>{
 function quantcry(){
     setTimeout(() => {
         let out= document.getElementsByTagName('tr')
-        document.getElementById('quantcry').innerHTML= out.length-1
+        document.getElementById('quantcry').innerHTML= out.length-2
         
     }, 5000);
     
@@ -939,7 +1161,10 @@ function restart(){
 restart()
 
 
-/////////////////////////
+
+
+
+
 /*
 function integracao(par){
     
