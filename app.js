@@ -92,6 +92,16 @@ fetch(url)
             td42.setAttribute('id',`difsup_${result[i].id}`)
             td42.setAttribute("class","tdp")
 
+            let td411 = document.createElement("td")
+            td411.setAttribute('id',`res_${result[i].id}`)
+            td411.setAttribute("class","tdp")
+
+            let td412 = document.createElement("td")
+            td412.setAttribute('id',`difres_${result[i].id}`)
+            td412.setAttribute("class","tdp")
+
+            
+
             let td43 = document.createElement("td")
             td43.setAttribute('id',`qualymes_${result[i].id}`)
             td43.setAttribute("class","tdp")
@@ -143,6 +153,8 @@ fetch(url)
             tr.appendChild(td4)
             tr.appendChild(td41)
             tr.appendChild(td42)
+            tr.appendChild(td411)
+            tr.appendChild(td412)
             tr.appendChild(td43)
             tr.appendChild(td44)
             tr.appendChild(tdac)
@@ -166,8 +178,10 @@ fetch(url)
             document.getElementById(`pe_${result[i].id}`).innerHTML= result[i].pro;
             document.getElementById(result[i].id).innerHTML= result[i].pro;
             document.getElementById(`sup_${result[i].id}`).innerHTML= '000.000';
-            document.getElementById(`difsup_${result[i].id}`).innerHTML= '999.999';
-            document.getElementById(`qualymes_${result[i].id}`).innerHTML= '0,0,0';
+            document.getElementById(`difsup_${result[i].id}`).innerHTML= '000.00';
+            document.getElementById(`res_${result[i].id}`).innerHTML= '000.000';
+            document.getElementById(`difres_${result[i].id}`).innerHTML= '000.00';
+            document.getElementById(`qualymes_${result[i].id}`).innerHTML= '000';
             document.getElementById(`rmaxtu_${result[i].id}`).innerHTML= '0.00';
             document.getElementById(`acu_${result[i].id}`).innerHTML= '0.000';
             document.getElementById(`max_${result[i].id}`).innerHTML= '0.000';
@@ -328,10 +342,18 @@ function ativar(){
                     //calculo da DIFSUP diferença entre valor atual e suporte Tabela Principal
                     let supmom = ''
                     let difsup=999.999
+                    let resmom=''
+                    let difres=99.99
                     if(document.getElementById(`sup_${moe}`)){
                         supmom = document.getElementById(`sup_${moe}`).innerHTML
-                        difsup = parseFloat(preco-supmom)/parseFloat(supmom)
+                        difsup = parseFloat(preco-supmom)/parseFloat(preco)
                         document.getElementById(`difsup_${result[i].id}`).innerHTML= (difsup*100).toFixed(2)
+                    }
+
+                    if(document.getElementById(`res_${moe}`)){
+                        resmom = document.getElementById(`res_${moe}`).innerHTML
+                        difres = parseFloat(preco-resmom)/parseFloat(preco)
+                        document.getElementById(`difres_${result[i].id}`).innerHTML= (difres*100).toFixed(2)
                     }
                     
                     

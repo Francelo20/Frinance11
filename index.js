@@ -12,19 +12,19 @@ let limit=100
 
 //entsymb('NEO')
 /*
-"1INCH","AAVE","ACH","ACM","ADA","ADX","AGLD","AION","AKRO","ALCX","ALGO","ALICE","ALPACA","ALPHA",
-    "AMP","ANKR","ANT","ANY","API3","AR","ARDR","ARPA","ASR","ATA","ATM","ATOM","AUCTION","AUD","AUDIO","AUTO",
-    "AVA",
-    "AVAX","AXS","BADGER","BAKE","BAL","BAND","BAR","BAT","BCH","BEAM","BEL","BETA","BICO","BLZ","BNB","BNT","BNX",
-    "BOND","BTC","BTCST","BTG","BTS","BTT","BTTC","BURGER", "BUSD","C98","CAKE","CELO","CELR","CFX","CHESS","CHR","CHZ","CITY","CKB",
+
+*/
+let listcoin=[
+    "1INCH","AAVE","ACA","ACH","ACM","ADA","ADX","AGLD","AION","AKRO","ALCX","ALGO","ALICE","ALPACA","ALPHA",
+    "AMP","ANC","ANKR","ANT","ANY","API3","AR","ARDR","ARPA","ASR","ATA","ATM","ATOM","AUCTION","AUD","AUDIO","AUTO",
+    "AVA","AVAX","AXS","BADGER","BAKE","BAL","BAND","BAR","BAT","BCH","BEAM","BEL","BETA","BICO","BLZ","BNB",
+    "BNT","BNX","BOND","BTC","BTCST","BTG","BTS","BTT","BTTC","BURGER", "BUSD","C98","CAKE","CELO","CELR","CFX","CHESS","CHR",
+    "CHZ","CITY","CKB",
     "CLV","COCOS","COMP","COS","COTI","CRV","CTK","CTSI","CTXC","CVC","CVP","CVX","DAR","DASH","DATA","DCR","DEGO","DENT",
     "DEXE","DF","DGB","DIA","DNT","DOCK","DODO","DOGE","DOT","DREP","DUSK","DYDX","EGLD","ELF","ENJ","ENS","EOS","EPS",
     "ERN","ETC","ETH","EUR","FARM","FET","FIDA","FIL","FIO","FIRO","FIS","FLM","FLOW","FLUX","FOR","FORTH","FRONT","FTM","FTT",
-    "FUN","FXS","GALA",
- 
-*/
-let listcoin=[
-    "GBP","GHST","GLMR","GNO","GRT","GTC","GTO","GXS","HARD","HBAR","HIGH","HIVE","HNT","HOT","ICP",
+    "FUN","FXS","GALA","GBP","GHST","GLMR","GNO","GRT","GTC","GTO","GXS","HARD","HBAR","HIGH","HIVE","HNT",
+    "HOT","ICP",
     "ICX","IDEX","ILV","IMX","INJ","IOST","IOTA","IOTX","IRIS","JASMY","JOE","JST","JUV","KAVA","KEEP","KEY","KLAY","KMD","KNC","KP3R","KSM",
     "LAZIO","LINA","LINK","LIT","LOKA","LPT","LRC","LSK","LTC","LTO","LUNA","MANA","MASK","MATIC","MBL","MBOX","MC","MDT","MDX","MFT",
     "MINA","MIR","MITH","MKR","MLN","MOVR","MTL","NANO","NBS","NEAR","NEO","NKN","NMR","NU","NULS","OCEAN","OG","OGN","OM","OMG","ONE",
@@ -32,8 +32,9 @@ let listcoin=[
     "PYR","QI","QNT","QTUM","QUICK","RAD","RAMP","RARE","RAY","REEF","REN","REP","REQ","RGT","RIF","RLC","RNDR","ROSE","RSR",
     "RUNE","RVN","SAND","SANTOS","SC","SCRT","SFP","SHIB","SKL","SLP","SNX","SOL","SPELL","SRM","STMX","STORJ","STPT","STRAX","STX","SUN","SUPER","SUSD",
     "SUSHI","SXP","SYS","TCT","TFUEL","THETA","TKO","TLM","TOMO","TORN","TRB","TRIBE","TROY","TRU","TRX","TUSD","TVK","TWT","UMA","UNFI","UNI",
-    "USDC","USDP","UST","UTK","VET","VGX","VIDT","VITE","VOXEL","VTHO","WAN","WAVES","WAXP","WIN","WING","WNXM","WRX","WTC",
-    "XEC","XEM","XLM","XMR","XRP","XTZ","XVG","XVS","YFI","YFII","YGG","ZEC","ZEN","ZIL","ZRX"
+    "USDC","USDP","UST","UTK","VET","VGX","VIDT","VITE","VOXEL","VTHO","WAN","WAVES","WAXP",
+    "WIN","WING","WNXM","WRX","WTC",
+    "XEC","XEM","XLM","XMR","XNO","XRP","XTZ","XVG","XVS","YFI","YFII","YGG","ZEC","ZEN","ZIL","ZRX"
 ]
 
 
@@ -47,7 +48,7 @@ setInterval(() => {
         console.log('acabou')
     }
     
-}, 12000);
+}, 4000);
     
 
 
@@ -223,6 +224,10 @@ function entsymb(symboll){
             //console.log('...........................')
             let tentsort = colec[8].min.sort()
             tentsort =colec[8].min.reverse()
+            tentsort=colec[8].min[0]
+
+            let tentresis= colec[8].max.sort()
+            tentresis=colec[8].max[0]
             limit =parseInt(list[0].mes-2) // -1 tirando 1 ou 2 do Maximo p proxima chamada
             if(parseInt(limit)>=2){        // >=2 chegando a chamada até num minimo de velas
                 chamar(limit)
@@ -237,8 +242,22 @@ function entsymb(symboll){
                //blook console.log(`Crypto: ${colec[8].val}  Intervalos:${listart.length}  Rodadas:${colec[8].rod} Atual: ${list[2].val}`)
 
                if(interval==='1M'){
-                    console.log(`{"cryp":"${symboll}", "sup":[${tentsort}], "qualymes":[${colec[0].val}], "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val}},`)
-                    //console.log(`{"cryp":"${symboll}","atual":${list[2].val}},`)
+                   if(colec[0].val[3]){
+                        console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":${tentresis}, "qualymes":${colec[0].val[0]}${colec[0].val[1]}${colec[0].val[2]}${colec[0].val[3]}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val}, "final":""},`)
+                        //console.log(`{"cryp":"${symboll}","atual":${list[2].val}},`)
+
+                   }else if(colec[0].val[2]){
+                    console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":${tentresis}, "qualymes":${colec[0].val[0]}${colec[0].val[1]}${colec[0].val[2]}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"final":""},`)
+
+
+                   }else if(colec[0].val[1]){
+                    console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":${tentresis}, "qualymes":${colec[0].val[0]}${colec[0].val[1]}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"final":""},`)
+
+                   }else{
+                    console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":${tentresis}, "qualymes":${colec[0].val[0]}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"final":""},`)
+
+                   }
+                    
 
                }
                 /*

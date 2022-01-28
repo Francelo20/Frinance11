@@ -91,6 +91,15 @@ async function candle(symbol='BNBUSDT', interval='1w', limit=500){ //=40
     return res
 }
 
+async function aggtrades(symbol='BNBUSDT'){ //=40
+    
+    //console.log(`Moeda ${symbol}  - ${interval}/${interval} - ${limit}`)
+    //console.log('..............................')
+    const res =await publicCall('/v3/aggTrades',{symbol});
+    //console.log('res.length: '+res.length)
+    return res
+}
+
 
 
 async function exchangeInfo(){
@@ -98,4 +107,4 @@ async function exchangeInfo(){
 }
 
 
-module.exports= {time, depth, exchangeInfo, accountInfo, publicCall, privateCall, newOrder, candle}
+module.exports= {time, depth, exchangeInfo, accountInfo, publicCall, privateCall, newOrder, candle, aggtrades}
