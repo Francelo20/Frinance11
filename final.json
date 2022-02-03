@@ -1,0 +1,639 @@
+[
+    {"cry": "1INCH","volume": 7.849,"gelo": 1.684,"percgel": 1.25,"percin": 1.662,"percat": 1.19,"difpercatin": -28.4,"preop": 1.685,"prein": 1.713,"preat": 1.705,"presup": 1.718,"difsupperc": -0.76, "preres": 1.738,"difresperc": -1.94,"qualymes":633,"rmaxtu": 0.4,"acumperc": -0.467,"maxperc": 0.117,"minperc": -0.467,"aumeperc": -0.409, "final": 0.487},
+
+{"cry": "AAVE","volume": 12.884,"gelo": 162.8,"percgel": -1.04,"percin": -3.003,"percat": -3.24,"difpercatin": 7.89,"preop": 166.5,"prein": 161.5,"preat": 161.1,"presup": 25.939,"difsupperc": 83.9, "preres": 162.3,"difresperc": -0.74,"qualymes":633,"rmaxtu": 0.47,"acumperc": -0.248,"maxperc": 0.248,"minperc": -0.248,"aumeperc": -0.371, "final": 0.588},
+
+{"cry": "ACA","volume": 2.997,"gelo": 1.491,"percgel": -4.09,"percin": -5.354,"percat": -5.49,"difpercatin": 2.54,"preop": 1.513,"prein": 1.432,"preat": 1.43,"presup": 1.41,"difsupperc": 1.4, "preres": 1.499,"difresperc": -4.83,"qualymes":3,"rmaxtu": 0.5,"acumperc": -0.14,"maxperc": 0.14,"minperc": -0.14,"aumeperc": -0.279, "final": 0.439},
+
+{"cry": "ACH","volume": 1.705,"gelo": 0.0395,"percgel": -2.71,"percin": -3.35,"percat": -3.93,"difpercatin": 17.31,"preop": 0.04,"prein": 0.03866,"preat": 0.03843,"presup": 0.03849,"difsupperc": -0.16, "preres": 0.03903,"difresperc": -1.56,"qualymes":3,"rmaxtu": 0.5,"acumperc": -0.595,"maxperc": 0.155,"minperc": -0.595,"aumeperc": -0.492, "final": 1.615},
+
+{"cry": "ACM","volume": 0.154,"gelo": 4.195,"percgel": 0.12,"percin": 1.786,"percat": 1.35,"difpercatin": -24.41,"preop": 4.144,"prein": 4.218,"preat": 4.2,"presup": 4.23,"difsupperc": -0.71, "preres": 16.584,"difresperc": -294.86,"qualymes":3333,"rmaxtu": 0.08,"acumperc": -0.427,"maxperc": 0,"minperc": -0.427,"aumeperc": -0.427, "final": 0.376},
+
+{"cry": "ADA","volume": 122.592,"gelo": 1.069,"percgel": -0.28,"percin": 0.469,"percat": 0.09,"difpercatin": -80.81,"preop": 1.065,"prein": 1.07,"preat": 1.066,"presup": 1.066,"difsupperc": 0, "preres": 1.083,"difresperc": -1.59,"qualymes":63,"rmaxtu": 0.89,"acumperc": -0.374,"maxperc": 0.093,"minperc": -0.374,"aumeperc": -0.281, "final": 0.48},
+
+{"cry": "ADX","volume": 2.312,"gelo": 0.4242,"percgel": 3.87,"percin": 3.513,"percat": 3.19,"difpercatin": -9.19,"preop": 0.427,"prein": 0.442,"preat": 0.4406,"presup": 0.4391,"difsupperc": 0.34, "preres": 0.4477,"difresperc": -1.61,"qualymes":33,"rmaxtu": 0.2,"acumperc": -0.317,"maxperc": 0.317,"minperc": -0.317,"aumeperc": -0.519, "final": 1.294},
+
+{"cry": "AGLD","volume": 107.38,"gelo": 1.054,"percgel": 47.15,"percin": 62.947,"percat": 63.26,"difpercatin": 0.5,"preop": 0.95,"prein": 1.548,"preat": 1.551,"presup": 1.66,"difsupperc": -7.03, "preres": 1.758,"difresperc": -13.35,"qualymes":33,"rmaxtu": 0.2,"acumperc": 0.194,"maxperc": 0.904,"minperc": 0,"aumeperc": -0.513, "final": 7.718},
+
+{"cry": "AION","volume": 2.233,"gelo": 0.0914,"percgel": 0.88,"percin": 2.21,"percat": 1.88,"difpercatin": -14.93,"preop": 0.0905,"prein": 0.0925,"preat": 0.0922,"presup": 0.09,"difsupperc": 2.39, "preres": 0.0984,"difresperc": -6.72,"qualymes":63,"rmaxtu": 0.64,"acumperc": -0.324,"maxperc": 0.108,"minperc": -0.324,"aumeperc": -0.432, "final": -0.221},
+
+{"cry": "AKRO","volume": 1.146,"gelo": 0.01345,"percgel": 0.22,"percin": 0.223,"percat": 0,"difpercatin": -100,"preop": 0.01348,"prein": 0.01351,"preat": 0.01348,"presup": 0.01348,"difsupperc": 0, "preres": 0.01363,"difresperc": -1.11,"qualymes":63,"rmaxtu": 0.38,"acumperc": -0.222,"maxperc": 0.37,"minperc": -0.222,"aumeperc": -0.59, "final": 0.31},
+
+{"cry": "ALCX","volume": 1.808,"gelo": 178,"percgel": -2.02,"percin": -5.354,"percat": -5.68,"difpercatin": 6.09,"preop": 184.9,"prein": 175,"preat": 174.4,"presup": 175.9,"difsupperc": -0.86, "preres": 177.4,"difresperc": -1.72,"qualymes":3,"rmaxtu": 0.25,"acumperc": -0.343,"maxperc": 0,"minperc": -0.343,"aumeperc": -0.343, "final": 0},
+
+{"cry": "ALGO","volume": 33.609,"gelo": 0.9777,"percgel": 2.79,"percin": 3.409,"percat": 3.19,"difpercatin": -6.42,"preop": 0.9739,"prein": 1.0071,"preat": 1.005,"presup": 1.0174,"difsupperc": -1.23, "preres": 1.0212,"difresperc": -1.61,"qualymes":36,"rmaxtu": 0.03,"acumperc": -0.209,"maxperc": 0.328,"minperc": -0.209,"aumeperc": -0.337, "final": -0.145},
+
+{"cry": "ALICE","volume": 21.839,"gelo": 7.28,"percgel": 0.69,"percin": 1.097,"percat": 0.55,"difpercatin": -49.86,"preop": 7.29,"prein": 7.37,"preat": 7.33,"presup": 7.39,"difsupperc": -0.82, "preres": 11.37,"difresperc": -55.12,"qualymes":36,"rmaxtu": 0.08,"acumperc": -0.543,"maxperc": 0.271,"minperc": -0.543,"aumeperc": -0.543, "final": 0.429},
+
+{"cry": "ALPACA","volume": 1.3,"gelo": 0.3648,"percgel": 0.16,"percin": -0.864,"percat": -1.32,"difpercatin": 52.78,"preop": 0.3703,"prein": 0.3671,"preat": 0.3654,"presup": 0.3682,"difsupperc": -0.77, "preres": 0.3726,"difresperc": -1.97,"qualymes":33,"rmaxtu": 0.14,"acumperc": -0.463,"maxperc": 0.054,"minperc": -0.463,"aumeperc": -0.517, "final": 0.198},
+
+{"cry": "ALPHA","volume": 1.55,"gelo": 0.3871,"percgel": -0.34,"percin": -2.372,"percat": -2.65,"difpercatin": 11.72,"preop": 0.3963,"prein": 0.3869,"preat": 0.3858,"presup": 0.3881,"difsupperc": -0.6, "preres": 0.3898,"difresperc": -1.04,"qualymes":6333,"rmaxtu": 0.29,"acumperc": -0.284,"maxperc": 0.181,"minperc": -0.284,"aumeperc": -0.464, "final": 0.673},
+
+{"cry": "AMP","volume": 1.093,"gelo": 0.0304,"percgel": 0.82,"percin": -0.098,"percat": -0.36,"difpercatin": 267.35,"preop": 0.03076,"prein": 0.03073,"preat": 0.03065,"presup": 0.024,"difsupperc": 21.7, "preres": 0.08,"difresperc": -161.01,"qualymes":3,"rmaxtu": 0.25,"acumperc": -0.26,"maxperc": 0.033,"minperc": -0.26,"aumeperc": 0, "final": -0.439},
+
+{"cry": "ANC","volume": 0.689,"gelo": 1.565,"percgel": -2.88,"percin": -1.929,"percat": -2.25,"difpercatin": 16.64,"preop": 1.555,"prein": 1.525,"preat": 1.52,"presup": 1.253,"difsupperc": 17.57, "preres": 1.98,"difresperc": -30.26,"qualymes":3,"rmaxtu": 0.5,"acumperc": -0.328,"maxperc": 0,"minperc": -0.328,"aumeperc": -0.328, "final": -0.469},
+
+{"cry": "ANKR","volume": 5.941,"gelo": 0.07822,"percgel": 0.56,"percin": 0.78,"percat": 0.54,"difpercatin": -30.77,"preop": 0.07824,"prein": 0.07885,"preat": 0.07866,"presup": 0.07939,"difsupperc": -0.93, "preres": 0.07979,"difresperc": -1.44,"qualymes":66,"rmaxtu": 0.66,"acumperc": -0.241,"maxperc": 0.216,"minperc": -0.241,"aumeperc": -0.456, "final": 1.236},
+
+{"cry": "ANT","volume": 38.682,"gelo": 7.41,"percgel": 13.2,"percin": 10.267,"percat": 9.85,"difpercatin": -4.06,"preop": 7.636,"prein": 8.42,"preat": 8.388,"presup": 8.361,"difsupperc": 0.32, "preres": 14.293,"difresperc": -70.4,"qualymes":366,"rmaxtu": 0.05,"acumperc": -0.38,"maxperc": 0.083,"minperc": -0.38,"aumeperc": -0.368, "final": 0.024},
+
+{"cry": "ANY","volume": 1.747,"gelo": 19.57,"percgel": 2.45,"percin": 0.499,"percat": 0.15,"difpercatin": -69.94,"preop": 20.02,"prein": 20.12,"preat": 20.05,"presup": 19.36,"difsupperc": 3.44, "preres": 20.42,"difresperc": -1.85,"qualymes":6,"rmaxtu": 0.67,"acumperc": -0.348,"maxperc": 0,"minperc": -0.348,"aumeperc": -0.348, "final": 0.359},
+
+{"cry": "API3","volume": 4.41,"gelo": 3.475,"percgel": 3.25,"percin": 3.362,"percat": 3.1,"difpercatin": -7.79,"preop": 3.48,"prein": 3.597,"preat": 3.588,"presup": 3.331,"difsupperc": 7.16, "preres": 7.22,"difresperc": -101.23,"qualymes":3,"rmaxtu": 0.5,"acumperc": -0.25,"maxperc": 0.056,"minperc": -0.25,"aumeperc": -0.306, "final": 1.343},
+
+{"cry": "AR","volume": 19.438,"gelo": 40.4,"percgel": -4.55,"percin": -2.546,"percat": -2.8,"difpercatin": 9.98,"preop": 39.67,"prein": 38.66,"preat": 38.56,"presup": 7.101,"difsupperc": 81.58, "preres": 41.82,"difresperc": -8.45,"qualymes":6,"rmaxtu": 0.7,"acumperc": -0.259,"maxperc": 0.103,"minperc": -0.259,"aumeperc": -0.284, "final": 0.027},
+
+{"cry": "ARDR","volume": 0.603,"gelo": 0.1806,"percgel": 1.66,"percin": 2.211,"percat": 1.49,"difpercatin": -32.61,"preop": 0.1809,"prein": 0.1849,"preat": 0.1836,"presup": 0.1839,"difsupperc": -0.16, "preres": 0.1842,"difresperc": -0.33,"qualymes":663,"rmaxtu": 0.55,"acumperc": -0.703,"maxperc": 0.162,"minperc": -0.703,"aumeperc": -0.864, "final": 1.767},
+
+{"cry": "ARPA","volume": 1.449,"gelo": 0.06226,"percgel": 1.43,"percin": 0.619,"percat": 0.3,"difpercatin": -51.53,"preop": 0.06296,"prein": 0.06335,"preat": 0.06315,"presup": 0.00326,"difsupperc": 94.84, "preres": 0.27525,"difresperc": -335.87,"qualymes":6,"rmaxtu": 0.89,"acumperc": -0.316,"maxperc": 0.126,"minperc": -0.316,"aumeperc": -0.316, "final": 0.563},
+
+{"cry": "ASR","volume": 0.12,"gelo": 3.12,"percgel": 0.1,"percin": 0.804,"percat": 0.42,"difpercatin": -47.76,"preop": 3.11,"prein": 3.135,"preat": 3.123,"presup": 3.134,"difsupperc": -0.35, "preres": 11.653,"difresperc": -273.13,"qualymes":3333,"rmaxtu": 0.07,"acumperc": -0.383,"maxperc": 0.032,"minperc": -0.383,"aumeperc": -0.415, "final": 0.264},
+
+{"cry": "ATA","volume": 1.489,"gelo": 0.4076,"percgel": 1.5,"percin": 1.636,"percat": 1,"difpercatin": -38.88,"preop": 0.4096,"prein": 0.4163,"preat": 0.4137,"presup": 0.4059,"difsupperc": 1.89, "preres": 0.421,"difresperc": -1.76,"qualymes":33,"rmaxtu": 0.11,"acumperc": -0.625,"maxperc": 0.12,"minperc": -0.625,"aumeperc": -0.744, "final": 0},
+
+{"cry": "ATM","volume": 0.206,"gelo": 5.34,"percgel": -0.19,"percin": 0.375,"percat": 0,"difpercatin": -100,"preop": 5.33,"prein": 5.35,"preat": 5.33,"presup": 5.32,"difsupperc": 0.19, "preres": 13.9,"difresperc": -160.79,"qualymes":633,"rmaxtu": 0.4,"acumperc": -0.374,"maxperc": 0,"minperc": -0.374,"aumeperc": -0.374, "final": 0.591},
+
+{"cry": "ATOM","volume": 72.381,"gelo": 28.72,"percgel": -2.05,"percin": -2.721,"percat": -3.1,"difpercatin": 13.93,"preop": 29.03,"prein": 28.24,"preat": 28.13,"presup": 28.47,"difsupperc": -1.21, "preres": 28.87,"difresperc": -2.63,"qualymes":66,"rmaxtu": 0.86,"acumperc": -0.39,"maxperc": 0.248,"minperc": -0.39,"aumeperc": -0.39, "final": 1.257},
+
+{"cry": "AUCTION","volume": 0.677,"gelo": 14.48,"percgel": 0.55,"percin": -0.069,"percat": -0.14,"difpercatin": 102.9,"preop": 14.58,"prein": 14.57,"preat": 14.56,"presup": 11.66,"difsupperc": 19.92, "preres": 43.79,"difresperc": -200.76,"qualymes":3,"rmaxtu": 0.4,"acumperc": -0.069,"maxperc": 0.412,"minperc": -0.069,"aumeperc": -0.478, "final": 0.434},
+
+{"cry": "AUD","volume": 15.455,"gelo": 0.7099,"percgel": 0.32,"percin": 0.636,"percat": 0.59,"difpercatin": -7.23,"preop": 0.708,"prein": 0.7125,"preat": 0.7122,"presup": 0.7131,"difsupperc": -0.13, "preres": 0.7142,"difresperc": -0.28,"qualymes":3333,"rmaxtu": 0.21,"acumperc": -0.042,"maxperc": 0.014,"minperc": -0.042,"aumeperc": -0.042, "final": -0.042},
+
+{"cry": "AUDIO","volume": 7.69,"gelo": 0.99,"percgel": -2.83,"percin": -3.774,"percat": -4.47,"difpercatin": 18.44,"preop": 1.007,"prein": 0.969,"preat": 0.962,"presup": 0.965,"difsupperc": -0.31, "preres": 0.97,"difresperc": -0.83,"qualymes":66,"rmaxtu": 0.35,"acumperc": -0.722,"maxperc": 0.103,"minperc": -0.722,"aumeperc": -0.62, "final": -0.324},
+
+{"cry": "AUTO","volume": 0.633,"gelo": 416.8,"percgel": -0.19,"percin": -0.735,"percat": -1.42,"difpercatin": 93.2,"preop": 422,"prein": 418.9,"preat": 416,"presup": 419.7,"difsupperc": -0.89, "preres": 1039.8,"difresperc": -149.95,"qualymes":333,"rmaxtu": 0.09,"acumperc": -0.692,"maxperc": 0,"minperc": -0.692,"aumeperc": -0.692, "final": -0.546},
+
+{"cry": "AVA","volume": 0.552,"gelo": 1.167,"percgel": -1.03,"percin": -1.024,"percat": -1.45,"difpercatin": 41.6,"preop": 1.172,"prein": 1.16,"preat": 1.155,"presup": 1.149,"difsupperc": 0.52, "preres": 1.176,"difresperc": -1.82,"qualymes":633,"rmaxtu": 0.38,"acumperc": -0.431,"maxperc": 0,"minperc": -0.431,"aumeperc": -0.431, "final": 0.178},
+
+{"cry": "AVAX","volume": 126.416,"gelo": 71.58,"percgel": 3.05,"percin": 4.596,"percat": 4.3,"difpercatin": -6.44,"preop": 70.72,"prein": 73.97,"preat": 73.76,"presup": 72.91,"difsupperc": 1.15, "preres": 147,"difresperc": -99.3,"qualymes":6,"rmaxtu": 0.83,"acumperc": -0.284,"maxperc": 0.243,"minperc": -0.284,"aumeperc": -0.526, "final": 0.416},
+
+{"cry": "AXS","volume": 44.558,"gelo": 53.05,"percgel": -1.07,"percin": -2.787,"percat": -3.14,"difpercatin": 12.67,"preop": 54.18,"prein": 52.67,"preat": 52.48,"presup": 0.1,"difsupperc": 99.81, "preres": 166.09,"difresperc": -216.48,"qualymes":6,"rmaxtu": 0.81,"acumperc": -0.361,"maxperc": 0.266,"minperc": -0.361,"aumeperc": -0.455, "final": 0.52},
+
+{"cry": "BADGER","volume": 1.542,"gelo": 11.06,"percgel": -1.45,"percin": -2.313,"percat": -3.02,"difpercatin": 30.57,"preop": 11.24,"prein": 10.98,"preat": 10.9,"presup": 8.28,"difsupperc": 24.04, "preres": 11.3,"difresperc": -3.67,"qualymes":36,"rmaxtu": 0.08,"acumperc": -0.729,"maxperc": 0.273,"minperc": -0.729,"aumeperc": -0.729, "final": 0.095},
+
+{"cry": "BAKE","volume": 3.945,"gelo": 0.631,"percgel": 3.33,"percin": 2.188,"percat": 1.88,"difpercatin": -14.08,"preop": 0.64,"prein": 0.654,"preat": 0.652,"presup": 0.651,"difsupperc": 0.15, "preres": 0.655,"difresperc": -0.46,"qualymes":333,"rmaxtu": 0.18,"acumperc": -0.306,"maxperc": 0.153,"minperc": -0.306,"aumeperc": -0.306, "final": 0.157},
+
+{"cry": "BAL","volume": 0.989,"gelo": 12.56,"percgel": -0.48,"percin": -1.025,"percat": -1.42,"difpercatin": 38.54,"preop": 12.68,"prein": 12.55,"preat": 12.5,"presup": 8.375,"difsupperc": 33, "preres": 12.62,"difresperc": -0.96,"qualymes":633,"rmaxtu": 0.53,"acumperc": -0.398,"maxperc": 0.159,"minperc": -0.398,"aumeperc": -0.557, "final": 0.25},
+
+{"cry": "BAND","volume": 2.706,"gelo": 3.525,"percgel": -0.96,"percin": -1.325,"percat": -1.61,"difpercatin": 21.51,"preop": 3.548,"prein": 3.501,"preat": 3.491,"presup": 3.501,"difsupperc": -0.29, "preres": 10.087,"difresperc": -188.94,"qualymes":633,"rmaxtu": 0.67,"acumperc": -0.286,"maxperc": 0.371,"minperc": -0.286,"aumeperc": -0.655, "final": 1.045},
+
+{"cry": "BAR","volume": 0.519,"gelo": 6.25,"percgel": 1.28,"percin": 0.954,"percat": 0.64,"difpercatin": -32.91,"preop": 6.29,"prein": 6.35,"preat": 6.33,"presup": 6.36,"difsupperc": -0.47, "preres": 10.76,"difresperc": -69.98,"qualymes":333,"rmaxtu": 0.09,"acumperc": -0.315,"maxperc": 0.315,"minperc": -0.315,"aumeperc": -0.628, "final": 0.165},
+
+{"cry": "BAT","volume": 6.436,"gelo": 0.8429,"percgel": 1.02,"percin": 0.685,"percat": 0.51,"difpercatin": -25.55,"preop": 0.8472,"prein": 0.853,"preat": 0.8515,"presup": 0.8358,"difsupperc": 1.84, "preres": 0.863,"difresperc": -1.35,"qualymes":6,"rmaxtu": 0.92,"acumperc": -0.176,"maxperc": 0.106,"minperc": -0.176,"aumeperc": -0.281, "final": 0.086},
+
+{"cry": "BCH","volume": 14.38,"gelo": 286.2,"percgel": 1.99,"percin": 1.739,"percat": 1.5,"difpercatin": -13.74,"preop": 287.6,"prein": 292.6,"preat": 291.9,"presup": 293.9,"difsupperc": -0.69, "preres": 1650,"difresperc": -465.26,"qualymes":633,"rmaxtu": 0.68,"acumperc": -0.239,"maxperc": 0.171,"minperc": -0.239,"aumeperc": -0.375, "final": 0.387},
+
+{"cry": "BEAM","volume": 1.643,"gelo": 0.3585,"percgel": -3.43,"percin": -3.659,"percat": -4.05,"difpercatin": 10.69,"preop": 0.3608,"prein": 0.3476,"preat": 0.3462,"presup": 0.3445,"difsupperc": 0.49, "preres": 0.3533,"difresperc": -2.05,"qualymes":63,"rmaxtu": 0.67,"acumperc": -0.403,"maxperc": 0.115,"minperc": -0.403,"aumeperc": -0.374, "final": 0.211},
+
+{"cry": "BEL","volume": 1.029,"gelo": 0.93,"percgel": 2.37,"percin": 1.592,"percat": 1.06,"difpercatin": -33.42,"preop": 0.942,"prein": 0.957,"preat": 0.952,"presup": 0.958,"difsupperc": -0.63, "preres": 0.963,"difresperc": -1.16,"qualymes":3333,"rmaxtu": 0.06,"acumperc": -0.522,"maxperc": 0.104,"minperc": -0.522,"aumeperc": -0.626, "final": 0.22},
+
+{"cry": "BETA","volume": 4.367,"gelo": 0.3942,"percgel": 3.02,"percin": 3.108,"percat": 2.36,"difpercatin": -24.07,"preop": 0.39675,"prein": 0.40908,"preat": 0.40611,"presup": 0.40154,"difsupperc": 1.13, "preres": 0.4195,"difresperc": -3.3,"qualymes":33,"rmaxtu": 0.2,"acumperc": -0.726,"maxperc": 0,"minperc": -0.726,"aumeperc": -0.505, "final": -0.329},
+
+{"cry": "BICO","volume": 7.231,"gelo": 2.034,"percgel": -2.02,"percin": -8.065,"percat": -8.16,"difpercatin": 1.18,"preop": 2.17,"prein": 1.995,"preat": 1.993,"presup": 1.914,"difsupperc": 3.96, "preres": 2.2,"difresperc": -10.39,"qualymes":3,"rmaxtu": 0.33,"acumperc": -0.1,"maxperc": 0.05,"minperc": -0.1,"aumeperc": -0.15, "final": 0.522},
+
+{"cry": "BLZ","volume": 2.021,"gelo": 0.1353,"percgel": 0.52,"percin": 0.22,"percat": -0.29,"difpercatin": -231.82,"preop": 0.1364,"prein": 0.1367,"preat": 0.136,"presup": 0.1356,"difsupperc": 0.29, "preres": 0.1368,"difresperc": -0.59,"qualymes":63,"rmaxtu": 0.42,"acumperc": -0.512,"maxperc": 0.146,"minperc": -0.512,"aumeperc": -0.512, "final": 0.077},
+
+{"cry": "BNB","volume": 178.182,"gelo": 384.7,"percgel": -1.14,"percin": -0.961,"percat": -1.2,"difpercatin": 24.87,"preop": 384.9,"prein": 381.2,"preat": 380.3,"presup": 6.38,"difsupperc": 98.32, "preres": 385.4,"difresperc": -1.34,"qualymes":66,"rmaxtu": 0.83,"acumperc": -0.236,"maxperc": 0.157,"minperc": -0.236,"aumeperc": -0.262, "final": 0.486},
+
+{"cry": "BNT","volume": 0.261,"gelo": 2.539,"percgel": -0.71,"percin": -1.442,"percat": -1.72,"difpercatin": 19.28,"preop": 2.565,"prein": 2.528,"preat": 2.521,"presup": 2.543,"difsupperc": -0.87, "preres": 2.547,"difresperc": -1.03,"qualymes":63,"rmaxtu": 0.56,"acumperc": -0.277,"maxperc": 0.119,"minperc": -0.277,"aumeperc": -0.316, "final": 0.996},
+
+{"cry": "BNX","volume": 1.746,"gelo": 20.1,"percgel": 3.48,"percin": 3.98,"percat": 3.48,"difpercatin": -12.56,"preop": 20.1,"prein": 20.9,"preat": 20.8,"presup": 21,"difsupperc": -0.96, "preres": 109.7,"difresperc": -427.4,"qualymes":3,"rmaxtu": 0.25,"acumperc": -0.478,"maxperc": 0,"minperc": -0.478,"aumeperc": 0, "final": 0},
+
+{"cry": "BOND","volume": 1.725,"gelo": 9.9,"percgel": 1.11,"percin": 1.109,"percat": 0.91,"difpercatin": -17.94,"preop": 9.92,"prein": 10.03,"preat": 10.01,"presup": 9.85,"difsupperc": 1.6, "preres": 10.33,"difresperc": -3.2,"qualymes":33,"rmaxtu": 0.5,"acumperc": -0.199,"maxperc": 0.1,"minperc": -0.199,"aumeperc": -0.199, "final": 0.418},
+
+{"cry": "BTC","volume": 1104.574,"gelo": 38533.14,"percgel": -1.03,"percin": -1.441,"percat": -1.86,"difpercatin": 29.08,"preop": 38856.41,"prein": 38296.48,"preat": 38135.19,"presup": 32917.17,"difsupperc": 13.68, "preres": 69000,"difresperc": -80.94,"qualymes":6,"rmaxtu": 0.95,"acumperc": -0.421,"maxperc": 0.198,"minperc": -0.421,"aumeperc": -0.442, "final": 0.26},
+
+{"cry": "BTCST","volume": 1.149,"gelo": 15.09,"percgel": 0.46,"percin": -0.131,"percat": -0.46,"difpercatin": 251.15,"preop": 15.23,"prein": 15.21,"preat": 15.16,"presup": 8,"difsupperc": 47.23, "preres": 1000,"difresperc": -6496.31,"qualymes":3363,"rmaxtu": 0.07,"acumperc": -0.329,"maxperc": 0.263,"minperc": -0.329,"aumeperc": -0.59, "final": 0.822},
+
+{"cry": "BTG","volume": 0.412,"gelo": 29.68,"percgel": 4.11,"percin": 4.32,"percat": 3.48,"difpercatin": -19.44,"preop": 29.86,"prein": 31.15,"preat": 30.9,"presup": 31.09,"difsupperc": -0.61, "preres": 169,"difresperc": -446.93,"qualymes":333,"rmaxtu": 0.18,"acumperc": -0.803,"maxperc": 0,"minperc": -0.803,"aumeperc": -0.803, "final": 0},
+
+{"cry": "BTS","volume": 0.921,"gelo": 0.02449,"percgel": 0.69,"percin": 1.269,"percat": 0.94,"difpercatin": -25.93,"preop": 0.02443,"prein": 0.02474,"preat": 0.02466,"presup": 0.02486,"difsupperc": -0.81, "preres": 0.02518,"difresperc": -2.11,"qualymes":633,"rmaxtu": 0.6,"acumperc": -0.323,"maxperc": 0,"minperc": -0.323,"aumeperc": -0.323, "final": 0.551},
+
+{"cry": "BTT","volume": 32.648,"gelo": 0.002601,"percgel": 6.77,"percin": 8.139,"percat": 8.14,"difpercatin": 0.01,"preop": 0.002568,"prein": 0.002777,"preat": 0.002777,"presup": 0.00271,"difsupperc": 2.41, "preres": 0.00278,"difresperc": -0.11,"qualymes":663,"rmaxtu": 0.76,"acumperc": 0,"maxperc": 0,"minperc": 0,"aumeperc": 0, "final": 0},
+
+{"cry": "BTTC","volume": 10.988,"gelo": 0.00000217,"percgel": -1.84,"percin": -2.74,"percat": -2.74,"difpercatin": 0,"preop": 0.00000219,"prein": 0.00000213,"preat": 0.00000213,"presup": 0.00000214,"difsupperc": -0.47, "preres": 0.00000215,"difresperc": -0.94,"qualymes":3,"rmaxtu": 0.5,"acumperc": 0,"maxperc": 0,"minperc": -0.469,"aumeperc": 0, "final": 0},
+
+{"cry": "BURGER","volume": 0.947,"gelo": 1.811,"percgel": -1.99,"percin": -2.678,"percat": -3.01,"difpercatin": 12.4,"preop": 1.83,"prein": 1.781,"preat": 1.775,"presup": 1.773,"difsupperc": 0.11, "preres": 1.784,"difresperc": -0.51,"qualymes":333,"rmaxtu": 0.18,"acumperc": -0.337,"maxperc": 0.056,"minperc": -0.337,"aumeperc": -0.393, "final": 1.343},
+
+{"cry": "BUSD","volume": 420.363,"gelo": 0.9995,"percgel": 0,"percin": 0.01,"percat": 0,"difpercatin": -100,"preop": 0.9995,"prein": 0.9996,"preat": 0.9995,"presup": 0.9995,"difsupperc": 0, "preres": 0.9996,"difresperc": -0.01,"qualymes":3333,"rmaxtu": 0.03,"acumperc": -0.01,"maxperc": 0,"minperc": -0.01,"aumeperc": -0.01, "final": 0.01},
+
+{"cry": "C98","volume": 5.759,"gelo": 1.679,"percgel": -0.66,"percin": -2.335,"percat": -2.63,"difpercatin": 12.63,"preop": 1.713,"prein": 1.673,"preat": 1.668,"presup": 1.682,"difsupperc": -0.84, "preres": 1.703,"difresperc": -2.1,"qualymes":63,"rmaxtu": 0.25,"acumperc": -0.299,"maxperc": 0.12,"minperc": -0.299,"aumeperc": -0.299, "final": 0.495},
+
+{"cry": "CAKE","volume": 12.687,"gelo": 7.71,"percgel": -1.56,"percin": -0.911,"percat": -1.17,"difpercatin": 28.43,"preop": 7.68,"prein": 7.61,"preat": 7.59,"presup": 7.63,"difsupperc": -0.53, "preres": 19.86,"difresperc": -161.66,"qualymes":333,"rmaxtu": 0.23,"acumperc": -0.263,"maxperc": 0,"minperc": -0.263,"aumeperc": -0.263, "final": 0.274},
+
+{"cry": "CELO","volume": 7.156,"gelo": 3.232,"percgel": -1.45,"percin": -2.887,"percat": -3.22,"difpercatin": 11.53,"preop": 3.291,"prein": 3.196,"preat": 3.185,"presup": 3.192,"difsupperc": -0.22, "preres": 10.957,"difresperc": -244.02,"qualymes":63,"rmaxtu": 0.57,"acumperc": -0.344,"maxperc": 0.125,"minperc": -0.344,"aumeperc": -0.438, "final": 0.393},
+
+{"cry": "CELR","volume": 9.08,"gelo": 0.05196,"percgel": 0.96,"percin": 0.67,"percat": 0.46,"difpercatin": -31.34,"preop": 0.05222,"prein": 0.05257,"preat": 0.05246,"presup": 0.05248,"difsupperc": -0.04, "preres": 0.05291,"difresperc": -0.86,"qualymes":63,"rmaxtu": 0.86,"acumperc": -0.209,"maxperc": 0.152,"minperc": -0.209,"aumeperc": -0.247, "final": -0.574},
+
+{"cry": "CFX","volume": 0.949,"gelo": 0.1116,"percgel": 1.16,"percin": 0.799,"percat": 0.18,"difpercatin": -77.47,"preop": 0.1127,"prein": 0.1136,"preat": 0.1129,"presup": 0.1135,"difsupperc": -0.53, "preres": 0.1149,"difresperc": -1.77,"qualymes":333,"rmaxtu": 0.08,"acumperc": -0.616,"maxperc": 0,"minperc": -0.616,"aumeperc": -0.529, "final": -0.901},
+
+{"cry": "CHESS","volume": 2.327,"gelo": 0.94,"percgel": 2.34,"percin": 2.331,"percat": 1.91,"difpercatin": -18.06,"preop": 0.944,"prein": 0.966,"preat": 0.962,"presup": 0.953,"difsupperc": 0.94, "preres": 0.958,"difresperc": 0.42,"qualymes":33,"rmaxtu": 0.2,"acumperc": -0.414,"maxperc": 0,"minperc": -0.414,"aumeperc": -0.414, "final": -0.432},
+
+{"cry": "CHR","volume": 21.606,"gelo": 0.5377,"percgel": 6.92,"percin": 5.289,"percat": 5.22,"difpercatin": -1.3,"preop": 0.5464,"prein": 0.5753,"preat": 0.5749,"presup": 0.5391,"difsupperc": 6.23, "preres": 0.5558,"difresperc": 3.32,"qualymes":6,"rmaxtu": 0.86,"acumperc": -0.07,"maxperc": 0.209,"minperc": -0.104,"aumeperc": -0.26, "final": 0.785},
+
+{"cry": "CHZ","volume": 13.355,"gelo": 0.1881,"percgel": 2.71,"percin": 2.261,"percat": 1.58,"difpercatin": -30.12,"preop": 0.1902,"prein": 0.1945,"preat": 0.1932,"presup": 0.1913,"difsupperc": 0.98, "preres": 0.1923,"difresperc": 0.47,"qualymes":633,"rmaxtu": 0.63,"acumperc": -0.668,"maxperc": 0.206,"minperc": -0.668,"aumeperc": -0.464, "final": 0.219},
+
+{"cry": "CITY","volume": 0.406,"gelo": 9.63,"percgel": 0.21,"percin": 0.52,"percat": 0.31,"difpercatin": -40.38,"preop": 9.62,"prein": 9.67,"preat": 9.65,"presup": 9.67,"difsupperc": -0.21, "preres": 10.02,"difresperc": -3.83,"qualymes":3,"rmaxtu": 0.25,"acumperc": -0.207,"maxperc": 0,"minperc": -0.207,"aumeperc": -0.207, "final": 0},
+
+{"cry": "CKB","volume": 5.257,"gelo": 0.01576,"percgel": -1.97,"percin": -0.704,"percat": -1.09,"difpercatin": 54.83,"preop": 0.01562,"prein": 0.01551,"preat": 0.01545,"presup": 0.01551,"difsupperc": -0.39, "preres": 0.01577,"difresperc": -2.07,"qualymes":66,"rmaxtu": 0.21,"acumperc": -0.387,"maxperc": 0.387,"minperc": -0.387,"aumeperc": -0.579, "final": 0.266},
+
+{"cry": "CLV","volume": 2.474,"gelo": 0.346,"percgel": 0,"percin": 0.581,"percat": 0.58,"difpercatin": -0.17,"preop": 0.344,"prein": 0.346,"preat": 0.346,"presup": 0.344,"difsupperc": 0.58, "preres": 0.35,"difresperc": -1.16,"qualymes":33,"rmaxtu": 0.13,"acumperc": 0,"maxperc": 0,"minperc": 0,"aumeperc": 0, "final": 0.302},
+
+{"cry": "COCOS","volume": 6.336,"gelo": 1.3505,"percgel": -1.76,"percin": -4.54,"percat": -4.85,"difpercatin": 6.83,"preop": 1.3943,"prein": 1.331,"preat": 1.3267,"presup": 0.000171,"difsupperc": 99.99, "preres": 6.5,"difresperc": -389.94,"qualymes":6,"rmaxtu": 0.9,"acumperc": -0.323,"maxperc": 0.09,"minperc": -0.323,"aumeperc": -0.398, "final": 3.431},
+
+{"cry": "COMP","volume": 5.22,"gelo": 127.3,"percgel": 1.1,"percin": 1.411,"percat": 0.86,"difpercatin": -39.05,"preop": 127.6,"prein": 129.4,"preat": 128.7,"presup": 80.62,"difsupperc": 37.36, "preres": 130.9,"difresperc": -1.71,"qualymes":633,"rmaxtu": 0.57,"acumperc": -0.541,"maxperc": 0.155,"minperc": -0.541,"aumeperc": -0.541, "final": 0.901},
+
+{"cry": "COS","volume": 3.641,"gelo": 0.01763,"percgel": -2.44,"percin": -4.42,"percat": -4.97,"difpercatin": 12.44,"preop": 0.0181,"prein": 0.0173,"preat": 0.0172,"presup": 0.01731,"difsupperc": -0.64, "preres": 0.01736,"difresperc": -0.93,"qualymes":6,"rmaxtu": 0.94,"acumperc": -0.578,"maxperc": 0,"minperc": -0.578,"aumeperc": -0.521, "final": 0.914},
+
+{"cry": "COTI","volume": 11.592,"gelo": 0.308,"percgel": -0.32,"percin": -3.058,"percat": -3.22,"difpercatin": 5.3,"preop": 0.3172,"prein": 0.3075,"preat": 0.307,"presup": 0.3075,"difsupperc": -0.16, "preres": 0.3129,"difresperc": -1.92,"qualymes":63,"rmaxtu": 0.84,"acumperc": -0.163,"maxperc": 0.13,"minperc": -0.163,"aumeperc": -0.033, "final": 1.238},
+
+{"cry": "CRV","volume": 64.051,"gelo": 3.415,"percgel": -3.69,"percin": -2.335,"percat": -2.81,"difpercatin": 20.34,"preop": 3.384,"prein": 3.305,"preat": 3.289,"presup": 3.355,"difsupperc": -2.01, "preres": 23.255,"difresperc": -607.05,"qualymes":36,"rmaxtu": 0.05,"acumperc": -0.484,"maxperc": 0.151,"minperc": -0.484,"aumeperc": -0.574, "final": 0.157},
+
+{"cry": "CTK","volume": 1.529,"gelo": 1.309,"percgel": 0.99,"percin": -1.119,"percat": -1.34,"difpercatin": 19.75,"preop": 1.34,"prein": 1.325,"preat": 1.322,"presup": 1.326,"difsupperc": -0.3, "preres": 1.332,"difresperc": -0.76,"qualymes":336,"rmaxtu": 0.06,"acumperc": -0.226,"maxperc": 0,"minperc": -0.226,"aumeperc": -0.226, "final": 0.233},
+
+{"cry": "CTSI","volume": 3.704,"gelo": 0.4784,"percgel": -3.91,"percin": -4.023,"percat": -4.17,"difpercatin": 3.65,"preop": 0.4797,"prein": 0.4604,"preat": 0.4597,"presup": 0.4621,"difsupperc": -0.52, "preres": 0.4668,"difresperc": -1.54,"qualymes":63,"rmaxtu": 0.61,"acumperc": -0.152,"maxperc": 0.217,"minperc": -0.152,"aumeperc": -0.368, "final": -0.114},
+
+{"cry": "CTXC","volume": 3.001,"gelo": 0.313,"percgel": -2.01,"percin": -2.666,"percat": -2.67,"difpercatin": 0.15,"preop": 0.3151,"prein": 0.3067,"preat": 0.3067,"presup": 0.3036,"difsupperc": 1.01, "preres": 0.3205,"difresperc": -4.5,"qualymes":6,"rmaxtu": 0.93,"acumperc": 0,"maxperc": 0.391,"minperc": 0,"aumeperc": -0.39, "final": -0.034},
+
+{"cry": "CVC","volume": 3.26,"gelo": 0.2853,"percgel": -2.49,"percin": -1.83,"percat": -2.08,"difpercatin": 13.66,"preop": 0.2841,"prein": 0.2789,"preat": 0.2782,"presup": 0.2811,"difsupperc": -1.04, "preres": 0.2823,"difresperc": -1.47,"qualymes":63,"rmaxtu": 0.84,"acumperc": -0.251,"maxperc": 0.143,"minperc": -0.251,"aumeperc": -0.251, "final": 0.945},
+
+{"cry": "CVP","volume": 0.692,"gelo": 1.074,"percgel": 1.77,"percin": 0.549,"percat": 0.09,"difpercatin": -83.61,"preop": 1.092,"prein": 1.098,"preat": 1.093,"presup": 1.083,"difsupperc": 0.91, "preres": 1.124,"difresperc": -2.84,"qualymes":33,"rmaxtu": 0.2,"acumperc": -0.455,"maxperc": 0,"minperc": -0.455,"aumeperc": -0.455, "final": 0.749},
+
+{"cry": "CVX","volume": 3.889,"gelo": 27.56,"percgel": 1.23,"percin": 1.447,"percat": 0.9,"difpercatin": -37.8,"preop": 27.65,"prein": 28.05,"preat": 27.9,"presup": 28.17,"difsupperc": -0.97, "preres": 28.91,"difresperc": -3.62,"qualymes":3,"rmaxtu": 0.67,"acumperc": -0.535,"maxperc": 0,"minperc": -0.535,"aumeperc": -0.179, "final": 1.092},
+
+{"cry": "DAR","volume": 15.104,"gelo": 0.71671,"percgel": 8.13,"percin": 6.007,"percat": 6.33,"difpercatin": 5.38,"preop": 0.72883,"prein": 0.77261,"preat": 0.77495,"presup": 0.7555,"difsupperc": 2.51, "preres": 0.81948,"difresperc": -5.75,"qualymes":3,"rmaxtu": 0.25,"acumperc": 0.303,"maxperc": 0.633,"minperc": 0,"aumeperc": -0.328, "final": 2.385},
+
+{"cry": "DASH","volume": 6.916,"gelo": 96,"percgel": 1.98,"percin": 2.292,"percat": 1.98,"difpercatin": -13.61,"preop": 96,"prein": 98.2,"preat": 97.9,"presup": 98.6,"difsupperc": -0.72, "preres": 240.3,"difresperc": -145.45,"qualymes":633,"rmaxtu": 0.75,"acumperc": -0.305,"maxperc": 0.305,"minperc": -0.305,"aumeperc": -0.508, "final": -0.105},
+
+{"cry": "DATA","volume": 1.689,"gelo": 0.07882,"percgel": -1.99,"percin": -1.934,"percat": -2.34,"difpercatin": 20.99,"preop": 0.0791,"prein": 0.07757,"preat": 0.07725,"presup": 0.07706,"difsupperc": 0.25, "preres": 0.08,"difresperc": -3.56,"qualymes":633,"rmaxtu": 0.57,"acumperc": -0.413,"maxperc": 0.077,"minperc": -0.413,"aumeperc": -0.49, "final": 0.339},
+
+{"cry": "DCR","volume": 0.469,"gelo": 63.2,"percgel": 1.42,"percin": -1.236,"percat": -0.93,"difpercatin": -24.76,"preop": 64.7,"prein": 63.9,"preat": 64.1,"presup": 64.1,"difsupperc": 0, "preres": 114.2,"difresperc": -78.16,"qualymes":633,"rmaxtu": 0.5,"acumperc": 0.313,"maxperc": 0.313,"minperc": 0,"aumeperc": 0.313, "final": 0.644},
+
+{"cry": "DEGO","volume": 0.712,"gelo": 3.77,"percgel": -0.27,"percin": -0.789,"percat": -1.05,"difpercatin": 33.08,"preop": 3.8,"prein": 3.77,"preat": 3.76,"presup": 3.77,"difsupperc": -0.27, "preres": 10.12,"difresperc": -169.15,"qualymes":33,"rmaxtu": 0.08,"acumperc": -0.265,"maxperc": 0,"minperc": -0.265,"aumeperc": -0.265, "final": -0.548},
+
+{"cry": "DENT","volume": 7.051,"gelo": 0.002622,"percgel": 1.33,"percin": 0.452,"percat": 0.19,"difpercatin": -57.96,"preop": 0.002652,"prein": 0.002664,"preat": 0.002657,"presup": 0.00268,"difsupperc": -0.87, "preres": 0.002724,"difresperc": -2.52,"qualymes":663,"rmaxtu": 0.68,"acumperc": -0.263,"maxperc": 0.263,"minperc": -0.263,"aumeperc": -0.524, "final": 0.078},
+
+{"cry": "DEXE","volume": 0.593,"gelo": 6.57,"percgel": 5.63,"percin": 4.211,"percat": 4.36,"difpercatin": 3.54,"preop": 6.65,"prein": 6.93,"preat": 6.94,"presup": 6.61,"difsupperc": 4.76, "preres": 27.22,"difresperc": -292.22,"qualymes":33,"rmaxtu": 0.13,"acumperc": 0.144,"maxperc": 0.144,"minperc": 0,"aumeperc": 0, "final": 0.154},
+
+{"cry": "DF","volume": 0.523,"gelo": 0.1011,"percgel": 0.79,"percin": -0.488,"percat": -0.49,"difpercatin": 0.41,"preop": 0.1024,"prein": 0.1019,"preat": 0.1019,"presup": 0.1018,"difsupperc": 0.1, "preres": 0.1034,"difresperc": -1.47,"qualymes":33,"rmaxtu": 0.17,"acumperc": 0,"maxperc": 0,"minperc": 0,"aumeperc": 0, "final": 1.3},
+
+{"cry": "DGB","volume": 1.995,"gelo": 0.02228,"percgel": 0.67,"percin": 0.267,"percat": -0.13,"difpercatin": -148.69,"preop": 0.02246,"prein": 0.02252,"preat": 0.02243,"presup": 0.02248,"difsupperc": -0.22, "preres": 0.02263,"difresperc": -0.89,"qualymes":633,"rmaxtu": 0.55,"acumperc": -0.4,"maxperc": 0.044,"minperc": -0.4,"aumeperc": -0.4, "final": 0.14},
+
+{"cry": "DIA","volume": 0.877,"gelo": 0.949,"percgel": 0.32,"percin": -1.339,"percat": -1.96,"difpercatin": 46.38,"preop": 0.971,"prein": 0.958,"preat": 0.952,"presup": 0.958,"difsupperc": -0.63, "preres": 0.958,"difresperc": -0.63,"qualymes":333,"rmaxtu": 0.5,"acumperc": -0.626,"maxperc": 0.209,"minperc": -0.626,"aumeperc": -0.833, "final": 0.11},
+
+{"cry": "DNT","volume": 0.7,"gelo": 0.0819,"percgel": 1.71,"percin": 1.455,"percat": 0.97,"difpercatin": -33.33,"preop": 0.0825,"prein": 0.0837,"preat": 0.0833,"presup": 0.0832,"difsupperc": 0.12, "preres": 0.0836,"difresperc": -0.36,"qualymes":633,"rmaxtu": 0.38,"acumperc": -0.478,"maxperc": 0,"minperc": -0.478,"aumeperc": -0.359, "final": 0.616},
+
+{"cry": "DOCK","volume": 1.104,"gelo": 0.04418,"percgel": -1.77,"percin": 0.927,"percat": 0.53,"difpercatin": -42.83,"preop": 0.04317,"prein": 0.04357,"preat": 0.0434,"presup": 0.04328,"difsupperc": 0.28, "preres": 0.04435,"difresperc": -2.19,"qualymes":633,"rmaxtu": 0.68,"acumperc": -0.39,"maxperc": 0.23,"minperc": -0.39,"aumeperc": -0.344, "final": -0.572},
+
+{"cry": "DODO","volume": 3.862,"gelo": 0.492,"percgel": -0.61,"percin": -3.15,"percat": -3.74,"difpercatin": 18.73,"preop": 0.508,"prein": 0.492,"preat": 0.489,"presup": 0.491,"difsupperc": -0.41, "preres": 0.495,"difresperc": -1.23,"qualymes":3333,"rmaxtu": 0.08,"acumperc": -0.61,"maxperc": 0.203,"minperc": -0.61,"aumeperc": -0.811, "final": 0.212},
+
+{"cry": "DOGE","volume": 53.029,"gelo": 0.1424,"percgel": 0.35,"percin": 0.209,"percat": -0.28,"difpercatin": -233.97,"preop": 0.1433,"prein": 0.1436,"preat": 0.1429,"presup": 0.144,"difsupperc": -0.77, "preres": 0.1447,"difresperc": -1.26,"qualymes":633,"rmaxtu": 0.72,"acumperc": -0.487,"maxperc": 0.139,"minperc": -0.487,"aumeperc": -0.418, "final": 0.502},
+
+{"cry": "DOT","volume": 147.581,"gelo": 19.7,"percgel": 2.13,"percin": 2.329,"percat": 1.87,"difpercatin": -19.71,"preop": 19.75,"prein": 20.21,"preat": 20.12,"presup": 20.27,"difsupperc": -0.75, "preres": 20.45,"difresperc": -1.64,"qualymes":6,"rmaxtu": 0.84,"acumperc": -0.445,"maxperc": 0.247,"minperc": -0.445,"aumeperc": -0.544, "final": 0.314},
+
+{"cry": "DREP","volume": 3.159,"gelo": 0.7609,"percgel": -3.44,"percin": -2.768,"percat": -3.18,"difpercatin": 14.88,"preop": 0.7588,"prein": 0.7378,"preat": 0.7347,"presup": 0.735,"difsupperc": -0.04, "preres": 0.7508,"difresperc": -2.19,"qualymes":66,"rmaxtu": 0.62,"acumperc": -0.42,"maxperc": 0.285,"minperc": -0.42,"aumeperc": -0.407, "final": 1.664},
+
+{"cry": "DUSK","volume": 14.041,"gelo": 0.5375,"percgel": -1.47,"percin": -2.676,"percat": -2.93,"difpercatin": 9.49,"preop": 0.5456,"prein": 0.531,"preat": 0.5296,"presup": 0.5215,"difsupperc": 1.53, "preres": 0.5516,"difresperc": -4.15,"qualymes":6,"rmaxtu": 0.94,"acumperc": -0.264,"maxperc": 0.264,"minperc": -0.264,"aumeperc": -0.395, "final": 0.735},
+
+{"cry": "DYDX","volume": 23.465,"gelo": 5.96,"percgel": 5.67,"percin": 5.292,"percat": 5.14,"difpercatin": -2.87,"preop": 5.99,"prein": 6.307,"preat": 6.298,"presup": 6.304,"difsupperc": -0.1, "preres": 14.94,"difresperc": -137.22,"qualymes":33,"rmaxtu": 0.17,"acumperc": -0.143,"maxperc": 0.301,"minperc": -0.143,"aumeperc": -0.317, "final": 0.18},
+
+{"cry": "EGLD","volume": 29.071,"gelo": 152.26,"percgel": 0.8,"percin": 1.732,"percat": 1.49,"difpercatin": -13.97,"preop": 151.23,"prein": 153.85,"preat": 153.48,"presup": 6,"difsupperc": 96.09, "preres": 544.25,"difresperc": -254.61,"qualymes":6,"rmaxtu": 0.83,"acumperc": -0.24,"maxperc": 0.292,"minperc": -0.24,"aumeperc": -0.531, "final": 0.973},
+
+{"cry": "ELF","volume": 0.348,"gelo": 0.3279,"percgel": 1.22,"percin": 1.093,"percat": 0.73,"difpercatin": -33.21,"preop": 0.3295,"prein": 0.3331,"preat": 0.3319,"presup": 0.3344,"difsupperc": -0.75, "preres": 0.3351,"difresperc": -0.96,"qualymes":33,"rmaxtu": 0.17,"acumperc": -0.36,"maxperc": 0.21,"minperc": -0.36,"aumeperc": -0.569, "final": 0.39},
+
+{"cry": "ENJ","volume": 12.809,"gelo": 1.846,"percgel": -1.46,"percin": -1.771,"percat": -2.36,"difpercatin": 33.26,"preop": 1.863,"prein": 1.83,"preat": 1.819,"presup": 0.03223,"difsupperc": 98.23, "preres": 4.845,"difresperc": -166.36,"qualymes":6,"rmaxtu": 0.91,"acumperc": -0.601,"maxperc": 0.055,"minperc": -0.601,"aumeperc": -0.601, "final": 0.64},
+
+{"cry": "ENS","volume": 14.382,"gelo": 19.58,"percgel": -2.25,"percin": -5.7,"percat": -5.95,"difpercatin": 4.39,"preop": 20.35,"prein": 19.19,"preat": 19.14,"presup": 14.43,"difsupperc": 24.61, "preres": 120,"difresperc": -526.96,"qualymes":3,"rmaxtu": 0.25,"acumperc": -0.261,"maxperc": 0.261,"minperc": -0.261,"aumeperc": -0.416, "final": 0.054},
+
+{"cry": "EOS","volume": 22.769,"gelo": 2.33,"percgel": 3.35,"percin": 3.073,"percat": 2.77,"difpercatin": -9.86,"preop": 2.343,"prein": 2.415,"preat": 2.408,"presup": 2.426,"difsupperc": -0.75, "preres": 14.9,"difresperc": -518.77,"qualymes":3633,"rmaxtu": 0.04,"acumperc": -0.29,"maxperc": 0.166,"minperc": -0.29,"aumeperc": -0.331, "final": 0.685},
+
+{"cry": "EPS","volume": 2.317,"gelo": 0.1674,"percgel": 0.9,"percin": 1.558,"percat": 1.2,"difpercatin": -22.98,"preop": 0.1669,"prein": 0.1695,"preat": 0.1689,"presup": 0.1691,"difsupperc": -0.12, "preres": 0.17,"difresperc": -0.65,"qualymes":333,"rmaxtu": 0.09,"acumperc": -0.354,"maxperc": 0.118,"minperc": -0.354,"aumeperc": -0.413, "final": 1.258},
+
+{"cry": "ERN","volume": 0.871,"gelo": 4.928,"percgel": 2.35,"percin": -1.251,"percat": -1.39,"difpercatin": 11.11,"preop": 5.115,"prein": 5.051,"preat": 5.044,"presup": 4.928,"difsupperc": 2.3, "preres": 19.838,"difresperc": -293.3,"qualymes":33,"rmaxtu": 0.33,"acumperc": -0.139,"maxperc": 0,"minperc": -0.139,"aumeperc": -0.139, "final": 1.138},
+
+{"cry": "ETC","volume": 32.229,"gelo": 26.38,"percgel": 5.53,"percin": 6.443,"percat": 6.14,"difpercatin": -4.7,"preop": 26.23,"prein": 27.92,"preat": 27.84,"presup": 3.0726,"difsupperc": 88.96, "preres": 179.83,"difresperc": -545.94,"qualymes":633,"rmaxtu": 0.8,"acumperc": -0.287,"maxperc": 0.072,"minperc": -0.287,"aumeperc": -0.287, "final": 0.48},
+
+{"cry": "ETH","volume": 847.764,"gelo": 2768.32,"percgel": -0.49,"percin": -0.887,"percat": -1.31,"difpercatin": 47.69,"preop": 2791.38,"prein": 2766.63,"preat": 2754.86,"presup": 86,"difsupperc": 96.88, "preres": 2790.98,"difresperc": -1.31,"qualymes":6,"rmaxtu": 0.95,"acumperc": -0.425,"maxperc": 0.266,"minperc": -0.425,"aumeperc": -0.439, "final": 0.499},
+
+{"cry": "EUR","volume": 20.899,"gelo": 1.123,"percgel": 0.62,"percin": 0.444,"percat": 0.44,"difpercatin": -0.9,"preop": 1.125,"prein": 1.13,"preat": 1.13,"presup": 1.129,"difsupperc": 0.09, "preres": 1.131,"difresperc": -0.09,"qualymes":3636,"rmaxtu": 0.04,"acumperc": 0,"maxperc": 0,"minperc": -0.088,"aumeperc": 0, "final": 0},
+
+{"cry": "FARM","volume": 5.076,"gelo": 110.4,"percgel": -1.81,"percin": 1.684,"percat": 1.4,"difpercatin": -16.86,"preop": 106.9,"prein": 108.7,"preat": 108.4,"presup": 99.7,"difsupperc": 8.03, "preres": 110.1,"difresperc": -1.57,"qualymes":33,"rmaxtu": 0.14,"acumperc": -0.276,"maxperc": 0.276,"minperc": -0.276,"aumeperc": -0.55, "final": 0},
+
+{"cry": "FET","volume": 2.932,"gelo": 0.3209,"percgel": -0.34,"percin": -1.955,"percat": -2.32,"difpercatin": 18.67,"preop": 0.3274,"prein": 0.321,"preat": 0.3198,"presup": 0.3227,"difsupperc": -0.91, "preres": 0.3275,"difresperc": -2.41,"qualymes":63,"rmaxtu": 0.86,"acumperc": -0.374,"maxperc": 0.093,"minperc": -0.374,"aumeperc": -0.467, "final": 0.292},
+
+{"cry": "FIDA","volume": 8.426,"gelo": 2.487,"percgel": -10.41,"percin": -6.822,"percat": -7.32,"difpercatin": 7.3,"preop": 2.404,"prein": 2.24,"preat": 2.228,"presup": 2.241,"difsupperc": -0.58, "preres": 10.055,"difresperc": -351.3,"qualymes":3,"rmaxtu": 0.5,"acumperc": -0.536,"maxperc": 0,"minperc": -0.536,"aumeperc": -0.491, "final": 2.226},
+
+{"cry": "FIL","volume": 42.722,"gelo": 20.8,"percgel": 0.62,"percin": 0.238,"percat": -0.48,"difpercatin": -301.68,"preop": 21.03,"prein": 21.08,"preat": 20.93,"presup": 21.16,"difsupperc": -1.1, "preres": 120.17,"difresperc": -474.15,"qualymes":3333,"rmaxtu": 0.06,"acumperc": -0.712,"maxperc": 0.19,"minperc": -0.712,"aumeperc": -0.806, "final": 0},
+
+{"cry": "FIO","volume": 0.5,"gelo": 0.0994,"percgel": -0.91,"percin": -2.279,"percat": -2.38,"difpercatin": 4.43,"preop": 0.1009,"prein": 0.0986,"preat": 0.0985,"presup": 0.0983,"difsupperc": 0.2, "preres": 0.1003,"difresperc": -1.83,"qualymes":63,"rmaxtu": 0.44,"acumperc": -0.101,"maxperc": 0,"minperc": -0.101,"aumeperc": -0.101, "final": 0.937},
+
+{"cry": "FIRO","volume": 0.5,"gelo": 3.708,"percgel": -1.11,"percin": 2.737,"percat": 2.4,"difpercatin": -12.31,"preop": 3.581,"prein": 3.679,"preat": 3.667,"presup": 3.667,"difsupperc": 0, "preres": 12.296,"difresperc": -235.31,"qualymes":333,"rmaxtu": 0.36,"acumperc": -0.326,"maxperc": 0.19,"minperc": -0.326,"aumeperc": -0.218, "final": 0},
+
+{"cry": "FIS","volume": 1.325,"gelo": 0.7191,"percgel": 2.67,"percin": 1.216,"percat": 0.83,"difpercatin": -31.74,"preop": 0.7322,"prein": 0.7411,"preat": 0.7383,"presup": 0.7324,"difsupperc": 0.8, "preres": 0.75,"difresperc": -1.58,"qualymes":363,"rmaxtu": 0.08,"acumperc": -0.378,"maxperc": 0.175,"minperc": -0.378,"aumeperc": -0.512, "final": -0.21},
+
+{"cry": "FLM","volume": 1.426,"gelo": 0.2491,"percgel": 3.09,"percin": 3.115,"percat": 2.56,"difpercatin": -17.82,"preop": 0.2504,"prein": 0.2582,"preat": 0.2568,"presup": 0.2489,"difsupperc": 3.08, "preres": 0.2595,"difresperc": -1.05,"qualymes":3633,"rmaxtu": 0.06,"acumperc": -0.542,"maxperc": 0.116,"minperc": -0.542,"aumeperc": -0.619, "final": 0.404},
+
+{"cry": "FLOW","volume": 13.756,"gelo": 6.61,"percgel": -2.72,"percin": -4.579,"percat": -5.02,"difpercatin": 9.63,"preop": 6.77,"prein": 6.46,"preat": 6.43,"presup": 6.52,"difsupperc": -1.4, "preres": 10.56,"difresperc": -64.23,"qualymes":333,"rmaxtu": 0.13,"acumperc": -0.464,"maxperc": 0.155,"minperc": -0.464,"aumeperc": -0.464, "final": -0.159},
+
+{"cry": "FLUX","volume": 4.583,"gelo": 1.522,"percgel": 2.96,"percin": 1.417,"percat": 0.9,"difpercatin": -36.49,"preop": 1.553,"prein": 1.575,"preat": 1.567,"presup": 1.561,"difsupperc": 0.38, "preres": 1.604,"difresperc": -2.36,"qualymes":3,"rmaxtu": 0.33,"acumperc": -0.508,"maxperc": 0.19,"minperc": -0.508,"aumeperc": -0.381, "final": 0.538},
+
+{"cry": "FOR","volume": 4.695,"gelo": 0.0446,"percgel": 2.96,"percin": 2.21,"percat": 1.5,"difpercatin": -32.13,"preop": 0.04524,"prein": 0.04624,"preat": 0.04592,"presup": 0.04606,"difsupperc": -0.3, "preres": 0.04659,"difresperc": -1.46,"qualymes":33,"rmaxtu": 0.29,"acumperc": -0.692,"maxperc": 0.065,"minperc": -0.692,"aumeperc": -0.498, "final": 1.845},
+
+{"cry": "FORTH","volume": 4.964,"gelo": 5.29,"percgel": 15.5,"percin": 13.197,"percat": 13.57,"difpercatin": 2.83,"preop": 5.38,"prein": 6.09,"preat": 6.11,"presup": 5.82,"difsupperc": 4.75, "preres": 10,"difresperc": -63.67,"qualymes":3333,"rmaxtu": 0.09,"acumperc": 0.328,"maxperc": 1.478,"minperc": 0,"aumeperc": -0.65, "final": 0},
+
+{"cry": "FRONT","volume": 1.425,"gelo": 0.4987,"percgel": 4.11,"percin": 1.866,"percat": 2,"difpercatin": 7.18,"preop": 0.509,"prein": 0.5185,"preat": 0.5192,"presup": 0.5021,"difsupperc": 3.29, "preres": 0.509,"difresperc": 1.96,"qualymes":33,"rmaxtu": 0.2,"acumperc": 0.135,"maxperc": 0.154,"minperc": -0.019,"aumeperc": 0.135, "final": 1.847},
+
+{"cry": "FTM","volume": 157.221,"gelo": 2.0549,"percgel": -0.27,"percin": -2.639,"percat": -3.07,"difpercatin": 16.33,"preop": 2.1141,"prein": 2.0583,"preat": 2.0493,"presup": 2.0643,"difsupperc": -0.73, "preres": 2.0949,"difresperc": -2.23,"qualymes":63,"rmaxtu": 0.88,"acumperc": -0.437,"maxperc": 0.214,"minperc": -0.437,"aumeperc": -0.524, "final": 0.157},
+
+{"cry": "FTT","volume": 54.211,"gelo": 44.64,"percgel": 1.3,"percin": 3.254,"percat": 2.89,"difpercatin": -11.19,"preop": 43.95,"prein": 45.38,"preat": 45.22,"presup": 45.31,"difsupperc": -0.2, "preres": 46.22,"difresperc": -2.21,"qualymes":63,"rmaxtu": 0.81,"acumperc": -0.353,"maxperc": 0.176,"minperc": -0.353,"aumeperc": -0.462, "final": 0.434},
+
+{"cry": "FUN","volume": 0.424,"gelo": 0.0098,"percgel": 0.82,"percin": 0.305,"percat": 0.41,"difpercatin": 34.43,"preop": 0.00984,"prein": 0.00987,"preat": 0.00988,"presup": 0.00986,"difsupperc": 0.2, "preres": 0.00994,"difresperc": -0.61,"qualymes":633,"rmaxtu": 0.68,"acumperc": 0.101,"maxperc": 0.101,"minperc": 0,"aumeperc": 0, "final": 0.204},
+
+{"cry": "FXS","volume": 1.091,"gelo": 21.257,"percgel": 1.06,"percin": -1.368,"percat": -1.4,"difpercatin": 2.34,"preop": 21.788,"prein": 21.49,"preat": 21.483,"presup": 21.48,"difsupperc": 0.01, "preres": 21.482,"difresperc": 0,"qualymes":6,"rmaxtu": 0.67,"acumperc": -0.033,"maxperc": 0,"minperc": -0.033,"aumeperc": -0.033, "final": -0.373},
+
+{"cry": "GALA","volume": 108.776,"gelo": 0.2013,"percgel": -0.88,"percin": -2.96,"percat": -3.33,"difpercatin": 12.5,"preop": 0.20641,"prein": 0.2003,"preat": 0.19953,"presup": 0.02103,"difsupperc": 89.46, "preres": 0.84128,"difresperc": -321.63,"qualymes":6,"rmaxtu": 0.5,"acumperc": -0.384,"maxperc": 0.26,"minperc": -0.384,"aumeperc": -0.394, "final": 0.349},
+
+{"cry": "GBP","volume": 9.097,"gelo": 1.349,"percgel": 0.67,"percin": 0.742,"percat": 0.74,"difpercatin": -0.27,"preop": 1.348,"prein": 1.358,"preat": 1.358,"presup": 1.355,"difsupperc": 0.22, "preres": 1.358,"difresperc": 0,"qualymes":3633,"rmaxtu": 0.05,"acumperc": 0,"maxperc": 0,"minperc": -0.074,"aumeperc": 0.074, "final": 0.074},
+
+{"cry": "GHST","volume": 0.278,"gelo": 2.043,"percgel": -0.54,"percin": -1.119,"percat": -1.12,"difpercatin": 0.09,"preop": 2.055,"prein": 2.032,"preat": 2.032,"presup": 1.508,"difsupperc": 25.79, "preres": 3.4,"difresperc": -67.32,"qualymes":6,"rmaxtu": 0.57,"acumperc": 0,"maxperc": 0,"minperc": 0,"aumeperc": 0, "final": 0},
+
+{"cry": "GLMR","volume": 8.877,"gelo": 5.3432,"percgel": -1.66,"percin": -4.443,"percat": -4.55,"difpercatin": 2.41,"preop": 5.5051,"prein": 5.2605,"preat": 5.2545,"presup": 5,"difsupperc": 4.84, "preres": 51,"difresperc": -870.6,"qualymes":3,"rmaxtu": 0.5,"acumperc": -0.114,"maxperc": 0.181,"minperc": -0.114,"aumeperc": -0.294, "final": 0.092},
+
+{"cry": "GNO","volume": 0.135,"gelo": 293.6,"percgel": 0.31,"percin": -2.054,"percat": -2.42,"difpercatin": 17.82,"preop": 301.8,"prein": 295.6,"preat": 294.5,"presup": 295.1,"difsupperc": -0.2, "preres": 296.7,"difresperc": -0.75,"qualymes":3,"rmaxtu": 0.57,"acumperc": -0.372,"maxperc": 0,"minperc": -0.372,"aumeperc": -0.372, "final": 0.39},
+
+{"cry": "GRT","volume": 16.971,"gelo": 0.4358,"percgel": -1.19,"percin": 2.882,"percat": 2.57,"difpercatin": -10.83,"preop": 0.4198,"prein": 0.4319,"preat": 0.4306,"presup": 0,"difsupperc": 100, "preres": 999,"difresperc": -231901.86,"qualymes":0,"rmaxtu": 0,"acumperc": -0.301,"maxperc": 0.185,"minperc": -0.301,"aumeperc": -0.416, "final": 0.073},
+
+{"cry": "GTC","volume": 12.862,"gelo": 8.108,"percgel": 1.53,"percin": 2.881,"percat": 2.67,"difpercatin": -7.32,"preop": 8.018,"prein": 8.249,"preat": 8.232,"presup": 8.089,"difsupperc": 1.74, "preres": 29.043,"difresperc": -252.81,"qualymes":6,"rmaxtu": 0.67,"acumperc": -0.206,"maxperc": 0.436,"minperc": -0.206,"aumeperc": -0.64, "final": 0.645},
+
+{"cry": "GTO","volume": 0.912,"gelo": 0.03328,"percgel": 0.6,"percin": -0.592,"percat": -0.86,"difpercatin": 45.27,"preop": 0.03377,"prein": 0.03357,"preat": 0.03348,"presup": 0.03356,"difsupperc": -0.24, "preres": 0.03381,"difresperc": -0.99,"qualymes":66,"rmaxtu": 0.69,"acumperc": -0.268,"maxperc": 0.119,"minperc": -0.268,"aumeperc": -0.268, "final": 0.62},
+
+{"cry": "GXS","volume": 4.258,"gelo": 1.5613,"percgel": -2.19,"percin": -3.141,"percat": -3.48,"difpercatin": 10.79,"preop": 1.5821,"prein": 1.5324,"preat": 1.5271,"presup": 1.1338,"difsupperc": 25.75, "preres": 2.2799,"difresperc": -49.3,"qualymes":6,"rmaxtu": 0.91,"acumperc": -0.346,"maxperc": 0.052,"minperc": -0.346,"aumeperc": -0.222, "final": 0.81},
+
+{"cry": "HARD","volume": 4.776,"gelo": 0.5496,"percgel": 1.66,"percin": 2.459,"percat": 1.79,"difpercatin": -27.21,"preop": 0.5489,"prein": 0.5624,"preat": 0.5587,"presup": 0.569,"difsupperc": -1.84, "preres": 0.5749,"difresperc": -2.9,"qualymes":3333,"rmaxtu": 0.06,"acumperc": -0.658,"maxperc": 0,"minperc": -0.658,"aumeperc": -0.552, "final": 0.678},
+
+{"cry": "HBAR","volume": 7.082,"gelo": 0.2258,"percgel": 1.59,"percin": 0.877,"percat": 0.57,"difpercatin": -35.01,"preop": 0.2281,"prein": 0.2301,"preat": 0.2294,"presup": 0.2311,"difsupperc": -0.74, "preres": 0.2321,"difresperc": -1.18,"qualymes":63,"rmaxtu": 0.83,"acumperc": -0.304,"maxperc": 0.087,"minperc": -0.304,"aumeperc": -0.261, "final": 0.861},
+
+{"cry": "HIGH","volume": 7.033,"gelo": 5.75,"percgel": -1.39,"percin": -6.579,"percat": -6.74,"difpercatin": 2.45,"preop": 6.08,"prein": 5.68,"preat": 5.67,"presup": 5.77,"difsupperc": -1.76, "preres": 12.52,"difresperc": -120.81,"qualymes":3,"rmaxtu": 0.33,"acumperc": -0.176,"maxperc": 0.352,"minperc": -0.176,"aumeperc": -0.176, "final": 0.563},
+
+{"cry": "HIVE","volume": 1.075,"gelo": 0.9422,"percgel": 2.1,"percin": 0.87,"percat": 0.88,"difpercatin": 1.15,"preop": 0.9536,"prein": 0.9619,"preat": 0.962,"presup": 0.7102,"difsupperc": 26.17, "preres": 1.3194,"difresperc": -37.15,"qualymes":6,"rmaxtu": 0.87,"acumperc": 0.01,"maxperc": 0.052,"minperc": 0,"aumeperc": -0.042, "final": -0.402},
+
+{"cry": "HNT","volume": 9.386,"gelo": 26.97,"percgel": 0.56,"percin": -0.403,"percat": -0.62,"difpercatin": 53.85,"preop": 27.29,"prein": 27.18,"preat": 27.12,"presup": 0.686,"difsupperc": 97.47, "preres": 59.27,"difresperc": -118.55,"qualymes":6,"rmaxtu": 0.83,"acumperc": -0.221,"maxperc": 0.258,"minperc": -0.221,"aumeperc": -0.404, "final": 0.311},
+
+{"cry": "HOT","volume": 5.385,"gelo": 0.004565,"percgel": -1.03,"percin": -1.822,"percat": -2.02,"difpercatin": 10.87,"preop": 0.004611,"prein": 0.004527,"preat": 0.004518,"presup": 0.004544,"difsupperc": -0.58, "preres": 0.004593,"difresperc": -1.66,"qualymes":63,"rmaxtu": 0.73,"acumperc": -0.199,"maxperc": 0.199,"minperc": -0.199,"aumeperc": -0.353, "final": 0.092},
+
+{"cry": "ICP","volume": 54.424,"gelo": 19.92,"percgel": 10.64,"percin": 7.494,"percat": 9.38,"difpercatin": 25.17,"preop": 20.15,"prein": 21.66,"preat": 22.04,"presup": 21.47,"difsupperc": 2.59, "preres": 21.81,"difresperc": 1.04,"qualymes":333,"rmaxtu": 0.1,"acumperc": 1.754,"maxperc": 2.124,"minperc": 0,"aumeperc": -0.362, "final": 3.205},
+
+{"cry": "ICX","volume": 4.496,"gelo": 0.738,"percgel": 1.22,"percin": 0.538,"percat": 0.4,"difpercatin": -25.65,"preop": 0.744,"prein": 0.748,"preat": 0.747,"presup": 0.746,"difsupperc": 0.13, "preres": 0.758,"difresperc": -1.47,"qualymes":63,"rmaxtu": 0.76,"acumperc": -0.134,"maxperc": 0.267,"minperc": -0.134,"aumeperc": -0.4, "final": 0.694},
+
+{"cry": "IDEX","volume": 75.421,"gelo": 0.11848,"percgel": 84.13,"percin": 79.051,"percat": 84.13,"difpercatin": 6.42,"preop": 0.11848,"prein": 0.21214,"preat": 0.21816,"presup": 0.15748,"difsupperc": 27.81, "preres": 0.19737,"difresperc": 9.53,"qualymes":33,"rmaxtu": 0.17,"acumperc": 2.838,"maxperc": 3.337,"minperc": 0,"aumeperc": -0.484, "final": 20.305},
+
+{"cry": "ILV","volume": 3.229,"gelo": 629.4,"percgel": -2.53,"percin": -3.096,"percat": -3.6,"difpercatin": 16.28,"preop": 636.4,"prein": 616.7,"preat": 613.5,"presup": 414.5,"difsupperc": 32.44, "preres": 1930,"difresperc": -214.59,"qualymes":6,"rmaxtu": 0.67,"acumperc": -0.519,"maxperc": 0.227,"minperc": -0.519,"aumeperc": -0.744, "final": 1.017},
+
+{"cry": "IMX","volume": 11.735,"gelo": 2.895,"percgel": 5.42,"percin": 9.058,"percat": 10.14,"difpercatin": 11.95,"preop": 2.771,"prein": 3.022,"preat": 3.052,"presup": 2,"difsupperc": 34.47, "preres": 4.679,"difresperc": -53.31,"qualymes":3,"rmaxtu": 0.5,"acumperc": 0.993,"maxperc": 2.184,"minperc": 0,"aumeperc": -0.196, "final": -0.14},
+
+{"cry": "INJ","volume": 0.922,"gelo": 4.3,"percgel": -0.72,"percin": -0.809,"percat": -1.39,"difpercatin": 71.82,"preop": 4.329,"prein": 4.294,"preat": 4.269,"presup": 4.28,"difsupperc": -0.26, "preres": 10.337,"difresperc": -142.14,"qualymes":633,"rmaxtu": 0.47,"acumperc": -0.582,"maxperc": 0,"minperc": -0.582,"aumeperc": -0.536, "final": 0.339},
+
+{"cry": "IOST","volume": 4.348,"gelo": 0.0255,"percgel": 4.35,"percin": 3.766,"percat": 3.3,"difpercatin": -12.37,"preop": 0.02576,"prein": 0.02673,"preat": 0.02661,"presup": 0.02521,"difsupperc": 5.26, "preres": 0.0267,"difresperc": -0.34,"qualymes":663,"rmaxtu": 0.72,"acumperc": -0.449,"maxperc": 0.15,"minperc": -0.449,"aumeperc": -0.412, "final": -0.193},
+
+{"cry": "IOTA","volume": 10.687,"gelo": 0.8445,"percgel": 6.94,"percin": 6.168,"percat": 5.49,"difpercatin": -10.99,"preop": 0.8561,"prein": 0.9089,"preat": 0.9031,"presup": 0.8958,"difsupperc": 0.81, "preres": 0.9045,"difresperc": -0.16,"qualymes":663,"rmaxtu": 0.78,"acumperc": -0.638,"maxperc": 0,"minperc": -0.638,"aumeperc": -0.298, "final": 0.396},
+
+{"cry": "IOTX","volume": 4.77,"gelo": 0.07615,"percgel": 1.8,"percin": 1.727,"percat": 1.4,"difpercatin": -18.93,"preop": 0.07645,"prein": 0.07777,"preat": 0.07752,"presup": 0.001034,"difsupperc": 98.67, "preres": 0.263,"difresperc": -239.27,"qualymes":6,"rmaxtu": 0.89,"acumperc": -0.321,"maxperc": 0.167,"minperc": -0.321,"aumeperc": -0.347, "final": 0.659},
+
+{"cry": "IRIS","volume": 1.362,"gelo": 0.06789,"percgel": -0.77,"percin": -0.878,"percat": -1.45,"difpercatin": 65.15,"preop": 0.06836,"prein": 0.06776,"preat": 0.06737,"presup": 0.06756,"difsupperc": -0.28, "preres": 0.0691,"difresperc": -2.57,"qualymes":66,"rmaxtu": 0.47,"acumperc": -0.576,"maxperc": 0.517,"minperc": -0.576,"aumeperc": -0.883, "final": 0.214},
+
+{"cry": "JASMY","volume": 5.205,"gelo": 0.0444,"percgel": -2.25,"percin": -4.396,"percat": -4.62,"difpercatin": 5.1,"preop": 0.0455,"prein": 0.0435,"preat": 0.0434,"presup": 0.0437,"difsupperc": -0.69, "preres": 0.0444,"difresperc": -2.3,"qualymes":3,"rmaxtu": 0.25,"acumperc": -0.23,"maxperc": 0,"minperc": -0.23,"aumeperc": -0.23, "final": 1.46},
+
+{"cry": "JOE","volume": 15.036,"gelo": 1.488,"percgel": -4.37,"percin": -10.732,"percat": -10.16,"difpercatin": -5.33,"preop": 1.584,"prein": 1.414,"preat": 1.423,"presup": 0.657,"difsupperc": 53.83, "preres": 2.79,"difresperc": -96.06,"qualymes":3,"rmaxtu": 0.33,"acumperc": 0.636,"maxperc": 0.636,"minperc": 0,"aumeperc": 0.423, "final": 0.892},
+
+{"cry": "JST","volume": 15.025,"gelo": 0.04232,"percgel": 2.58,"percin": 2.398,"percat": 2.07,"difpercatin": -13.68,"preop": 0.04253,"prein": 0.04355,"preat": 0.04341,"presup": 0.04363,"difsupperc": -0.51, "preres": 0.04377,"difresperc": -0.83,"qualymes":633,"rmaxtu": 0.47,"acumperc": -0.321,"maxperc": 0.253,"minperc": -0.321,"aumeperc": -0.413, "final": -0.118},
+
+{"cry": "JUV","volume": 0.234,"gelo": 6.25,"percgel": 1.6,"percin": 1.757,"percat": 1.44,"difpercatin": -18.04,"preop": 6.26,"prein": 6.37,"preat": 6.35,"presup": 6.28,"difsupperc": 1.1, "preres": 10.98,"difresperc": -72.91,"qualymes":3333,"rmaxtu": 0.07,"acumperc": -0.314,"maxperc": 0,"minperc": -0.314,"aumeperc": -0.314, "final": 0.828},
+
+{"cry": "KAVA","volume": 31.662,"gelo": 3.274,"percgel": 2.54,"percin": 0.869,"percat": 0.54,"difpercatin": -37.86,"preop": 3.339,"prein": 3.368,"preat": 3.357,"presup": 3.35,"difsupperc": 0.21, "preres": 3.39,"difresperc": -0.98,"qualymes":63,"rmaxtu": 0.79,"acumperc": -0.327,"maxperc": 0.267,"minperc": -0.327,"aumeperc": -0.356, "final": 0.25},
+
+{"cry": "KEEP","volume": 2.442,"gelo": 0.4561,"percgel": -2.87,"percin": -2.024,"percat": -2.55,"difpercatin": 25.99,"preop": 0.4546,"prein": 0.4454,"preat": 0.443,"presup": 0.4454,"difsupperc": -0.54, "preres": 0.449,"difresperc": -1.35,"qualymes":63,"rmaxtu": 0.56,"acumperc": -0.539,"maxperc": 0.202,"minperc": -0.539,"aumeperc": -0.583, "final": -0.023},
+
+{"cry": "KEY","volume": 1.067,"gelo": 0.007113,"percgel": -1.34,"percin": -3.228,"percat": -3.6,"difpercatin": 11.52,"preop": 0.00728,"prein": 0.007045,"preat": 0.007018,"presup": 0.006942,"difsupperc": 1.08, "preres": 0.007118,"difresperc": -1.42,"qualymes":66,"rmaxtu": 0.68,"acumperc": -0.383,"maxperc": 0.043,"minperc": -0.383,"aumeperc": -0.27, "final": 0.34},
+
+{"cry": "KLAY","volume": 4.085,"gelo": 1.184,"percgel": -0.68,"percin": -1.671,"percat": -1.75,"difpercatin": 4.73,"preop": 1.197,"prein": 1.177,"preat": 1.176,"presup": 1.178,"difsupperc": -0.17, "preres": 1.187,"difresperc": -0.94,"qualymes":63,"rmaxtu": 0.56,"acumperc": -0.085,"maxperc": 0.085,"minperc": -0.085,"aumeperc": -0.17, "final": 0.087},
+
+{"cry": "KMD","volume": 0.233,"gelo": 0.4883,"percgel": 0.35,"percin": 0.184,"percat": 0,"difpercatin": -100,"preop": 0.49,"prein": 0.4909,"preat": 0.49,"presup": 0.493,"difsupperc": -0.61, "preres": 0.4935,"difresperc": -0.71,"qualymes":63,"rmaxtu": 0.47,"acumperc": -0.183,"maxperc": 0,"minperc": -0.183,"aumeperc": -0.183, "final": 0.913},
+
+{"cry": "KNC","volume": 9.923,"gelo": 1.868,"percgel": 6.42,"percin": 5.388,"percat": 5.02,"difpercatin": -6.83,"preop": 1.893,"prein": 1.995,"preat": 1.988,"presup": 1.978,"difsupperc": 0.5, "preres": 2.024,"difresperc": -1.81,"qualymes":66,"rmaxtu": 0.52,"acumperc": -0.351,"maxperc": 0.201,"minperc": -0.351,"aumeperc": -0.501, "final": 2.308},
+
+{"cry": "KP3R","volume": 7.364,"gelo": 906.07,"percgel": -2.55,"percin": -3.786,"percat": -4.51,"difpercatin": 19.12,"preop": 924.68,"prein": 889.67,"preat": 882.99,"presup": 547.25,"difsupperc": 38.02, "preres": 2065,"difresperc": -133.86,"qualymes":3,"rmaxtu": 0.25,"acumperc": -0.751,"maxperc": 0.241,"minperc": -0.751,"aumeperc": -0.665, "final": 0.798},
+
+{"cry": "KSM","volume": 9.717,"gelo": 174.6,"percgel": -0.74,"percin": 4.897,"percat": 4.78,"difpercatin": -2.39,"preop": 165.4,"prein": 173.5,"preat": 173.3,"presup": 23.158,"difsupperc": 86.64, "preres": 175.2,"difresperc": -1.1,"qualymes":63,"rmaxtu": 0.5,"acumperc": -0.115,"maxperc": 0.231,"minperc": -0.115,"aumeperc": -0.345, "final": 0.123},
+
+{"cry": "LAZIO","volume": 2.632,"gelo": 3.1277,"percgel": 1.39,"percin": 1.342,"percat": 1.33,"difpercatin": -0.89,"preop": 3.1296,"prein": 3.1716,"preat": 3.1713,"presup": 3.1455,"difsupperc": 0.81, "preres": 10.9,"difresperc": -243.71,"qualymes":33,"rmaxtu": 0.2,"acumperc": -0.009,"maxperc": 0.088,"minperc": -0.009,"aumeperc": -0.098, "final": 0.1},
+
+{"cry": "LINA","volume": 9.226,"gelo": 0.02596,"percgel": -2.66,"percin": 1.765,"percat": 1.36,"difpercatin": -22.95,"preop": 0.02493,"prein": 0.02537,"preat": 0.02527,"presup": 0.02542,"difsupperc": -0.59, "preres": 0.02557,"difresperc": -1.19,"qualymes":33,"rmaxtu": 0.08,"acumperc": -0.394,"maxperc": 0.158,"minperc": -0.394,"aumeperc": -0.433, "final": 0.166},
+
+{"cry": "LINK","volume": 68.744,"gelo": 17.15,"percgel": -1.17,"percin": -2.24,"percat": -2.64,"difpercatin": 17.86,"preop": 17.41,"prein": 17.02,"preat": 16.95,"presup": 17.04,"difsupperc": -0.53, "preres": 17.11,"difresperc": -0.94,"qualymes":63,"rmaxtu": 0.76,"acumperc": -0.411,"maxperc": 0.235,"minperc": -0.411,"aumeperc": -0.47, "final": 0.061},
+
+{"cry": "LIT","volume": 4.48,"gelo": 1.456,"percgel": 0.82,"percin": 1.875,"percat": 1.94,"difpercatin": 3.47,"preop": 1.44,"prein": 1.467,"preat": 1.468,"presup": 1.463,"difsupperc": 0.34, "preres": 1.495,"difresperc": -1.84,"qualymes":333,"rmaxtu": 0.08,"acumperc": 0.068,"maxperc": 0.341,"minperc": 0,"aumeperc": -0.204, "final": 0.144},
+
+{"cry": "LOKA","volume": 19.613,"gelo": 1.7566,"percgel": 18.6,"percin": 15.64,"percat": 15.47,"difpercatin": -1.09,"preop": 1.8043,"prein": 2.0865,"preat": 2.0834,"presup": 0.16,"difsupperc": 92.32, "preres": 3.84,"difresperc": -84.31,"qualymes":3,"rmaxtu": 0.5,"acumperc": -0.149,"maxperc": 0.335,"minperc": -0.149,"aumeperc": -0.278, "final": -1.995},
+
+{"cry": "LPT","volume": 2.86,"gelo": 26.47,"percgel": 5.25,"percin": 4.637,"percat": 4.19,"difpercatin": -9.64,"preop": 26.74,"prein": 27.98,"preat": 27.86,"presup": 26.37,"difsupperc": 5.35, "preres": 101.8,"difresperc": -265.4,"qualymes":6,"rmaxtu": 0.7,"acumperc": -0.429,"maxperc": 0.286,"minperc": -0.429,"aumeperc": -0.429, "final": 1.028},
+
+{"cry": "LRC","volume": 71.38,"gelo": 0.9677,"percgel": -3.8,"percin": -7.11,"percat": -7.57,"difpercatin": 6.47,"preop": 1.0071,"prein": 0.9355,"preat": 0.9309,"presup": 0.071,"difsupperc": 92.37, "preres": 3.85,"difresperc": -313.58,"qualymes":6,"rmaxtu": 0.86,"acumperc": -0.492,"maxperc": 0.15,"minperc": -0.492,"aumeperc": -0.407, "final": 0.975},
+
+{"cry": "LSK","volume": 0.473,"gelo": 1.622,"percgel": -1.05,"percin": -2.184,"percat": -2.61,"difpercatin": 19.51,"preop": 1.648,"prein": 1.612,"preat": 1.605,"presup": 1.606,"difsupperc": -0.06, "preres": 1.622,"difresperc": -1.06,"qualymes":633,"rmaxtu": 0.64,"acumperc": -0.434,"maxperc": 0,"minperc": -0.434,"aumeperc": -0.249, "final": -0.126},
+
+{"cry": "LTC","volume": 58.826,"gelo": 113.7,"percgel": -0.44,"percin": 1.518,"percat": 1.07,"difpercatin": -29.51,"preop": 112,"prein": 113.7,"preat": 113.2,"presup": 97.5,"difsupperc": 13.87, "preres": 114.4,"difresperc": -1.06,"qualymes":63,"rmaxtu": 0.82,"acumperc": -0.44,"maxperc": 0.176,"minperc": -0.44,"aumeperc": -0.44, "final": 0.182},
+
+{"cry": "LTO","volume": 2.379,"gelo": 0.201,"percgel": -0.3,"percin": -2.923,"percat": -3.98,"difpercatin": 36.16,"preop": 0.2087,"prein": 0.2026,"preat": 0.2004,"presup": 0.2025,"difsupperc": -1.05, "preres": 0.2046,"difresperc": -2.1,"qualymes":66,"rmaxtu": 0.6,"acumperc": -1.086,"maxperc": 0,"minperc": -1.086,"aumeperc": -1.037, "final": 0.361},
+
+{"cry": "LUNA","volume": 218.142,"gelo": 51.81,"percgel": 0.73,"percin": -0.038,"percat": -0.29,"difpercatin": 663.16,"preop": 52.34,"prein": 52.32,"preat": 52.19,"presup": 50.41,"difsupperc": 3.41, "preres": 103.6,"difresperc": -98.51,"qualymes":6,"rmaxtu": 0.89,"acumperc": -0.248,"maxperc": 0.248,"minperc": -0.248,"aumeperc": -0.325, "final": 0.324},
+
+{"cry": "MANA","volume": 94.048,"gelo": 2.7075,"percgel": -2.4,"percin": -3.587,"percat": -3.86,"difpercatin": 7.61,"preop": 2.7488,"prein": 2.6502,"preat": 2.6426,"presup": 0.03,"difsupperc": 98.86, "preres": 5.9,"difresperc": -123.26,"qualymes":6,"rmaxtu": 0.84,"acumperc": -0.287,"maxperc": 0.264,"minperc": -0.287,"aumeperc": -0.294, "final": 0.559},
+
+{"cry": "MASK","volume": 2.652,"gelo": 6.191,"percgel": 2.05,"percin": 0.746,"percat": 0.24,"difpercatin": -67.83,"preop": 6.303,"prein": 6.35,"preat": 6.318,"presup": 6.37,"difsupperc": -0.82, "preres": 14.301,"difresperc": -126.35,"qualymes":6,"rmaxtu": 0.7,"acumperc": -0.504,"maxperc": 0.236,"minperc": -0.504,"aumeperc": -0.582, "final": -1.337},
+
+{"cry": "MATIC","volume": 83.125,"gelo": 1.648,"percgel": -1.21,"percin": -1.977,"percat": -2.46,"difpercatin": 24.43,"preop": 1.669,"prein": 1.636,"preat": 1.628,"presup": 1.638,"difsupperc": -0.61, "preres": 1.665,"difresperc": -2.27,"qualymes":6,"rmaxtu": 0.94,"acumperc": -0.489,"maxperc": 0.244,"minperc": -0.489,"aumeperc": -0.611, "final": 0.128},
+
+{"cry": "MBL","volume": 0.199,"gelo": 0.005693,"percgel": 1.9,"percin": 1.889,"percat": 1.45,"difpercatin": -23.24,"preop": 0.005718,"prein": 0.005826,"preat": 0.005801,"presup": 0.005782,"difsupperc": 0.33, "preres": 0.005857,"difresperc": -0.97,"qualymes":63,"rmaxtu": 0.6,"acumperc": -0.429,"maxperc": 0,"minperc": -0.429,"aumeperc": -0.326, "final": 1.601},
+
+{"cry": "MBOX","volume": 17.982,"gelo": 2.668,"percgel": 7.57,"percin": 6.923,"percat": 6.26,"difpercatin": -9.58,"preop": 2.701,"prein": 2.888,"preat": 2.87,"presup": 1.969,"difsupperc": 31.39, "preres": 15.734,"difresperc": -448.22,"qualymes":6,"rmaxtu": 0.71,"acumperc": -0.623,"maxperc": 0.139,"minperc": -0.623,"aumeperc": -0.623, "final": 0.662},
+
+{"cry": "MC","volume": 3.133,"gelo": 2.44,"percgel": -4.51,"percin": -3.704,"percat": -4.12,"difpercatin": 11.23,"preop": 2.43,"prein": 2.34,"preat": 2.33,"presup": 2.3,"difsupperc": 1.29, "preres": 12.7,"difresperc": -445.06,"qualymes":3,"rmaxtu": 0.33,"acumperc": -0.427,"maxperc": 0,"minperc": -0.427,"aumeperc": -0.427, "final": -0.455},
+
+{"cry": "MDT","volume": 3.788,"gelo": 0.06172,"percgel": -0.23,"percin": -3.96,"percat": -4.38,"difpercatin": 10.61,"preop": 0.0644,"prein": 0.06185,"preat": 0.06158,"presup": 0.00788,"difsupperc": 87.2, "preres": 0.17888,"difresperc": -190.48,"qualymes":6,"rmaxtu": 0.9,"acumperc": -0.437,"maxperc": 0.226,"minperc": -0.437,"aumeperc": -0.34, "final": 0.068},
+
+{"cry": "MDX","volume": 1.022,"gelo": 0.232,"percgel": 0,"percin": -0.433,"percat": 0.43,"difpercatin": -199.31,"preop": 0.231,"prein": 0.23,"preat": 0.232,"presup": 0.231,"difsupperc": 0.43, "preres": 0.231,"difresperc": 0.43,"qualymes":333,"rmaxtu": 0.2,"acumperc": 0.87,"maxperc": 1.304,"minperc": 0,"aumeperc": -0.429, "final": 0.442},
+
+{"cry": "MFT","volume": 0.978,"gelo": 0.006131,"percgel": 2.94,"percin": 3.237,"percat": 3.17,"difpercatin": -2.07,"preop": 0.006117,"prein": 0.006315,"preat": 0.006311,"presup": 0.006238,"difsupperc": 1.16, "preres": 0.006512,"difresperc": -3.18,"qualymes":663,"rmaxtu": 0.65,"acumperc": -0.063,"maxperc": 0,"minperc": -0.063,"aumeperc": -0.032, "final": 0.839},
+
+{"cry": "MINA","volume": 20.659,"gelo": 2.578,"percgel": -0.23,"percin": -0.538,"percat": -1.15,"difpercatin": 113.75,"preop": 2.602,"prein": 2.588,"preat": 2.572,"presup": 2.05,"difsupperc": 20.3, "preres": 6.684,"difresperc": -159.88,"qualymes":3,"rmaxtu": 0.57,"acumperc": -0.618,"maxperc": 0.309,"minperc": -0.618,"aumeperc": -0.772, "final": 0.08},
+
+{"cry": "MIR","volume": 0.801,"gelo": 1.164,"percgel": 0.09,"percin": -0.255,"percat": -1.02,"difpercatin": 300,"preop": 1.177,"prein": 1.174,"preat": 1.165,"presup": 1.17,"difsupperc": -0.43, "preres": 1.176,"difresperc": -0.94,"qualymes":333,"rmaxtu": 0.09,"acumperc": -0.767,"maxperc": 0,"minperc": -0.767,"aumeperc": -0.597, "final": 0.172},
+
+{"cry": "MITH","volume": 2.737,"gelo": 0.03548,"percgel": 2.03,"percin": 0.082,"percat": -0.52,"difpercatin": -734.15,"preop": 0.03639,"prein": 0.03642,"preat": 0.0362,"presup": 0.03637,"difsupperc": -0.47, "preres": 0.03731,"difresperc": -3.07,"qualymes":63,"rmaxtu": 0.71,"acumperc": -0.604,"maxperc": 0.082,"minperc": -0.604,"aumeperc": -0.577, "final": -0.198},
+
+{"cry": "MKR","volume": 4.018,"gelo": 2177,"percgel": 3.35,"percin": 1.438,"percat": 1.12,"difpercatin": -22.11,"preop": 2225,"prein": 2257,"preat": 2250,"presup": 429.79,"difsupperc": 80.9, "preres": 2303,"difresperc": -2.36,"qualymes":633,"rmaxtu": 0.55,"acumperc": -0.31,"maxperc": 0.222,"minperc": -0.31,"aumeperc": -0.398, "final": 0.599},
+
+{"cry": "MLN","volume": 1.072,"gelo": 57.1,"percgel": -2.98,"percin": -3.299,"percat": -3.82,"difpercatin": 15.79,"preop": 57.6,"prein": 55.7,"preat": 55.4,"presup": 55.6,"difsupperc": -0.36, "preres": 131.9,"difresperc": -138.09,"qualymes":33,"rmaxtu": 0.38,"acumperc": -0.539,"maxperc": 0,"minperc": -0.539,"aumeperc": -0.539, "final": 0.369},
+
+{"cry": "MOVR","volume": 4.299,"gelo": 75.1,"percgel": 4.26,"percin": 2.999,"percat": 2.09,"difpercatin": -30.31,"preop": 76.7,"prein": 79,"preat": 78.3,"presup": 67.1,"difsupperc": 14.3, "preres": 540,"difresperc": -589.66,"qualymes":3,"rmaxtu": 0.25,"acumperc": -0.886,"maxperc": 0.506,"minperc": -0.886,"aumeperc": -1.261, "final": -0.262},
+
+{"cry": "MTL","volume": 11.297,"gelo": 1.511,"percgel": 14.36,"percin": 12.934,"percat": 11.2,"difpercatin": -13.41,"preop": 1.554,"prein": 1.755,"preat": 1.728,"presup": 1.667,"difsupperc": 3.53, "preres": 1.714,"difresperc": 0.81,"qualymes":663,"rmaxtu": 0.65,"acumperc": -1.538,"maxperc": 0,"minperc": -1.538,"aumeperc": -0.69, "final": -1.351},
+
+{"cry": "NANO","volume": 3.223,"gelo": 2.15,"percgel": 3.44,"percin": 5.203,"percat": 5.2,"difpercatin": -0.06,"preop": 2.114,"prein": 2.224,"preat": 2.224,"presup": 2.148,"difsupperc": 3.42, "preres": 17.7,"difresperc": -695.86,"qualymes":633,"rmaxtu": 0.76,"acumperc": 0,"maxperc": 0,"minperc": 0,"aumeperc": 0, "final": 0},
+
+{"cry": "NBS","volume": 0.567,"gelo": 0.01138,"percgel": -1.14,"percin": -3.587,"percat": -3.93,"difpercatin": 9.56,"preop": 0.01171,"prein": 0.01129,"preat": 0.01125,"presup": 0.01133,"difsupperc": -0.71, "preres": 0.01133,"difresperc": -0.71,"qualymes":66,"rmaxtu": 0.44,"acumperc": -0.354,"maxperc": 0,"minperc": -0.354,"aumeperc": -0.354, "final": -0.642},
+
+{"cry": "NEAR","volume": 69.133,"gelo": 11.157,"percgel": 2.03,"percin": 1.238,"percat": 0.67,"difpercatin": -45.88,"preop": 11.308,"prein": 11.448,"preat": 11.384,"presup": 11.01,"difsupperc": 3.29, "preres": 11.72,"difresperc": -2.95,"qualymes":6,"rmaxtu": 0.94,"acumperc": -0.559,"maxperc": 0.192,"minperc": -0.559,"aumeperc": -0.611, "final": 0.844},
+
+{"cry": "NEO","volume": 9.487,"gelo": 19.86,"percgel": 6.45,"percin": 6.356,"percat": 5.81,"difpercatin": -8.59,"preop": 19.98,"prein": 21.25,"preat": 21.14,"presup": 3.89,"difsupperc": 81.6, "preres": 141,"difresperc": -566.98,"qualymes":3633,"rmaxtu": 0.06,"acumperc": -0.518,"maxperc": 0.188,"minperc": -0.518,"aumeperc": -0.564, "final": 0.145},
+
+{"cry": "NKN","volume": 1.591,"gelo": 0.2212,"percgel": 0.77,"percin": 0.676,"percat": 0.45,"difpercatin": -33.43,"preop": 0.2219,"prein": 0.2234,"preat": 0.2229,"presup": 0.2227,"difsupperc": 0.09, "preres": 0.2256,"difresperc": -1.21,"qualymes":66,"rmaxtu": 0.66,"acumperc": -0.224,"maxperc": 0.224,"minperc": -0.224,"aumeperc": -0.447, "final": 0.142},
+
+{"cry": "NMR","volume": 0.684,"gelo": 25.15,"percgel": -1.83,"percin": -3.016,"percat": -3.29,"difpercatin": 9.08,"preop": 25.53,"prein": 24.76,"preat": 24.69,"presup": 24.85,"difsupperc": -0.65, "preres": 24.88,"difresperc": -0.77,"qualymes":333,"rmaxtu": 0.53,"acumperc": -0.283,"maxperc": 0,"minperc": -0.283,"aumeperc": -0.162, "final": 0.298},
+
+{"cry": "NU","volume": 1.355,"gelo": 0.4921,"percgel": 0.14,"percin": -0.483,"percat": -0.73,"difpercatin": 51.14,"preop": 0.4964,"prein": 0.494,"preat": 0.4928,"presup": 0.4941,"difsupperc": -0.26, "preres": 0.4941,"difresperc": -0.26,"qualymes":63,"rmaxtu": 0.56,"acumperc": -0.243,"maxperc": 0,"minperc": -0.243,"aumeperc": -0.243, "final": 0.248},
+
+{"cry": "NULS","volume": 1.609,"gelo": 0.3972,"percgel": -1.18,"percin": -4.357,"percat": -4.45,"difpercatin": 2.13,"preop": 0.4108,"prein": 0.3929,"preat": 0.3925,"presup": 0.394,"difsupperc": -0.38, "preres": 0.4008,"difresperc": -2.11,"qualymes":36,"rmaxtu": 0.02,"acumperc": -0.102,"maxperc": 0,"minperc": -0.102,"aumeperc": -0.102, "final": 0.591},
+
+{"cry": "OCEAN","volume": 3.632,"gelo": 0.5717,"percgel": -0.21,"percin": -1.836,"percat": -2.11,"difpercatin": 14.92,"preop": 0.5828,"prein": 0.5721,"preat": 0.5705,"presup": 0.5726,"difsupperc": -0.37, "preres": 0.5735,"difresperc": -0.53,"qualymes":66,"rmaxtu": 0.47,"acumperc": -0.28,"maxperc": 0.245,"minperc": -0.28,"aumeperc": -0.332, "final": 0.239},
+
+{"cry": "OG","volume": 1.047,"gelo": 3.34,"percgel": 0.75,"percin": 3.116,"percat": 2.81,"difpercatin": -9.82,"preop": 3.273,"prein": 3.375,"preat": 3.365,"presup": 3.347,"difsupperc": 0.53, "preres": 11.2,"difresperc": -232.84,"qualymes":3333,"rmaxtu": 0.07,"acumperc": -0.296,"maxperc": 0,"minperc": -0.296,"aumeperc": -0.296, "final": -0.52},
+
+{"cry": "OGN","volume": 3.323,"gelo": 0.3275,"percgel": 1.92,"percin": 1.269,"percat": 0.85,"difpercatin": -33.02,"preop": 0.331,"prein": 0.3352,"preat": 0.3338,"presup": 0.3254,"difsupperc": 2.52, "preres": 0.342,"difresperc": -2.46,"qualymes":63,"rmaxtu": 0.62,"acumperc": -0.418,"maxperc": 0.298,"minperc": -0.418,"aumeperc": -0.536, "final": 0.537},
+
+{"cry": "OM","volume": 0.377,"gelo": 0.0985,"percgel": -1.12,"percin": -0.812,"percat": -1.12,"difpercatin": 37.93,"preop": 0.0985,"prein": 0.0977,"preat": 0.0974,"presup": 0.0979,"difsupperc": -0.51, "preres": 0.098,"difresperc": -0.62,"qualymes":333,"rmaxtu": 0.08,"acumperc": -0.307,"maxperc": 0.102,"minperc": -0.307,"aumeperc": -0.409, "final": 0.532},
+
+{"cry": "OMG","volume": 18.48,"gelo": 4.836,"percgel": 0.66,"percin": -0.812,"percat": -1.18,"difpercatin": 45.32,"preop": 4.926,"prein": 4.886,"preat": 4.868,"presup": 0.3031,"difsupperc": 93.77, "preres": 20.124,"difresperc": -313.39,"qualymes":6,"rmaxtu": 0.91,"acumperc": -0.368,"maxperc": 0.143,"minperc": -0.368,"aumeperc": -0.368, "final": 0.447},
+
+{"cry": "ONE","volume": 35.382,"gelo": 0.18642,"percgel": 3,"percin": 0.523,"percat": 0.33,"difpercatin": -36.9,"preop": 0.19138,"prein": 0.19238,"preat": 0.19201,"presup": 0.18821,"difsupperc": 1.98, "preres": 0.19184,"difresperc": 0.09,"qualymes":63,"rmaxtu": 0.88,"acumperc": -0.192,"maxperc": 0.364,"minperc": -0.192,"aumeperc": -0.554, "final": 0.349},
+
+{"cry": "ONG","volume": 2.004,"gelo": 0.6251,"percgel": 2.08,"percin": 2.264,"percat": 1.72,"difpercatin": -24.03,"preop": 0.6273,"prein": 0.6415,"preat": 0.6381,"presup": 0.6373,"difsupperc": 0.13, "preres": 0.6406,"difresperc": -0.39,"qualymes":3633,"rmaxtu": 0.03,"acumperc": -0.53,"maxperc": 0,"minperc": -0.53,"aumeperc": -0.266, "final": -2.28},
+
+{"cry": "ONT","volume": 5.299,"gelo": 0.4994,"percgel": 1.4,"percin": 1.558,"percat": 1.12,"difpercatin": -28.11,"preop": 0.5008,"prein": 0.5086,"preat": 0.5064,"presup": 0.5061,"difsupperc": 0.06, "preres": 0.5111,"difresperc": -0.93,"qualymes":3633,"rmaxtu": 0.02,"acumperc": -0.433,"maxperc": 0.177,"minperc": -0.433,"aumeperc": -0.295, "final": 0.369},
+
+{"cry": "OOKI","volume": 8.971,"gelo": 0.01305,"percgel": 12.64,"percin": 10.782,"percat": 11.62,"difpercatin": 7.77,"preop": 0.01317,"prein": 0.01459,"preat": 0.0147,"presup": 0.00932,"difsupperc": 36.6, "preres": 1.8,"difresperc": -12144.9,"qualymes":3,"rmaxtu": 0.33,"acumperc": 0.754,"maxperc": 1.576,"minperc": 0,"aumeperc": -0.81, "final": 1.316},
+
+{"cry": "ORN","volume": 2.296,"gelo": 4.308,"percgel": -3.92,"percin": -7.946,"percat": -8.39,"difpercatin": 5.59,"preop": 4.518,"prein": 4.159,"preat": 4.139,"presup": 4.159,"difsupperc": -0.48, "preres": 13.187,"difresperc": -218.6,"qualymes":633,"rmaxtu": 0.39,"acumperc": -0.481,"maxperc": 0,"minperc": -0.481,"aumeperc": -0.481, "final": 0.355},
+
+{"cry": "OXT","volume": 1.383,"gelo": 0.2445,"percgel": 0.16,"percin": -1.243,"percat": -1.8,"difpercatin": 44.81,"preop": 0.2494,"prein": 0.2463,"preat": 0.2449,"presup": 0.2455,"difsupperc": -0.24, "preres": 0.2488,"difresperc": -1.59,"qualymes":63,"rmaxtu": 0.44,"acumperc": -0.568,"maxperc": 0,"minperc": -0.568,"aumeperc": -0.568, "final": 0.553},
+
+{"cry": "PAXG","volume": 2.35,"gelo": 1805,"percgel": 0.22,"percin": -0.055,"percat": -0.06,"difpercatin": 9.09,"preop": 1810,"prein": 1809,"preat": 1809,"presup": 1801,"difsupperc": 0.44, "preres": 1814,"difresperc": -0.28,"qualymes":336,"rmaxtu": 0.32,"acumperc": 0,"maxperc": 0,"minperc": 0,"aumeperc": 0, "final": 0.055},
+
+{"cry": "PEOPLE","volume": 76.957,"gelo": 0.084,"percgel": 2.98,"percin": -1.249,"percat": -1.82,"difpercatin": 45.72,"preop": 0.0881,"prein": 0.087,"preat": 0.0865,"presup": 0.0305,"difsupperc": 64.74, "preres": 0.2,"difresperc": -131.21,"qualymes":3,"rmaxtu": 0.33,"acumperc": -0.575,"maxperc": 0.23,"minperc": -0.575,"aumeperc": -0.346, "final": 0.842},
+
+{"cry": "PERL","volume": 1.088,"gelo": 0.05023,"percgel": -0.92,"percin": -0.97,"percat": -1.48,"difpercatin": 52.58,"preop": 0.05052,"prein": 0.05003,"preat": 0.04977,"presup": 0.05002,"difsupperc": -0.5, "preres": 0.05049,"difresperc": -1.45,"qualymes":63,"rmaxtu": 0.68,"acumperc": -0.52,"maxperc": 0.02,"minperc": -0.52,"aumeperc": -0.46, "final": 0.434},
+
+{"cry": "PERP","volume": 0.887,"gelo": 6.4,"percgel": -2.81,"percin": -2.344,"percat": -2.81,"difpercatin": 19.88,"preop": 6.4,"prein": 6.25,"preat": 6.22,"presup": 6.27,"difsupperc": -0.8, "preres": 23.13,"difresperc": -271.86,"qualymes":63,"rmaxtu": 0.5,"acumperc": -0.48,"maxperc": 0,"minperc": -0.48,"aumeperc": -0.48, "final": 0.334},
+
+{"cry": "PHA","volume": 2.539,"gelo": 0.2528,"percgel": 0.4,"percin": 0.118,"percat": -0.04,"difpercatin": -133.9,"preop": 0.2539,"prein": 0.2542,"preat": 0.2538,"presup": 0.2548,"difsupperc": -0.39, "preres": 0.2591,"difresperc": -2.09,"qualymes":33,"rmaxtu": 0.44,"acumperc": -0.157,"maxperc": 0.197,"minperc": -0.157,"aumeperc": -0.079, "final": 0.902},
+
+{"cry": "PLA","volume": 0.348,"gelo": 0.926,"percgel": -1.4,"percin": -1.502,"percat": -2.04,"difpercatin": 35.82,"preop": 0.932,"prein": 0.918,"preat": 0.913,"presup": 0.624,"difsupperc": 31.65, "preres": 3.404,"difresperc": -272.84,"qualymes":3,"rmaxtu": 0.25,"acumperc": -0.545,"maxperc": 0,"minperc": -0.545,"aumeperc": -0.328, "final": 1.699},
+
+{"cry": "PNT","volume": 2.667,"gelo": 0.6141,"percgel": -0.83,"percin": 0.197,"percat": -0.23,"difpercatin": -216.75,"preop": 0.6104,"prein": 0.6116,"preat": 0.609,"presup": 0.6119,"difsupperc": -0.48, "preres": 0.6144,"difresperc": -0.89,"qualymes":633,"rmaxtu": 0.38,"acumperc": -0.425,"maxperc": 0,"minperc": -0.425,"aumeperc": -0.197, "final": -0.135},
+
+{"cry": "POLS","volume": 0.566,"gelo": 1.589,"percgel": -1.51,"percin": -1.067,"percat": -1.76,"difpercatin": 64.95,"preop": 1.593,"prein": 1.576,"preat": 1.565,"presup": 0.8,"difsupperc": 48.88, "preres": 5.27,"difresperc": -236.74,"qualymes":6,"rmaxtu": 0.8,"acumperc": -0.698,"maxperc": 0,"minperc": -0.698,"aumeperc": -0.698, "final": 1.907},
+
+{"cry": "POLY","volume": 2.875,"gelo": 0.3842,"percgel": 3.62,"percin": 3.845,"percat": 3.43,"difpercatin": -10.79,"preop": 0.3849,"prein": 0.3997,"preat": 0.3981,"presup": 0.3998,"difsupperc": -0.43, "preres": 0.4065,"difresperc": -2.11,"qualymes":33,"rmaxtu": 0.33,"acumperc": -0.4,"maxperc": 0.125,"minperc": -0.4,"aumeperc": -0.45, "final": 1.181},
+
+{"cry": "POND","volume": 10.273,"gelo": 0.04541,"percgel": -4.01,"percin": -0.137,"percat": -0.55,"difpercatin": 301.46,"preop": 0.04383,"prein": 0.04377,"preat": 0.04359,"presup": 0.04373,"difsupperc": -0.32, "preres": 0.04475,"difresperc": -2.66,"qualymes":333,"rmaxtu": 0.17,"acumperc": -0.411,"maxperc": 0.137,"minperc": -0.411,"aumeperc": -0.366, "final": 1.032},
+
+{"cry": "PORTO","volume": 2.766,"gelo": 3.0611,"percgel": 2.58,"percin": 2.529,"percat": 2.47,"difpercatin": -2.33,"preop": 3.0643,"prein": 3.1418,"preat": 3.14,"presup": 1,"difsupperc": 68.15, "preres": 41.11,"difresperc": -1209.24,"qualymes":3,"rmaxtu": 0.25,"acumperc": -0.057,"maxperc": 0.274,"minperc": -0.067,"aumeperc": 0.01, "final": 1.403},
+
+{"cry": "POWR","volume": 1.345,"gelo": 0.549,"percgel": -0.02,"percin": -0.489,"percat": -0.54,"difpercatin": 10.43,"preop": 0.5519,"prein": 0.5492,"preat": 0.5489,"presup": 0.548,"difsupperc": 0.16, "preres": 0.5534,"difresperc": -0.82,"qualymes":3,"rmaxtu": 0.25,"acumperc": -0.055,"maxperc": 0,"minperc": -0.055,"aumeperc": -0.055, "final": 0.24},
+
+{"cry": "PSG","volume": 0.757,"gelo": 14.29,"percgel": -1.47,"percin": -1.255,"percat": -1.81,"difpercatin": 44.22,"preop": 14.34,"prein": 14.16,"preat": 14.08,"presup": 7.688,"difsupperc": 45.4, "preres": 14.5,"difresperc": -2.98,"qualymes":63,"rmaxtu": 0.6,"acumperc": -0.565,"maxperc": 0,"minperc": -0.565,"aumeperc": -0.071, "final": 0.579},
+
+{"cry": "PUNDIX","volume": 0.437,"gelo": 0.783,"percgel": 0.51,"percin": 0.639,"percat": 0.51,"difpercatin": -20.19,"preop": 0.783,"prein": 0.788,"preat": 0.787,"presup": 0.771,"difsupperc": 2.03, "preres": 0.792,"difresperc": -0.64,"qualymes":333,"rmaxtu": 0.09,"acumperc": -0.127,"maxperc": 0,"minperc": -0.127,"aumeperc": -0.127, "final": -0.261},
+
+{"cry": "PYR","volume": 26.324,"gelo": 13.8,"percgel": -5.14,"percin": 2.504,"percat": 2.43,"difpercatin": -2.96,"preop": 12.78,"prein": 13.1,"preat": 13.09,"presup": 6.68,"difsupperc": 48.97, "preres": 50,"difresperc": -281.97,"qualymes":3,"rmaxtu": 0.25,"acumperc": -0.076,"maxperc": 1.221,"minperc": -0.076,"aumeperc": -0.381, "final": 2.077},
+
+{"cry": "QI","volume": 11.687,"gelo": 0.0528,"percgel": 11.55,"percin": 10.694,"percat": 10.51,"difpercatin": -1.72,"preop": 0.0533,"prein": 0.059,"preat": 0.0589,"presup": 0.0592,"difsupperc": -0.51, "preres": 0.0614,"difresperc": -4.24,"qualymes":3,"rmaxtu": 0.25,"acumperc": -0.169,"maxperc": 0.169,"minperc": -0.169,"aumeperc": -0.169, "final": 3.461},
+
+{"cry": "QNT","volume": 15.252,"gelo": 103.5,"percgel": 8.41,"percin": 12.849,"percat": 11.75,"difpercatin": -8.55,"preop": 100.4,"prein": 113.3,"preat": 112.2,"presup": 97.1,"difsupperc": 13.46, "preres": 121,"difresperc": -7.84,"qualymes":33,"rmaxtu": 0.38,"acumperc": -0.971,"maxperc": 0.088,"minperc": -0.971,"aumeperc": -0.883, "final": 4.719},
+
+{"cry": "QTUM","volume": 29.909,"gelo": 6.149,"percgel": 4.94,"percin": 5.239,"percat": 4.67,"difpercatin": -10.86,"preop": 6.165,"prein": 6.488,"preat": 6.453,"presup": 6.445,"difsupperc": 0.12, "preres": 19.3,"difresperc": -199.09,"qualymes":63,"rmaxtu": 0.81,"acumperc": -0.539,"maxperc": 0.262,"minperc": -0.539,"aumeperc": -0.616, "final": -0.237},
+
+{"cry": "QUICK","volume": 9.058,"gelo": 203.4,"percgel": -5.06,"percin": 7.572,"percat": 7.52,"difpercatin": -0.69,"preop": 179.6,"prein": 193.2,"preat": 193.1,"presup": 191.5,"difsupperc": 0.83, "preres": 196.1,"difresperc": -1.55,"qualymes":33,"rmaxtu": 0.14,"acumperc": -0.052,"maxperc": 0.104,"minperc": -0.052,"aumeperc": -0.155, "final": -0.11},
+
+{"cry": "RAD","volume": 2.035,"gelo": 5.544,"percgel": -0.79,"percin": -3.263,"percat": -3.51,"difpercatin": 7.57,"preop": 5.7,"prein": 5.514,"preat": 5.5,"presup": 5.531,"difsupperc": -0.56, "preres": 11.689,"difresperc": -112.53,"qualymes":33,"rmaxtu": 0.2,"acumperc": -0.254,"maxperc": 0,"minperc": -0.254,"aumeperc": -0.254, "final": 1.105},
+
+{"cry": "RAMP","volume": 3.879,"gelo": 0.1055,"percgel": 5.5,"percin": 4.991,"percat": 4.8,"difpercatin": -3.83,"preop": 0.1062,"prein": 0.1115,"preat": 0.1113,"presup": 0.1105,"difsupperc": 0.72, "preres": 0.1155,"difresperc": -3.77,"qualymes":333,"rmaxtu": 0.08,"acumperc": -0.179,"maxperc": 0,"minperc": -0.179,"aumeperc": 0, "final": 0},
+
+{"cry": "RARE","volume": 4.48,"gelo": 0.534,"percgel": 11.05,"percin": 9.158,"percat": 8.61,"difpercatin": -5.98,"preop": 0.546,"prein": 0.596,"preat": 0.593,"presup": 0.569,"difsupperc": 4.05, "preres": 0.66,"difresperc": -11.3,"qualymes":33,"rmaxtu": 0.2,"acumperc": -0.503,"maxperc": 0.503,"minperc": -0.503,"aumeperc": -1.002, "final": -0.175},
+
+{"cry": "RAY","volume": 3.154,"gelo": 3.87,"percgel": -2.92,"percin": -4.492,"percat": -4.64,"difpercatin": 3.29,"preop": 3.94,"prein": 3.763,"preat": 3.757,"presup": 3.778,"difsupperc": -0.56, "preres": 13.443,"difresperc": -257.81,"qualymes":33,"rmaxtu": 0.14,"acumperc": -0.159,"maxperc": 0.106,"minperc": -0.159,"aumeperc": -0.265, "final": -0.219},
+
+{"cry": "REEF","volume": 4.184,"gelo": 0.01027,"percgel": -0.1,"percin": -0.771,"percat": -1.16,"difpercatin": 50.45,"preop": 0.01038,"prein": 0.0103,"preat": 0.01026,"presup": 0.01027,"difsupperc": -0.1, "preres": 0.0104,"difresperc": -1.36,"qualymes":333,"rmaxtu": 0.07,"acumperc": -0.388,"maxperc": 0.097,"minperc": -0.388,"aumeperc": -0.485, "final": 0.402},
+
+{"cry": "REN","volume": 2.793,"gelo": 0.3256,"percgel": 2,"percin": -0.98,"percat": -1.34,"difpercatin": 36.73,"preop": 0.3366,"prein": 0.3333,"preat": 0.3321,"presup": 0.3328,"difsupperc": -0.21, "preres": 0.3359,"difresperc": -1.14,"qualymes":333,"rmaxtu": 0.6,"acumperc": -0.36,"maxperc": 0.21,"minperc": -0.36,"aumeperc": -0.42, "final": 0.253},
+
+{"cry": "REP","volume": 10.811,"gelo": 13.05,"percgel": 30.19,"percin": 30.934,"percat": 30.09,"difpercatin": -2.73,"preop": 13.06,"prein": 17.1,"preat": 16.99,"presup": 9.45,"difsupperc": 44.38, "preres": 17.63,"difresperc": -3.77,"qualymes":6333,"rmaxtu": 0.52,"acumperc": -0.643,"maxperc": 0,"minperc": -0.643,"aumeperc": -0.352, "final": -3.023},
+
+{"cry": "REQ","volume": 1.908,"gelo": 0.2343,"percgel": -1.79,"percin": 0.086,"percat": -0.9,"difpercatin": -1146.51,"preop": 0.2322,"prein": 0.2324,"preat": 0.2301,"presup": 0.1656,"difsupperc": 28.03, "preres": 1.099,"difresperc": -377.62,"qualymes":6,"rmaxtu": 0.57,"acumperc": -0.99,"maxperc": 0,"minperc": -0.99,"aumeperc": -0.217, "final": -0.135},
+
+{"cry": "RGT","volume": 0.169,"gelo": 20.98,"percgel": -0.91,"percin": -0.239,"percat": -0.43,"difpercatin": 79.92,"preop": 20.88,"prein": 20.83,"preat": 20.79,"presup": 20.81,"difsupperc": -0.1, "preres": 20.96,"difresperc": -0.82,"qualymes":3,"rmaxtu": 0.25,"acumperc": -0.192,"maxperc": 0,"minperc": -0.192,"aumeperc": -0.192, "final": -0.293},
+
+{"cry": "RIF","volume": 1.786,"gelo": 0.1402,"percgel": 4.56,"percin": 4.694,"percat": 4.27,"difpercatin": -9.03,"preop": 0.1406,"prein": 0.1472,"preat": 0.1466,"presup": 0.1458,"difsupperc": 0.55, "preres": 0.1468,"difresperc": -0.14,"qualymes":333,"rmaxtu": 0.07,"acumperc": -0.408,"maxperc": 0,"minperc": -0.408,"aumeperc": -0.408, "final": -0.072},
+
+{"cry": "RLC","volume": 1.163,"gelo": 1.96,"percgel": -0.05,"percin": -1.004,"percat": -1.66,"difpercatin": 65.34,"preop": 1.992,"prein": 1.972,"preat": 1.959,"presup": 1.975,"difsupperc": -0.82, "preres": 1.991,"difresperc": -1.63,"qualymes":63,"rmaxtu": 0.68,"acumperc": -0.659,"maxperc": 0.152,"minperc": -0.659,"aumeperc": -0.76, "final": 0.318},
+
+{"cry": "RNDR","volume": 21.885,"gelo": 3.791,"percgel": -1.03,"percin": -3.822,"percat": -4.41,"difpercatin": 15.38,"preop": 3.925,"prein": 3.775,"preat": 3.752,"presup": 3.731,"difsupperc": 0.56, "preres": 3.764,"difresperc": -0.32,"qualymes":3,"rmaxtu": 0.25,"acumperc": -0.609,"maxperc": 0.132,"minperc": -0.609,"aumeperc": -0.372, "final": -0.337},
+
+{"cry": "ROSE","volume": 67.68,"gelo": 0.3247,"percgel": 5.78,"percin": 3.238,"percat": 2.89,"difpercatin": -10.75,"preop": 0.33381,"prein": 0.34462,"preat": 0.34346,"presup": 0.34239,"difsupperc": 0.31, "preres": 0.3537,"difresperc": -2.98,"qualymes":6,"rmaxtu": 0.94,"acumperc": -0.337,"maxperc": 0.221,"minperc": -0.337,"aumeperc": -0.267, "final": 0.031},
+
+{"cry": "RSR","volume": 3.956,"gelo": 0.01857,"percgel": 2.48,"percin": 2.029,"percat": 1.6,"difpercatin": -21.14,"preop": 0.01873,"prein": 0.01911,"preat": 0.01903,"presup": 0.01911,"difsupperc": -0.42, "preres": 0.01915,"difresperc": -0.63,"qualymes":633,"rmaxtu": 0.47,"acumperc": -0.419,"maxperc": 0.209,"minperc": -0.419,"aumeperc": -0.523, "final": -0.166},
+
+{"cry": "RUNE","volume": 8.815,"gelo": 4.203,"percgel": -1.26,"percin": -1.444,"percat": -1.75,"difpercatin": 21.19,"preop": 4.224,"prein": 4.163,"preat": 4.15,"presup": 4.168,"difsupperc": -0.43, "preres": 14.897,"difresperc": -258.96,"qualymes":63,"rmaxtu": 0.5,"acumperc": -0.312,"maxperc": 0.24,"minperc": -0.312,"aumeperc": -0.408, "final": 0.28},
+
+{"cry": "RVN","volume": 5.038,"gelo": 0.06916,"percgel": 1.33,"percin": 0.672,"percat": 0.24,"difpercatin": -64.29,"preop": 0.06991,"prein": 0.07038,"preat": 0.07008,"presup": 0.07033,"difsupperc": -0.36, "preres": 0.07087,"difresperc": -1.13,"qualymes":6333,"rmaxtu": 0.6,"acumperc": -0.426,"maxperc": 0.185,"minperc": -0.426,"aumeperc": -0.455, "final": -1.255},
+
+{"cry": "SAND","volume": 135.218,"gelo": 3.9245,"percgel": -0.55,"percin": -1.901,"percat": -2.22,"difpercatin": 16.78,"preop": 3.9916,"prein": 3.9157,"preat": 3.9029,"presup": 0.008333,"difsupperc": 99.79, "preres": 8.4876,"difresperc": -117.47,"qualymes":6,"rmaxtu": 0.84,"acumperc": -0.327,"maxperc": 0.294,"minperc": -0.327,"aumeperc": -0.408, "final": 0.623},
+
+{"cry": "SANTOS","volume": 0.524,"gelo": 2.663,"percgel": 0.11,"percin": -0.742,"percat": -1.15,"difpercatin": 54.99,"preop": 2.697,"prein": 2.677,"preat": 2.666,"presup": 2.649,"difsupperc": 0.64, "preres": 2.742,"difresperc": -2.85,"qualymes":3,"rmaxtu": 0.33,"acumperc": -0.411,"maxperc": 0,"minperc": -0.411,"aumeperc": -0.411, "final": -0.426},
+
+{"cry": "SC","volume": 3.419,"gelo": 0.01008,"percgel": 1.49,"percin": 1.883,"percat": 1.39,"difpercatin": -26.18,"preop": 0.01009,"prein": 0.01028,"preat": 0.01023,"presup": 0.01028,"difsupperc": -0.49, "preres": 0.01034,"difresperc": -1.08,"qualymes":63,"rmaxtu": 0.5,"acumperc": -0.486,"maxperc": 0.097,"minperc": -0.486,"aumeperc": -0.389, "final": 0.301},
+
+{"cry": "SCRT","volume": 3.009,"gelo": 5.269,"percgel": 1.33,"percin": 1.576,"percat": 1.35,"difpercatin": -14.34,"preop": 5.268,"prein": 5.351,"preat": 5.339,"presup": 5.38,"difsupperc": -0.77, "preres": 5.453,"difresperc": -2.14,"qualymes":3,"rmaxtu": 0.5,"acumperc": -0.224,"maxperc": 0.505,"minperc": -0.224,"aumeperc": -0.725, "final": 3.729},
+
+{"cry": "SFP","volume": 3.306,"gelo": 0.8404,"percgel": 1.15,"percin": -0.421,"percat": -0.53,"difpercatin": 25.89,"preop": 0.8546,"prein": 0.851,"preat": 0.8501,"presup": 0.8406,"difsupperc": 1.12, "preres": 0.8609,"difresperc": -1.27,"qualymes":363,"rmaxtu": 0.08,"acumperc": -0.106,"maxperc": 0.27,"minperc": -0.106,"aumeperc": -0.375, "final": 0.087},
+
+{"cry": "SHIB","volume": 69.862,"gelo": 0.00002163,"percgel": -0.74,"percin": -0.829,"percat": -1.15,"difpercatin": 38.72,"preop": 0.00002172,"prein": 0.00002154,"preat": 0.00002147,"presup": 0.00002157,"difsupperc": -0.47, "preres": 0.00002182,"difresperc": -1.63,"qualymes":63,"rmaxtu": 0.6,"acumperc": -0.325,"maxperc": 0.186,"minperc": -0.325,"aumeperc": -0.371, "final": 0.24},
+
+{"cry": "SKL","volume": 2.176,"gelo": 0.116,"percgel": 1.03,"percin": -0.593,"percat": -0.76,"difpercatin": 28.16,"preop": 0.1181,"prein": 0.1174,"preat": 0.1172,"presup": 0.1184,"difsupperc": -1.02, "preres": 0.1191,"difresperc": -1.62,"qualymes":633,"rmaxtu": 0.27,"acumperc": -0.17,"maxperc": 0.256,"minperc": -0.17,"aumeperc": -0.425, "final": 0.359},
+
+{"cry": "SLP","volume": 12.188,"gelo": 0.0099,"percgel": -1.01,"percin": -1,"percat": -2,"difpercatin": 100,"preop": 0.01,"prein": 0.0099,"preat": 0.0098,"presup": 0.0099,"difsupperc": -1.02, "preres": 0.01,"difresperc": -2.04,"qualymes":333,"rmaxtu": 0.18,"acumperc": -1.01,"maxperc": 0,"minperc": -1.01,"aumeperc": -1.01, "final": 0},
+
+{"cry": "SNX","volume": 14.618,"gelo": 5.391,"percgel": 8.94,"percin": 7.228,"percat": 7.19,"difpercatin": -0.53,"preop": 5.479,"prein": 5.875,"preat": 5.873,"presup": 5.895,"difsupperc": -0.37, "preres": 11.8,"difresperc": -100.92,"qualymes":6333,"rmaxtu": 0.4,"acumperc": -0.034,"maxperc": 0.289,"minperc": -0.034,"aumeperc": -0.322, "final": -0.617},
+
+{"cry": "SOL","volume": 384.127,"gelo": 111.51,"percgel": -2.98,"percin": -0.984,"percat": -1.44,"difpercatin": 46.34,"preop": 109.77,"prein": 108.69,"preat": 108.19,"presup": 80.83,"difsupperc": 25.29, "preres": 112.3,"difresperc": -3.8,"qualymes":6,"rmaxtu": 0.84,"acumperc": -0.46,"maxperc": 0.267,"minperc": -0.46,"aumeperc": -0.405, "final": -0.274},
+
+{"cry": "SPELL","volume": 16.001,"gelo": 0.00715,"percgel": -7.83,"percin": -8.707,"percat": -10.34,"difpercatin": 18.76,"preop": 0.00735,"prein": 0.00671,"preat": 0.00659,"presup": 0.00483,"difsupperc": 26.71, "preres": 0.0281,"difresperc": -326.4,"qualymes":3,"rmaxtu": 0.33,"acumperc": -1.788,"maxperc": 0,"minperc": -1.788,"aumeperc": -0.152, "final": 2.404},
+
+{"cry": "SRM","volume": 6.682,"gelo": 2.36,"percgel": 1.61,"percin": 0.878,"percat": 0.29,"difpercatin": -66.97,"preop": 2.391,"prein": 2.412,"preat": 2.398,"presup": 2.41,"difsupperc": -0.5, "preres": 13.732,"difresperc": -472.64,"qualymes":63,"rmaxtu": 0.74,"acumperc": -0.58,"maxperc": 0.083,"minperc": -0.58,"aumeperc": -0.622, "final": 0.174},
+
+{"cry": "STMX","volume": 1.005,"gelo": 0.01519,"percgel": -0.79,"percin": -2.267,"percat": -2.4,"difpercatin": 5.87,"preop": 0.01544,"prein": 0.01509,"preat": 0.01507,"presup": 0.01507,"difsupperc": 0, "preres": 0.01529,"difresperc": -1.46,"qualymes":633,"rmaxtu": 0.52,"acumperc": -0.133,"maxperc": 0.331,"minperc": -0.133,"aumeperc": -0.462, "final": 0.611},
+
+{"cry": "STORJ","volume": 3.184,"gelo": 1.1444,"percgel": 2.94,"percin": 2.995,"percat": 2.27,"difpercatin": -24.21,"preop": 1.1518,"prein": 1.1863,"preat": 1.178,"presup": 1.1751,"difsupperc": 0.25, "preres": 1.1927,"difresperc": -1.25,"qualymes":66,"rmaxtu": 0.45,"acumperc": -0.7,"maxperc": 0.177,"minperc": -0.7,"aumeperc": -0.875, "final": 1.131},
+
+{"cry": "STPT","volume": 0.431,"gelo": 0.07477,"percgel": 1.62,"percin": 1.064,"percat": 1.09,"difpercatin": 2.44,"preop": 0.07516,"prein": 0.07596,"preat": 0.07598,"presup": 0.0756,"difsupperc": 0.5, "preres": 0.07574,"difresperc": 0.32,"qualymes":63,"rmaxtu": 0.83,"acumperc": 0.026,"maxperc": 0.105,"minperc": 0,"aumeperc": -0.079, "final": 0.24},
+
+{"cry": "STRAX","volume": 4.406,"gelo": 1.002,"percgel": 20.16,"percin": 24.179,"percat": 19.8,"difpercatin": -18.11,"preop": 1.005,"prein": 1.248,"preat": 1.204,"presup": 1.061,"difsupperc": 11.88, "preres": 1.135,"difresperc": 5.73,"qualymes":633,"rmaxtu": 0.44,"acumperc": -3.526,"maxperc": 0,"minperc": -3.526,"aumeperc": -0.824, "final": -2.931},
+
+{"cry": "STX","volume": 2.413,"gelo": 1.476,"percgel": 0.47,"percin": -0.467,"percat": -1,"difpercatin": 114.13,"preop": 1.498,"prein": 1.491,"preat": 1.483,"presup": 0.043,"difsupperc": 97.1, "preres": 3.256,"difresperc": -119.55,"qualymes":6,"rmaxtu": 0.93,"acumperc": -0.537,"maxperc": 0.134,"minperc": -0.537,"aumeperc": -0.67, "final": 0.35},
+
+{"cry": "SUN","volume": 27.095,"gelo": 0.01448,"percgel": 6.56,"percin": 6.985,"percat": 6.71,"difpercatin": -3.94,"preop": 0.01446,"prein": 0.01547,"preat": 0.01543,"presup": 0.01549,"difsupperc": -0.39, "preres": 0.01553,"difresperc": -0.65,"qualymes":333,"rmaxtu": 0.44,"acumperc": -0.259,"maxperc": 0.129,"minperc": -0.259,"aumeperc": -0.194, "final": 0.395},
+
+{"cry": "SUPER","volume": 11.101,"gelo": 0.6978,"percgel": -1.18,"percin": 3.271,"percat": 3,"difpercatin": -8.28,"preop": 0.6695,"prein": 0.6914,"preat": 0.6896,"presup": 0.6917,"difsupperc": -0.3, "preres": 0.6927,"difresperc": -0.45,"qualymes":36,"rmaxtu": 0.08,"acumperc": -0.26,"maxperc": 0.304,"minperc": -0.26,"aumeperc": -0.562, "final": 0.924},
+
+{"cry": "SUSD","volume": 0.018,"gelo": 1.002,"percgel": -0.1,"percin": -0.1,"percat": -0.1,"difpercatin": 0,"preop": 1.002,"prein": 1.001,"preat": 1.001,"presup": 1,"difsupperc": 0.1, "preres": 1.002,"difresperc": -0.1,"qualymes":6,"rmaxtu": 0.93,"acumperc": 0,"maxperc": 0,"minperc": 0,"aumeperc": 0, "final": 0},
+
+{"cry": "SUSHI","volume": 21.66,"gelo": 4.409,"percgel": -0.5,"percin": -0.318,"percat": -0.43,"difpercatin": 35.22,"preop": 4.406,"prein": 4.392,"preat": 4.387,"presup": 4.371,"difsupperc": 0.36, "preres": 10.684,"difresperc": -143.54,"qualymes":633,"rmaxtu": 0.39,"acumperc": -0.114,"maxperc": 0.228,"minperc": -0.114,"aumeperc": -0.341, "final": -0.192},
+
+{"cry": "SXP","volume": 11.495,"gelo": 1.367,"percgel": 0.88,"percin": 1.096,"percat": 0.73,"difpercatin": -33.39,"preop": 1.369,"prein": 1.384,"preat": 1.379,"presup": 1.385,"difsupperc": -0.44, "preres": 1.402,"difresperc": -1.67,"qualymes":633,"rmaxtu": 0.55,"acumperc": -0.361,"maxperc": 0.217,"minperc": -0.361,"aumeperc": -0.433, "final": -0.074},
+
+{"cry": "SYS","volume": 6.572,"gelo": 0.7616,"percgel": -1.23,"percin": -3.483,"percat": -4.03,"difpercatin": 15.7,"preop": 0.7838,"prein": 0.7565,"preat": 0.7522,"presup": 0.2579,"difsupperc": 65.71, "preres": 1.33,"difresperc": -76.81,"qualymes":6,"rmaxtu": 0.83,"acumperc": -0.568,"maxperc": 0.106,"minperc": -0.568,"aumeperc": -0.371, "final": 0.21},
+
+{"cry": "TCT","volume": 1.104,"gelo": 0.02055,"percgel": 0.83,"percin": 1.168,"percat": 0.83,"difpercatin": -28.94,"preop": 0.02055,"prein": 0.02079,"preat": 0.02072,"presup": 0.02061,"difsupperc": 0.53, "preres": 0.02152,"difresperc": -3.86,"qualymes":63,"rmaxtu": 0.65,"acumperc": -0.337,"maxperc": 0,"minperc": -0.337,"aumeperc": -0.337, "final": 1.309},
+
+{"cry": "TFUEL","volume": 2.765,"gelo": 0.1748,"percgel": -0.63,"percin": -1.193,"percat": -1.31,"difpercatin": 9.81,"preop": 0.176,"prein": 0.1739,"preat": 0.1737,"presup": 0.1721,"difsupperc": 0.92, "preres": 0.1762,"difresperc": -1.44,"qualymes":633,"rmaxtu": 0.76,"acumperc": -0.115,"maxperc": 0.288,"minperc": -0.173,"aumeperc": 0.058, "final": 0.959},
+
+{"cry": "THETA","volume": 22.214,"gelo": 2.922,"percgel": -0.92,"percin": -1.525,"percat": -1.9,"difpercatin": 24.59,"preop": 2.951,"prein": 2.906,"preat": 2.895,"presup": 2.907,"difsupperc": -0.41, "preres": 10.477,"difresperc": -261.9,"qualymes":633,"rmaxtu": 0.71,"acumperc": -0.379,"maxperc": 0.172,"minperc": -0.379,"aumeperc": -0.447, "final": 0.504},
+
+{"cry": "TKO","volume": 1.33,"gelo": 0.747,"percgel": -0.27,"percin": -0.666,"percat": -0.8,"difpercatin": 20.12,"preop": 0.751,"prein": 0.746,"preat": 0.745,"presup": 0.748,"difsupperc": -0.4, "preres": 0.759,"difresperc": -1.88,"qualymes":333,"rmaxtu": 0.09,"acumperc": -0.134,"maxperc": 0.402,"minperc": -0.134,"aumeperc": -0.534, "final": 0.69},
+
+{"cry": "TLM","volume": 10.858,"gelo": 0.1127,"percgel": 1.42,"percin": 0.615,"percat": 0.44,"difpercatin": -28.46,"preop": 0.1138,"prein": 0.1145,"preat": 0.1143,"presup": 0.1141,"difsupperc": 0.17, "preres": 0.1146,"difresperc": -0.26,"qualymes":36,"rmaxtu": 0.09,"acumperc": -0.175,"maxperc": 0.262,"minperc": -0.175,"aumeperc": -0.436, "final": 0.368},
+
+{"cry": "TOMO","volume": 0.809,"gelo": 1.139,"percgel": 1.93,"percin": 1.309,"percat": 1.31,"difpercatin": 0.08,"preop": 1.146,"prein": 1.161,"preat": 1.161,"presup": 1.156,"difsupperc": 0.43, "preres": 1.168,"difresperc": -0.6,"qualymes":63,"rmaxtu": 0.84,"acumperc": 0,"maxperc": 0.172,"minperc": 0,"aumeperc": -0.086, "final": 0},
+
+{"cry": "TORN","volume": 0.592,"gelo": 22.2,"percgel": 4.1,"percin": 2.986,"percat": 2.99,"difpercatin": 0.13,"preop": 22.44,"prein": 23.11,"preat": 23.11,"presup": 22.8,"difsupperc": 1.34, "preres": 23.63,"difresperc": -2.25,"qualymes":33,"rmaxtu": 0.44,"acumperc": 0,"maxperc": 0.519,"minperc": 0,"aumeperc": -0.302, "final": -0.137},
+
+{"cry": "TRB","volume": 0.716,"gelo": 20.82,"percgel": 1.87,"percin": 1.724,"percat": 1.58,"difpercatin": -8.35,"preop": 20.88,"prein": 21.24,"preat": 21.21,"presup": 21.18,"difsupperc": 0.14, "preres": 164.05,"difresperc": -673.46,"qualymes":63,"rmaxtu": 0.53,"acumperc": -0.141,"maxperc": 0.141,"minperc": -0.141,"aumeperc": -0.235, "final": 0.685},
+
+{"cry": "TRIBE","volume": 0.518,"gelo": 0.6943,"percgel": -0.55,"percin": -0.502,"percat": -0.98,"difpercatin": 95.22,"preop": 0.6973,"prein": 0.6938,"preat": 0.6905,"presup": 0.5742,"difsupperc": 16.84, "preres": 1.5209,"difresperc": -120.26,"qualymes":6,"rmaxtu": 0.57,"acumperc": -0.476,"maxperc": 0,"minperc": -0.476,"aumeperc": -0.476, "final": 0.336},
+
+{"cry": "TROY","volume": 1.477,"gelo": 0.006667,"percgel": -0.87,"percin": -3.192,"percat": -3.24,"difpercatin": 1.5,"preop": 0.00683,"prein": 0.006612,"preat": 0.006609,"presup": 0.00662,"difsupperc": -0.17, "preres": 0.00672,"difresperc": -1.68,"qualymes":63,"rmaxtu": 0.81,"acumperc": -0.045,"maxperc": 0.363,"minperc": -0.045,"aumeperc": -0.377, "final": 0.14},
+
+{"cry": "TRU","volume": 0.665,"gelo": 0.1896,"percgel": 2,"percin": 0.207,"percat": -0.15,"difpercatin": -172.46,"preop": 0.1937,"prein": 0.1941,"preat": 0.1934,"presup": 0.194,"difsupperc": -0.31, "preres": 0.1942,"difresperc": -0.41,"qualymes":63,"rmaxtu": 0.57,"acumperc": -0.361,"maxperc": 0,"minperc": -0.361,"aumeperc": -0.361, "final": 1.064},
+
+{"cry": "TRX","volume": 69.38,"gelo": 0.05969,"percgel": 1.89,"percin": 2.06,"percat": 1.84,"difpercatin": -10.68,"preop": 0.05972,"prein": 0.06095,"preat": 0.06082,"presup": 0.05665,"difsupperc": 6.86, "preres": 0.06154,"difresperc": -1.18,"qualymes":66,"rmaxtu": 0.78,"acumperc": -0.213,"maxperc": 0.098,"minperc": -0.213,"aumeperc": -0.23, "final": 0.117},
+
+{"cry": "TUSD","volume": 26.253,"gelo": 0.9998,"percgel": 0,"percin": -0.01,"percat": 0,"difpercatin": -100,"preop": 0.9998,"prein": 0.9997,"preat": 0.9998,"presup": 0.9997,"difsupperc": 0.01, "preres": 0.9998,"difresperc": 0,"qualymes":636,"rmaxtu": 0.8,"acumperc": 0.01,"maxperc": 0.01,"minperc": 0,"aumeperc": 0, "final": -0.01},
+
+{"cry": "TVK","volume": 1.472,"gelo": 0.1292,"percgel": 1.93,"percin": 1.457,"percat": 1,"difpercatin": -31.37,"preop": 0.1304,"prein": 0.1323,"preat": 0.1317,"presup": 0.1307,"difsupperc": 0.76, "preres": 0.1311,"difresperc": 0.46,"qualymes":33,"rmaxtu": 0.14,"acumperc": -0.454,"maxperc": 0.68,"minperc": -0.454,"aumeperc": -0.977, "final": 0.319},
+
+{"cry": "TWT","volume": 2.37,"gelo": 0.5496,"percgel": 3.91,"percin": 3.297,"percat": 2.88,"difpercatin": -12.65,"preop": 0.5551,"prein": 0.5734,"preat": 0.5711,"presup": 0.573,"difsupperc": -0.33, "preres": 0.5837,"difresperc": -2.21,"qualymes":63,"rmaxtu": 0.64,"acumperc": -0.401,"maxperc": 0.122,"minperc": -0.401,"aumeperc": -0.523, "final": 1.509},
+
+{"cry": "UMA","volume": 1.288,"gelo": 5.977,"percgel": -0.97,"percin": -2.891,"percat": -3.33,"difpercatin": 15.19,"preop": 6.123,"prein": 5.946,"preat": 5.919,"presup": 5.909,"difsupperc": 0.17, "preres": 23.39,"difresperc": -295.17,"qualymes":333,"rmaxtu": 0.33,"acumperc": -0.454,"maxperc": 0.067,"minperc": -0.454,"aumeperc": -0.387, "final": -0.279},
+
+{"cry": "UNFI","volume": 4.472,"gelo": 5.374,"percgel": -0.19,"percin": -0.629,"percat": -0.8,"difpercatin": 27.19,"preop": 5.407,"prein": 5.373,"preat": 5.364,"presup": 5.407,"difsupperc": -0.8, "preres": 13.574,"difresperc": -153.06,"qualymes":633,"rmaxtu": 0.31,"acumperc": -0.168,"maxperc": 0.261,"minperc": -0.168,"aumeperc": -0.427, "final": 0.273},
+
+{"cry": "UNI","volume": 15.887,"gelo": 11.18,"percgel": -0.72,"percin": -1.759,"percat": -2.37,"difpercatin": 34.74,"preop": 11.37,"prein": 11.17,"preat": 11.1,"presup": 9.85,"difsupperc": 11.26, "preres": 11.2,"difresperc": -0.9,"qualymes":633,"rmaxtu": 0.5,"acumperc": -0.627,"maxperc": 0.09,"minperc": -0.627,"aumeperc": -0.627, "final": 0.938},
+
+{"cry": "USDC","volume": 80.147,"gelo": 0.9995,"percgel": 0,"percin": 0.01,"percat": 0,"difpercatin": -100,"preop": 0.9995,"prein": 0.9996,"preat": 0.9995,"presup": 0.9995,"difsupperc": 0, "preres": 0.9996,"difresperc": -0.01,"qualymes":3333,"rmaxtu": 0.08,"acumperc": -0.01,"maxperc": 0,"minperc": -0.01,"aumeperc": -0.01, "final": 0},
+
+{"cry": "USDP","volume": 0.373,"gelo": 0.9996,"percgel": -0.01,"percin": -0.01,"percat": -0.01,"difpercatin": 0,"preop": 0.9996,"prein": 0.9995,"preat": 0.9995,"presup": 0.9995,"difsupperc": 0, "preres": 0.9996,"difresperc": -0.01,"qualymes":33,"rmaxtu": 0.17,"acumperc": 0,"maxperc": 0,"minperc": 0,"aumeperc": 0, "final": 0},
+
+{"cry": "UST","volume": 27.952,"gelo": 0.9995,"percgel": 0.05,"percin": 0.06,"percat": 0.06,"difpercatin": 0,"preop": 0.9994,"prein": 1,"preat": 1,"presup": 1,"difsupperc": 0, "preres": 1.0002,"difresperc": -0.02,"qualymes":3,"rmaxtu": 0.33,"acumperc": 0,"maxperc": 0.01,"minperc": 0,"aumeperc": 0, "final": 0.05},
+
+{"cry": "UTK","volume": 1.108,"gelo": 0.2326,"percgel": 1.5,"percin": 1.369,"percat": 0.98,"difpercatin": -28.41,"preop": 0.2338,"prein": 0.237,"preat": 0.2361,"presup": 0.2378,"difsupperc": -0.72, "preres": 0.2392,"difresperc": -1.31,"qualymes":633,"rmaxtu": 0.47,"acumperc": -0.38,"maxperc": 0.127,"minperc": -0.38,"aumeperc": -0.506, "final": 0.043},
+
+{"cry": "VET","volume": 26.382,"gelo": 0.05452,"percgel": 1.03,"percin": 0.473,"percat": 0.16,"difpercatin": -66.17,"preop": 0.05499,"prein": 0.05525,"preat": 0.05508,"presup": 0.05533,"difsupperc": -0.45, "preres": 0.05579,"difresperc": -1.29,"qualymes":63,"rmaxtu": 0.77,"acumperc": -0.308,"maxperc": 0.163,"minperc": -0.308,"aumeperc": -0.362, "final": 0.625},
+
+{"cry": "VGX","volume": 2.337,"gelo": 1.903,"percgel": 2.47,"percin": -2.047,"percat": -2.65,"difpercatin": 29.46,"preop": 2.003,"prein": 1.962,"preat": 1.95,"presup": 1.05,"difsupperc": 46.15, "preres": 5.818,"difresperc": -198.36,"qualymes":3,"rmaxtu": 0.25,"acumperc": -0.612,"maxperc": 0,"minperc": -0.612,"aumeperc": -0.51, "final": -1.267},
+
+{"cry": "VIDT","volume": 5.244,"gelo": 0.4831,"percgel": 6.62,"percin": 5.45,"percat": 5.94,"difpercatin": 8.99,"preop": 0.4862,"prein": 0.5127,"preat": 0.5151,"presup": 0.5,"difsupperc": 2.93, "preres": 0.5128,"difresperc": 0.45,"qualymes":33,"rmaxtu": 0.33,"acumperc": 0.468,"maxperc": 0.917,"minperc": 0,"aumeperc": -0.445, "final": 8.264},
+
+{"cry": "VITE","volume": 0.297,"gelo": 0.05183,"percgel": -0.98,"percin": -0.978,"percat": -1.63,"difpercatin": 66.67,"preop": 0.05217,"prein": 0.05166,"preat": 0.05132,"presup": 0.05154,"difsupperc": -0.43, "preres": 0.05168,"difresperc": -0.7,"qualymes":663,"rmaxtu": 0.63,"acumperc": -0.658,"maxperc": 0,"minperc": -0.658,"aumeperc": -0.658, "final": -0.379},
+
+{"cry": "VOXEL","volume": 47.766,"gelo": 1.4939,"percgel": 32.93,"percin": 32.117,"percat": 31.5,"difpercatin": -1.92,"preop": 1.5101,"prein": 1.9951,"preat": 1.9858,"presup": 0.2,"difsupperc": 89.93, "preres": 6.95,"difresperc": -249.98,"qualymes":3,"rmaxtu": 0.33,"acumperc": -0.466,"maxperc": 0.862,"minperc": -0.466,"aumeperc": -0.715, "final": -2.203},
+
+{"cry": "VTHO","volume": 1.19,"gelo": 0.003445,"percgel": 1.36,"percin": 1.568,"percat": 1.42,"difpercatin": -9.44,"preop": 0.003443,"prein": 0.003497,"preat": 0.003492,"presup": 0.003504,"difsupperc": -0.34, "preres": 0.00355,"difresperc": -1.66,"qualymes":633,"rmaxtu": 0.5,"acumperc": -0.143,"maxperc": 0.515,"minperc": -0.143,"aumeperc": -0.654, "final": -0.117},
+
+{"cry": "WAN","volume": 0.506,"gelo": 0.422,"percgel": -1.35,"percin": -2.015,"percat": -2.46,"difpercatin": 22.08,"preop": 0.4268,"prein": 0.4182,"preat": 0.4163,"presup": 0.4178,"difsupperc": -0.36, "preres": 0.4187,"difresperc": -0.58,"qualymes":633,"rmaxtu": 0.68,"acumperc": -0.454,"maxperc": 0,"minperc": -0.454,"aumeperc": -0.431, "final": 0.297},
+
+{"cry": "WAVES","volume": 19.191,"gelo": 8.95,"percgel": 0.45,"percin": -0.88,"percat": -1.1,"difpercatin": 25,"preop": 9.09,"prein": 9.01,"preat": 8.99,"presup": 8.97,"difsupperc": 0.22, "preres": 23.38,"difresperc": -160.07,"qualymes":633,"rmaxtu": 0.76,"acumperc": -0.222,"maxperc": 0.333,"minperc": -0.222,"aumeperc": -0.443, "final": 0.461},
+
+{"cry": "WAXP","volume": 6.572,"gelo": 0.3252,"percgel": 1.11,"percin": -0.151,"percat": -0.69,"difpercatin": 356.95,"preop": 0.3311,"prein": 0.3306,"preat": 0.3288,"presup": 0.3305,"difsupperc": -0.52, "preres": 0.3325,"difresperc": -1.13,"qualymes":6,"rmaxtu": 0.57,"acumperc": -0.544,"maxperc": 0.06,"minperc": -0.544,"aumeperc": -0.394, "final": -0.154},
+
+{"cry": "WIN","volume": 21.97,"gelo": 0.0003069,"percgel": 0.2,"percin": -0.516,"percat": -0.74,"difpercatin": 43.41,"preop": 0.0003098,"prein": 0.0003082,"preat": 0.0003075,"presup": 0.0003078,"difsupperc": -0.1, "preres": 0.0003113,"difresperc": -1.24,"qualymes":63,"rmaxtu": 0.68,"acumperc": -0.227,"maxperc": 0.195,"minperc": -0.227,"aumeperc": -0.259, "final": 0.134},
+
+{"cry": "WING","volume": 0.388,"gelo": 9.11,"percgel": -0.44,"percin": -0.871,"percat": -1.31,"difpercatin": 50.4,"preop": 9.19,"prein": 9.11,"preat": 9.07,"presup": 9.08,"difsupperc": -0.11, "preres": 12.83,"difresperc": -41.46,"qualymes":3333,"rmaxtu": 0.06,"acumperc": -0.439,"maxperc": 0,"minperc": -0.439,"aumeperc": -0.33, "final": 1.247},
+
+{"cry": "WNXM","volume": 0.756,"gelo": 34.93,"percgel": 1.92,"percin": -0.889,"percat": -1.11,"difpercatin": 24.86,"preop": 36,"prein": 35.68,"preat": 35.6,"presup": 35.83,"difsupperc": -0.65, "preres": 134.2,"difresperc": -276.97,"qualymes":63,"rmaxtu": 0.53,"acumperc": -0.224,"maxperc": 0,"minperc": -0.224,"aumeperc": -0.224, "final": 0.088},
+
+{"cry": "WRX","volume": 19.022,"gelo": 0.973,"percgel": 1.64,"percin": -0.799,"percat": -1.2,"difpercatin": 50.19,"preop": 1.001,"prein": 0.993,"preat": 0.989,"presup": 0.977,"difsupperc": 1.21, "preres": 1.03,"difresperc": -4.15,"qualymes":63,"rmaxtu": 0.6,"acumperc": -0.403,"maxperc": 0.101,"minperc": -0.403,"aumeperc": -0.403, "final": 0},
+
+{"cry": "WTC","volume": 0.744,"gelo": 0.5306,"percgel": 0.43,"percin": 0.038,"percat": -0.06,"difpercatin": -257.89,"preop": 0.5332,"prein": 0.5334,"preat": 0.5329,"presup": 0.5335,"difsupperc": -0.11, "preres": 0.5404,"difresperc": -1.41,"qualymes":66,"rmaxtu": 0.57,"acumperc": -0.094,"maxperc": 0.506,"minperc": -0.094,"aumeperc": -0.597, "final": 0.059},
+
+{"cry": "XEC","volume": 6.085,"gelo": 0.00007638,"percgel": 4.43,"percin": 4.432,"percat": 4.28,"difpercatin": -3.43,"preop": 0.00007649,"prein": 0.00007988,"preat": 0.00007976,"presup": 0.00007937,"difsupperc": 0.49, "preres": 0.00007991,"difresperc": -0.19,"qualymes":33,"rmaxtu": 0.17,"acumperc": -0.15,"maxperc": 0.163,"minperc": -0.15,"aumeperc": -0.25, "final": -0.256},
+
+{"cry": "XEM","volume": 1.094,"gelo": 0.1031,"percgel": 1.55,"percin": 1.449,"percat": 1.16,"difpercatin": -19.94,"preop": 0.1035,"prein": 0.105,"preat": 0.1047,"presup": 0.1047,"difsupperc": 0, "preres": 0.1054,"difresperc": -0.67,"qualymes":363,"rmaxtu": 0.31,"acumperc": -0.286,"maxperc": 0.095,"minperc": -0.286,"aumeperc": -0.286, "final": 0},
+
+{"cry": "XLM","volume": 11.071,"gelo": 0.2033,"percgel": -0.49,"percin": -0.54,"percat": -0.74,"difpercatin": 37.04,"preop": 0.2038,"prein": 0.2027,"preat": 0.2023,"presup": 0.2028,"difsupperc": -0.25, "preres": 0.2033,"difresperc": -0.49,"qualymes":63,"rmaxtu": 0.8,"acumperc": -0.197,"maxperc": 0.247,"minperc": -0.197,"aumeperc": -0.296, "final": 0.304},
+
+{"cry": "XMR","volume": 9.784,"gelo": 144.5,"percgel": 3.25,"percin": 2.957,"percat": 2.61,"difpercatin": -11.73,"preop": 145.4,"prein": 149.7,"preat": 149.2,"presup": 25.08,"difsupperc": 83.19, "preres": 149.7,"difresperc": -0.34,"qualymes":633,"rmaxtu": 0.75,"acumperc": -0.334,"maxperc": 0.267,"minperc": -0.334,"aumeperc": -0.334, "final": 0.339},
+
+{"cry": "XNO","volume": 0.645,"gelo": 2.115,"percgel": 1.7,"percin": -1.644,"percat": -1.78,"difpercatin": 8.27,"preop": 2.19,"prein": 2.154,"preat": 2.151,"presup": 2.092,"difsupperc": 2.74, "preres": 3.89,"difresperc": -80.85,"qualymes":3,"rmaxtu": 0.5,"acumperc": -0.139,"maxperc": 0.139,"minperc": -0.139,"aumeperc": -0.278, "final": 0.241},
+
+{"cry": "XRP","volume": 85.499,"gelo": 0.6223,"percgel": 0.51,"percin": 0.626,"percat": 0.37,"difpercatin": -40.89,"preop": 0.6232,"prein": 0.6271,"preat": 0.6255,"presup": 0.6263,"difsupperc": -0.13, "preres": 0.6294,"difresperc": -0.62,"qualymes":663,"rmaxtu": 0.78,"acumperc": -0.255,"maxperc": 0.128,"minperc": -0.255,"aumeperc": -0.303, "final": 0.297},
+
+{"cry": "XTZ","volume": 24.941,"gelo": 3.625,"percgel": 5.38,"percin": 6.47,"percat": 6.08,"difpercatin": -6.03,"preop": 3.601,"prein": 3.834,"preat": 3.82,"presup": 3.76,"difsupperc": 1.57, "preres": 3.802,"difresperc": 0.47,"qualymes":63,"rmaxtu": 0.87,"acumperc": -0.365,"maxperc": 0.183,"minperc": -0.365,"aumeperc": -0.547, "final": 0.609},
+
+{"cry": "XVG","volume": 0.808,"gelo": 0.01015,"percgel": 0.99,"percin": 0.389,"percat": -0.19,"difpercatin": -148.84,"preop": 0.01027,"prein": 0.01031,"preat": 0.01025,"presup": 0.0103,"difsupperc": -0.49, "preres": 0.01052,"difresperc": -2.63,"qualymes":33,"rmaxtu": 0.11,"acumperc": -0.582,"maxperc": 0,"minperc": -0.582,"aumeperc": -0.485, "final": 0.612},
+
+{"cry": "XVS","volume": 1.1,"gelo": 8.11,"percgel": -0.12,"percin": -0.368,"percat": -0.74,"difpercatin": 101.09,"preop": 8.16,"prein": 8.13,"preat": 8.1,"presup": 8.15,"difsupperc": -0.62, "preres": 14.05,"difresperc": -73.46,"qualymes":633,"rmaxtu": 0.47,"acumperc": -0.369,"maxperc": 0,"minperc": -0.369,"aumeperc": -0.369, "final": 0.256},
+
+{"cry": "YFI","volume": 6.507,"gelo": 25211.36,"percgel": -2.51,"percin": -2.297,"percat": -2.48,"difpercatin": 7.97,"preop": 25204.93,"prein": 24625.98,"preat": 24579.78,"presup": 3000,"difsupperc": 87.79, "preres": 24848.79,"difresperc": -1.09,"qualymes":636,"rmaxtu": 0.53,"acumperc": -0.188,"maxperc": 0.208,"minperc": -0.188,"aumeperc": -0.377, "final": 0.417},
+
+{"cry": "YFII","volume": 1.184,"gelo": 2301,"percgel": 4,"percin": 3.28,"percat": 3.28,"difpercatin": 0,"preop": 2317,"prein": 2393,"preat": 2393,"presup": 970,"difsupperc": 59.47, "preres": 2403,"difresperc": -0.42,"qualymes":363,"rmaxtu": 0.06,"acumperc": 0,"maxperc": 0.418,"minperc": 0,"aumeperc": -0.416, "final": 0.485},
+
+{"cry": "YGG","volume": 16.496,"gelo": 3.279,"percgel": 5.37,"percin": 16.546,"percat": 13.88,"difpercatin": -16.11,"preop": 3.034,"prein": 3.536,"preat": 3.455,"presup": 3.545,"difsupperc": -2.6, "preres": 11.5,"difresperc": -232.85,"qualymes":3,"rmaxtu": 0.5,"acumperc": -2.291,"maxperc": 0.255,"minperc": -2.291,"aumeperc": -0.576, "final": 0},
+
+{"cry": "ZEC","volume": 14.185,"gelo": 97.1,"percgel": 4.53,"percin": 5.481,"percat": 4.96,"difpercatin": -9.51,"preop": 96.7,"prein": 102,"preat": 101.5,"presup": 99.5,"difsupperc": 1.97, "preres": 103.3,"difresperc": -1.77,"qualymes":63,"rmaxtu": 0.75,"acumperc": -0.49,"maxperc": 0.098,"minperc": -0.49,"aumeperc": -0.588, "final": 1.515},
+
+{"cry": "ZEN","volume": 3.722,"gelo": 39.23,"percgel": 0.76,"percin": -0.176,"percat": -0.55,"difpercatin": 212.5,"preop": 39.75,"prein": 39.68,"preat": 39.53,"presup": 5.062,"difsupperc": 87.19, "preres": 138.31,"difresperc": -249.89,"qualymes":63,"rmaxtu": 0.55,"acumperc": -0.378,"maxperc": 0.101,"minperc": -0.378,"aumeperc": -0.378, "final": 0.907},
+
+{"cry": "ZIL","volume": 5.439,"gelo": 0.04558,"percgel": 1.54,"percin": 0.847,"percat": 0.56,"difpercatin": -33.88,"preop": 0.04602,"prein": 0.04641,"preat": 0.04628,"presup": 0.04644,"difsupperc": -0.35, "preres": 0.04667,"difresperc": -0.84,"qualymes":633,"rmaxtu": 0.76,"acumperc": -0.28,"maxperc": 0.237,"minperc": -0.28,"aumeperc": -0.43, "final": 0.112},
+
+{"cry": "ZRX","volume": 2.234,"gelo": 0.5906,"percgel": -0.08,"percin": -0.439,"percat": -0.47,"difpercatin": 7.06,"preop": 0.5929,"prein": 0.5903,"preat": 0.5901,"presup": 0.5901,"difsupperc": 0, "preres": 0.5941,"difresperc": -0.68,"qualymes":633,"rmaxtu": 0.73,"acumperc": -0.034,"maxperc": 0.356,"minperc": -0.034,"aumeperc": -0.388, "final": 0.46}
+]

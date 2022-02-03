@@ -169,24 +169,24 @@ fetch(url)
             let campvoll= document.getElementById(`vol_${result[i].id}`)
             document.getElementById(`mo_${result[i].id}`).innerHTML= result[i].id;
             campvoll.innerHTML= voll
-            document.getElementById(`gelo_${result[i].id}`).innerHTML= '000.0000000';
-            document.getElementById(`auvol_${result[i].id}`).innerHTML= '0.00';
+            document.getElementById(`gelo_${result[i].id}`).innerHTML= '0';
+            document.getElementById(`auvol_${result[i].id}`).innerHTML= '0';
             document.getElementById(`in_${result[i].id}`).innerHTML= result[i].value;
-            document.getElementById(`at_${result[i].id}`).innerHTML= '0.000';
-            document.getElementById(`dif_${result[i].id}`).innerHTML= '0.000';
+            document.getElementById(`at_${result[i].id}`).innerHTML= '0';
+            document.getElementById(`dif_${result[i].id}`).innerHTML= '0';
             document.getElementById(`ope_${result[i].id}`).innerHTML= result[i].open;
             document.getElementById(`pe_${result[i].id}`).innerHTML= result[i].pro;
             document.getElementById(result[i].id).innerHTML= result[i].pro;
-            document.getElementById(`sup_${result[i].id}`).innerHTML= '000.000';
-            document.getElementById(`difsup_${result[i].id}`).innerHTML= '000.00';
-            document.getElementById(`res_${result[i].id}`).innerHTML= '000.000';
-            document.getElementById(`difres_${result[i].id}`).innerHTML= '000.00';
-            document.getElementById(`qualymes_${result[i].id}`).innerHTML= '000';
-            document.getElementById(`rmaxtu_${result[i].id}`).innerHTML= '0.00';
-            document.getElementById(`acu_${result[i].id}`).innerHTML= '0.000';
-            document.getElementById(`max_${result[i].id}`).innerHTML= '0.000';
-            document.getElementById(`min_${result[i].id}`).innerHTML= '0.000';
-            document.getElementById(`au_${result[i].id}`).innerHTML= '0.000';
+            document.getElementById(`sup_${result[i].id}`).innerHTML= '0';
+            document.getElementById(`difsup_${result[i].id}`).innerHTML= '0';
+            document.getElementById(`res_${result[i].id}`).innerHTML= '999';
+            document.getElementById(`difres_${result[i].id}`).innerHTML= '0';
+            document.getElementById(`qualymes_${result[i].id}`).innerHTML= '0';
+            document.getElementById(`rmaxtu_${result[i].id}`).innerHTML= '0';
+            document.getElementById(`acu_${result[i].id}`).innerHTML= '0';
+            document.getElementById(`max_${result[i].id}`).innerHTML= '0';
+            document.getElementById(`min_${result[i].id}`).innerHTML= '0';
+            document.getElementById(`au_${result[i].id}`).innerHTML= '0';
 
 
 
@@ -558,7 +558,8 @@ function ativar(){
                             document.getElementById(`min_${moe}`).innerHTML=cracum
                         }else {
                             if(Math.sign(cracum)===1 && Math.abs(cracum)>Math.abs(maxvlr)){
-                            document.getElementById(`max_${moe}`).innerHTML=cracum
+                                document.getElementById(`max_${moe}`).innerHTML=cracum
+                                
                             }
                         }
                         
@@ -663,6 +664,14 @@ function ativar(){
                         td42.setAttribute('id',`difsup_${result[i].id}`)
                         td42.setAttribute("class","tdp")
 
+                        let td411 = document.createElement("td")
+                        td411.setAttribute('id',`res_${result[i].id}`)
+                        td411.setAttribute("class","tdp")
+
+                        let td412 = document.createElement("td")
+                        td412.setAttribute('id',`difres_${result[i].id}`)
+                        td412.setAttribute("class","tdp")
+
                         let td43 = document.createElement("td")
                         td43.setAttribute('id',`qualymes_${result[i].id}`)
                         td43.setAttribute("class","tdp")
@@ -712,6 +721,8 @@ function ativar(){
                         tr.appendChild(td4)
                         tr.appendChild(td41)
                         tr.appendChild(td42)
+                        tr.appendChild(td411)
+                        tr.appendChild(td412)
                         tr.appendChild(td43)
                         tr.appendChild(td44)
                         tr.appendChild(tdac)
@@ -726,22 +737,24 @@ function ativar(){
                         let campvoll= document.getElementById(`vol_${result[i].id}`)
                         document.getElementById(`mo_${result[i].id}`).innerHTML= result[i].id;
                         campvoll.innerHTML= voll
-                        document.getElementById(`gelo_${result[i].id}`).innerHTML= '000.0000000';
-                        document.getElementById(`auvol_${result[i].id}`).innerHTML= '0.00';
+                        document.getElementById(`gelo_${result[i].id}`).innerHTML= '0';
+                        document.getElementById(`auvol_${result[i].id}`).innerHTML= '0';
                         document.getElementById(`in_${result[i].id}`).innerHTML= result[i].value;
-                        document.getElementById(`at_${result[i].id}`).innerHTML= '0.000';
-                        document.getElementById(`dif_${result[i].id}`).innerHTML= '0.000';
+                        document.getElementById(`at_${result[i].id}`).innerHTML= '0';
+                        document.getElementById(`dif_${result[i].id}`).innerHTML= '0';
                         document.getElementById(`ope_${result[i].id}`).innerHTML= result[i].open;
                         document.getElementById(`pe_${result[i].id}`).innerHTML= result[i].pro;
                         document.getElementById(result[i].id).innerHTML= result[i].pro;
-                        document.getElementById(`sup_${result[i].id}`).innerHTML= '000.000';
-                        document.getElementById(`difsup_${result[i].id}`).innerHTML= '999.999';
-                        document.getElementById(`qualymes_${result[i].id}`).innerHTML= '0,0,0';
-                        document.getElementById(`rmaxtu_${result[i].id}`).innerHTML= '0.00';
-                        document.getElementById(`acu_${result[i].id}`).innerHTML= '0.000';
-                        document.getElementById(`max_${result[i].id}`).innerHTML= '0.000';
-                        document.getElementById(`min_${result[i].id}`).innerHTML= '0.000';
-                        document.getElementById(`au_${result[i].id}`).innerHTML= '0.000';
+                        document.getElementById(`sup_${result[i].id}`).innerHTML= '0';
+                        document.getElementById(`difsup_${result[i].id}`).innerHTML= '999';
+                        document.getElementById(`res_${result[i].id}`).innerHTML= '0';
+                        document.getElementById(`difres_${result[i].id}`).innerHTML= '0';
+                        document.getElementById(`qualymes_${result[i].id}`).innerHTML= '0';
+                        document.getElementById(`rmaxtu_${result[i].id}`).innerHTML= '0';
+                        document.getElementById(`acu_${result[i].id}`).innerHTML= '0';
+                        document.getElementById(`max_${result[i].id}`).innerHTML= '0';
+                        document.getElementById(`min_${result[i].id}`).innerHTML= '0';
+                        document.getElementById(`au_${result[i].id}`).innerHTML= '0';
 
                         //colocando cor na coluna Volume vol_XXX
                         if(voll < 1.0){
@@ -861,19 +874,28 @@ function ativar(){
                     let inpminac= document.getElementById('inpminac').value
                     
                     
-                    if(itemacum>maxpercac){
-                        document.getElementById('maxac').innerHTML= parseFloat(itemacum)
+                    if(parseFloat(itemacum)>parseFloat(maxpercac)){
+                        let agora = new Date();
+                        let hora = agora.getHours()
+                        let min = agora.getMinutes()
+                        let seg = agora.getSeconds()
+                        document.getElementById('maxac').innerHTML=itemacum
                         document.getElementById('moemaxac').innerHTML= moe
+                        console.log(`Novo Record acum+ ${moe}: ${itemacum}% às ${hora}:${min}:${seg}`)
+                        if(parseFloat(itemacum)>5){
+                            console.log(`Record >5%. Imprimindo...`)
+                            geraponta()
+                        }
                     }
-                    if(itemacum>maxpercac2){
+                    if(parseFloat(itemacum)>parseFloat(maxpercac2)){
                         document.getElementById('maxac2').innerHTML= parseFloat(itemacum)
                         document.getElementById('moemaxac2').innerHTML= moe
                     }
-                    if(itemacum[0]==='-'&& Math.abs(itemacum)>Math.abs(minpercac)){
+                    if(Math.sign(itemacum)===-1 && Math.abs(itemacum)>Math.abs(minpercac)){
                         document.getElementById('minac').innerHTML= itemacum
                         document.getElementById('moeminac').innerHTML= moe
                     }
-                    if(itemacum[0]==='-'&& Math.abs(itemacum)>Math.abs(minpercac2)) {
+                    if(Math.sign(itemacum)===-1 && Math.abs(itemacum)>Math.abs(minpercac2)) {
                         document.getElementById('minac2').innerHTML= itemacum
                         document.getElementById('moeminac2').innerHTML= moe
                     }
@@ -887,7 +909,7 @@ function ativar(){
                         }
                     }
                     if(inpminac){
-                        if(itemacum[0]==='-'&& Math.abs(itemacum)>=Math.abs(inpminac)){
+                        if(Math.sign(itemacum)===-1 && Math.abs(itemacum)>=Math.abs(inpminac)){
                             console.log(`ALERTA! Moeda ${moe} atingiu baixa de ${cresc}% no acumulado`)
                             audio.play()
                             document.getElementById('butminac').style.backgroundColor = "#138437"
@@ -980,9 +1002,15 @@ function ativar(){
             let tottem = parseInt(qttem)+ parseInt(qtsmoe.length)
             document.getElementById('quantcry').innerHTML= tottem
             lissuporte()
-            gelar()  
+            gelar()
             console.log(`Total: ${tottem} pares/USDT`)
-            
+
+            if(tottem>=318){
+                console.log(`Imprimindo chave com ${tottem} cryptos...`)
+                setTimeout(() => {
+                    integrar()
+                }, 30000);
+            }
         }
         
         
