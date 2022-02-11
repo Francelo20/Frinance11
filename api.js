@@ -82,7 +82,7 @@ async function depth(symbol='BTCUSDT', limit=10){
 
 ///////////
 
-async function candle(symbol='BNBUSDT', interval='1w', limit=500){ //=40
+async function candle(symbol='BNBUSDT', interval='1w', limit=250){ //=40
     
     //console.log(`Moeda ${symbol}  - ${interval}/${interval} - ${limit}`)
     //console.log('..............................')

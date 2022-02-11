@@ -34,7 +34,8 @@ chamar()
 //PARA PRODUZIR GELO  HORAS
 async function chamar(){
     for(let i =0; i<=moe.length-1;i++){
-        let symbol=moe[i]+'USDT'
+        let symb=moe[i]
+        let symbol=symb+'USDT'
         let result = await api.trades(symbol, limit);
         //console.log(result)
         //console.log(result);
@@ -44,7 +45,7 @@ async function chamar(){
         startTime=  parseInt(endTime-interv)
         //console.log(agora)    
         //console.log('simbolooo '+symbol)
-        rechamar(symbol,startTime,endTime,limit)
+        rechamar(symb,startTime,endTime,limit)
         
         
         
@@ -52,7 +53,8 @@ async function chamar(){
     //console.log(` Há ${quant} ${interval} Open: ${result[i][1]} High: ${result[i][2]}  Low-${result[i][3]} Close-${result[i][4]} `);
 }
 
-async function rechamar(symbol,startTime,endTime,limit){
+async function rechamar(symb,startTime,endTime,limit){
+    let symbol=symb+'USDT'
     limit=1000
     //console.log(`trades ${symbol} De ${startTime} até ${endTime}`)
     let result2 = await api.aggTradesDate(symbol,startTime,endTime,limit)
@@ -64,6 +66,7 @@ async function rechamar(symbol,startTime,endTime,limit){
     let total=0
     let difer=0
     let relac=0
+    let relac2=0
     let soma=0
     let subt=0
     let cont=0
@@ -88,22 +91,34 @@ async function rechamar(symbol,startTime,endTime,limit){
     }
     difer= parseFloat(psubir-pcair).toFixed(2)
     total= parseFloat(psubir+pcair).toFixed(2)
-    relac= parseFloat(psubir/pcair).toFixed(2)
-    let relac2= parseFloat(soma/subt).toFixed(2)
-    let volume='empatou'
+    //impedindo infinity se pcair e compr for ===0
+    if(parseFloat(pcair)===0){//acrescentandp valor 2 caso nao teve venda a favor do comprador, denominador =0
+        relac=2
+    }else{
+        relac= parseFloat(psubir/pcair).toFixed(2)
+    }
+
+    if(parseInt(subt)===0){
+        relac2=2
+    }else{
+        relac2= parseFloat(soma/subt).toFixed(2)
+    }
     
-    console.log('- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ')
+    
+    let volume=0
+    
+    //console.log('- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ')
     //console.log('Symbol '+symbol)
 
     if(Math.sign(difer)===1){
         
         //console.log('volume > vendedor! Vai Subir?!')
-        volume='vendedor'
+        volume= 1//'vendedor'
         //console.log('Total '+total)
         //console.log('Difer positiva '+difer)
     }else if(Math.sign(difer)===-1){
         //console.log('volume >  comprador! Vai Cair?')
-        volume='comprador'
+        volume= -1 //'comprador'
         //console.log('Total '+total)
         //console.log('Difer negativa '+difer)
 
@@ -151,7 +166,7 @@ async function rechamar(symbol,startTime,endTime,limit){
     }
 
 
-    console.log(`${symbol}     ${volume}  ${total}    difer ${difer}  relvol:${relac} relqut ${relac2}   vend${soma} X ${subt}compr               trades ${cont}`)
+    console.log(`{"crip": "${symb}", "vol":${volume}, "total":${total}, "difer": ${difer}, "relvol": ${relac}, "relqut": ${relac2}, "vend": ${soma}, "compr": ${subt},"trades": ${cont}},`)
     //console.log(cont+' trades')
     //console.log(`vendedor ${soma} X ${subt} comprador`)
     

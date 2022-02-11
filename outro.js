@@ -325,6 +325,7 @@ let chave=[
 
 
 
+
 for(let i=0;i<=chave.length-1;i++){
     
     //if(chave[i].volume>=7){

@@ -11,12 +11,9 @@ const goodSell = process.env.GOOD_SELL;
 let limit=250
 
 //entsymb('NEO')
-/*
-    
-    
-*/
+
 let listcoin=[
-    "1INCH","AAVE","ACA","ACH","ACM","ADA","ADX","AGLD","AION","AKRO","ALCX","ALGO","ALICE","ALPACA","ALPHA",
+/**/"1INCH","AAVE","ACA","ACH","ACM","ADA","ADX","AGLD","AION","AKRO","ALCX","ALGO","ALICE","ALPACA","ALPHA",
     "AMP","ANC","ANKR","ANT","ANY","API3","AR","ARDR","ARPA","ASR","ATA","ATM","ATOM","AUCTION","AUD","AUDIO",
     "AUTO","AVA","AVAX","AXS","BADGER","BAKE","BAL","BAND","BAR","BAT","BCH","BEAM","BEL","BETA","BICO","BLZ",
     "BNB","BNT","BNX","BOND","BTC","BTCST","BTG","BTS","BTT","BTTC","BURGER", "BUSD","C98","CAKE","CELO","CELR",
@@ -38,17 +35,26 @@ let listcoin=[
 
 
 let cc=0
+
+/*
+
+for(cc=0;cc<=listcoin.length-1;cc++){
+    entsymb(listcoin[cc])
+}
+*/
+let interv=500
 setInterval(() => {
 
     if(cc<=listcoin.length-1){
         entsymb(listcoin[cc])
         cc++
     }else{
-        console.log(`acabou`)
+        clearInterval(interv)
     }
     
-},3600);
-    
+},interv);
+
+
 
 
 
@@ -82,56 +88,71 @@ function entsymb(symboll){
             //blookconsole.log(`intervalo: ${interval}`)
             //console.log(`cont +1 ${cont+1}`)
             
+            
+
+
+            let result= await api.candle(symbol,interval,limit);
             let m50=0
             let m200=0
             let m50qua=0
             let m200qua=0
 
+            aplica(limit)
 
-            let result= await api.candle(symbol,interval,limit);
-            
-            //console.log('result.length '+result.length);
-            list=[{"mes":15, "val":0},{"mes":15, "val":500000},{"mes":15, "val":0}]
+            function aplica(limit){
+                let ii = ''
                 
-            let i=''
-            //console.log(result.length)
-            for(i=0; i<=result.length-1;i++){
-                let quant= (result.length-1)-i
-                //console.log(` Há ${quant} mes Open: ${result[i][1]} High: ${result[i][2]}  Low-${result[i][3]} Close-${result[i][4]} `);
-
-                //usando open ou close para marcar max e min, sup e res
-
-                //se open maior qu close, quem vi p max e min, sup e res
-                if(parseFloat(result[i][1])> parseFloat(result[i][4])){
-
-                        if(parseFloat(result[i][1])>= parseFloat(list[0].val)){
-                            list[0].val=result[i][1]
-                            list[0].mes=quant
-                            
-                        }
-                        if(parseFloat(result[i][4])<=parseFloat(list[1].val)){
-                            list[1].val=result[i][4]
-                            list[1].mes=quant
-                        }
-
-
-
-                        //se close maior que open,  quem vi p max e min, sup e res
-                }else if(parseFloat(result[i][1])<= parseFloat(result[i][4])){
-
-                        if(parseFloat(result[i][4])>= parseFloat(list[0].val)){
-                            list[0].val=result[i][4]
-                            list[0].mes=quant
-                            
-                        }
-
-                        if(parseFloat(result[i][1])<=parseFloat(list[1].val)){
-                            list[1].val=result[i][1]
-                            list[1].mes=quant
-                        }
-
-
+                if(Math.sign(parseInt(result.length-limit))===-1){
+                    ii=0
+            
+                }else{
+                    ii = result.length-limit
                 }
+                //console.log(ii)
+
+                
+                //console.log('result.length '+result.length);
+                list=[{"mes":15, "val":0},{"mes":15, "val":500000},{"mes":15, "val":0}]
+                
+                let i=''
+                //console.log(result.length)
+                for(i=ii; i<=result.length-1;i++){
+                    let quant= (result.length-1)-i
+                    //console.log(` Há ${quant} mes Open: ${result[i][1]} High: ${result[i][2]}  Low-${result[i][3]} Close-${result[i][4]} `);
+
+                    //usando open ou close para marcar max e min, sup e res
+
+                    //se open maior qu close, quem vi p max e min, sup e res
+                    if(parseFloat(result[i][1])> parseFloat(result[i][4])){
+
+                            if(parseFloat(result[i][1])>= parseFloat(list[0].val)){
+                                list[0].val=result[i][1]
+                                list[0].mes=quant
+                                
+                            }
+                            if(parseFloat(result[i][4])<=parseFloat(list[1].val)){
+                                list[1].val=result[i][4]
+                                list[1].mes=quant
+                            }
+
+
+
+                            //se close maior que open,  quem vi p max e min, sup e res
+                    }else if(parseFloat(result[i][1])<= parseFloat(result[i][4])){
+
+                            if(parseFloat(result[i][4])>= parseFloat(list[0].val)){
+                                list[0].val=result[i][4]
+                                list[0].mes=quant
+                                
+                            }
+
+                            if(parseFloat(result[i][1])<=parseFloat(list[1].val)){
+                                list[1].val=result[i][1]
+                                list[1].mes=quant
+                            }
+
+
+                    }
 
                     /*
                     if(parseFloat(result[i][1])>= parseFloat(list[0].val)){
@@ -147,25 +168,64 @@ function entsymb(symboll){
                     */
                     
                     
-                if(quant<1){
-                    list[2].val=result[i][4]
-                    list[2].mes=quant
-            
-                }
+                    if(quant<1){
+                        list[2].val=result[i][4]
+                        list[2].mes=quant
+                
+                    }
 
-                //aqui vai o m50 e m200
-                if(interval==='1m'){    
-                    m50qua+= parseFloat(result[i][4])
-                    m50= parseFloat(m50qua/(i+1)).toFixed(6)
-                    m200qua+= parseFloat(result[i][4])
-                    if(i>=200){
-                        m200= parseFloat(m200qua/200).toFixed(6)
+                    //aqui vai o m50 e m200
+                    if(interval==='1m'){
+                        //console.log('interv 1m')
+
+                        if(parseInt(ii)===0){
+                            //console.log('ii===0')
+
+                            if(parseInt(result.length)>=50){
+                                if(quant<=49){
+                                    //console.log(`quant50 = ${quant}`)
+    
+                                    m50qua+= parseFloat(result[i][4])
+    
+                                    m50= parseFloat(m50qua/50).toFixed(6)
+    
+                                }
+
+                            }else{
+                                m50=50
+                            }
+
+
+
+                            if(parseInt(result.length)>=200){
+
+                                if(quant<=199){
+                                    //console.log(`quant200 = ${quant}`)
+    
+                                    m200qua+= parseFloat(result[i][4])
+                                    m200= parseFloat(m200qua/200).toFixed(6)
+    
+                                    //console.log(`m200qua = ${m200qua}`)
+                                    //console.log(`m200 = ${m200}`)
+    
+    
+                                }
+
+                            }else{
+                                m200=200
+                            }
+
+
+
+                            
+
+                            
+
+                        }
+                        
                     }
                     
                 }
-                
-                
-            }
             
 
                 //puxhando max e min p listar nos intervalos. criando sup e res nos intervalos
@@ -284,7 +344,7 @@ function entsymb(symboll){
 
                 limit =parseInt(list[0].mes-2) // -1 tirando 1 ou 2 do Maximo p proxima chamada
                 if(parseInt(limit)>=2){        // >=2 chegando a chamada até num minimo de velas
-                    chamar(limit)
+                    aplica(limit)
                 }else{
                     
                     
@@ -389,6 +449,26 @@ function entsymb(symboll){
                 colec[cont].min
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+
+
+
+
+
+
+            
         
         }
     //let colec=[{"rod":0, "val":0}, {"rod":0, "val":0}, {"rod":0, "val":0}, {"rod":0, "val":0},{"rod":0, "val":0}, {"rod":0, "val":0}, {"rod":0, "val":0}, {"rod":0, "val":0}, {"rod":0, "val":""}]// pontos p cada cry
