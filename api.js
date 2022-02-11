@@ -75,7 +75,7 @@ async function time(){
     return publicCall('/v3/time');
 }
 
-async function depth(symbol='BTCUSDT', limit=5){
+async function depth(symbol='BTCUSDT', limit=10){
     return await publicCall('/v3/depth',{symbol, limit});
 }
 
@@ -91,14 +91,44 @@ async function candle(symbol='BNBUSDT', interval='1w', limit=500){ //=40
     return res
 }
 
-async function aggtrades(symbol='BNBUSDT'){ //=40
+async function trades(symbol='BNBUSDT', limit=30){ //=40
     
     //console.log(`Moeda ${symbol}  - ${interval}/${interval} - ${limit}`)
     //console.log('..............................')
-    const res =await publicCall('/v3/aggTrades',{symbol});
+    const res =await publicCall('/v3/trades',{symbol, limit});
     //console.log('res.length: '+res.length)
     return res
 }
+
+
+async function historicalTrades(symbol='BNBUSDT', limit=50, fromId=61049237){ //=40
+    
+    //console.log(`Moeda ${symbol}  - ${interval}/${interval} - ${limit}`)
+    //console.log('..............................')
+    const res =await publicCall('/v3/historicalTrades',{symbol, limit, fromId});
+    //console.log('res.length: '+res.length)
+    return res
+}
+
+
+async function aggTrades(symbol='BNBUSDT', limit=6){ //=40
+    
+    //console.log(`Moeda ${symbol}  - ${interval}/${interval} - ${limit}`)
+    //console.log('..............................')
+    const res =await publicCall('/v3/aggTrades',{symbol, limit});
+    //console.log('res.length: '+res.length)
+    return res
+}
+
+async function aggTradesDate(symbol='BNBUSDT', startTime=1644453864857, endTime=1644453874857 ,limit=6){ //=40
+    
+    //console.log(`Moeda ${symbol}  - ${interval}/${interval} - ${limit}`)
+    //console.log('..............................')
+    const res =await publicCall('/v3/aggTrades',{symbol, startTime, endTime, limit});
+    //console.log('res.length: '+res.length)
+    return res
+}
+
 
 
 
@@ -107,4 +137,4 @@ async function exchangeInfo(){
 }
 
 
-module.exports= {time, depth, exchangeInfo, accountInfo, publicCall, privateCall, newOrder, candle, aggtrades}
+module.exports= {time, depth, exchangeInfo, accountInfo, publicCall, privateCall, newOrder, candle, trades, aggTradesDate, historicalTrades, aggTrades}

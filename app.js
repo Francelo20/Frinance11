@@ -245,7 +245,7 @@ const btnZerar = document.querySelector(".btn");
 btnZerar.addEventListener("click", ativar);
 
 //declarando tag audio
-const audio = document.querySelector('audio')
+let audio = document.querySelector('audio')
 let qtsmoe=[]
 
 function ativar(){
@@ -1005,11 +1005,11 @@ function ativar(){
             gelar()
             console.log(`Total: ${tottem} pares/USDT`)
 
-            if(tottem>=318){
+            if(tottem>=320){
                 console.log(`Imprimindo chave com ${tottem} cryptos...`)
                 setTimeout(() => {
                     integrar()
-                }, 30000);
+                }, 60000);
             }
         }
         
@@ -1176,11 +1176,21 @@ btnacm.addEventListener('click',()=>{
 
 // 313 cryptos...
 function quantcry(){
+    let total=''
     setTimeout(() => {
         let out= document.getElementsByTagName('tr')
-        document.getElementById('quantcry').innerHTML= out.length-2
+        total= out.length-2
+        document.getElementById('quantcry').innerHTML= total
+
+        if(total>=319){
+            setTimeout(() => {
+                console.log(`Imprimindo chave com ${total} cryptos...`)
+                integrar()
+            }, 60000);
+        }
         
     }, 5000);
+    
     
 }
 quantcry()

@@ -27,17 +27,35 @@ let moe =[
 
 ]
 
-let limit=24
-let interval='1h'
+let limit=1
 
+//let interval='1h'
+juntatrade()
 //PARA PRODUZIR GELO  HORAS
-async function chamar(){
+async function juntatrade(){
     for(let i =0; i<=moe.length-1;i++){
         let symbol=moe[i]+'USDT'
-        let result = await api.aggtrades(symbol);
+        let result = await api.trades(symbol, limit);
         //console.log(result)
         console.log(result);
+        let fromId= result[0].id
+        console.log('fromId '+fromId)
+        let limite=40
+        rechamatrade(symbol,limite,fromId)
+        
+        
     }
     //console.log(` Há ${quant} ${interval} Open: ${result[i][1]} High: ${result[i][2]}  Low-${result[i][3]} Close-${result[i][4]} `);
 }
-chamar()
+
+
+async function rechamatrade(symbol,limite,fromId){
+    console.log('opa')
+    console.log('limit '+limite)
+    console.log('simbolooo '+symbol)
+    console.log('fromId '+fromId)      
+    let result2 = await api.historicalTrades(symbol, limite, fromId)
+    console.log(result2)
+    console.log(result2.length)
+    
+}

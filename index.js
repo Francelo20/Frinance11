@@ -8,11 +8,11 @@ const goodSell = process.env.GOOD_SELL;
 
 //let interval= ''
 //let symbol='MITHUSDT'
-let limit=200
+let limit=250
 
 //entsymb('NEO')
 /*
-"1INCH","AAVE","ACA","ACH","ACM","ADA","ADX","AGLD","AION","AKRO","ALCX","ALGO","ALICE","ALPACA","ALPHA",
+    "1INCH","AAVE","ACA","ACH","ACM","ADA","ADX","AGLD","AION","AKRO","ALCX","ALGO","ALICE","ALPACA","ALPHA",
     "AMP","ANC","ANKR","ANT","ANY","API3","AR","ARDR","ARPA","ASR","ATA","ATM","ATOM","AUCTION","AUD","AUDIO",
     "AUTO","AVA","AVAX","AXS","BADGER","BAKE","BAL","BAND","BAR","BAT","BCH","BEAM","BEL","BETA","BICO","BLZ",
     "BNB","BNT","BNX","BOND","BTC","BTCST","BTG","BTS","BTT","BTTC","BURGER", "BUSD","C98","CAKE","CELO","CELR",
@@ -22,20 +22,18 @@ let limit=200
     "FIS","FLM","FLOW","FLUX","FOR","FORTH","FRONT","FTM","FTT","FUN","FXS","GALA","GBP","GHST","GLMR","GNO","GRT","GTC",
     "GTO","GXS","HARD","HBAR","HIGH","HIVE","HNT","HOT","ICP","ICX","IDEX","ILV","IMX","INJ","IOST","IOTA","IOTX","IRIS",
     "JASMY","JOE","JST","JUV","KAVA","KEEP","KEY","KLAY","KMD","KNC","KP3R","KSM","LAZIO","LINA","LINK","LIT","LOKA","LPT",
-    "LRC","LSK","LTC","LTO","LUNA","MANA","MASK","MATIC","MBL","MBOX","MC","MDT","MDX","MFT","MINA","MIR","MITH","MKR","MLN",
+    "LRC","LSK","LTC","LTO","LUNA","MANA","MASK","MATIC","MBL","MBOX","MC","MDT","MDX","MFT","MINA",
+*/
+let listcoin=[
+
+    "MIR","MITH","MKR","MLN",
     "MOVR","MTL","NANO","NBS","NEAR","NEO","NKN","NMR","NU","NULS","OCEAN","OG","OGN","OM","OMG","ONE","ONG","ONT","OOKI","ORN",
     "OXT","PAXG","PEOPLE","PERL","PERP","PHA","PLA","PNT","POLS","POLY","POND","PORTO","POWR","PSG","PUNDIX","PYR","QI","QNT",
     "QTUM","QUICK","RAD","RAMP","RARE","RAY","REEF","REN","REP","REQ","RGT","RIF","RLC","RNDR","ROSE","RSR","RUNE","RVN","SAND",
     "SANTOS","SC","SCRT","SFP","SHIB","SKL","SLP","SNX","SOL","SPELL","SRM","STMX","STORJ","STPT","STRAX","STX","SUN","SUPER",
     "SUSD","SUSHI","SXP","SYS","TCT","TFUEL","THETA","TKO","TLM","TOMO","TORN","TRB","TRIBE","TROY","TRU","TRX","TUSD","TVK",
-    "TWT","UMA","UNFI","UNI","USDC","USDP",
-    
-*/
-let listcoin=[
-
-    "UST","UTK","VET","VGX","VIDT","VITE","VOXEL","VTHO","WAN","WAVES","WAXP","WIN",
-    "WING","WNXM","WRX","WTC","XEC","XEM","XLM",
-    "XMR","XNO","XRP","XTZ","XVG","XVS","YFI","YFII","YGG","ZEC","ZEN","ZIL","ZRX"
+    "TWT","UMA","UNFI","UNI","USDC","USDP","UST","UTK","VET","VGX","VIDT","VITE","VOXEL","VTHO","WAN","WAVES","WAXP","WIN",
+    "WING","WNXM","WRX","WTC","XEC","XEM","XLM","XMR","XNO","XRP","XTZ","XVG","XVS","YFI","YFII","YGG","ZEC","ZEN","ZIL","ZRX"
 ]
 
 
@@ -61,20 +59,18 @@ function entsymb(symboll){
 
     let symbol=symboll+'USDT'
 
-    let listart=["1M","1w", "1d", "4h", "1h", "15m", "5m", "1m"] // INTERVAL P LOOP  ]//
+    let listart=["1M","1w", "1d", "4h", "1h", "15m", "5m", "1m"] // INTERVAL P LOOP  ]// ["1M","1w", "1d", "4h", "1h", "15m", "5m", "1m"]
 
     let list=[{"mes":15, "val":0},{"mes":15, "val":500000},{"mes":15, "val":0}] // 0 -max 1 -min 2-atual
 
     let colec=[{"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0}, {"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0}, {"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0}, {"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0},{"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0}, {"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0}, {"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0}, {"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0}, {"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0}]// pontos p cada cry
 
-
+    
     colec[8].val= symbol
 
     for(let cont=0; cont<=listart.length-1; cont++){
         //console.log(`${listart[cont]}`)
         
-        
-
         async function chamar(limit){
             colec[cont].rod++
             colec[8].rod ++ // colec[8].rod +colec[cont].rod
@@ -86,37 +82,96 @@ function entsymb(symboll){
             //blookconsole.log(`intervalo: ${interval}`)
             //console.log(`cont +1 ${cont+1}`)
             
+            let m50=0
+            let m200=0
+            let m50qua=0
+            let m200qua=0
+
+
             let result= await api.candle(symbol,interval,limit);
             
-                //console.log('result.length '+result.length);
-                list=[{"mes":15, "val":0},{"mes":15, "val":500000},{"mes":15, "val":0}]
+            //console.log('result.length '+result.length);
+            list=[{"mes":15, "val":0},{"mes":15, "val":500000},{"mes":15, "val":0}]
                 
-                let i=''
-                for(i=0; i<=result.length-1;i++){
-                    let quant= (result.length-1)-i
-                    //console.log(` Há ${quant} mes Open: ${result[i][1]} High: ${result[i][2]}  Low-${result[i][3]} Close-${result[i][4]} `);
-                    if(parseFloat(result[i][2])>= parseFloat(list[0].val)){
-                        list[0].val=result[i][2]
+            let i=''
+            //console.log(result.length)
+            for(i=0; i<=result.length-1;i++){
+                let quant= (result.length-1)-i
+                //console.log(` Há ${quant} mes Open: ${result[i][1]} High: ${result[i][2]}  Low-${result[i][3]} Close-${result[i][4]} `);
+
+                //usando open ou close para marcar max e min, sup e res
+
+                //se open maior qu close, quem vi p max e min, sup e res
+                if(parseFloat(result[i][1])> parseFloat(result[i][4])){
+
+                        if(parseFloat(result[i][1])>= parseFloat(list[0].val)){
+                            list[0].val=result[i][1]
+                            list[0].mes=quant
+                            
+                        }
+                        if(parseFloat(result[i][4])<=parseFloat(list[1].val)){
+                            list[1].val=result[i][4]
+                            list[1].mes=quant
+                        }
+
+
+
+                        //se close maior que open,  quem vi p max e min, sup e res
+                }else if(parseFloat(result[i][1])<= parseFloat(result[i][4])){
+
+                        if(parseFloat(result[i][4])>= parseFloat(list[0].val)){
+                            list[0].val=result[i][4]
+                            list[0].mes=quant
+                            
+                        }
+
+                        if(parseFloat(result[i][1])<=parseFloat(list[1].val)){
+                            list[1].val=result[i][1]
+                            list[1].mes=quant
+                        }
+
+
+                }
+
+                    /*
+                    if(parseFloat(result[i][1])>= parseFloat(list[0].val)){
+                        list[0].val=result[i][1]
                         list[0].mes=quant
                         
                     }
+
                     if(parseFloat(result[i][3])<=parseFloat(list[1].val)){
                         list[1].val=result[i][3]
                         list[1].mes=quant
                     }
-                    if(quant<1){
-                        list[2].val=result[i][4]
-                        list[2].mes=quant
-            
-                    }
-
+                    */
+                    
+                    
+                if(quant<1){
+                    list[2].val=result[i][4]
+                    list[2].mes=quant
             
                 }
+
+                //aqui vai o m50 e m200
+                if(interval==='1m'){    
+                    m50qua+= parseFloat(result[i][4])
+                    m50= parseFloat(m50qua/(i+1)).toFixed(6)
+                    m200qua+= parseFloat(result[i][4])
+                    if(i>=200){
+                        m200= parseFloat(m200qua/200).toFixed(6)
+                    }
+                    
+                }
+                
+                
+            }
             
 
-                //puxhando max e min p listar nos intervalos
+                //puxhando max e min p listar nos intervalos. criando sup e res nos intervalos
                 colec[cont].max.push(list[0].val)
                 colec[cont].min.push(list[1].val)
+
                 //puxando max e min p lista geral [8]max e [8].min
                 if(!colec[8].max.includes(list[0].val)){
                     colec[8].max.push(list[0].val)
@@ -125,6 +180,11 @@ function entsymb(symboll){
                 if(!colec[8].min.includes(list[1].val)){
                     colec[8].min.push(list[1].val)
                 }
+
+
+
+
+
 
                 //Relacao Maximo Todo e Minimo Inicio
                 let rlcmxtd= parseFloat((i-list[0].mes)/i).toFixed(2)    //relação Máximo Todo
@@ -173,7 +233,6 @@ function entsymb(symboll){
                     }
                 }else if(parseFloat(list[0].val)<parseFloat(list[2].val)){ //max<atual,  só subindo, parou de subir mas nao curvou p baixo, caiu mas recuperou muuuito- atual > max
             
-                    
                     if(list[1].mes>list[0].mes){// se o minimo é mais anterior mais antigo o maximo (V)
                         colec[cont].val.push(8)
                             //blookconsole.log(`--> SÓ SUBINDO ou RECUPEROU DE QUEDA COM LOUVOR 4 (SEM TOCAR O MÍNIMO) (8 pontos) <--`)
@@ -186,29 +245,43 @@ function entsymb(symboll){
                     //blook  console.log(`Caiu ${list[0].val-list[1].val} USDT (${quedmdmMm*100}%) por ${list[0].mes -list[1].mes} ${colec[cont].int}`) //% - caiu M-m USDT (M-m/M)% por n meses
                     //blook console.log(`Recuperando ${alta}% há ${list[1].mes-list[2].mes} ${colec[cont].int}`)//recuperando % (A-m/m) ha n meses
                     }
-                }else{ // atual=max,
-                    if(list[1].mes>list[0].mes){// se o minimo é mais anterior mais antigo o maximo  , com atual ===max  (VII)
+                }else if(parseFloat(list[0].val)===parseFloat(list[2].val)){
+                    if(list[1].mes>list[0].mes){ // atual=max,
+                        // se o minimo é mais anterior mais antigo o maximo  , com atual ===max  (VII)
                         colec[cont].val.push(7)
-                        //blook console.log(`--> SÓ SUBINDO COM LOUVOR 3 (min antes do maximo e do atual)(7 pontos) <--`)
-                        //blook console.log(`Mínimo há ${list[1].mes} ${colec[cont].int}.`)
-                        //blook console.log(`"Subindo" ${alta}%  desde este mínimo`) //quanto subiu (A-m/m)
-                        
+                                //blook console.log(`--> SÓ SUBINDO COM LOUVOR 3 (min antes do maximo e do atual)(7 pontos) <--`)
+                                //blook console.log(`Mínimo há ${list[1].mes} ${colec[cont].int}.`)
+                                //blook console.log(`"Subindo" ${alta}%  desde este mínimo`) //quanto subiu (A-m/m)
+                                
                     }else{//se o minimo é posterior ao max - mais recente que o maximo ,  com atual ===max  (VIII)
                         colec[cont].val.push(4)
-                    //blook  console.log(`--> RECUPERANDO DE QUEDA COM LOUVOR 1,atual=max (4 pontos) <--`)
-                    //blook console.log(`Caiu ${list[0].val-list[1].val} USDT (${quedmdmMm*100}%) por ${list[0].mes -list[1].mes} ${colec[cont].int}`) //% - caiu M-m USDT (M-m/M)% por n meses
-                    //blook  console.log(`"Recuperando" ${alta}% há ${list[1].mes-list[2].mes} ${colec[cont].int}`)//recuperando % (A-m/m) há n meses
+                            //blook  console.log(`--> RECUPERANDO DE QUEDA COM LOUVOR 1,atual=max (4 pontos) <--`)
+                            //blook console.log(`Caiu ${list[0].val-list[1].val} USDT (${quedmdmMm*100}%) por ${list[0].mes -list[1].mes} ${colec[cont].int}`) //% - caiu M-m USDT (M-m/M)% por n meses
+                            //blook  console.log(`"Recuperando" ${alta}% há ${list[1].mes-list[2].mes} ${colec[cont].int}`)//recuperando % (A-m/m) há n meses
                     }
-                    
-                    
-                }
-                //console.log('...........................')
-                let tentsort = colec[8].min.sort()
-                tentsort =colec[8].min.reverse()
-                tentsort=colec[8].min[0]
 
-                let tentresis= colec[8].max.sort()
-                tentresis=colec[8].max[0]
+                }else{
+                    //colec[cont].val.push(0)
+                }
+                    
+                    
+                
+                //console.log('...........................')
+
+                //criando suporte e resistencia a partir do '1m' - colec[7]
+                let tentsort = colec[7].min.sort()
+                tentsort =colec[7].min.reverse()
+                tentsort=colec[7].min[0]
+                /*
+                let tentresis= colec[7].max.sort()
+                tentresis=colec[7].max[0]
+                */
+                let tentresis= colec[7].max.sort()
+                //tentresis=colec[7].max
+                
+                let qualymes=0
+
+
                 limit =parseInt(list[0].mes-2) // -1 tirando 1 ou 2 do Maximo p proxima chamada
                 if(parseInt(limit)>=2){        // >=2 chegando a chamada até num minimo de velas
                     chamar(limit)
@@ -222,23 +295,55 @@ function entsymb(symboll){
                 
                 //blook console.log(`Crypto: ${colec[8].val}  Intervalos:${listart.length}  Rodadas:${colec[8].rod} Atual: ${list[2].val}`)
 
-                if(interval==='1M'){
-                    if(colec[0].val[3]){
-                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":${tentresis}, "qualymes":${colec[0].val[0]}${colec[0].val[1]}${colec[0].val[2]}${colec[0].val[3]}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val}},`)
+                if(parseInt(cont)===7){ //interval==='1M' estava assim. troquie p pegar na ultima rodada 1m, cont=7
+                    
+                    //sup e res vindo de 1m. qualymes vindo de 1h. rmaxt vindo de 1M
+                    if(colec[4].val[3]){
+                        qualymes= `${colec[4].val[0]}${colec[4].val[1]}${colec[4].val[2]}${colec[4].val[3]}`
+                        console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
                             //console.log(`{"cryp":"${symboll}","atual":${list[2].val}},`)
+                    
+                    }else if(colec[4].val[2]){
+                        qualymes= `${colec[4].val[0]}${colec[4].val[1]}${colec[4].val[2]}`
+                        console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
 
-                    }else if(colec[0].val[2]){
-                        console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":${tentresis}, "qualymes":${colec[0].val[0]}${colec[0].val[1]}${colec[0].val[2]}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val}},`)
 
+                    }else if(colec[4].val[1]){
+                        qualymes= `${colec[4].val[0]}${colec[4].val[1]}`
+                        console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
 
-                    }else if(colec[0].val[1]){
-                        console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":${tentresis}, "qualymes":${colec[0].val[0]}${colec[0].val[1]}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val}},`)
+                    }else if(colec[4].val[0]){
+                        qualymes= `${colec[4].val[0]}`
+                        console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
 
                     }else{
-                        console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":${tentresis}, "qualymes":${colec[0].val[0]}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val}},`)
-
-                    }
                         
+                        if(colec[3].val[3]){
+                            qualymes= `${colec[3].val[0]}${colec[3].val[1]}${colec[3].val[2]}${colec[3].val[3]}`
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+
+                        }else if(colec[3].val[2]){
+                            qualymes= `${colec[3].val[0]}${colec[3].val[1]}${colec[3].val[2]}`
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+    
+    
+                        }else if(colec[3].val[1]){
+                            qualymes= `${colec[3].val[0]}${colec[3].val[1]}`
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+    
+                        }else if(colec[3].val[0]){
+                            qualymes= `${colec[3].val[0]}`
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+    
+                        }else{
+                            //qualymes= `${colec[4].rod}`
+                            qualymes=0
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+
+                        }
+                        
+                    }
+                    
 
                 }
                     /*
