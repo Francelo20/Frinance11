@@ -244,8 +244,7 @@ fetch(url)
 const btnZerar = document.querySelector(".btn");
 btnZerar.addEventListener("click", ativar);
 
-//declarando tag audio
-let audio = document.querySelector('audio')
+
 let qtsmoe=[]
 
 function ativar(){
@@ -258,6 +257,9 @@ function ativar(){
         urll= `${apisel}binance.com/api/v3/ticker/24hr`
     }
     selecapi()
+
+    //declarando tag audio
+    let audio = document.querySelector('audio')
 
     //hora de inicio do botao
     let interval =30000;
