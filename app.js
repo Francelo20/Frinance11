@@ -36,6 +36,8 @@ fetch(url)
         
         //let ajudaa=[]
         //PRIMEIRO FOR
+
+
         for(let i =0; i<result.length; i++){
             //let gelo= result[i].pro
             //ajudaa.push(`{"cry":${result[i].id}, "gelo":${gelo}}`)
@@ -100,6 +102,24 @@ fetch(url)
             td412.setAttribute('id',`difres_${result[i].id}`)
             td412.setAttribute("class","tdp")
 
+
+
+            let td413 = document.createElement("td")
+            td413.setAttribute('id',`m50_${result[i].id}`)
+            td413.setAttribute("class","tdp")
+
+            let td4131 = document.createElement("td")
+            td4131.setAttribute('id',`difm50_${result[i].id}`)
+            td4131.setAttribute("class","tdp")
+
+            let td414 = document.createElement("td")
+            td414.setAttribute('id',`m200_${result[i].id}`)
+            td414.setAttribute("class","tdp")
+
+
+
+
+
             
 
             let td43 = document.createElement("td")
@@ -155,6 +175,9 @@ fetch(url)
             tr.appendChild(td42)
             tr.appendChild(td411)
             tr.appendChild(td412)
+            tr.appendChild(td413)
+            tr.appendChild(td4131)
+            tr.appendChild(td414)
             tr.appendChild(td43)
             tr.appendChild(td44)
             tr.appendChild(tdac)
@@ -181,6 +204,11 @@ fetch(url)
             document.getElementById(`difsup_${result[i].id}`).innerHTML= '0';
             document.getElementById(`res_${result[i].id}`).innerHTML= '999';
             document.getElementById(`difres_${result[i].id}`).innerHTML= '0';
+
+            document.getElementById(`m50_${result[i].id}`).innerHTML= '0';
+            document.getElementById(`difm50_${result[i].id}`).innerHTML= '0';
+            document.getElementById(`m200_${result[i].id}`).innerHTML= '0';
+
             document.getElementById(`qualymes_${result[i].id}`).innerHTML= '0';
             document.getElementById(`rmaxtu_${result[i].id}`).innerHTML= '0';
             document.getElementById(`acu_${result[i].id}`).innerHTML= '0';
@@ -190,6 +218,10 @@ fetch(url)
 
 
 
+
+
+
+            
 
 
             //colocando cor na coluna Volume vol_XXX
@@ -324,6 +356,14 @@ function ativar(){
                     let preco = result[i].pro
                     let voll = (result[i].vol/1000000).toFixed(3);
                     //let valperc= result[i].value
+
+                    //calculo de difm50 dif entre atual preço / m50
+                    let difmed=''
+                    if(document.getElementById(`m50_${result[i].id}`)){
+                        basmed = document.getElementById(`m50_${result[i].id}`).innerHTML
+                        difmed=parseFloat(result[i].pro/basmed).toFixed(3)
+                        document.getElementById(`difm50_${result[i].id}`).innerHTML=difmed
+                    }
                 
 
                     
@@ -652,7 +692,7 @@ function ativar(){
                         let td3 = document.createElement("td")
                         td3.setAttribute('id',`pe_${result[i].id}`)
                         td3.setAttribute("class","tdp")
-                
+
                         let td4 = document.createElement("td")
                         td4.setAttribute('id',result[i].id)
                         td4.setAttribute("class","tdp")
@@ -673,6 +713,23 @@ function ativar(){
                         let td412 = document.createElement("td")
                         td412.setAttribute('id',`difres_${result[i].id}`)
                         td412.setAttribute("class","tdp")
+
+
+
+                        let td413 = document.createElement("td")
+                        td413.setAttribute('id',`m50_${result[i].id}`)
+                        td413.setAttribute("class","tdp")
+
+                        let td4131 = document.createElement("td")
+                        td4131.setAttribute('id',`difm50_${result[i].id}`)
+                        td4131.setAttribute("class","tdp")
+
+                        let td414 = document.createElement("td")
+                        td414.setAttribute('id',`m200_${result[i].id}`)
+                        td414.setAttribute("class","tdp")
+
+
+
 
                         let td43 = document.createElement("td")
                         td43.setAttribute('id',`qualymes_${result[i].id}`)
@@ -725,6 +782,9 @@ function ativar(){
                         tr.appendChild(td42)
                         tr.appendChild(td411)
                         tr.appendChild(td412)
+                        tr.appendChild(td413)
+                        tr.appendChild(td4131)
+                        tr.appendChild(td414)
                         tr.appendChild(td43)
                         tr.appendChild(td44)
                         tr.appendChild(tdac)
@@ -751,6 +811,11 @@ function ativar(){
                         document.getElementById(`difsup_${result[i].id}`).innerHTML= '999';
                         document.getElementById(`res_${result[i].id}`).innerHTML= '0';
                         document.getElementById(`difres_${result[i].id}`).innerHTML= '0';
+
+                        document.getElementById(`m50_${result[i].id}`).innerHTML= '0';
+                        document.getElementById(`difm50_${result[i].id}`).innerHTML= '0';
+                        document.getElementById(`m200_${result[i].id}`).innerHTML= '0';
+
                         document.getElementById(`qualymes_${result[i].id}`).innerHTML= '0';
                         document.getElementById(`rmaxtu_${result[i].id}`).innerHTML= '0';
                         document.getElementById(`acu_${result[i].id}`).innerHTML= '0';
@@ -1191,7 +1256,7 @@ function quantcry(){
             }, 60000);
         }
         
-    }, 5000);
+    }, 10000);
     
     
 }

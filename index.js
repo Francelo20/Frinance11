@@ -67,11 +67,11 @@ function entsymb(symboll){
 
     let listart=["1M","1w", "1d", "4h", "1h", "15m", "5m", "1m"] // INTERVAL P LOOP  ]// ["1M","1w", "1d", "4h", "1h", "15m", "5m", "1m"]
 
-    let list=[{"mes":15, "val":0},{"mes":15, "val":500000},{"mes":15, "val":0}] // 0 -max 1 -min 2-atual
+    let list=[]//{"mes":15, "val":0},{"mes":15, "val":500000},{"mes":15, "val":0}] // 0 -max 1 -min 2-atual
 
-    let colec=[{"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0}, {"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0}, {"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0}, {"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0},{"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0}, {"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0}, {"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0}, {"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0}, {"int":"","rod":0, "val":[], "max":[],"min":[], "rmaxt":0, "rmini":0}]// pontos p cada cry
+    let colec=[{"int":"","rod":0, "val":"", "max":[],"min":[], "rmaxt":"", "rmini":""}, {"int":"","rod":0, "val":"", "max":[],"min":[], "rmaxt":"", "rmini":0}, {"int":"","rod":0, "val":"", "max":[],"min":[], "rmaxt":"", "rmini":0}, {"int":"","rod":0, "val":"", "max":[],"min":[], "rmaxt":"", "rmini":0},{"int":"","rod":0, "val":"", "max":[],"min":[], "rmaxt":"", "rmini":0}, {"int":"","rod":0, "val":"", "max":[],"min":[], "rmaxt":"", "rmini":0}, {"int":"","rod":0, "val":"", "max":[],"min":[], "rmaxt":"", "rmini":0}, {"int":"","rod":0, "val":"", "max":[],"min":[], "rmaxt":"", "rmini":0}, {"int":"","rod":0, "val":"", "max":[],"min":[], "rmaxt":"", "rmini":0}]// pontos p cada cry
 
-    
+    let rmaxvai=''
     colec[8].val= symbol
 
     for(let cont=0; cont<=listart.length-1; cont++){
@@ -81,7 +81,7 @@ function entsymb(symboll){
             colec[cont].rod++
             colec[8].rod ++ // colec[8].rod +colec[cont].rod
             
-            //colec[cont].rod++ 
+            
             let interval = listart[cont]
             colec[cont].int = interval
             //blookconsole.log(`Rodada Geral ${colec[8].rod}.  Interv. ${colec[cont].int}. ${colec[cont].rod}ª rod. ${limit} velas`)
@@ -101,14 +101,15 @@ function entsymb(symboll){
 
             function aplica(limit){
                 let ii = ''
-                
-                if(Math.sign(parseInt(result.length-limit))===-1){
-                    ii=0
-            
+                //encontrando a primeira rodada. p i=0. Depois, i=...
+                //Math.sign(parseInt(result.length-limit))>=0){//parseInt(colec[cont].rod)===0){//Math.sign(parseInt(result.length-limit))===-1){
+                if(parseInt(result.length)> parseInt(limit)){   
+                    ii=result.length-limit
                 }else{
-                    ii = result.length-limit
+                    ii = 0
                 }
                 //console.log(ii)
+                
 
                 
                 //console.log('result.length '+result.length);
@@ -151,7 +152,8 @@ function entsymb(symboll){
                                 list[1].mes=quant
                             }
 
-
+                    }else{
+                        console.log('caiu no else')
                     }
 
                     /*
@@ -187,7 +189,7 @@ function entsymb(symboll){
     
                                     m50qua+= parseFloat(result[i][4])
     
-                                    m50= parseFloat(m50qua/50).toFixed(6)
+                                    m50= parseFloat(m50qua/50).toFixed(8)
     
                                 }
 
@@ -203,7 +205,7 @@ function entsymb(symboll){
                                     //console.log(`quant200 = ${quant}`)
     
                                     m200qua+= parseFloat(result[i][4])
-                                    m200= parseFloat(m200qua/200).toFixed(6)
+                                    m200= parseFloat(m200qua/200).toFixed(8)
     
                                     //console.log(`m200qua = ${m200qua}`)
                                     //console.log(`m200 = ${m200}`)
@@ -249,7 +251,7 @@ function entsymb(symboll){
                 //Relacao Maximo Todo e Minimo Inicio
                 let rlcmxtd= parseFloat((i-list[0].mes)/i).toFixed(2)    //relação Máximo Todo
                 let rlcmnin= parseFloat(list[1].mes/i).toFixed(2)//relação Mínimo-Início
-                if(colec[cont].rod<2){
+                if(parseInt(colec[cont].rod)<=1){
                     colec[cont].rmaxt=parseFloat(rlcmxtd)
                     colec[cont].rmini=parseFloat(rlcmnin)
                     //blookconsole.log(`OK SETANDO rmaxt = ${colec[cont].rmaxt} MES NO intervalo 1M ${colec[cont].int} rodada 0-1 ${colec[cont].rod}`)
@@ -267,14 +269,14 @@ function entsymb(symboll){
                 if(parseFloat(list[0].val)>parseFloat(list[2].val)){ //só caindo curvou p baixo ou parou de só subir...caindo
                     
                     if(list[1].mes>list[0].mes){ //mínimo antes do maximo.  (II)
-                        colec[cont].val.push(6) 
+                        colec[cont].val=colec[cont].val+'6' //.push(6) 
                         //blookconsole.log(`-->PAROU DE SUBIR, EM QUEDA HÁ ${list[0].mes} ${colec[cont].int} (6 pontos)<--`)
                         //blookconsole.log(`Em queda de ${list[0].val-list[2].val} USDT (${(quedamamMat*100).toFixed(2)}%) desde então`) 
                         //blookconsole.log(`Antes o mínimo foi ${list[1].val} USDT há ${list[1].mes} meses`)
                         //blookconsole.log(`Falta cair ${falpsup.toFixed(8)} USDT (${falpsupper*100}%) para atingir o pior mínimo que teve em ${i} ${colec[cont].int} `)
                     }else{ //mínimo depois do maximo
                         if(parseFloat(list[1].val)<parseFloat(list[2].val)){ // min < atual ? (III)
-                            colec[cont].val.push(3)
+                            colec[cont].val=colec[cont].val+'3'//.push(3)
                             //blookconsole.log(`--> RECUPERANDO APÓS QUEDA (3 pontos) <--`) //teve buraco, min<attual
                             //blookconsole.log(` Há ${list[0].mes} ${colec[cont].int}, perdeu  ${perMmper*100}% por ${list[0].mes-list[1].mes} ${colec[cont].int},`) //Ha x meses, perdeu x% por n meses
                             //blookconsole.log(`Subindo ${alta*100}% há ${list[1].mes} ${colec[cont].int} desde que atingiu o min de ${list[1].val} USDT`)// quanto % subiu ha quanto tempo desde queda
@@ -282,46 +284,46 @@ function entsymb(symboll){
                         //blook console.log(`Se voltar a cair ${falpsup} USDT (${falpsupper*100}%) reatinge o mínimo`) // voltar a cair ...USDT (%) p minimo
             
                         }else if(parseFloat(list[1].val)>parseFloat(list[2].val)){ //min > atual so caindo  (I)
-                            colec[cont].val.push(1)
+                            colec[cont].val=colec[cont].val+'1'//.push(1)
                         //blook console.log(`--> SÓ CAINDO HÁ ${list[0].mes} ${colec[cont].int} (1 ponto)<--`) // não teve buraco, min >=atual
                             //blookconsole.log(`Precisa subir ${falpresamdm*100}% para atingir o máximo`)// quantos % do atual p atingir o max se subir (M-A/A)
                         }else{ //  min === atual lateralizado
                             //blookconsole.log(`--> PAROU DE CAIR (2 pontos)<--`) //(IV)
-                            colec[cont].val.push(2)
+                            colec[cont].val=colec[cont].val+'2' //.push(2)
                         }
             
                     }
                 }else if(parseFloat(list[0].val)<parseFloat(list[2].val)){ //max<atual,  só subindo, parou de subir mas nao curvou p baixo, caiu mas recuperou muuuito- atual > max
             
                     if(list[1].mes>list[0].mes){// se o minimo é mais anterior mais antigo o maximo (V)
-                        colec[cont].val.push(8)
+                        colec[cont].val=colec[cont].val+'8' //.push(8)
                             //blookconsole.log(`--> SÓ SUBINDO ou RECUPEROU DE QUEDA COM LOUVOR 4 (SEM TOCAR O MÍNIMO) (8 pontos) <--`)
                         //blook console.log(`Mínimo há ${list[1].mes} meses.`)
                         //blook console.log(`Subiu ${alta}%  desde este mínimo`) //quanto subiu (A-m/m)
                         
                     }else{//se o minimo é posterior ao max - mais recente que o maximo (VI)
-                        colec[cont].val.push(5)
+                        colec[cont].val=colec[cont].val+'5' //.push(5)
                     //blook console.log(`--> RECUPERADA DE QUEDA COM LOUVOR 2, atual>max (5 pontos) <--`)
                     //blook  console.log(`Caiu ${list[0].val-list[1].val} USDT (${quedmdmMm*100}%) por ${list[0].mes -list[1].mes} ${colec[cont].int}`) //% - caiu M-m USDT (M-m/M)% por n meses
                     //blook console.log(`Recuperando ${alta}% há ${list[1].mes-list[2].mes} ${colec[cont].int}`)//recuperando % (A-m/m) ha n meses
                     }
                 }else if(parseFloat(list[0].val)===parseFloat(list[2].val)){
-                    if(list[1].mes>list[0].mes){ // atual=max,
-                        // se o minimo é mais anterior mais antigo o maximo  , com atual ===max  (VII)
-                        colec[cont].val.push(7)
-                                //blook console.log(`--> SÓ SUBINDO COM LOUVOR 3 (min antes do maximo e do atual)(7 pontos) <--`)
-                                //blook console.log(`Mínimo há ${list[1].mes} ${colec[cont].int}.`)
-                                //blook console.log(`"Subindo" ${alta}%  desde este mínimo`) //quanto subiu (A-m/m)
-                                
-                    }else{//se o minimo é posterior ao max - mais recente que o maximo ,  com atual ===max  (VIII)
-                        colec[cont].val.push(4)
-                            //blook  console.log(`--> RECUPERANDO DE QUEDA COM LOUVOR 1,atual=max (4 pontos) <--`)
-                            //blook console.log(`Caiu ${list[0].val-list[1].val} USDT (${quedmdmMm*100}%) por ${list[0].mes -list[1].mes} ${colec[cont].int}`) //% - caiu M-m USDT (M-m/M)% por n meses
-                            //blook  console.log(`"Recuperando" ${alta}% há ${list[1].mes-list[2].mes} ${colec[cont].int}`)//recuperando % (A-m/m) há n meses
-                    }
-
+                        if(list[1].mes>list[0].mes){ // atual=max,
+                            // se o minimo é mais anterior mais antigo o maximo  , com atual ===max  (VII)
+                            colec[cont].val=colec[cont].val+'7' //.push(7)
+                                    //blook console.log(`--> SÓ SUBINDO COM LOUVOR 3 (min antes do maximo e do atual)(7 pontos) <--`)
+                                    //blook console.log(`Mínimo há ${list[1].mes} ${colec[cont].int}.`)
+                                    //blook console.log(`"Subindo" ${alta}%  desde este mínimo`) //quanto subiu (A-m/m)
+                                    
+                        }else{//se o minimo é posterior ao max - mais recente que o maximo ,  com atual ===max  (VIII)
+                            colec[cont].val=colec[cont].val+'4' //.push(4)
+                                //blook  console.log(`--> RECUPERANDO DE QUEDA COM LOUVOR 1,atual=max (4 pontos) <--`)
+                                //blook console.log(`Caiu ${list[0].val-list[1].val} USDT (${quedmdmMm*100}%) por ${list[0].mes -list[1].mes} ${colec[cont].int}`) //% - caiu M-m USDT (M-m/M)% por n meses
+                                //blook  console.log(`"Recuperando" ${alta}% há ${list[1].mes-list[2].mes} ${colec[cont].int}`)//recuperando % (A-m/m) há n meses
+                        }
                 }else{
                     //colec[cont].val.push(0)
+                    console.log('sera aqui o vazio?')
                 }
                     
                     
@@ -339,7 +341,10 @@ function entsymb(symboll){
                 let tentresis= colec[7].max.sort()
                 //tentresis=colec[7].max
                 
-                let qualymes=0
+                //qualymes h[3]
+                
+                
+                
 
 
                 limit =parseInt(list[0].mes-2) // -1 tirando 1 ou 2 do Maximo p proxima chamada
@@ -355,57 +360,116 @@ function entsymb(symboll){
                 
                 //blook console.log(`Crypto: ${colec[8].val}  Intervalos:${listart.length}  Rodadas:${colec[8].rod} Atual: ${list[2].val}`)
 
-                if(parseInt(cont)===7){ //interval==='1M' estava assim. troquie p pegar na ultima rodada 1m, cont=7
-                    
-                    //sup e res vindo de 1m. qualymes vindo de 1h. rmaxt vindo de 1M
-                    if(colec[4].val[3]){
-                        qualymes= `${colec[4].val[0]}${colec[4].val[1]}${colec[4].val[2]}${colec[4].val[3]}`
-                        console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
-                            //console.log(`{"cryp":"${symboll}","atual":${list[2].val}},`)
-                    
-                    }else if(colec[4].val[2]){
-                        qualymes= `${colec[4].val[0]}${colec[4].val[1]}${colec[4].val[2]}`
-                        console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
-
-
-                    }else if(colec[4].val[1]){
-                        qualymes= `${colec[4].val[0]}${colec[4].val[1]}`
-                        console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
-
-                    }else if(colec[4].val[0]){
-                        qualymes= `${colec[4].val[0]}`
-                        console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
-
-                    }else{
+                    if(parseInt(cont)===7){ //interval==='1M' estava assim. troquie p pegar na ultima rodada 1m, cont=7
                         
-                        if(colec[3].val[3]){
-                            qualymes= `${colec[3].val[0]}${colec[3].val[1]}${colec[3].val[2]}${colec[3].val[3]}`
-                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
-
-                        }else if(colec[3].val[2]){
-                            qualymes= `${colec[3].val[0]}${colec[3].val[1]}${colec[3].val[2]}`
-                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
-    
-    
-                        }else if(colec[3].val[1]){
-                            qualymes= `${colec[3].val[0]}${colec[3].val[1]}`
-                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
-    
-                        }else if(colec[3].val[0]){
-                            qualymes= `${colec[3].val[0]}`
-                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
-    
+                        //sup e res vindo de 1m. qualymes vindo de 1m [7]. rmaxt vindo de 1m -> 1M [0] -> [7]
+                        let qualyhora;
+                        if( parseInt(colec[7].val.length)<=4){
+                            qualyhora=colec[7].val
                         }else{
-                            //qualymes= `${colec[4].rod}`
-                            qualymes=0
-                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
-
+                            qualyhora=colec[7].val.slice(-5,-1)
                         }
                         
-                    }
-                    
+                        
+                        if(colec[0].rmaxt){
+                            
+                            //console.log('0--'+colec[0].rmaxt)
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualyhora}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+                        }else if(colec[1].rmaxt){
+                            //console.log('1--'+colec[1].rmaxt)
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualyhora}, "rmaxt": ${colec[1].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+                        }else if(colec[2].rmaxt){
+                            //console.log('2--'+colec[2].rmaxt)
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualyhora}, "rmaxt": ${colec[2].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+                        }else  if(colec[3].rmaxt){
+                            //console.log('3--'+colec[3].rmaxt)
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualyhora}, "rmaxt": ${colec[3].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+                        }else  if(colec[4].rmaxt){
+                            //console.log('4--'+colec[4].rmaxt)
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualyhora}, "rmaxt": ${colec[4].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+                        }else  if(colec[5].rmaxt){
+                            //console.log('5--'+colec[5].rmaxt)
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualyhora}, "rmaxt": ${colec[5].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+                        }else  if(colec[6].rmaxt){
+                            //console.log('6--'+colec[6].rmaxt)
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualyhora}, "rmaxt": ${colec[6].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+                        }else  if(colec[7].rmaxt){
+                            //console.log('7--'+colec[7].rmaxt)
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualyhora}, "rmaxt": ${colec[7].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+                        }else{
+                            console.log('merda')
+                        }
+                        
+                        /*
+                        if(colec[4].val){
+                            //console.log('4--'+colec[4].val)
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${colec[7].val}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+                        }else if(colec[3].val){
+                            //console.log('3--'+colec[3].val)
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${colec[7].val}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+                        }else if(colec[2].val){
+                            //console.log('2--'+colec[2].val)
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${colec[7].val}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+                        }else if(colec[1].val){
+                            //console.log('1--'+colec[1].val)
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${colec[7].val}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+                        }else if(colec[0].val){
+                            //console.log('0--'+colec[0].val)
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${colec[7].val}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+                        }else{
+                            console.log('merda')
+                        }
+                        */
+                        /*
+                        if(colec[4].val[3]){
+                            qualymes= `${colec[4].val[0]}${colec[4].val[1]}${colec[4].val[2]}${colec[4].val[3]}`
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+                                //console.log(`{"cryp":"${symboll}","atual":${list[2].val}},`)
+                        
+                        }else if(colec[4].val[2]){
+                            qualymes= `${colec[4].val[0]}${colec[4].val[1]}${colec[4].val[2]}`
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
 
-                }
+
+                        }else if(colec[4].val[1]){
+                            qualymes= `${colec[4].val[0]}${colec[4].val[1]}`
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+
+                        }else if(colec[4].val[0]){
+                            qualymes= `${colec[4].val[0]}`
+                            console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+
+                        }else{
+                            
+                            if(colec[3].val[3]){
+                                qualymes= `${colec[3].val[0]}${colec[3].val[1]}${colec[3].val[2]}${colec[3].val[3]}`
+                                console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+
+                            }else if(colec[3].val[2]){
+                                qualymes= `${colec[3].val[0]}${colec[3].val[1]}${colec[3].val[2]}`
+                                console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+        
+        
+                            }else if(colec[3].val[1]){
+                                qualymes= `${colec[3].val[0]}${colec[3].val[1]}`
+                                console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+        
+                            }else if(colec[3].val[0]){
+                                qualymes= `${colec[3].val[0]}`
+                                console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+        
+                            }else{
+                                //qualymes= `${colec[4].rod}`
+                                qualymes=0
+                                console.log(`{"cryp":"${symboll}", "sup":${tentsort}, "res":[${tentresis}], "qualymes":${qualymes}, "rmaxt": ${colec[0].rmaxt}, "atual":${list[2].val},"m50":${m50},"m200": ${m200}},`)
+
+                            }
+                        }
+                        */
+
+
+
+                    }
                     /*
                     console.log(`Suportes: ${colec[8].min}`)
                     console.log(`Resistencias: ${colec[8].max}`)
@@ -448,45 +512,11 @@ function entsymb(symboll){
                 colec[cont].max
                 colec[cont].min
 
-        
-
-
-
-
-
-
-
-
-
-
-
-
             }
 
-
-
-
-
-
-            
-        
         }
-    //let colec=[{"rod":0, "val":0}, {"rod":0, "val":0}, {"rod":0, "val":0}, {"rod":0, "val":0},{"rod":0, "val":0}, {"rod":0, "val":0}, {"rod":0, "val":0}, {"rod":0, "val":0}, {"rod":0, "val":""}]// pontos p cada cry
-        
-        
         chamar(limit)
-
-
-
     }
-
-
-
-
-
-
-
-
 }
 
 

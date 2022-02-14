@@ -25,7 +25,7 @@ let moe =[
 
 ]
 
-let limit=4
+let limit=1
 let interval='1h'
 
 //PARA PRODUZIR GELO  HORAS
