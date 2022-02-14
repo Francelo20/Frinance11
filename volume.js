@@ -92,7 +92,7 @@ async function rechamar(symb,startTime,endTime,limit){
     difer= parseFloat(psubir-pcair).toFixed(2)
     total= parseFloat(psubir+pcair).toFixed(2)
     //impedindo infinity se pcair e compr for ===0
-    if(parseFloat(pcair)===0){//acrescentandp valor 2 caso nao teve venda a favor do comprador, denominador =0
+    if(parseFloat(pcair)===0){
         relac=2
     }else{
         relac= parseFloat(psubir/pcair).toFixed(2)
@@ -166,7 +166,7 @@ async function rechamar(symb,startTime,endTime,limit){
     }
 
 
-    console.log(`{"crip": "${symb}", "vol":${volume}, "total":${total}, "difer": ${difer}, "relvol": ${relac}, "relqut": ${relac2}, "vend": ${soma}, "compr": ${subt},"trades": ${cont}},`)
+    console.log(`{"crip": "${symb}", "vol":${volume}, "total":${parseFloat(total/1000).toFixed(3)}, "difer": ${difer}, "relvol": ${relac}, "relqut": ${relac2}, "vend": ${soma}, "compr": ${subt},"trades": ${cont}},`)
     //console.log(cont+' trades')
     //console.log(`vendedor ${soma} X ${subt} comprador`)
     

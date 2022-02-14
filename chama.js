@@ -26,7 +26,7 @@ let moe =[
 ]
 
 let limit=1
-let interval='1h'
+let interval='4h'
 
 //PARA PRODUZIR GELO  HORAS
 async function chamar(){

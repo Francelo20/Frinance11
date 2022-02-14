@@ -41,227 +41,8 @@ fetch(url)
         for(let i =0; i<result.length; i++){
             //let gelo= result[i].pro
             //ajudaa.push(`{"cry":${result[i].id}, "gelo":${gelo}}`)
-            let voll = (result[i].vol/1000000).toFixed(3);
 
-            let td1 = document.createElement("td")
-            td1.setAttribute('id', `mo_${result[i].id}`)
-            td1.setAttribute("class","td")
-
-            let td11 = document.createElement("td")
-            td11.setAttribute('id', `vol_${result[i].id}`)
-            td11.setAttribute("class","td")
-
-            let td13 = document.createElement("td")
-            td13.setAttribute('id',`gelo_${result[i].id}`)
-            td13.setAttribute("class","tdp")
-
-            let td12 = document.createElement("td")
-            td12.setAttribute('id', `auvol_${result[i].id}`)
-            td12.setAttribute("class","td")
-
-
-            let td2 = document.createElement("td")
-            td2.setAttribute('id',`in_${result[i].id}`)
-            td2.setAttribute("class","td")
-
-            let td22 = document.createElement("td")
-            td22.setAttribute('id',`at_${result[i].id}`)
-            td22.setAttribute("class","td")
-
-            let td23 = document.createElement("td")
-            td23.setAttribute('id',`dif_${result[i].id}`)
-            td23.setAttribute("class","td")
-
-            let td24 = document.createElement("td")
-            td24.setAttribute('id',`ope_${result[i].id}`)
-            td24.setAttribute("class","tdp")
-
-            
-            let td3 = document.createElement("td")
-            td3.setAttribute('id',`pe_${result[i].id}`)
-            td3.setAttribute("class","tdp")
-    
-            let td4 = document.createElement("td")
-            td4.setAttribute('id',result[i].id)
-            td4.setAttribute("class","tdp")
-            td4.style.backgroundColor='#d2dd54'
-
-            let td41 = document.createElement("td")
-            td41.setAttribute('id',`sup_${result[i].id}`)
-            td41.setAttribute("class","tdp")
-
-            let td42 = document.createElement("td")
-            td42.setAttribute('id',`difsup_${result[i].id}`)
-            td42.setAttribute("class","tdp")
-
-            let td411 = document.createElement("td")
-            td411.setAttribute('id',`res_${result[i].id}`)
-            td411.setAttribute("class","tdp")
-
-            let td412 = document.createElement("td")
-            td412.setAttribute('id',`difres_${result[i].id}`)
-            td412.setAttribute("class","tdp")
-
-
-
-            let td413 = document.createElement("td")
-            td413.setAttribute('id',`m50_${result[i].id}`)
-            td413.setAttribute("class","tdp")
-
-            let td4131 = document.createElement("td")
-            td4131.setAttribute('id',`difm50_${result[i].id}`)
-            td4131.setAttribute("class","tdp")
-
-            let td414 = document.createElement("td")
-            td414.setAttribute('id',`m200_${result[i].id}`)
-            td414.setAttribute("class","tdp")
-
-
-
-
-
-            
-
-            let td43 = document.createElement("td")
-            td43.setAttribute('id',`qualymes_${result[i].id}`)
-            td43.setAttribute("class","tdp")
-
-            let td44 = document.createElement("td")
-            td44.setAttribute('id',`rmaxtu_${result[i].id}`)
-            td44.setAttribute("class","td")
-
-            let tdac = document.createElement("td")
-            tdac.setAttribute('id',`acu_${result[i].id}`)
-            tdac.setAttribute("class","td")
-            tdac.addEventListener('click',()=>{
-                let valpz= document.getElementById(`${result[i].id}`).innerHTML
-                document.getElementById(`pe_${result[i].id}`).innerHTML= valpz
-                tdac.innerHTML='0.000'
-                tdac.style.backgroundColor= '#ffffff'
-                let azul = document.getElementById(`max_${result[i].id}`)
-                azul.style.backgroundColor= '#8d8ec4'
-            })
-
-            let tdmx = document.createElement("td")
-            tdmx.setAttribute('id',`max_${result[i].id}`)
-            tdmx.setAttribute("class","td")
-
-            let tdmn = document.createElement("td")
-            tdmn.setAttribute('id',`min_${result[i].id}`)
-            tdmn.setAttribute("class","td")
-    
-            let td5 = document.createElement("td")
-            td5.setAttribute('id',`au_${result[i].id}`)
-            td5.setAttribute("class","td")
-    
-            let tr = document.createElement("tr")
-            tr.setAttribute('id', `tr_${result[i].id}`)
-
-            
-
-            setTimeout(500)
-
-            tr.appendChild(td1)
-            tr.appendChild(td11)
-            tr.appendChild(td13)
-            tr.appendChild(td12)
-            tr.appendChild(td2)
-            tr.appendChild(td22)
-            tr.appendChild(td23)
-            tr.appendChild(td24)
-            tr.appendChild(td3)
-            tr.appendChild(td4)
-            tr.appendChild(td41)
-            tr.appendChild(td42)
-            tr.appendChild(td411)
-            tr.appendChild(td412)
-            tr.appendChild(td413)
-            tr.appendChild(td4131)
-            tr.appendChild(td414)
-            tr.appendChild(td43)
-            tr.appendChild(td44)
-            tr.appendChild(tdac)
-            tr.appendChild(tdmx)
-            tr.appendChild(tdmn)
-            tr.appendChild(td5)
-            
-            let tab = document.getElementById('tbody')
-
-            tab.appendChild(tr)
-
-            let campvoll= document.getElementById(`vol_${result[i].id}`)
-            document.getElementById(`mo_${result[i].id}`).innerHTML= result[i].id;
-            campvoll.innerHTML= voll
-            document.getElementById(`gelo_${result[i].id}`).innerHTML= '0';
-            document.getElementById(`auvol_${result[i].id}`).innerHTML= '0';
-            document.getElementById(`in_${result[i].id}`).innerHTML= result[i].value;
-            document.getElementById(`at_${result[i].id}`).innerHTML= '0';
-            document.getElementById(`dif_${result[i].id}`).innerHTML= '0';
-            document.getElementById(`ope_${result[i].id}`).innerHTML= result[i].open;
-            document.getElementById(`pe_${result[i].id}`).innerHTML= result[i].pro;
-            document.getElementById(result[i].id).innerHTML= result[i].pro;
-            document.getElementById(`sup_${result[i].id}`).innerHTML= '0';
-            document.getElementById(`difsup_${result[i].id}`).innerHTML= '0';
-            document.getElementById(`res_${result[i].id}`).innerHTML= '999';
-            document.getElementById(`difres_${result[i].id}`).innerHTML= '0';
-
-            document.getElementById(`m50_${result[i].id}`).innerHTML= '0';
-            document.getElementById(`difm50_${result[i].id}`).innerHTML= '0';
-            document.getElementById(`m200_${result[i].id}`).innerHTML= '0';
-
-            document.getElementById(`qualymes_${result[i].id}`).innerHTML= '0';
-            document.getElementById(`rmaxtu_${result[i].id}`).innerHTML= '0';
-            document.getElementById(`acu_${result[i].id}`).innerHTML= '0';
-            document.getElementById(`max_${result[i].id}`).innerHTML= '0';
-            document.getElementById(`min_${result[i].id}`).innerHTML= '0';
-            document.getElementById(`au_${result[i].id}`).innerHTML= '0';
-
-
-
-
-
-
-            
-
-
-            //colocando cor na coluna Volume vol_XXX
-            if(voll < 1.0){
-                campvoll.style.backgroundColor = "#b51717"; //vermelho escuro
-
-            }else if(voll >= 1.0 && voll < 2.0){
-                campvoll.style.backgroundColor = "#f7281d"; //vermelho medio
-
-            }else if(voll >=2.0 && voll < 3.0){
-                campvoll.style.backgroundColor = "#f9645c"; //vermelho claro
-
-            }else if(voll >= 3.0 && voll < 4.0){
-                campvoll.style.backgroundColor = "#f9a29d"; //laranja-vermelho
-
-            }else if(voll >=4.0 && voll < 5.0){
-                campvoll.style.backgroundColor = "#fcdcd1"; //laranja
-
-            }else if(voll >=5.0 && voll <10.0){
-                campvoll.style.backgroundColor = "#c5f271"; //amarelo
-
-            }else if(voll >=10.0 && voll <50.0){
-                campvoll.style.backgroundColor = "#d2dd54"; //amarelo esverdeado
-
-            }else if(voll >=50.0 && voll <100.0){
-                campvoll.style.backgroundColor = "#9db541"; // verde claro
-
-            }else if(voll >=100.0 && voll <500.0){
-                campvoll.style.backgroundColor = "#1da548"; // verde medio
-
-            }else if(voll >=500.0 && voll < 1300.0){
-                campvoll.style.backgroundColor = "#138437"; // verde escuro
-
-            }else if(voll >= 1300.0){
-                campvoll.style.backgroundColor = "#0b5623"; // verde escurao
-
-            }
-            
-
-
+            entracry(result,i)
         }
         //ajudaa.sort()
         //let jss= JSON.stringify(ajudaa)
@@ -270,6 +51,244 @@ fetch(url)
     })
 })
 .catch(err=> console.error('Algo deu errado',err))
+
+
+//funcao entracry p ciclo 1 e 2
+function entracry(result,i){
+    
+    let voll = (result[i].vol/1000000).toFixed(3);
+
+    let td1 = document.createElement("td")
+    td1.setAttribute('id', `mo_${result[i].id}`)
+    td1.setAttribute("class","td")
+
+    let td11 = document.createElement("td")
+    td11.setAttribute('id', `vol_${result[i].id}`)
+    td11.setAttribute("class","td")
+
+    let td13 = document.createElement("td")
+    td13.setAttribute('id',`gelo_${result[i].id}`)
+    td13.setAttribute("class","tdp")
+
+    let td12 = document.createElement("td")
+    td12.setAttribute('id', `auvol_${result[i].id}`)
+    td12.setAttribute("class","td")
+
+    let td2 = document.createElement("td")
+    td2.setAttribute('id',`in_${result[i].id}`)
+    td2.setAttribute("class","td")
+
+    let td22 = document.createElement("td")
+    td22.setAttribute('id',`at_${result[i].id}`)
+    td22.setAttribute("class","td")
+
+    let td23 = document.createElement("td")
+    td23.setAttribute('id',`dif_${result[i].id}`)
+    td23.setAttribute("class","td")
+
+    let td24 = document.createElement("td")
+    td24.setAttribute('id',`ope_${result[i].id}`)
+    td24.setAttribute("class","tdp")
+
+    let td3 = document.createElement("td")
+    td3.setAttribute('id',`pe_${result[i].id}`)
+    td3.setAttribute("class","tdp")
+
+    let td4 = document.createElement("td")
+    td4.setAttribute('id',result[i].id)
+    td4.setAttribute("class","tdp")
+    td4.style.backgroundColor='#d2dd54'
+
+    let td41 = document.createElement("td")
+    td41.setAttribute('id',`sup_${result[i].id}`)
+    td41.setAttribute("class","tdp")
+
+    let td42 = document.createElement("td")
+    td42.setAttribute('id',`difsup_${result[i].id}`)
+    td42.setAttribute("class","tdp")
+
+    let td411 = document.createElement("td")
+    td411.setAttribute('id',`res_${result[i].id}`)
+    td411.setAttribute("class","tdp")
+
+    let td412 = document.createElement("td")
+    td412.setAttribute('id',`difres_${result[i].id}`)
+    td412.setAttribute("class","tdp")
+
+    let td413 = document.createElement("td")
+    td413.setAttribute('id',`m50_${result[i].id}`)
+    td413.setAttribute("class","td")
+
+    let td4131 = document.createElement("td")
+    td4131.setAttribute('id',`difm50_${result[i].id}`)
+    td4131.setAttribute("class","td")
+
+    let td414 = document.createElement("td")
+    td414.setAttribute('id',`m200_${result[i].id}`)
+    td414.setAttribute("class","td")
+
+    let td43 = document.createElement("td")
+    td43.setAttribute('id',`qualymes_${result[i].id}`)
+    td43.setAttribute("class","tdp")
+
+    let td44 = document.createElement("td")
+    td44.setAttribute('id',`rmaxtu_${result[i].id}`)
+    td44.setAttribute("class","td")
+
+    let td45 = document.createElement("td")
+    td45.setAttribute('id',`favor_${result[i].id}`)
+    td45.setAttribute("class","td")
+
+    let td46 = document.createElement("td")
+    td46.setAttribute('id',`volmom_${result[i].id}`)
+    td46.setAttribute("class","td")
+
+    let td47 = document.createElement("td")
+    td47.setAttribute('id',`relvolmom_${result[i].id}`)
+    td47.setAttribute("class","td")
+
+    let td48 = document.createElement("td")
+    td48.setAttribute('id',`reltrade_${result[i].id}`)
+    td48.setAttribute("class","td")
+
+    let td49 = document.createElement("td")
+    td49.setAttribute('id',`trades_${result[i].id}`)
+    td49.setAttribute("class","td")
+
+    let tdac = document.createElement("td")
+    tdac.setAttribute('id',`acu_${result[i].id}`)
+    tdac.setAttribute("class","td")
+    tdac.addEventListener('click',()=>{
+        let valpz= document.getElementById(`${result[i].id}`).innerHTML
+        document.getElementById(`pe_${result[i].id}`).innerHTML= valpz
+        tdac.innerHTML='0.000'
+        tdac.style.backgroundColor= '#ffffff'
+        let azul = document.getElementById(`max_${result[i].id}`)
+        azul.style.backgroundColor= '#8d8ec4'
+    })
+
+    let tdmx = document.createElement("td")
+    tdmx.setAttribute('id',`max_${result[i].id}`)
+    tdmx.setAttribute("class","td")
+
+    let tdmn = document.createElement("td")
+    tdmn.setAttribute('id',`min_${result[i].id}`)
+    tdmn.setAttribute("class","td")
+
+    let td5 = document.createElement("td")
+    td5.setAttribute('id',`au_${result[i].id}`)
+    td5.setAttribute("class","td")
+
+    let tr = document.createElement("tr")
+    tr.setAttribute('id', `tr_${result[i].id}`)
+
+    setTimeout(500)
+
+    tr.appendChild(td1)
+    tr.appendChild(td11)
+    tr.appendChild(td13)
+    tr.appendChild(td12)
+    tr.appendChild(td2)
+    tr.appendChild(td22)
+    tr.appendChild(td23)
+    tr.appendChild(td24)
+    tr.appendChild(td3)
+    tr.appendChild(td4)
+    tr.appendChild(td41)
+    tr.appendChild(td42)
+    tr.appendChild(td411)
+    tr.appendChild(td412)
+    tr.appendChild(td413)
+    tr.appendChild(td4131)
+    tr.appendChild(td414)
+    tr.appendChild(td43)
+    tr.appendChild(td44)
+    tr.appendChild(td45)
+    tr.appendChild(td46)
+    tr.appendChild(td47)
+    tr.appendChild(td48)
+    tr.appendChild(td49)
+    tr.appendChild(tdac)
+    tr.appendChild(tdmx)
+    tr.appendChild(tdmn)
+    tr.appendChild(td5)
+    
+    let tab = document.getElementById('tbody')
+
+    tab.appendChild(tr)
+
+    let campvoll= document.getElementById(`vol_${result[i].id}`)
+    document.getElementById(`mo_${result[i].id}`).innerHTML= result[i].id;
+    campvoll.innerHTML= voll
+    document.getElementById(`gelo_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`auvol_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`in_${result[i].id}`).innerHTML= result[i].value;
+    document.getElementById(`at_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`dif_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`ope_${result[i].id}`).innerHTML= result[i].open;
+    document.getElementById(`pe_${result[i].id}`).innerHTML= result[i].pro;
+    document.getElementById(result[i].id).innerHTML= result[i].pro;
+    document.getElementById(`sup_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`difsup_${result[i].id}`).innerHTML= '999';
+    document.getElementById(`res_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`difres_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`m50_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`difm50_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`m200_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`qualymes_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`rmaxtu_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`favor_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`volmom_${result[i].id}`).innerHTML= '000';
+    document.getElementById(`relvolmom_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`reltrade_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`trades_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`acu_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`max_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`min_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`au_${result[i].id}`).innerHTML= '0';
+
+    //colocando cor na coluna Volume vol_XXX
+    if(voll < 1.0){
+        campvoll.style.backgroundColor = "#b51717"; //vermelho escuro
+
+    }else if(voll >= 1.0 && voll < 2.0){
+        campvoll.style.backgroundColor = "#f7281d"; //vermelho medio
+
+    }else if(voll >=2.0 && voll < 3.0){
+        campvoll.style.backgroundColor = "#f9645c"; //vermelho claro
+
+    }else if(voll >= 3.0 && voll < 4.0){
+        campvoll.style.backgroundColor = "#f9a29d"; //laranja-vermelho
+
+    }else if(voll >=4.0 && voll < 5.0){
+        campvoll.style.backgroundColor = "#fcdcd1"; //laranja
+
+    }else if(voll >=5.0 && voll <10.0){
+        campvoll.style.backgroundColor = "#c5f271"; //amarelo
+
+    }else if(voll >=10.0 && voll <50.0){
+        campvoll.style.backgroundColor = "#d2dd54"; //amarelo esverdeado
+
+    }else if(voll >=50.0 && voll <100.0){
+        campvoll.style.backgroundColor = "#9db541"; // verde claro
+
+    }else if(voll >=100.0 && voll <500.0){
+        campvoll.style.backgroundColor = "#1da548"; // verde medio
+
+    }else if(voll >=500.0 && voll < 1300.0){
+        campvoll.style.backgroundColor = "#138437"; // verde escuro
+
+    }else if(voll >= 1300.0){
+        campvoll.style.backgroundColor = "#0b5623"; // verde escurao
+
+    }
+
+}
+
+
+
+
+
 
 
 // SEGUNDA PARTE
@@ -319,6 +338,9 @@ function ativar(){
     let cresc ='';
     let i =0;
     let v=0;
+    
+    let contpos=0
+    let contrest=0
     console.log(`Bom dia. Iniciando com intervalo de ${duration} segundos pela ${apisel}`)
     setInterval(() => {
         fetch(urll)
@@ -354,7 +376,7 @@ function ativar(){
                     //console.log(ajudaa)
                     let moe = result[i].id
                     let preco = result[i].pro
-                    let voll = (result[i].vol/1000000).toFixed(3);
+                    //let voll = (result[i].vol/1000000).toFixed(3);
                     //let valperc= result[i].value
 
                     //calculo de difm50 dif entre atual preço / m50
@@ -590,7 +612,19 @@ function ativar(){
                         cracum = crac.toFixed(3)
                         let campacu=   document.getElementById(`acu_${moe}`)
                         campacu.innerHTML = cracum;
+
+                        //quantos posistivos?
                         
+                        if(parseFloat(cracum)>0){
+                            contpos++
+
+                        }else{
+                            contrest++
+                        }
+                        
+
+
+
 
                         //4 verificando acumulado p coluna MAXIMO e MINIMO 
                         let maxvlr= document.getElementById(`max_${moe}`).innerHTML
@@ -648,220 +682,11 @@ function ativar(){
 
                         }
 
-
                     }else{
-                        
                         qtsmoe.push(moe)
                         //console.log(`Nova moeda nao cadastrada: ${moe}`)
-
-
-                        let td1 = document.createElement("td")
-                        td1.setAttribute('id', `mo_${result[i].id}`)
-                        td1.setAttribute("class","td")
-
-                        let td11 = document.createElement("td")
-                        td11.setAttribute('id', `vol_${result[i].id}`)
-                        td11.setAttribute("class","td")
-
-                        let td13 = document.createElement("td")
-                        td13.setAttribute('id',`gelo_${result[i].id}`)
-                        td13.setAttribute("class","tdp")
-
-                        let td12 = document.createElement("td")
-                        td12.setAttribute('id', `auvol_${result[i].id}`)
-                        td12.setAttribute("class","td")
-
-
-                        let td2 = document.createElement("td")
-                        td2.setAttribute('id',`in_${result[i].id}`)
-                        td2.setAttribute("class","td")
-
-                        let td22 = document.createElement("td")
-                        td22.setAttribute('id',`at_${result[i].id}`)
-                        td22.setAttribute("class","td")
-
-                        let td23 = document.createElement("td")
-                        td23.setAttribute('id',`dif_${result[i].id}`)
-                        td23.setAttribute("class","td")
-
-                        let td24 = document.createElement("td")
-                        td24.setAttribute('id',`ope_${result[i].id}`)
-                        td24.setAttribute("class","tdp")
-
-                        
-                        let td3 = document.createElement("td")
-                        td3.setAttribute('id',`pe_${result[i].id}`)
-                        td3.setAttribute("class","tdp")
-
-                        let td4 = document.createElement("td")
-                        td4.setAttribute('id',result[i].id)
-                        td4.setAttribute("class","tdp")
-                        td4.style.backgroundColor='#d2dd54'
-
-                        let td41 = document.createElement("td")
-                        td41.setAttribute('id',`sup_${result[i].id}`)
-                        td41.setAttribute("class","tdp")
-
-                        let td42 = document.createElement("td")
-                        td42.setAttribute('id',`difsup_${result[i].id}`)
-                        td42.setAttribute("class","tdp")
-
-                        let td411 = document.createElement("td")
-                        td411.setAttribute('id',`res_${result[i].id}`)
-                        td411.setAttribute("class","tdp")
-
-                        let td412 = document.createElement("td")
-                        td412.setAttribute('id',`difres_${result[i].id}`)
-                        td412.setAttribute("class","tdp")
-
-
-
-                        let td413 = document.createElement("td")
-                        td413.setAttribute('id',`m50_${result[i].id}`)
-                        td413.setAttribute("class","tdp")
-
-                        let td4131 = document.createElement("td")
-                        td4131.setAttribute('id',`difm50_${result[i].id}`)
-                        td4131.setAttribute("class","tdp")
-
-                        let td414 = document.createElement("td")
-                        td414.setAttribute('id',`m200_${result[i].id}`)
-                        td414.setAttribute("class","tdp")
-
-
-
-
-                        let td43 = document.createElement("td")
-                        td43.setAttribute('id',`qualymes_${result[i].id}`)
-                        td43.setAttribute("class","tdp")
-
-                        let td44 = document.createElement("td")
-                        td44.setAttribute('id',`rmaxtu_${result[i].id}`)
-                        td44.setAttribute("class","td")
-
-                        let tdac = document.createElement("td")
-                        tdac.setAttribute('id',`acu_${result[i].id}`)
-                        tdac.setAttribute("class","td")
-                        tdac.addEventListener('click',()=>{
-                            let valpz= document.getElementById(`${result[i].id}`).innerHTML
-                            document.getElementById(`pe_${result[i].id}`).innerHTML= valpz
-                            tdac.innerHTML='0.000'
-                            tdac.style.backgroundColor= '#ffffff'
-                            let azul = document.getElementById(`max_${result[i].id}`)
-                            azul.style.backgroundColor= '#8d8ec4'
-                        })
-
-                        let tdmx = document.createElement("td")
-                        tdmx.setAttribute('id',`max_${result[i].id}`)
-                        tdmx.setAttribute("class","td")
-
-                        let tdmn = document.createElement("td")
-                        tdmn.setAttribute('id',`min_${result[i].id}`)
-                        tdmn.setAttribute("class","td")
-                
-                        let td5 = document.createElement("td")
-                        td5.setAttribute('id',`au_${result[i].id}`)
-                        td5.setAttribute("class","td")
-                
-                        let tr = document.createElement("tr")
-                        tr.setAttribute('id', `tr_${result[i].id}`)
-
-                        setTimeout(500)
-
-                        tr.appendChild(td1)
-                        tr.appendChild(td11)
-                        tr.appendChild(td13)
-                        tr.appendChild(td12)
-                        tr.appendChild(td2)
-                        tr.appendChild(td22)
-                        tr.appendChild(td23)
-                        tr.appendChild(td24)
-                        tr.appendChild(td3)
-                        tr.appendChild(td4)
-                        tr.appendChild(td41)
-                        tr.appendChild(td42)
-                        tr.appendChild(td411)
-                        tr.appendChild(td412)
-                        tr.appendChild(td413)
-                        tr.appendChild(td4131)
-                        tr.appendChild(td414)
-                        tr.appendChild(td43)
-                        tr.appendChild(td44)
-                        tr.appendChild(tdac)
-                        tr.appendChild(tdmx)
-                        tr.appendChild(tdmn)
-                        tr.appendChild(td5)
-                        
-                        let tab = document.getElementById('tbody')
-
-                        tab.appendChild(tr)
-
-                        let campvoll= document.getElementById(`vol_${result[i].id}`)
-                        document.getElementById(`mo_${result[i].id}`).innerHTML= result[i].id;
-                        campvoll.innerHTML= voll
-                        document.getElementById(`gelo_${result[i].id}`).innerHTML= '0';
-                        document.getElementById(`auvol_${result[i].id}`).innerHTML= '0';
-                        document.getElementById(`in_${result[i].id}`).innerHTML= result[i].value;
-                        document.getElementById(`at_${result[i].id}`).innerHTML= '0';
-                        document.getElementById(`dif_${result[i].id}`).innerHTML= '0';
-                        document.getElementById(`ope_${result[i].id}`).innerHTML= result[i].open;
-                        document.getElementById(`pe_${result[i].id}`).innerHTML= result[i].pro;
-                        document.getElementById(result[i].id).innerHTML= result[i].pro;
-                        document.getElementById(`sup_${result[i].id}`).innerHTML= '0';
-                        document.getElementById(`difsup_${result[i].id}`).innerHTML= '999';
-                        document.getElementById(`res_${result[i].id}`).innerHTML= '0';
-                        document.getElementById(`difres_${result[i].id}`).innerHTML= '0';
-
-                        document.getElementById(`m50_${result[i].id}`).innerHTML= '0';
-                        document.getElementById(`difm50_${result[i].id}`).innerHTML= '0';
-                        document.getElementById(`m200_${result[i].id}`).innerHTML= '0';
-
-                        document.getElementById(`qualymes_${result[i].id}`).innerHTML= '0';
-                        document.getElementById(`rmaxtu_${result[i].id}`).innerHTML= '0';
-                        document.getElementById(`acu_${result[i].id}`).innerHTML= '0';
-                        document.getElementById(`max_${result[i].id}`).innerHTML= '0';
-                        document.getElementById(`min_${result[i].id}`).innerHTML= '0';
-                        document.getElementById(`au_${result[i].id}`).innerHTML= '0';
-
-                        //colocando cor na coluna Volume vol_XXX
-                        if(voll < 1.0){
-                            campvoll.style.backgroundColor = "#b51717"; //vermelho escuro
-
-                        }else if(voll >= 1.0 && voll < 2.0){
-                            campvoll.style.backgroundColor = "#f7281d"; //vermelho medio
-
-                        }else if(voll >=2.0 && voll < 3.0){
-                            campvoll.style.backgroundColor = "#f9645c"; //vermelho claro
-
-                        }else if(voll >= 3.0 && voll < 4.0){
-                            campvoll.style.backgroundColor = "#f9a29d"; //laranja-vermelho
-
-                        }else if(voll >=4.0 && voll < 5.0){
-                            campvoll.style.backgroundColor = "#fcdcd1"; //laranja
-
-                        }else if(voll >=5.0 && voll <10.0){
-                            campvoll.style.backgroundColor = "#c5f271"; //amarelo
-
-                        }else if(voll >=10.0 && voll <50.0){
-                            campvoll.style.backgroundColor = "#d2dd54"; //amarelo esverdeado
-
-                        }else if(voll >=50.0 && voll <100.0){
-                            campvoll.style.backgroundColor = "#9db541"; // verde claro
-
-                        }else if(voll >=100.0 && voll <500.0){
-                            campvoll.style.backgroundColor = "#1da548"; // verde medio
-
-                        }else if(voll >=500.0 && voll < 1300.0){
-                            campvoll.style.backgroundColor = "#138437"; // verde escuro
-
-                        }else if(voll >= 1300.0){
-                            campvoll.style.backgroundColor = "#0b5623"; // verde escurao
-
-                        }
-
+                        entracry(result,i)
                         //console.log(`Entrou ${moe}`)
-                        
-
                     }
 
                     //console.log(`Quantas moedas nao cadastrada: ${qtsmoe.length}`)
@@ -1046,6 +871,14 @@ function ativar(){
                         }
                     }
                     
+                }
+
+                //enviando quantos % acumulado positivo
+                let conttot=parseInt((contpos/(contpos+contrest))*100)
+                //console.log(`contpos= ${contpos} e contrest = ${contrest} e %=${conttot}`)
+                if(document.getElementById('quantpos')){
+                    document.getElementById('quantpos').innerHTML=conttot
+
                 }
                 //ajudaa.sort()
                 //let jss= JSON.stringify(ajudaa)

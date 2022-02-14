@@ -58,7 +58,7 @@
                         <h1 class="cron" id="timer">cron</h1>
                     </div>
                     <h2 class="quantpos">+</h2>
-                    <h2 class="quantpos1">50</h2>
+                    <h2 id="quantpos" class="quantpos1">00</h2>
                     <h2 class="quantpos2">%</h2>
                 </div>
                 <div class="linhabtn">
@@ -153,7 +153,7 @@
                     <tr>
                         <th class= "td">Crypto </th>
                         <th class= "td">Volume </th>
-                        <th class= "tdp">$gelo(1h)</th>
+                        <th class= "tdp">$gelo(4h)</th>
                         <th class= "td">%24h gel </th>
                         <th class= "td">%24h ini </th>
                         <th class= "td">%24h atu </th>
@@ -170,6 +170,11 @@
                         <th class= "td">m200</th>
                         <th class= "td">Qualyhora</th>
                         <th class= "td">RMT(1M)</th>
+                        <th class= "td">favor</th>
+                        <th class= "td">volmom</th>
+                        <th class= "td">relvol</th>
+                        <th class= "td">reltrad</th>
+                        <th class= "td">trades</th>
                         <th class= "td">Acumul.</th>
                         <th class= "td">Máximo </th>
                         <th class= "td">Mínimo </th>
@@ -286,7 +291,7 @@
     <script type="text/javascript" src="index.js"></script>
     -->
     <script type="text/javascript" src="congelado.js"></script>
-
+    <script type="text/javascript" src="fluxo.js"></script>
     <script>
         let btnInteg = document.getElementById("integrac");
         btnInteg.addEventListener("click", integrar);
