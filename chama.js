@@ -1,10 +1,8 @@
 const api=require('./api');
 
-/*
 
-*/
 let moe =[
-    "1INCH","AAVE","ACA","ACH","ACM","ADA","ADX","AGLD","AION","AKRO","ALCX","ALGO","ALICE","ALPACA","ALPHA",
+    /**/"1INCH","AAVE","ACA","ACH","ACM","ADA","ADX","AGLD","AION","AKRO","ALCX","ALGO","ALICE","ALPACA","ALPHA",
     "AMP","ANC","ANKR","ANT","ANY","API3","AR","ARDR","ARPA","ASR","ATA","ATM","ATOM","AUCTION","AUD","AUDIO","AUTO",
     "AVA","AVAX","AXS","BADGER","BAKE","BAL","BAND","BAR","BAT","BCH","BEAM","BEL","BETA","BICO","BLZ","BNB","BNT","BNX",
     "BOND","BTC","BTCST","BTG","BTS","BTT","BTTC","BURGER", "BUSD","C98","CAKE","CELO","CELR","CFX","CHESS","CHR","CHZ","CITY","CKB",
@@ -25,16 +23,48 @@ let moe =[
 
 ]
 
-let limit=1
-let interval='4h'
+let limit=16
+let interval='15m'
 
 //PARA PRODUZIR GELO  HORAS
 async function chamar(){
-    for(let i =0; i<=moe.length-1;i++){
-        let symbol=moe[i]+'USDT'
+    let cont =''
+    let i=''
+    for(cont =0; cont<=moe.length-1;cont++){
+        let symbol=moe[cont]+'USDT'
         let result = await api.candle(symbol,interval,limit);
         //console.log(result)
-        console.log(`{"moe":"${moe[i]}","preco":${result[0][1]} },`);
+        let preco15=''
+        let preco30=''
+        let preco45=''
+        let preco60=''
+        let preco120=''
+        let preco240=''
+        for(i =0; i<=result.length-1;i++){
+            let quant= (result.length-1)-i
+            
+            if(parseInt(i)===0){
+                preco240=result[i][4]
+            }else if(parseInt(i)===8){
+                preco120=result[i][4]
+            }else if(parseInt(i)===12){
+                preco60=result[i][4]
+            }else if(parseInt(i)===13){
+                preco45=result[i][4]
+            }else if(parseInt(i)===14){
+                preco30=result[i][4]
+            }else if(parseInt(i)===15){
+                preco15=result[i][4]
+            }
+            //console.log(` Há ${quant} ${interval} Open: ${result[i][1]} High: ${result[i][2]}  Low-${result[i][3]} Close-${result[i][4]} `);
+            //console.log(`{"moe":"${moe[cont]}","preco":${preco},"preco30":${preco30},"preco45":${preco45},"preco60":${preco60},`);
+
+        }
+        console.log(`{"moe":"${moe[cont]}","preco":${preco15},"preco30":${preco30},"preco45":${preco45},"preco60":${preco60},"preco120":${preco120},"preco240":${preco240}},`);
+
+
+
+        //console.log(`{"moe":"${moe[i]}","preco":${result[0][1]} },`);
     }
     //console.log(` Há ${quant} ${interval} Open: ${result[i][1]} High: ${result[i][2]}  Low-${result[i][3]} Close-${result[i][4]} `);
 }

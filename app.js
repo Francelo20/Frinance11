@@ -66,9 +66,53 @@ function entracry(result,i){
     td11.setAttribute('id', `vol_${result[i].id}`)
     td11.setAttribute("class","td")
 
+    let td1312 = document.createElement("td")
+    td1312.setAttribute('id',`gelo240_${result[i].id}`)
+    td1312.setAttribute("class","tdp")
+
+    let td1313 = document.createElement("td")
+    td1313.setAttribute('id',`gelo120_${result[i].id}`)
+    td1313.setAttribute("class","tdp")
+
+    let td131 = document.createElement("td")
+    td131.setAttribute('id',`gelo60_${result[i].id}`)
+    td131.setAttribute("class","tdp")
+
+    let td132 = document.createElement("td")
+    td132.setAttribute('id',`gelo45_${result[i].id}`)
+    td132.setAttribute("class","tdp")
+
+    let td133 = document.createElement("td")
+    td133.setAttribute('id',`gelo30_${result[i].id}`)
+    td133.setAttribute("class","tdp")
+
     let td13 = document.createElement("td")
     td13.setAttribute('id',`gelo_${result[i].id}`)
     td13.setAttribute("class","tdp")
+
+    let td1343 = document.createElement("td")
+    td1343.setAttribute('id',`desde_${result[i].id}`)
+    td1343.setAttribute("class","tdp")
+
+    let td1341 = document.createElement("td")
+    td1341.setAttribute('id',`percgel240_${result[i].id}`)
+    td1341.setAttribute("class","tdp")
+
+    let td1342 = document.createElement("td")
+    td1342.setAttribute('id',`percgel120_${result[i].id}`)
+    td1342.setAttribute("class","tdp")
+
+    let td134 = document.createElement("td")
+    td134.setAttribute('id',`percgel60_${result[i].id}`)
+    td134.setAttribute("class","tdp")
+
+    let td135 = document.createElement("td")
+    td135.setAttribute('id',`percgel45_${result[i].id}`)
+    td135.setAttribute("class","tdp")
+
+    let td136 = document.createElement("td")
+    td136.setAttribute('id',`percgel30_${result[i].id}`)
+    td136.setAttribute("class","tdp")
 
     let td12 = document.createElement("td")
     td12.setAttribute('id', `auvol_${result[i].id}`)
@@ -85,6 +129,10 @@ function entracry(result,i){
     let td23 = document.createElement("td")
     td23.setAttribute('id',`dif_${result[i].id}`)
     td23.setAttribute("class","td")
+
+    let td231 = document.createElement("td")
+    td231.setAttribute('id',`inv15_${result[i].id}`)
+    td231.setAttribute("class","td")
 
     let td24 = document.createElement("td")
     td24.setAttribute('id',`ope_${result[i].id}`)
@@ -127,6 +175,10 @@ function entracry(result,i){
     td414.setAttribute('id',`m200_${result[i].id}`)
     td414.setAttribute("class","td")
 
+    let td431 = document.createElement("td")
+    td431.setAttribute('id',`classe_${result[i].id}`)
+    td431.setAttribute("class","tdp")
+
     let td43 = document.createElement("td")
     td43.setAttribute('id',`qualymes_${result[i].id}`)
     td43.setAttribute("class","tdp")
@@ -151,8 +203,16 @@ function entracry(result,i){
     td48.setAttribute('id',`reltrade_${result[i].id}`)
     td48.setAttribute("class","td")
 
+    let td492 = document.createElement("td")
+    td492.setAttribute('id',`trades_${result[i].id}`)
+    td492.setAttribute("class","td")
+
+    let td491 = document.createElement("td")
+    td491.setAttribute('id',`recup_${result[i].id}`)
+    td491.setAttribute("class","td")
+
     let td49 = document.createElement("td")
-    td49.setAttribute('id',`trades_${result[i].id}`)
+    td49.setAttribute('id',`perda_${result[i].id}`)
     td49.setAttribute("class","td")
 
     let tdac = document.createElement("td")
@@ -175,6 +235,14 @@ function entracry(result,i){
     tdmn.setAttribute('id',`min_${result[i].id}`)
     tdmn.setAttribute("class","td")
 
+    let tdult = document.createElement("td")
+    tdult.setAttribute('id',`ultimo_${result[i].id}`)
+    tdult.setAttribute("class","tdp")
+
+    let tdifm = document.createElement("td")
+    tdifm.setAttribute('id',`difmm_${result[i].id}`)
+    tdifm.setAttribute("class","td")
+
     let td5 = document.createElement("td")
     td5.setAttribute('id',`au_${result[i].id}`)
     td5.setAttribute("class","td")
@@ -186,11 +254,23 @@ function entracry(result,i){
 
     tr.appendChild(td1)
     tr.appendChild(td11)
+    tr.appendChild(td1312)
+    tr.appendChild(td1313)
+    tr.appendChild(td131)
+    tr.appendChild(td132)
+    tr.appendChild(td133)
     tr.appendChild(td13)
+    tr.appendChild(td1343)
+    tr.appendChild(td1341)
+    tr.appendChild(td1342)
+    tr.appendChild(td134)
+    tr.appendChild(td135)
+    tr.appendChild(td136)
     tr.appendChild(td12)
     tr.appendChild(td2)
     tr.appendChild(td22)
     tr.appendChild(td23)
+    tr.appendChild(td231)
     tr.appendChild(td24)
     tr.appendChild(td3)
     tr.appendChild(td4)
@@ -201,16 +281,21 @@ function entracry(result,i){
     tr.appendChild(td413)
     tr.appendChild(td4131)
     tr.appendChild(td414)
+    tr.appendChild(td431)
     tr.appendChild(td43)
     tr.appendChild(td44)
     tr.appendChild(td45)
     tr.appendChild(td46)
     tr.appendChild(td47)
     tr.appendChild(td48)
+    tr.appendChild(td492)
+    tr.appendChild(td491)
     tr.appendChild(td49)
     tr.appendChild(tdac)
     tr.appendChild(tdmx)
     tr.appendChild(tdmn)
+    tr.appendChild(tdult)
+    tr.appendChild(tdifm)
     tr.appendChild(td5)
     
     let tab = document.getElementById('tbody')
@@ -220,11 +305,23 @@ function entracry(result,i){
     let campvoll= document.getElementById(`vol_${result[i].id}`)
     document.getElementById(`mo_${result[i].id}`).innerHTML= result[i].id;
     campvoll.innerHTML= voll
+    document.getElementById(`gelo240_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`gelo120_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`gelo60_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`gelo45_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`gelo30_${result[i].id}`).innerHTML= '0';
     document.getElementById(`gelo_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`desde_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`percgel240_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`percgel120_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`percgel60_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`percgel45_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`percgel30_${result[i].id}`).innerHTML= '0';
     document.getElementById(`auvol_${result[i].id}`).innerHTML= '0';
     document.getElementById(`in_${result[i].id}`).innerHTML= result[i].value;
     document.getElementById(`at_${result[i].id}`).innerHTML= '0';
     document.getElementById(`dif_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`inv15_${result[i].id}`).innerHTML= '0';
     document.getElementById(`ope_${result[i].id}`).innerHTML= result[i].open;
     document.getElementById(`pe_${result[i].id}`).innerHTML= result[i].pro;
     document.getElementById(result[i].id).innerHTML= result[i].pro;
@@ -235,6 +332,7 @@ function entracry(result,i){
     document.getElementById(`m50_${result[i].id}`).innerHTML= '0';
     document.getElementById(`difm50_${result[i].id}`).innerHTML= '0';
     document.getElementById(`m200_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`classe_${result[i].id}`).innerHTML= '0';
     document.getElementById(`qualymes_${result[i].id}`).innerHTML= '0';
     document.getElementById(`rmaxtu_${result[i].id}`).innerHTML= '0';
     document.getElementById(`favor_${result[i].id}`).innerHTML= '0';
@@ -242,9 +340,13 @@ function entracry(result,i){
     document.getElementById(`relvolmom_${result[i].id}`).innerHTML= '0';
     document.getElementById(`reltrade_${result[i].id}`).innerHTML= '0';
     document.getElementById(`trades_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`recup_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`perda_${result[i].id}`).innerHTML= '0';
     document.getElementById(`acu_${result[i].id}`).innerHTML= '0';
     document.getElementById(`max_${result[i].id}`).innerHTML= '0';
     document.getElementById(`min_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`ultimo_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`difmm_${result[i].id}`).innerHTML= '0';
     document.getElementById(`au_${result[i].id}`).innerHTML= '0';
 
     //colocando cor na coluna Volume vol_XXX
@@ -284,8 +386,6 @@ function entracry(result,i){
     }
 
 }
-
-
 
 
 
@@ -341,7 +441,9 @@ function ativar(){
     
     let contpos=0
     let contrest=0
+
     console.log(`Bom dia. Iniciando com intervalo de ${duration} segundos pela ${apisel}`)
+
     setInterval(() => {
         fetch(urll)
         .then(res =>{
@@ -383,31 +485,28 @@ function ativar(){
                     let difmed=''
                     if(document.getElementById(`m50_${result[i].id}`)){
                         basmed = document.getElementById(`m50_${result[i].id}`).innerHTML
-                        difmed=parseFloat(result[i].pro/basmed).toFixed(3)
-                        document.getElementById(`difm50_${result[i].id}`).innerHTML=difmed
+                        if(parseFloat(basmed)===0){
+                            //difmed=parseFloat(result[i].pro/basmed).toFixed(3)
+                            document.getElementById(`difm50_${result[i].id}`).innerHTML=0
+
+                        }else{
+                            difmed=parseFloat(result[i].pro/basmed).toFixed(3)
+                            document.getElementById(`difm50_${result[i].id}`).innerHTML=difmed
+
+                        }
+                        
                     }
                 
 
                     
 
-                    //calculo do aumento %24 gelo---onde era aum vol auvol_
-                    let basgelo=''
-                    let aumgelo=''
-                    if(document.getElementById(`gelo_${result[i].id}`)){
-                        basgelo = document.getElementById(`gelo_${result[i].id}`).innerHTML
-                        aumgelo = parseFloat((preco-basgelo)/basgelo)
-                        
-                    }
-
-                    if(document.getElementById(`auvol_${result[i].id}`)){
-                        document.getElementById(`auvol_${result[i].id}`).innerHTML= (aumgelo*100).toFixed(2)
-                    }
-
+                    
                     //calculo da DIFSUP diferença entre valor atual e suporte Tabela Principal
                     let supmom = ''
                     let difsup=999.999
                     let resmom=''
                     let difres=99.99
+                    
                     if(document.getElementById(`sup_${moe}`)){
                         supmom = document.getElementById(`sup_${moe}`).innerHTML
                         difsup = parseFloat(preco-supmom)/parseFloat(preco)
@@ -419,10 +518,52 @@ function ativar(){
                         difres = parseFloat(preco-resmom)/parseFloat(preco)
                         document.getElementById(`difres_${result[i].id}`).innerHTML= (difres*100).toFixed(2)
                     }
+
                     
-                    
-                    //let difsup = document.getElementById(`difsup_${result[i].id}`).innerHTML
-                    
+                    //logando init-atual x sup/res na rodada qual esta entre  
+                    //console.log(`rodada ${c}`)
+                    let init=preco
+                    if(document.getElementById(`classe_${moe}`)){
+                        let classit=document.getElementById(`classe_${moe}`).innerHTML
+                        if(classit.length>5){
+                            classit=classit.slice(-5)
+                        }
+                        if(parseInt(classit)===0){
+                            if(parseFloat(init)>= parseFloat(supmom) && parseFloat(init)<= parseFloat(resmom)){
+                                //entre 2
+                                document.getElementById(`classe_${moe}`).innerHTML='2'
+                            }else if(parseFloat(init)> parseFloat(resmom)){
+                                //acima da resistencia 3
+                                document.getElementById(`classe_${moe}`).innerHTML='3'
+                            }else{
+                                //abaixo do suporte 1
+                                document.getElementById(`classe_${moe}`).innerHTML='1'
+                            }
+                        }else{
+                            let ultimo=classit.slice(-1)
+                            if(parseFloat(init)>= parseFloat(supmom) && parseFloat(init)<= parseFloat(resmom)){
+                                //entre 2
+                                if(parseInt(ultimo)===1 || parseInt(ultimo)===3){
+                                    classit=classit+'2'
+                                    document.getElementById(`classe_${moe}`).innerHTML=classit
+                                }
+                            }else if(parseFloat(init)> parseFloat(resmom)){
+                                //acima da resistencia 3
+                                if(parseInt(ultimo)===1 || parseInt(ultimo)===2){
+                                    classit=classit+'3'
+                                    document.getElementById(`classe_${moe}`).innerHTML=classit
+                                }
+                            }else{
+                                //abaixo do suporte 1
+                                if(parseInt(ultimo)===2 || parseInt(ultimo)===3){
+                                    classit=classit+'1'
+                                    document.getElementById(`classe_${moe}`).innerHTML=classit
+                                }
+                            }
+
+                        }
+                    }
+                                       
 
                     //criando e/ou setando a tabela 2
                     if(parseFloat(difsup)<=0){
@@ -613,11 +754,9 @@ function ativar(){
                         let campacu=   document.getElementById(`acu_${moe}`)
                         campacu.innerHTML = cracum;
 
-                        //quantos posistivos?
-                        
+                        //quantos posistivos? indo p painel 
                         if(parseFloat(cracum)>0){
                             contpos++
-
                         }else{
                             contrest++
                         }
@@ -626,19 +765,137 @@ function ativar(){
 
 
 
-                        //4 verificando acumulado p coluna MAXIMO e MINIMO 
+                        ///////////////////////////////////////////////////
+
+                        //4 verificando acumulado p coluna MAXIMO e MINIMO e ULTIMO/PRIMEIRO
                         let maxvlr= document.getElementById(`max_${moe}`).innerHTML
                         let minvlr= document.getElementById(`min_${moe}`).innerHTML
-                        
+                        let ultcamp= document.getElementById(`ultimo_${moe}`).innerHTML
+
+
                         if(Math.sign(cracum)=== -1 && Math.abs(cracum)>Math.abs(minvlr)){
                             document.getElementById(`min_${moe}`).innerHTML=cracum
+                            minvlr=cracum
+                            document.getElementById(`min_${moe}`).style.backgroundColor= '#f4f7ad' //amarelo clarinho
+                            document.getElementById(`max_${moe}`).style.backgroundColor= '#ffffff' //branco
+                            if(parseInt(ultcamp)===0){
+                                //ultcamp=cracum
+                                document.getElementById(`ultimo_${moe}`).innerHTML='-1'
+
+                            }
+                            
                         }else {
+
                             if(Math.sign(cracum)===1 && Math.abs(cracum)>Math.abs(maxvlr)){
                                 document.getElementById(`max_${moe}`).innerHTML=cracum
+                                maxvlr=cracum
+                                document.getElementById(`min_${moe}`).style.backgroundColor= '#ffffff' //branco
+                                document.getElementById(`max_${moe}`).style.backgroundColor= '#f4f7ad' //amarelo clarinho
+                                if(parseInt(ultcamp)===0){
+                                    //ultcamp=cracum
+                                    document.getElementById(`ultimo_${moe}`).innerHTML='1'
+
+
+                                }
+
                                 
+                            }else{
+
                             }
                         }
+
+                        let perdacamp= document.getElementById(`perda_${moe}`).innerHTML
+                        let recupcamp= document.getElementById(`recup_${moe}`).innerHTML
+                        let perda=''
+                        let recup=''
+
+
+                        if(Math.sign(ultcamp)===1){//PRIMEIRO tocado foi o max
+
+                            if(Math.sign(minvlr)===0){//nao tocou negativo
+                                perda=parseFloat(cracum-maxvlr).toFixed(3)
+
+                                if(parseFloat(perda)<0){
+                                    document.getElementById(`perda_${moe}`).innerHTML=perda
+
+
+                                }else{
+                                    document.getElementById(`perda_${moe}`).innerHTML='0'
+                                    document.getElementById(`recup_${moe}`).innerHTML=perda
+                                }
+
+                                
+
+                            }else{//tocou negativo
+
+                                perda=parseFloat((maxvlr-cracum)*-1).toFixed(3) //(minvlr*-1)+maxvlr
+                                document.getElementById(`perda_${moe}`).innerHTML=perda
+
+                                recup=parseFloat(cracum-minvlr).toFixed(3)
+                                if(parseFloat(recup)>0){
+                                    document.getElementById(`recup_${moe}`).innerHTML=recup
+
+                                }else{
+                                    document.getElementById(`recup_${moe}`).innerHTML='0'
+                                    document.getElementById(`perda_${moe}`).innerHTML=recup
+                                }
+
+                            }
+                            
+                                
+                        }else if(Math.sign(ultcamp)===-1){//PRIMEIRO tocado foi o min
+
+                            if(Math.sign(maxvlr)===0){//nao tocou positivo
+                                recup= parseFloat(cracum-minvlr).toFixed(3)
+                                if(parseFloat(recup)>0){
+                                    document.getElementById(`recup_${moe}`).innerHTML=recup
+                                    perda=cracum
+                                    document.getElementById(`perda_${moe}`).innerHTML=perda
+
+                                }else if(parseFloat(recup)<=0){
+                                    perda=recup*-1 //recup//parseFloat(minvlr-cracum).toFixed(3)
+                                    document.getElementById(`perda_${moe}`).innerHTML=cracum
+
+                                }
+
+
+                            }else{//tocou positivo
+                               
+                                recup= parseFloat((cracum-minvlr)).toFixed(3)
+                                if(Math.sign(recup)===-1){
+                                    recup=-1*recup
+
+                                }
+                                document.getElementById(`recup_${moe}`).innerHTML=recup
+                                perda=parseFloat(maxvlr-cracum).toFixed(3)
+                                if(parseFloat(perda)<=0){
+                                    document.getElementById(`perda_${moe}`).innerHTML='0'
+                                }else{
+                                    perda=-1*perda
+                                    document.getElementById(`perda_${moe}`).innerHTML=perda
+
+                                }
+
+
+                            }
+                            
+                              //////          
+                        }
                         
+
+                        //diferença Maximo-Mínimo
+                        let difmm=''
+                        if(document.getElementById(`difmm_${moe}`)){
+                                difmm= parseFloat(maxvlr-minvlr).toFixed(3)
+                                document.getElementById(`difmm_${moe}`).innerHTML=difmm
+
+                            
+                        }
+
+
+
+
+
 
                         //colocando cor coluna acumulado campacu cracum
                         if(cracum<= -4.0){
@@ -809,8 +1066,9 @@ function ativar(){
                     }
 
 
-                    //colocando valores na coluna %24at(atual-open)/atual e %24dif(%at-%ini/%ini)
+                    //colocando valores na coluna %24at e %24dif...(%at-%ini/%ini)...
                     let percat =''
+                    let difer=''
                     if(document.getElementById(`ope_${moe}`)){
                         opebas=document.getElementById(`ope_${moe}`).innerHTML
                         //campo %24 at recebendo valor percat
@@ -819,15 +1077,11 @@ function ativar(){
                         document.getElementById(`at_${moe}`).innerHTML= percat
                         //calculando diferença %24dif(%at-%ini/%ini)
                         let percin= document.getElementById(`in_${moe}`).innerHTML
-                        let difer =parseFloat((percat- percin)/percin) 
-                        let campdif= document.getElementById(`dif_${moe}`)
-                        campdif.innerHTML= (difer*100).toFixed(2)
+                        difer =parseFloat(percat-percin).toFixed(2)
                         
-
-
-
-
-
+                        let campdif= document.getElementById(`dif_${moe}`)
+                        campdif.innerHTML=difer // (difer*100).toFixed(2)
+                        
                         // coluna dif %24h recebendo cor
                         if(difer<= -4.0){
                             campdif.style.backgroundColor = "#700b0b"; //vermelho escurao
@@ -870,6 +1124,228 @@ function ativar(){
 
                         }
                     }
+
+
+
+                    //calculo do aumento %24 gelo---onde era aum vol auvol_
+                    let basgelo=''
+
+                    let aumgelo=''
+                    let aumgelo2=''
+                    let aumgelo3=''
+                    let aumgelo4=''
+                    let aumgelo5=''
+                    let aumgelo6=''
+                    //1
+                    if(document.getElementById(`gelo_${result[i].id}`)){
+                        basgelo = document.getElementById(`gelo_${result[i].id}`).innerHTML
+                        if(parseFloat(basgelo)===0){
+                            aumgelo=0
+                        }else{
+                            aumgelo = parseFloat((preco-basgelo)/basgelo)
+                        }
+                        //aumgelo = parseFloat((preco-basgelo)/basgelo)
+
+                        if(document.getElementById(`auvol_${result[i].id}`)){
+                            aumgelo=(aumgelo*100).toFixed(2)
+                            document.getElementById(`auvol_${result[i].id}`).innerHTML= aumgelo
+                        }
+                        if(parseFloat(aumgelo)>0){
+                            let verd1=document.getElementById(`auvol_${result[i].id}`)
+                            verd1.style.backgroundColor="#9db541"
+                        }
+                        
+                    }
+                    //inv15
+                    if(document.getElementById(`inv15_${result[i].id}`)){
+                        let inver15=document.getElementById(`inv15_${result[i].id}`).innerHTML
+                        let difinat= document.getElementById(`dif_${result[i].id}`).innerHTML
+                        let perc15= document.getElementById(`auvol_${result[i].id}`).innerHTML
+                        if(parseInt(inver15)===0 && parseFloat(perc15)>0 ){
+                            if(parseFloat(difinat)>parseFloat(perc15)){
+                                document.getElementById(`inv15_${result[i].id}`).innerHTML=c
+
+                            }
+
+                        }
+
+                    }
+                    
+
+                    
+                    //2
+                    if(document.getElementById(`gelo30_${result[i].id}`)){
+                        basgelo = document.getElementById(`gelo30_${result[i].id}`).innerHTML
+                        if(parseFloat(basgelo)===0){
+                            aumgelo2=0
+                        }else{
+                            aumgelo2 = parseFloat((preco-basgelo)/basgelo)
+                        }
+                        //aumgelo = parseFloat((preco-basgelo)/basgelo)
+
+                        if(document.getElementById(`percgel30_${result[i].id}`)){
+                            aumgelo2=(aumgelo2*100).toFixed(2)
+                            document.getElementById(`percgel30_${result[i].id}`).innerHTML= aumgelo2
+                        }
+                        if(parseFloat(aumgelo2)>=parseFloat(aumgelo)){
+                            let verd2=document.getElementById(`percgel30_${result[i].id}`)
+                            verd2.style.backgroundColor="#9db541"
+                        }
+                        
+                        
+                    }
+
+                    
+                    
+                    //3
+                    if(document.getElementById(`gelo45_${result[i].id}`)){
+                        basgelo = document.getElementById(`gelo45_${result[i].id}`).innerHTML
+                        if(parseFloat(basgelo)===0){
+                            aumgelo3=0
+                        }else{
+                            aumgelo3 = parseFloat((preco-basgelo)/basgelo)
+                        }
+                        //aumgelo = parseFloat((preco-basgelo)/basgelo)
+
+                        if(document.getElementById(`percgel45_${result[i].id}`)){
+                            aumgelo3=(aumgelo3*100).toFixed(2)
+                            document.getElementById(`percgel45_${result[i].id}`).innerHTML= aumgelo3
+                        }
+                        if(parseFloat(aumgelo3)>=parseFloat(aumgelo2)){
+                            let verd3=document.getElementById(`percgel45_${result[i].id}`)
+                            verd3.style.backgroundColor="#9db541"
+                            
+                        }
+                        
+                        
+                    }
+
+                    //4
+                    if(document.getElementById(`gelo60_${result[i].id}`)){
+                        basgelo = document.getElementById(`gelo60_${result[i].id}`).innerHTML
+                        if(parseFloat(basgelo)===0){
+                            aumgelo4=0
+                        }else{
+                            aumgelo4 = parseFloat((preco-basgelo)/basgelo)
+                        }
+                        //aumgelo = parseFloat((preco-basgelo)/basgelo)
+
+                        if(document.getElementById(`percgel60_${result[i].id}`)){
+                            aumgelo4=(aumgelo4*100).toFixed(2)
+                            document.getElementById(`percgel60_${result[i].id}`).innerHTML= aumgelo4
+                        }
+                        if(parseFloat(aumgelo4)>parseFloat(aumgelo3)){
+                            let verd4=document.getElementById(`percgel60_${result[i].id}`)
+                            verd4.style.backgroundColor="#9db541"
+                            
+
+                        }
+                        
+                    }
+
+                    //5
+                    if(document.getElementById(`gelo120_${result[i].id}`)){
+                        basgelo = document.getElementById(`gelo120_${result[i].id}`).innerHTML
+                        if(parseFloat(basgelo)===0){
+                            aumgelo5=0
+                        }else{
+                            aumgelo5 = parseFloat((preco-basgelo)/basgelo)
+                        }
+                        //aumgelo = parseFloat((preco-basgelo)/basgelo)
+
+                        if(document.getElementById(`percgel120_${result[i].id}`)){
+                            aumgelo5=(aumgelo5*100).toFixed(2)
+                            document.getElementById(`percgel120_${result[i].id}`).innerHTML= aumgelo5
+                        }
+                        if(parseFloat(aumgelo5)>parseFloat(aumgelo4)){
+                            let verd5=document.getElementById(`percgel120_${result[i].id}`)
+                            verd5.style.backgroundColor="#9db541"
+                            
+
+                        }
+                        
+                    }
+
+                    //6
+                    if(document.getElementById(`gelo240_${result[i].id}`)){
+                        basgelo = document.getElementById(`gelo240_${result[i].id}`).innerHTML
+                        if(parseFloat(basgelo)===0){
+                            aumgelo6=0
+                        }else{
+                            aumgelo6 = parseFloat((preco-basgelo)/basgelo)
+                        }
+                        //aumgelo = parseFloat((preco-basgelo)/basgelo)
+
+                        if(document.getElementById(`percgel240_${result[i].id}`)){
+                            aumgelo6=(aumgelo6*100).toFixed(2)
+                            document.getElementById(`percgel240_${result[i].id}`).innerHTML= aumgelo6
+                        }
+                        if(parseFloat(aumgelo6)>parseFloat(aumgelo5)){
+                            let verd6=document.getElementById(`percgel240_${result[i].id}`)
+                            verd6.style.backgroundColor="#9db541"
+                        }
+                    }
+
+                    /*
+                    //15...ou init-atual-linha verde em relacao a 24% atual Maior que quinze
+                    if(parseFloat(aumgelo2)>parseFloat(aumgelo)){
+                        let verd1=document.getElementById(`percgel30_${result[i].id}`)
+                        //let verd2=document.getElementById(`auvol_${result[i].id}`)
+                        verd1.style.backgroundColor="#9db541"
+                        //verd2.style.backgroundColor="#9db541"
+
+                    }*/
+
+                    //desde
+                    let desde=''
+                    let campdesde=document.getElementById(`desde_${result[i].id}`)
+                    //let difag=document.getElementById(`dif_${result[i].id}`).innerHTML
+                    
+                    if(parseFloat(difer)>0){
+                        desde='1'
+                        if(parseFloat(aumgelo)>0){
+                            desde=desde+'1'
+                            if(parseFloat(aumgelo2)>=parseFloat(aumgelo)){
+                                desde=desde+'1'
+                                if(parseFloat(aumgelo3)>=parseFloat(aumgelo2)){
+                                    desde=desde+'1'
+                                    if(parseFloat(aumgelo4)>=parseFloat(aumgelo3)){
+                                        desde=desde+'1'
+                                        if(parseFloat(aumgelo5)>=parseFloat(aumgelo4)){
+                                            desde=desde+'1'
+                                            if(parseFloat(aumgelo5)>=parseFloat(aumgelo5)){
+                                                desde=desde+'1'
+                                            }else{
+                                                campdesde.innerHTML=desde
+                                            }  
+                                        }else{
+                                            campdesde.innerHTML=desde
+                                        }
+                    
+                                    }else{
+                                        campdesde.innerHTML=desde
+                                    }
+                
+                                }else{
+                                    campdesde.innerHTML=desde
+                                }
+        
+                            }else{
+                                campdesde.innerHTML=desde
+                            }
+
+                        }else{
+                            campdesde.innerHTML=desde
+                        }
+    
+                    }else if(parseFloat(difer)<0){
+                        desde='-1'
+                        campdesde.innerHTML=desde
+                    }else{
+                        
+                    }
+
+            
                     
                 }
 
@@ -883,6 +1359,11 @@ function ativar(){
                 //ajudaa.sort()
                 //let jss= JSON.stringify(ajudaa)
                 //console.log(jss)
+                //console.log(`Acima da resistência: [${acimas}]`)
+                //console.log(`Entre suporte e resistência: [${entresups}]`)
+                //console.log(`Abaixo do suporte: [${abaixos}]`)
+                
+
             })
             
         })

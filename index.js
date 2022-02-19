@@ -13,7 +13,7 @@ let limit=250
 //entsymb('NEO')
 
 let listcoin=[
-/**/"1INCH","AAVE","ACA","ACH","ACM","ADA","ADX","AGLD","AION","AKRO","ALCX","ALGO","ALICE","ALPACA","ALPHA",
+/*"1INCH","AAVE","ACA","ACH","ACM","ADA","ADX","AGLD","AION","AKRO","ALCX","ALGO","ALICE","ALPACA","ALPHA",
     "AMP","ANC","ANKR","ANT","ANY","API3","AR","ARDR","ARPA","ASR","ATA","ATM","ATOM","AUCTION","AUD","AUDIO",
     "AUTO","AVA","AVAX","AXS","BADGER","BAKE","BAL","BAND","BAR","BAT","BCH","BEAM","BEL","BETA","BICO","BLZ",
     "BNB","BNT","BNX","BOND","BTC","BTCST","BTG","BTS","BTT","BTTC","BURGER", "BUSD","C98","CAKE","CELO","CELR",
@@ -29,7 +29,7 @@ let listcoin=[
     "QTUM","QUICK","RAD","RAMP","RARE","RAY","REEF","REN","REP","REQ","RGT","RIF","RLC","RNDR","ROSE","RSR","RUNE","RVN","SAND",
     "SANTOS","SC","SCRT","SFP","SHIB","SKL","SLP","SNX","SOL","SPELL","SRM","STMX","STORJ","STPT","STRAX","STX","SUN","SUPER",
     "SUSD","SUSHI","SXP","SYS","TCT","TFUEL","THETA","TKO","TLM","TOMO","TORN","TRB","TRIBE","TROY","TRU",
-    "TRX","TUSD","TVK","TWT","UMA","UNFI","UNI","USDC","USDP","UST","UTK","VET","VGX","VIDT","VITE","VOXEL","VTHO","WAN","WAVES","WAXP","WIN","WING","WNXM","WOO","WRX","WTC",
+    "TRX","TUSD","TVK","TWT","UMA","UNFI","UNI","USDC","USDP","UST","UTK","VET","VGX","VIDT","VITE","VOXEL",*/"VTHO","WAN","WAVES","WAXP","WIN","WING","WNXM","WOO","WRX","WTC",
     "XEC","XEM","XLM","XMR","XNO","XRP","XTZ","XVG","XVS","YFI","YFII","YGG","ZEC","ZEN","ZIL","ZRX"
 ]
 
@@ -122,31 +122,24 @@ function entsymb(symboll){
                     //console.log(` Há ${quant} mes Open: ${result[i][1]} High: ${result[i][2]}  Low-${result[i][3]} Close-${result[i][4]} `);
 
                     //usando open ou close para marcar max e min, sup e res
-
                     //se open maior qu close, quem vi p max e min, sup e res
                     if(parseFloat(result[i][1])> parseFloat(result[i][4])){
 
                             if(parseFloat(result[i][1])>= parseFloat(list[0].val)){
                                 list[0].val=result[i][1]
                                 list[0].mes=quant
-                                
                             }
                             if(parseFloat(result[i][4])<=parseFloat(list[1].val)){
                                 list[1].val=result[i][4]
                                 list[1].mes=quant
                             }
-
-
-
                             //se close maior que open,  quem vi p max e min, sup e res
                     }else if(parseFloat(result[i][1])<= parseFloat(result[i][4])){
 
                             if(parseFloat(result[i][4])>= parseFloat(list[0].val)){
                                 list[0].val=result[i][4]
-                                list[0].mes=quant
-                                
+                                list[0].mes=quant   
                             }
-
                             if(parseFloat(result[i][1])<=parseFloat(list[1].val)){
                                 list[1].val=result[i][1]
                                 list[1].mes=quant
@@ -168,8 +161,6 @@ function entsymb(symboll){
                         list[1].mes=quant
                     }
                     */
-                    
-                    
                     if(quant<1){
                         list[2].val=result[i][4]
                         list[2].mes=quant
@@ -197,31 +188,21 @@ function entsymb(symboll){
                                 m50=50
                             }
 
-
-
                             if(parseInt(result.length)>=200){
 
                                 if(quant<=199){
                                     //console.log(`quant200 = ${quant}`)
-    
+
                                     m200qua+= parseFloat(result[i][4])
                                     m200= parseFloat(m200qua/200).toFixed(8)
     
                                     //console.log(`m200qua = ${m200qua}`)
                                     //console.log(`m200 = ${m200}`)
-    
-    
                                 }
 
                             }else{
                                 m200=200
                             }
-
-
-
-                            
-
-                            
 
                         }
                         
@@ -339,6 +320,7 @@ function entsymb(symboll){
                 tentresis=colec[7].max[0]
                 */
                 let tentresis= colec[7].max.sort()
+                
                 //tentresis=colec[7].max
                 
                 //qualymes h[3]

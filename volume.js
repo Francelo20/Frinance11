@@ -1,9 +1,9 @@
 const api=require('./api');
 
-/*
 
-*/
-let moe =[
+let moe =[/**/
+
+    
 
     "1INCH","AAVE","ACH","ACM","ADA","ADX","AGLD","AION","AKRO","ALCX","ALGO","ALICE","ALPACA","ALPHA",
     "AMP","ANKR","ANT","ANY","API3","AR","ARDR","ARPA","ASR","ATA","ATM","ATOM","AUCTION","AUD","AUDIO","AUTO",
