@@ -36,8 +36,6 @@ fetch(url)
         
         //let ajudaa=[]
         //PRIMEIRO FOR
-
-
         for(let i =0; i<result.length; i++){
             //let gelo= result[i].pro
             //ajudaa.push(`{"cry":${result[i].id}, "gelo":${gelo}}`)
@@ -187,6 +185,23 @@ function entracry(result,i){
     td44.setAttribute('id',`rmaxtu_${result[i].id}`)
     td44.setAttribute("class","td")
 
+
+    let td441 = document.createElement("td")
+    td441.setAttribute('id',`dep50pc_${result[i].id}`)
+    td441.setAttribute("class","td")
+    let td442 = document.createElement("td")
+    td442.setAttribute('id',`dep50rel_${result[i].id}`)
+    td442.setAttribute("class","td")
+    let td443 = document.createElement("td")
+    td443.setAttribute('id',`dep10pc_${result[i].id}`)
+    td443.setAttribute("class","td")
+    let td444 = document.createElement("td")
+    td444.setAttribute('id',`dep10rel_${result[i].id}`)
+    td444.setAttribute("class","td")
+
+
+
+
     let td45 = document.createElement("td")
     td45.setAttribute('id',`favor_${result[i].id}`)
     td45.setAttribute("class","td")
@@ -203,6 +218,22 @@ function entracry(result,i){
     td48.setAttribute('id',`reltrade_${result[i].id}`)
     td48.setAttribute("class","td")
 
+    let td4925 = document.createElement("td")
+    td4925.setAttribute('id',`totrades_${result[i].id}`)
+    td4925.setAttribute("class","td")
+
+    let td4924 = document.createElement("td")
+    td4924.setAttribute('id',`trades4_${result[i].id}`)
+    td4924.setAttribute("class","td")
+
+    let td4923 = document.createElement("td")
+    td4923.setAttribute('id',`trades3_${result[i].id}`)
+    td4923.setAttribute("class","td")
+
+    let td4922 = document.createElement("td")
+    td4922.setAttribute('id',`trades2_${result[i].id}`)
+    td4922.setAttribute("class","td")
+
     let td492 = document.createElement("td")
     td492.setAttribute('id',`trades_${result[i].id}`)
     td492.setAttribute("class","td")
@@ -215,9 +246,18 @@ function entracry(result,i){
     td49.setAttribute('id',`perda_${result[i].id}`)
     td49.setAttribute("class","td")
 
+    let td4933 = document.createElement("td")
+    td4933.setAttribute('id',`difperec_${result[i].id}`)
+    td4933.setAttribute("class","td")
+
+    let td4934 = document.createElement("td")
+    td4934.setAttribute('id',`difprcnt_${result[i].id}`)
+    td4934.setAttribute("class","td")
+
     let tdac = document.createElement("td")
     tdac.setAttribute('id',`acu_${result[i].id}`)
     tdac.setAttribute("class","td")
+    /*
     tdac.addEventListener('click',()=>{
         let valpz= document.getElementById(`${result[i].id}`).innerHTML
         document.getElementById(`pe_${result[i].id}`).innerHTML= valpz
@@ -225,7 +265,7 @@ function entracry(result,i){
         tdac.style.backgroundColor= '#ffffff'
         let azul = document.getElementById(`max_${result[i].id}`)
         azul.style.backgroundColor= '#8d8ec4'
-    })
+    })*/
 
     let tdmx = document.createElement("td")
     tdmx.setAttribute('id',`max_${result[i].id}`)
@@ -284,13 +324,24 @@ function entracry(result,i){
     tr.appendChild(td431)
     tr.appendChild(td43)
     tr.appendChild(td44)
+    tr.appendChild(td441)
+    tr.appendChild(td442)
+    tr.appendChild(td443)
+    tr.appendChild(td444)
+
     tr.appendChild(td45)
     tr.appendChild(td46)
     tr.appendChild(td47)
     tr.appendChild(td48)
+    tr.appendChild(td4925)
+    tr.appendChild(td4924)
+    tr.appendChild(td4923)
+    tr.appendChild(td4922)
     tr.appendChild(td492)
     tr.appendChild(td491)
     tr.appendChild(td49)
+    tr.appendChild(td4933)
+    tr.appendChild(td4934)
     tr.appendChild(tdac)
     tr.appendChild(tdmx)
     tr.appendChild(tdmn)
@@ -335,13 +386,25 @@ function entracry(result,i){
     document.getElementById(`classe_${result[i].id}`).innerHTML= '0';
     document.getElementById(`qualymes_${result[i].id}`).innerHTML= '0';
     document.getElementById(`rmaxtu_${result[i].id}`).innerHTML= '0';
+
+    document.getElementById(`dep50pc_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`dep50rel_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`dep10pc_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`dep10rel_${result[i].id}`).innerHTML= '0';
+
     document.getElementById(`favor_${result[i].id}`).innerHTML= '0';
     document.getElementById(`volmom_${result[i].id}`).innerHTML= '000';
     document.getElementById(`relvolmom_${result[i].id}`).innerHTML= '0';
     document.getElementById(`reltrade_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`totrades_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`trades4_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`trades3_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`trades2_${result[i].id}`).innerHTML= '0';
     document.getElementById(`trades_${result[i].id}`).innerHTML= '0';
     document.getElementById(`recup_${result[i].id}`).innerHTML= '0';
     document.getElementById(`perda_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`difperec_${result[i].id}`).innerHTML= '0';
+    document.getElementById(`difprcnt_${result[i].id}`).innerHTML= '0';
     document.getElementById(`acu_${result[i].id}`).innerHTML= '0';
     document.getElementById(`max_${result[i].id}`).innerHTML= '0';
     document.getElementById(`min_${result[i].id}`).innerHTML= '0';
@@ -398,6 +461,10 @@ btnZerar.addEventListener("click", ativar);
 
 let qtsmoe=[]
 
+//declarando tag audio
+let audio = document.querySelector('audio')
+let sorte=[]
+
 function ativar(){
     btnZerar.innerHTML = 'Iniciado'
     btnZerar.style.backgroundColor='#fff'
@@ -409,9 +476,7 @@ function ativar(){
     }
     selecapi()
 
-    //declarando tag audio
-    let audio = document.querySelector('audio')
-
+    
     //hora de inicio do botao
     let interval =30000;
     let timais = 1000;
@@ -773,117 +838,156 @@ function ativar(){
                         let ultcamp= document.getElementById(`ultimo_${moe}`).innerHTML
 
 
-                        if(Math.sign(cracum)=== -1 && Math.abs(cracum)>Math.abs(minvlr)){
-                            document.getElementById(`min_${moe}`).innerHTML=cracum
-                            minvlr=cracum
-                            document.getElementById(`min_${moe}`).style.backgroundColor= '#f4f7ad' //amarelo clarinho
-                            document.getElementById(`max_${moe}`).style.backgroundColor= '#ffffff' //branco
-                            if(parseInt(ultcamp)===0){
-                                //ultcamp=cracum
-                                document.getElementById(`ultimo_${moe}`).innerHTML='-1'
+                        if(Math.sign(cracum)=== -1){
+
+                            if(parseFloat(maxvlr)===0){
+                                document.getElementById(`max_${moe}`).innerHTML=cracum
+                            }else if(parseFloat(maxvlr)<=0 && parseFloat(maxvlr)<parseFloat(cracum)){
+                                document.getElementById(`max_${moe}`).innerHTML=cracum
+                            }
+
+                            if(parseFloat(cracum)<parseFloat(minvlr)){
+                                document.getElementById(`min_${moe}`).innerHTML=cracum
+                                minvlr=cracum
+                                document.getElementById(`min_${moe}`).style.backgroundColor= '#f4f7ad' //amarelo clarinho
+                                document.getElementById(`max_${moe}`).style.backgroundColor= '#ffffff' //branco
 
                             }
                             
-                        }else {
+                            if(parseInt(ultcamp)===0){
+                                //ultcamp=cracum
+                                document.getElementById(`ultimo_${moe}`).innerHTML='-100'
 
-                            if(Math.sign(cracum)===1 && Math.abs(cracum)>Math.abs(maxvlr)){
+                            }
+
+                            
+                            
+                        }else if(Math.sign(cracum)===1){
+
+                            if(parseFloat(minvlr)===0){
+                                document.getElementById(`min_${moe}`).innerHTML=cracum
+                            }else if(parseFloat(minvlr)>0 && parseFloat(minvlr)>parseFloat(cracum)){
+                                document.getElementById(`min_${moe}`).innerHTML=cracum
+                            }
+
+                            if(Math.abs(cracum)>=Math.abs(maxvlr)){
                                 document.getElementById(`max_${moe}`).innerHTML=cracum
                                 maxvlr=cracum
                                 document.getElementById(`min_${moe}`).style.backgroundColor= '#ffffff' //branco
                                 document.getElementById(`max_${moe}`).style.backgroundColor= '#f4f7ad' //amarelo clarinho
-                                if(parseInt(ultcamp)===0){
-                                    //ultcamp=cracum
-                                    document.getElementById(`ultimo_${moe}`).innerHTML='1'
-
-
-                                }
-
-                                
-                            }else{
 
                             }
+                            
+                            if(parseInt(ultcamp)===0){
+                                //ultcamp=cracum
+                                document.getElementById(`ultimo_${moe}`).innerHTML='100'
+                            }
+
+                            
+
+                            
+                        }else if(Math.sign(cracum)===0){
+
                         }
+
+                        
+
+                        
 
                         let perdacamp= document.getElementById(`perda_${moe}`).innerHTML
                         let recupcamp= document.getElementById(`recup_${moe}`).innerHTML
                         let perda=''
                         let recup=''
 
-
+                        //perda e recuperaçao
                         if(Math.sign(ultcamp)===1){//PRIMEIRO tocado foi o max
-
                             if(Math.sign(minvlr)===0){//nao tocou negativo
                                 perda=parseFloat(cracum-maxvlr).toFixed(3)
-
-                                if(parseFloat(perda)<0){
-                                    document.getElementById(`perda_${moe}`).innerHTML=perda
-
-
+                                if(parseFloat(cracum-maxvlr)===0){
+                                    perda=parseFloat(cracum-maxvlr).toFixed(0)
                                 }else{
-                                    document.getElementById(`perda_${moe}`).innerHTML='0'
-                                    document.getElementById(`recup_${moe}`).innerHTML=perda
+                                    perda=parseFloat(cracum-maxvlr).toFixed(3)
                                 }
-
-                                
-
+                                if(parseFloat(perda)<0){
+                                    
+                                    document.getElementById(`perda_${moe}`).innerHTML=perda
+                                }else{
+                                    
+                                    document.getElementById(`perda_${moe}`).innerHTML='0'
+                                    document.getElementById(`recup_${moe}`).innerHTML=cracum
+                                }
                             }else{//tocou negativo
-
-                                perda=parseFloat((maxvlr-cracum)*-1).toFixed(3) //(minvlr*-1)+maxvlr
+                                //perda=parseFloat((maxvlr-cracum)*-1).toFixed(3) //(minvlr*-1)+maxvlr
+                                //recup=parseFloat(cracum-minvlr).toFixed(3)
+                                if(parseFloat(maxvlr-cracum)===0){
+                                    perda=parseFloat((maxvlr-cracum)*-1).toFixed(0)
+                                }else{
+                                    perda=parseFloat((maxvlr-cracum)*-1).toFixed(3)
+                                }
+                                if(parseFloat(cracum-minvlr)===0){
+                                    recup=parseFloat(cracum-minvlr).toFixed(0)
+                                }else{
+                                    recup=parseFloat(cracum-minvlr).toFixed(3)
+                                }
+                                
                                 document.getElementById(`perda_${moe}`).innerHTML=perda
-
-                                recup=parseFloat(cracum-minvlr).toFixed(3)
                                 if(parseFloat(recup)>0){
                                     document.getElementById(`recup_${moe}`).innerHTML=recup
-
                                 }else{
                                     document.getElementById(`recup_${moe}`).innerHTML='0'
-                                    document.getElementById(`perda_${moe}`).innerHTML=recup
                                 }
-
                             }
-                            
-                                
                         }else if(Math.sign(ultcamp)===-1){//PRIMEIRO tocado foi o min
 
-                            if(Math.sign(maxvlr)===0){//nao tocou positivo
+                            if(parseFloat(cracum-minvlr)===0){
+                                recup= parseFloat(cracum-minvlr).toFixed(0)
+                            }else{
                                 recup= parseFloat(cracum-minvlr).toFixed(3)
+                            }
+
+                            if(Math.sign(maxvlr)===0){//nao tocou positivo
+                                
+
+
                                 if(parseFloat(recup)>0){
                                     document.getElementById(`recup_${moe}`).innerHTML=recup
                                     perda=cracum
+                                    if(parseFloat(perda)===0){
+                                        perda=parseFloat(perda).toFixed(0)
+                                    }
+                                    
                                     document.getElementById(`perda_${moe}`).innerHTML=perda
-
                                 }else if(parseFloat(recup)<=0){
-                                    perda=recup*-1 //recup//parseFloat(minvlr-cracum).toFixed(3)
+                                    perda=recup*-1//recup//parseFloat(minvlr-cracum).toFixed(3)
+                                    if(parseFloat(perda)===0){
+                                        perda=parseFloat(perda).toFixed(0)
+                                    }
+                                   
                                     document.getElementById(`perda_${moe}`).innerHTML=cracum
-
                                 }
 
 
+
+
                             }else{//tocou positivo
-                               
-                                recup= parseFloat((cracum-minvlr)).toFixed(3)
+                                //recup= parseFloat((cracum-minvlr)).toFixed(3)
                                 if(Math.sign(recup)===-1){
                                     recup=-1*recup
-
                                 }
                                 document.getElementById(`recup_${moe}`).innerHTML=recup
                                 perda=parseFloat(maxvlr-cracum).toFixed(3)
                                 if(parseFloat(perda)<=0){
+                                   
                                     document.getElementById(`perda_${moe}`).innerHTML='0'
                                 }else{
                                     perda=-1*perda
+                                   
                                     document.getElementById(`perda_${moe}`).innerHTML=perda
-
                                 }
-
-
-                            }
-                            
-                              //////          
+                            } 
                         }
                         
-
-                        //diferença Maximo-Mínimo
+                        //diferença Maximo-Mínimo - Intervalo maximo
                         let difmm=''
                         if(document.getElementById(`difmm_${moe}`)){
                                 difmm= parseFloat(maxvlr-minvlr).toFixed(3)
@@ -892,8 +996,103 @@ function ativar(){
                             
                         }
 
+                        //diferença entre recuper e perda
+
+                        //let cdirecper= document.getElementById(`difperec_${moe}`).innerHTML
+                        let gain=0
+                        let perdeu=0
+                        let difrecp=0
+                        let campdifrecp= document.getElementById(`difperec_${moe}`).innerHTML
+                        let campdifprcnt= document.getElementById(`difprcnt_${moe}`).innerHTML
+                        let newcprc=''
+
+                        if(document.getElementById(`perda_${moe}`)){
+                            perdeu= document.getElementById(`perda_${moe}`).innerHTML
+                            gain= document.getElementById(`recup_${moe}`).innerHTML
+                            difrecp=parseFloat(gain)+parseFloat(perdeu)
+                            if(parseFloat(difrecp)===0){
+                                difrecp=difrecp.toFixed(0)
+                            }else{
+                                difrecp=difrecp.toFixed(3)
+                            }
+
+                            if(parseFloat(difrecp)>parseFloat(campdifrecp)){//melhorrou + a dif
+                                document.getElementById(`difperec_${moe}`).style.backgroundColor = "#1da548";//verde medio
+                                if(parseFloat(campdifprcnt)>=0){//se a contagem esta positiva ou zero
+                                    newcprc= parseFloat(campdifprcnt)+1
+                                    document.getElementById(`difprcnt_${moe}`).innerHTML=newcprc
+                                }else if(parseFloat(campdifprcnt)<=0){//se a contagem esta negativa ou zero
+                                    newcprc= 1
+                                    document.getElementById(`difprcnt_${moe}`).innerHTML=newcprc
+                                }
+                                
+
+                            }else if(parseFloat(difrecp)<parseFloat(campdifrecp)){//piorou - a dif
+                                document.getElementById(`difperec_${moe}`).style.backgroundColor = "#f7281d";//vermelho medio
+                                if(parseFloat(campdifprcnt)>=0){//se a contagem esta positiva ou zero
+                                    newcprc= -1
+                                    document.getElementById(`difprcnt_${moe}`).innerHTML=newcprc
+                                }else if(parseFloat(campdifprcnt)<=0){//se a contagem esta negativa ou zero
+                                    newcprc= parseFloat(campdifprcnt-1)
+                                    document.getElementById(`difprcnt_${moe}`).innerHTML=newcprc
+                                }
+                               
 
 
+                            }
+
+
+                            document.getElementById(`difperec_${moe}`).innerHTML=difrecp
+                            //console.log(`${moe} gain${gain} + perdeu${perdeu} = dif ${difrecp}`)
+
+
+                           
+
+                        }
+
+
+
+
+                        ///////////////////////////// IFs DA SORTE!!
+                        let selecult=document.getElementById(`ultimo_${moe}`).innerHTML
+                        let selecmin=document.getElementById(`min_${moe}`).innerHTML
+                        let selecdrp=document.getElementById(`difperec_${moe}`).innerHTML
+                        let selecacu=document.getElementById(`acu_${moe}`).innerHTML
+
+                        if(Math.sign(selecult)===-1){
+                            if(Math.abs(selecmin)>0 && Math.abs(selecmin)<1.7){
+                                    if(parseFloat(selecacu)>=0){
+                                        //console.log(`BOA SORTE com ${moe}`)
+                                        sorte.push(moe)
+                                    }else if(parseFloat(selecacu)>2){
+                                        if(parseFloat(selec3)>0){
+                                            //console.log(`COMPRAR ${moe}  por ${preco}!!`)
+                                        }
+                                    }
+                            }
+                        }else if(Math.sign(selecult)===1){
+                            if(Math.abs(selecmin)>0 && Math.abs(selecmin)<=1){
+                                if(parseFloat(selecdrp)>0){
+                                    if(parseFloat(selecacu)>0 && parseFloat(selecacu)<1){
+                                        //console.log(`BOA SORTE com ${moe}`)
+                                        sorte.push(moe)
+                                    }else if(parseFloat(selecacu)>=1){
+                                        //console.log(`COMPRAR ${moe}  por ${preco}!!`)
+                                    }
+                                }
+                            }else if(Math.abs(selecmin)===0){
+                                if(parseFloat(selecdrp)>=0){
+                                    if(parseFloat(selecacu)>1 && Math.abs(selecmin)<2){
+                                    //console.log(`BOA SORTE com ${moe}`)
+                                    sorte.push(moe)
+                                    }else if(parseFloat(selecacu)>=2){
+                                        //console.log(`COMPRAR ${moe} por ${preco}!!`)
+                                    }
+                                }
+                            }
+                        }
+                        //////////////////////////////////
+                        
 
 
 
@@ -954,6 +1153,7 @@ function ativar(){
                    
                     setTimeout(500)   //timeout
 
+                    cresc=cracum
                     grafico(moe, c, cresc)
 
                     //preparando campo max min - Aumento rodada ?? Record
@@ -969,6 +1169,8 @@ function ativar(){
                     let inpmax= inpmaxcamp.value
                     let inpmin= document.getElementById('inpmin').value
                     
+                    let audio2=document.getElementById('audio')
+
 
                     // 5 aqui entra os recordes da rodada
                     if(cresc>maxperc){
@@ -987,12 +1189,13 @@ function ativar(){
                         document.getElementById('min2').innerHTML=cresc
                         document.getElementById('moemin2').innerHTML= moe
                     }
+                    audio = document.querySelector('audio')
 
                     //aqui compara input max recorde / aumento ???
                     if(inpmax){
                         if(cresc>=parseFloat(inpmax)){
                             console.log(`ALERTA! Moeda ${moe} atingiu alta de ${cresc}% na rodada`)
-                            audio.play()
+                            audio2.play()
                             document.getElementById('butmax').style.backgroundColor = "#138437"
                         }
                     }
@@ -1001,7 +1204,9 @@ function ativar(){
                     if(inpmin){
                         if(cresc[0]==='-'&& Math.abs(cresc)>=Math.abs(inpmin)){
                             console.log(`ALERTA! Moeda ${moe} atingiu baixa de ${cresc}% na rodada`)
-                            audio.play()
+                            let audio = document.querySelector('audio')
+
+                            audio2.play()
                             document.getElementById('butmin').style.backgroundColor = "#138437"
                         }
                     }
@@ -1051,7 +1256,8 @@ function ativar(){
                     if(inpmaxac){
                         if(itemacum>=inpmaxac){//primeiro play
                             console.log(`ALERTA! Moeda ${moe} atingiu alta de ${itemacum}% no acumulado`)
-                            audio.play()
+                            audio = document.querySelector('audio')
+                            audio2.play()
                             document.getElementById('butmaxac').style.backgroundColor = "#138437"
                             
                             
@@ -1060,7 +1266,7 @@ function ativar(){
                     if(inpminac){
                         if(Math.sign(itemacum)===-1 && Math.abs(itemacum)>=Math.abs(inpminac)){
                             console.log(`ALERTA! Moeda ${moe} atingiu baixa de ${cresc}% no acumulado`)
-                            audio.play()
+                            audio2.play()
                             document.getElementById('butminac').style.backgroundColor = "#138437"
                         }
                     }
@@ -1125,8 +1331,6 @@ function ativar(){
                         }
                     }
 
-
-
                     //calculo do aumento %24 gelo---onde era aum vol auvol_
                     let basgelo=''
 
@@ -1156,22 +1360,7 @@ function ativar(){
                         }
                         
                     }
-                    //inv15
-                    if(document.getElementById(`inv15_${result[i].id}`)){
-                        let inver15=document.getElementById(`inv15_${result[i].id}`).innerHTML
-                        let difinat= document.getElementById(`dif_${result[i].id}`).innerHTML
-                        let perc15= document.getElementById(`auvol_${result[i].id}`).innerHTML
-                        if(parseInt(inver15)===0 && parseFloat(perc15)>0 ){
-                            if(parseFloat(difinat)>parseFloat(perc15)){
-                                document.getElementById(`inv15_${result[i].id}`).innerHTML=c
-
-                            }
-
-                        }
-
-                    }
                     
-
                     
                     //2
                     if(document.getElementById(`gelo30_${result[i].id}`)){
@@ -1286,15 +1475,33 @@ function ativar(){
                         }
                     }
 
+                    //inv15
                     /*
-                    //15...ou init-atual-linha verde em relacao a 24% atual Maior que quinze
-                    if(parseFloat(aumgelo2)>parseFloat(aumgelo)){
-                        let verd1=document.getElementById(`percgel30_${result[i].id}`)
-                        //let verd2=document.getElementById(`auvol_${result[i].id}`)
-                        verd1.style.backgroundColor="#9db541"
-                        //verd2.style.backgroundColor="#9db541"
+                    if(document.getElementById(`inv15_${result[i].id}`)){
+                        let inver15=document.getElementById(`inv15_${result[i].id}`).innerHTML
+                        let difinat= document.getElementById(`dif_${result[i].id}`).innerHTML
+                        let perc15= document.getElementById(`auvol_${result[i].id}`).innerHTML
+                        let perc30= document.getElementById(`percgel30_${result[i].id}`).innerHTML
+                        let perc45= document.getElementById(`percgel45_${result[i].id}`).innerHTML
+                        let perc60= document.getElementById(`percgel60_${result[i].id}`).innerHTML
+                        let perc120= document.getElementById(`percgel120_${result[i].id}`).innerHTML
+                        let perc240= document.getElementById(`percgel240_${result[i].id}`).innerHTML
+                        if(parseInt(inver15)===0){
+                            if(Math.sign(difinat)===1 && Math.sign(perc15)===-1){
+                                if(Math.abs(difinat)>Math.abs(perc15)){
+                                    document.getElementById(`inv15_${result[i].id}`).innerHTML=15
+
+                                }
+
+                            }
+                        }
+
+                        
+
+                        
 
                     }*/
+
 
                     //desde
                     let desde=''
@@ -1313,8 +1520,9 @@ function ativar(){
                                         desde=desde+'1'
                                         if(parseFloat(aumgelo5)>=parseFloat(aumgelo4)){
                                             desde=desde+'1'
-                                            if(parseFloat(aumgelo5)>=parseFloat(aumgelo5)){
+                                            if(parseFloat(aumgelo6)>=parseFloat(aumgelo5)){
                                                 desde=desde+'1'
+                                                campdesde.innerHTML=desde
                                             }else{
                                                 campdesde.innerHTML=desde
                                             }  
@@ -1336,17 +1544,46 @@ function ativar(){
 
                         }else{
                             campdesde.innerHTML=desde
+                            
                         }
     
                     }else if(parseFloat(difer)<0){
                         desde='-1'
-                        campdesde.innerHTML=desde
-                    }else{
-                        
-                    }
+                        if(parseFloat(aumgelo)<0){
+                            desde='-11'
+                            if(parseFloat(aumgelo2)<=parseFloat(aumgelo)){
+                                desde='-111'
+                                if(parseFloat(aumgelo3)<=parseFloat(aumgelo2)){
+                                    desde='-1111'
+                                    if((aumgelo4)<=parseFloat(aumgelo3)){
+                                        desde='-11111'
+                                        if(parseFloat(aumgelo5)<=parseFloat(aumgelo4)){
+                                            desde='-111111'
+                                            if(parseFloat(aumgelo6)<=parseFloat(aumgelo5)){
+                                                desde='-1111111'
+                                                campdesde.innerHTML=desde
+                                            }else{
+                                                campdesde.innerHTML=desde
+                                            }
+                                        }else{
+                                            campdesde.innerHTML=desde
+                                        }
+                                    }else{
+                                        campdesde.innerHTML=desde
+                                    }
 
-            
-                    
+                                }else{
+                                    campdesde.innerHTML=desde
+                                }
+                            }else{
+                                campdesde.innerHTML=desde
+                            }
+                        }else{
+                            campdesde.innerHTML=desde
+                        }
+                    }else{
+                        //campdesde.innerHTML=desde                        
+                    }
                 }
 
                 //enviando quantos % acumulado positivo
@@ -1362,6 +1599,8 @@ function ativar(){
                 //console.log(`Acima da resistência: [${acimas}]`)
                 //console.log(`Entre suporte e resistência: [${entresups}]`)
                 //console.log(`Abaixo do suporte: [${abaixos}]`)
+                //console.log(`SORTE DA RODADA: ${sorte}`)
+                sorte=[]
                 
 
             })
@@ -1383,7 +1622,7 @@ function ativar(){
             let tottem = parseInt(qttem)+ parseInt(qtsmoe.length)
             document.getElementById('quantcry').innerHTML= tottem
             lissuporte()
-            gelar()
+            //gelar()
             console.log(`Total: ${tottem} pares/USDT`)
 
             if(tottem>=320){

@@ -41,7 +41,7 @@
                     <p id="destaq">(erro ao renderizar)</p>
                 </div>
                 <div class="divaudio">
-                    <audio controls loop src="_O Pai das Crianças)_48k.mp3">
+                    <audio id="audio" controls loop src="_O Pai das Crianças)_48k.mp3">
                 </div>
             </div>
         </div>
@@ -183,13 +183,26 @@
                         <th class= "td">classe</th>
                         <th class= "td">Qualyhora</th>
                         <th class= "td">RMT(1M)</th>
+
+                        <th class= "td">D50pc</th>
+                        <th class= "td">D50rel</th>
+                        <th class= "td">D10pc</th>
+                        <th class= "td">D10rel</th>
+
                         <th class= "td">favor</th>
                         <th class= "td">volmom</th>
                         <th class= "td">relvol</th>
                         <th class= "td">reltrad</th>
+                        <th class= "td">Totrades</th>
+                        <th class= "td">trades4</th>
+                        <th class= "td">trades3</th>
+                        <th class= "td">trades2</th>
                         <th class= "td">trades</th>
+
                         <th class= "td">(Re)cup</th>
                         <th class= "td">(re)perda</th>
+                        <th class= "td">difperec</th>
+                        <th class= "td">contador</th>
                         <th class= "td">Acumul.</th>
                         <th class= "td">Máximo </th>
                         <th class= "td">Mínimo </th>
@@ -246,6 +259,76 @@
                         <th class= "tg1">8</th>
                         <th class= "tg1">9</th>
                         <th class= "tg1">0</th>
+                        <th class= "tg2">1</th>
+                        <th class= "tg2">2</th>
+                        <th class= "tg2">3</th>
+                        <th class= "tg2">4</th>
+                        <th class= "tg2">5</th>
+                        <th class= "tg2">6</th>
+                        <th class= "tg2">7</th>
+                        <th class= "tg2">8</th>
+                        <th class= "tg2">9</th>
+                        <th class= "tg2">0</th>
+                        <th class= "tg1">1</th>
+                        <th class= "tg1">2</th>
+                        <th class= "tg1">3</th>
+                        <th class= "tg1">4</th>
+                        <th class= "tg1">5</th>
+                        <th class= "tg1">6</th>
+                        <th class= "tg1">7</th>
+                        <th class= "tg1">8</th>
+                        <th class= "tg1">9</th>
+                        <th class= "tg1">0</th>
+                        <th class= "tg2">1</th>
+                        <th class= "tg2">2</th>
+                        <th class= "tg2">3</th>
+                        <th class= "tg2">4</th>
+                        <th class= "tg2">5</th>
+                        <th class= "tg2">6</th>
+                        <th class= "tg2">7</th>
+                        <th class= "tg2">8</th>
+                        <th class= "tg2">9</th>
+                        <th class= "tg2">0</th>
+                        <th class= "tg1">1</th>
+                        <th class= "tg1">2</th>
+                        <th class= "tg1">3</th>
+                        <th class= "tg1">4</th>
+                        <th class= "tg1">5</th>
+                        <th class= "tg1">6</th>
+                        <th class= "tg1">7</th>
+                        <th class= "tg1">8</th>
+                        <th class= "tg1">9</th>
+                        <th class= "tg1">0</th>
+                        <th class= "tg2">1</th>
+                        <th class= "tg2">2</th>
+                        <th class= "tg2">3</th>
+                        <th class= "tg2">4</th>
+                        <th class= "tg2">5</th>
+                        <th class= "tg2">6</th>
+                        <th class= "tg2">7</th>
+                        <th class= "tg2">8</th>
+                        <th class= "tg2">9</th>
+                        <th class= "tg2">0</th>
+                        <th class= "tg1">1</th>
+                        <th class= "tg1">2</th>
+                        <th class= "tg1">3</th>
+                        <th class= "tg1">4</th>
+                        <th class= "tg1">5</th>
+                        <th class= "tg1">6</th>
+                        <th class= "tg1">7</th>
+                        <th class= "tg1">8</th>
+                        <th class= "tg1">9</th>
+                        <th class= "tg1">0</th>
+                        <th class= "tg2">1</th>
+                        <th class= "tg2">2</th>
+                        <th class= "tg2">3</th>
+                        <th class= "tg2">4</th>
+                        <th class= "tg2">5</th>
+                        <th class= "tg2">6</th>
+                        <th class= "tg2">7</th>
+                        <th class= "tg2">8</th>
+                        <th class= "tg2">9</th>
+                        <th class= "tg2">0</th>
                     </tr>
                     
                 </thead>
@@ -301,6 +384,10 @@
             <button id="pontach" class="rodamax">Gerar pontachave</button>
         </div>
     </div>
+    <script type="text/javascript" src="requestvolume.js"></script>
+    <script type="text/javascript" src="requestdepth.js"></script>
+    <script type="text/javascript" src="requestindex.js"></script>
+    <script type="text/javascript" src="requestchama.js"></script>
     <script type="text/javascript" src="app.js"> </script>
     <script type="text/javascript" src="./src/tablesort.js"></script>
     <script type="text/javascript" src="./listas.js"></script>

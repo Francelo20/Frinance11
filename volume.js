@@ -6,7 +6,7 @@ let moe =[/**/
     
 
     "1INCH","AAVE","ACH","ACM","ADA","ADX","AGLD","AION","AKRO","ALCX","ALGO","ALICE","ALPACA","ALPHA",
-    "AMP","ANKR","ANT","ANY","API3","AR","ARDR","ARPA","ASR","ATA","ATM","ATOM","AUCTION","AUD","AUDIO","AUTO",
+    "ALPINE","AMP","ANKR","ANT","ANY","API3","AR","ARDR","ARPA","ASR","ATA","ATM","ATOM","AUCTION","AUD","AUDIO","AUTO",
     "AVA",
     "AVAX","AXS","BADGER","BAKE","BAL","BAND","BAR","BAT","BCH","BEAM","BEL","BETA","BICO","BLZ","BNB","BNT","BNX",
     "BOND","BTC","BTCST","BTG","BTS","BTT","BTTC","BURGER", "BUSD","C98","CAKE","CELO","CELR","CFX","CHESS","CHR","CHZ","CITY","CKB",
@@ -28,20 +28,23 @@ let moe =[/**/
 ]
 
 let limit=1
-let interv=120000
+let interv=300000
 //let interval='1h'
 chamar()
 //PARA PRODUZIR GELO  HORAS
 async function chamar(){
+    let agora=''
     for(let i =0; i<=moe.length-1;i++){
         let symb=moe[i]
         let symbol=symb+'USDT'
         let result = await api.trades(symbol, limit);
         //console.log(result)
         //console.log(result);
-        agora= result[0].time
+        //agora= result[0].time
+        var date = new Date();
+        agora=date.getTime()
         endTime=agora
-        
+
         startTime=  parseInt(endTime-interv)
         //console.log(agora)    
         //console.log('simbolooo '+symbol)
@@ -58,6 +61,7 @@ async function rechamar(symb,startTime,endTime,limit){
     limit=1000
     //console.log(`trades ${symbol} De ${startTime} até ${endTime}`)
     let result2 = await api.aggTradesDate(symbol,startTime,endTime,limit)
+    //result2= JSON.stringify(result) parse
     //console.log(result2)
     //console.log(`Foram ${result2.length} trades`)
 
