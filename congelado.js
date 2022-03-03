@@ -1,3 +1,4 @@
+/*
 let congelados=[
     
     {"moe":"1INCH","preco":1.40800000,"preco30":1.41100000,"preco45":1.42100000,"preco60":1.42100000,"preco120":1.43000000,"preco240":1.39700000},
@@ -324,7 +325,7 @@ let congelados=[
 
 
 ]
-
+*/
 
 
 /*
@@ -370,7 +371,7 @@ let listchave=[]
 //GERADOR DE CHAVE JSON
 let listcrykey=[
     "1INCH","AAVE","ACA","ACH","ACM","ADA","ADX","AGLD","AION","AKRO","ALCX","ALGO","ALICE","ALPACA","ALPHA",
-    "ALPINE","AMP","ANC","ANKR","ANT","ANY","API3","AR","ARDR","ARPA","ASR","ATA","ATM","ATOM","AUCTION","AUD","AUDIO","AUTO",
+    "ALPINE","AMP","ANC","ANKR","ANT","ANY","API3","AR","ARDR","ARPA","ASR","ASTR","ATA","ATM","ATOM","AUCTION","AUD","AUDIO","AUTO",
     "AVA","AVAX","AXS","BADGER","BAKE","BAL","BAND","BAR","BAT","BCH","BEAM","BEL","BETA","BICO","BLZ","BNB",
     "BNT","BNX","BOND","BTC","BTCST","BTG","BTS","BTT","BTTC","BURGER", "BUSD","C98","CAKE","CELO","CELR","CFX","CHESS","CHR",
     "CHZ","CITY","CKB",
@@ -385,7 +386,7 @@ let listcrykey=[
     "ONG","ONT","OOKI","ORN","OXT","PAXG","PEOPLE","PERL","PERP","PHA","PLA","PNT","POLS","POLY","POND","PORTO","POWR","PSG","PUNDIX",
     "PYR","QI","QNT","QTUM","QUICK","RAD","RAMP","RARE","RAY","REEF","REN","REP","REQ","RGT","RIF","RLC","RNDR","ROSE","RSR",
     "RUNE","RVN","SAND","SANTOS","SC","SCRT","SFP","SHIB","SKL","SLP","SNX","SOL","SPELL","SRM","STMX","STORJ","STPT","STRAX","STX","SUN","SUPER","SUSD",
-    "SUSHI","SXP","SYS","TCT","TFUEL","THETA","TKO","TLM","TOMO","TORN","TRB","TRIBE","TROY","TRU","TRX","TUSD","TVK","TWT","UMA","UNFI","UNI",
+    "SUSHI","SXP","SYS","T","TCT","TFUEL","THETA","TKO","TLM","TOMO","TORN","TRB","TRIBE","TROY","TRU","TRX","TUSD","TVK","TWT","UMA","UNFI","UNI",
     "USDC","USDP","UST","UTK","VET","VGX","VIDT","VITE","VOXEL","VTHO","WAN","WAVES","WAXP",
     "WIN","WING","WNXM","WOO","WRX","WTC",
     "XEC","XEM","XLM","XMR","XNO","XRP","XTZ","XVG","XVS","YFI","YFII","YGG","ZEC","ZEN","ZIL","ZRX"

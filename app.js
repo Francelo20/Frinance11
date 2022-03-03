@@ -909,11 +909,16 @@ function ativar(){
                                     perda=parseFloat(cracum-maxvlr).toFixed(3)
                                 }
                                 if(parseFloat(perda)<0){
-                                    
+                                    //////////////////////
                                     document.getElementById(`perda_${moe}`).innerHTML=perda
-                                }else{
+
+            
                                     
-                                    document.getElementById(`perda_${moe}`).innerHTML='0'
+                                    
+                                }else{
+                                    perda=0
+                                    //////////////////////
+                                    document.getElementById(`perda_${moe}`).innerHTML=perda
                                     document.getElementById(`recup_${moe}`).innerHTML=cracum
                                 }
                             }else{//tocou negativo
@@ -929,8 +934,10 @@ function ativar(){
                                 }else{
                                     recup=parseFloat(cracum-minvlr).toFixed(3)
                                 }
-                                
+                                //////////////////////
                                 document.getElementById(`perda_${moe}`).innerHTML=perda
+
+                                
                                 if(parseFloat(recup)>0){
                                     document.getElementById(`recup_${moe}`).innerHTML=recup
                                 }else{
@@ -956,14 +963,18 @@ function ativar(){
                                         perda=parseFloat(perda).toFixed(0)
                                     }
                                     
+                                    //////////////////////
                                     document.getElementById(`perda_${moe}`).innerHTML=perda
+
                                 }else if(parseFloat(recup)<=0){
                                     perda=recup*-1//recup//parseFloat(minvlr-cracum).toFixed(3)
                                     if(parseFloat(perda)===0){
                                         perda=parseFloat(perda).toFixed(0)
                                     }
                                    
-                                    document.getElementById(`perda_${moe}`).innerHTML=cracum
+                                    //////////////////////
+                                    document.getElementById(`perda_${moe}`).innerHTML=perda
+
                                 }
 
 
@@ -977,16 +988,21 @@ function ativar(){
                                 document.getElementById(`recup_${moe}`).innerHTML=recup
                                 perda=parseFloat(maxvlr-cracum).toFixed(3)
                                 if(parseFloat(perda)<=0){
-                                   
-                                    document.getElementById(`perda_${moe}`).innerHTML='0'
+                                    perda=0
+                                    //////////////////////
+                                    document.getElementById(`perda_${moe}`).innerHTML=perda
+                                    
                                 }else{
                                     perda=-1*perda
-                                   
+                                   //////////////////////
                                     document.getElementById(`perda_${moe}`).innerHTML=perda
+                                    
                                 }
                             } 
                         }
                         
+
+
                         //diferença Maximo-Mínimo - Intervalo maximo
                         let difmm=''
                         if(document.getElementById(`difmm_${moe}`)){
@@ -1152,8 +1168,10 @@ function ativar(){
                     //Quarto FOR - OUTRAS CRYO QUE NAO ENTRARAM
                    
                     setTimeout(500)   //timeout
-
-                    cresc=cracum
+                    //escolhendo quem vai p grafico. rod, acum e agora difperrec
+                    let novograf= document.getElementById(`difperec_${moe}`).innerHTML
+                    //cresc=cracum
+                    cresc=novograf
                     grafico(moe, c, cresc)
 
                     //preparando campo max min - Aumento rodada ?? Record
