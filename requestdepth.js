@@ -32,7 +32,7 @@ setInterval(() => {
      for(p=0;p<=moedl.length-1;p++){
         reldepth(moedl,p)
     }
-}, 40000);
+}, 70000);
 
 
 

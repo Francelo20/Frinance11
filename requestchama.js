@@ -33,22 +33,24 @@ let preco45=''
 let preco60=''
 let preco120=''
 let preco240=''
-
+//criando lista p fazer suporte e res a partir dos gelosss
+let lisgelos=[]
 
 setInterval(() => {
     for(nn=0;nn<=moed.length-1;nn++){
         relagelo(moed,nn)
     }  
-}, 2900000);
+}, 65000); //290000
 
 
 
-
+/*
 setTimeout(() => {
     for(nn=0;nn<=moed.length-1;nn++){
         relagelo(moed,nn)
     }
 }, 65000);
+*/
     
     
 
@@ -96,6 +98,10 @@ function relagelo(moed,nn){
                 }
             }
 
+            //aplicando gelos p sup e res
+            lisgelos.push(preco240, preco120, preco60, preco45, preco30, preco15)
+            lisgelos.sort()
+
             //console.log(`{"moed":"${moed[nn]}","preco":${preco15},"preco30":${preco30},"preco45":${preco45},"preco60":${preco60},"preco120":${preco120},"preco240":${preco240}},`);
             
             if(document.getElementById(`gelo_${moed[nn]}`)){
@@ -118,6 +124,17 @@ function relagelo(moed,nn){
             if(document.getElementById(`gelo240_${moed[nn]}`)){
                 document.getElementById(`gelo240_${moed[nn]}`).innerHTML= preco240
             }
+
+            ///////////////////
+            if(document.getElementById(`sup_${moed[nn]}`)){
+                document.getElementById(`sup_${moed[nn]}`).innerHTML= lisgelos[0]
+            }
+            if(document.getElementById(`res_${moed[nn]}`)){
+                document.getElementById(`res_${moed[nn]}`).innerHTML= lisgelos[5]
+            }
+
+
+            lisgelos=[]
 
 
 
