@@ -27,7 +27,7 @@ let symbo=''
 let sym=''
 let p=''
 
-
+/*
 setInterval(() => {
      for(p=0;p<=moedl.length-1;p++){
         reldepth(moedl,p)
@@ -36,7 +36,7 @@ setInterval(() => {
 
 
 
-/*
+
 setTimeout(() => {
     for(p=0;p<=moedl.length-1;p++){
         reldepth(moedl,p)

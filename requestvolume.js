@@ -38,13 +38,15 @@ let subt=0
 let cont=0
 let result2=''
 
+
+/*
 setInterval(() => {
     for(cc=0;cc<=moe.length-1;cc++){
         relatrade(moe,cc)
     }  
 }, 120000);
 
-/*
+
 setTimeout(() => {
     for(cc=0;cc<=moe.length-1;cc++){
         relatrade(moe,cc)

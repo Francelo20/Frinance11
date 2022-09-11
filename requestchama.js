@@ -42,7 +42,7 @@ setInterval(() => {
         relagelo(moed,nn)
     }  
 }, 65000); //290000
-*/
+
 
 
 setTimeout(() => {
@@ -51,7 +51,7 @@ setTimeout(() => {
     }
 }, 100000);
 
-    
+*/
     
 
 

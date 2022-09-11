@@ -482,11 +482,11 @@ function lissuporte(){
     }
     
 }
-
+/* 
 setTimeout(() => {
     lissuporte()
 }, 10000);
-
+*/
 
 
 

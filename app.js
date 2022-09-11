@@ -63,7 +63,7 @@ function entracry(result,i){
     let td11 = document.createElement("td")
     td11.setAttribute('id', `vol_${result[i].id}`)
     td11.setAttribute("class","td")
-
+    /*
     let td1312 = document.createElement("td")
     td1312.setAttribute('id',`gelo240_${result[i].id}`)
     td1312.setAttribute("class","tdp")
@@ -115,6 +115,7 @@ function entracry(result,i){
     let td12 = document.createElement("td")
     td12.setAttribute('id', `auvol_${result[i].id}`)
     td12.setAttribute("class","td")
+    */
 
     let td2 = document.createElement("td")
     td2.setAttribute('id',`in_${result[i].id}`)
@@ -127,10 +128,11 @@ function entracry(result,i){
     let td23 = document.createElement("td")
     td23.setAttribute('id',`dif_${result[i].id}`)
     td23.setAttribute("class","td")
-
+    /*
     let td231 = document.createElement("td")
     td231.setAttribute('id',`inv15_${result[i].id}`)
     td231.setAttribute("class","td")
+    */
 
     let td24 = document.createElement("td")
     td24.setAttribute('id',`ope_${result[i].id}`)
@@ -145,6 +147,8 @@ function entracry(result,i){
     td4.setAttribute("class","tdp")
     td4.style.backgroundColor='#d2dd54'
 
+
+    /* 
     let td41 = document.createElement("td")
     td41.setAttribute('id',`sup_${result[i].id}`)
     td41.setAttribute("class","tdp")
@@ -237,6 +241,9 @@ function entracry(result,i){
     let td492 = document.createElement("td")
     td492.setAttribute('id',`trades_${result[i].id}`)
     td492.setAttribute("class","td")
+    */
+
+
 
     let td491 = document.createElement("td")
     td491.setAttribute('id',`recup_${result[i].id}`)
@@ -294,26 +301,28 @@ function entracry(result,i){
 
     tr.appendChild(td1)
     tr.appendChild(td11)
-    tr.appendChild(td1312)
-    tr.appendChild(td1313)
-    tr.appendChild(td131)
-    tr.appendChild(td132)
-    tr.appendChild(td133)
-    tr.appendChild(td13)
-    tr.appendChild(td1343)
-    tr.appendChild(td1341)
-    tr.appendChild(td1342)
-    tr.appendChild(td134)
-    tr.appendChild(td135)
-    tr.appendChild(td136)
-    tr.appendChild(td12)
+    
+    //tr.appendChild(td1312)
+    //tr.appendChild(td1313)
+    //tr.appendChild(td131)
+    //tr.appendChild(td132)
+    //tr.appendChild(td133)
+    //tr.appendChild(td13)
+    //tr.appendChild(td1343)
+    //tr.appendChild(td1341)
+    //tr.appendChild(td1342)
+    //tr.appendChild(td134)
+    //tr.appendChild(td135)
+    //tr.appendChild(td136)
+    //tr.appendChild(td12)
     tr.appendChild(td2)
     tr.appendChild(td22)
     tr.appendChild(td23)
-    tr.appendChild(td231)
+    //tr.appendChild(td231)
     tr.appendChild(td24)
     tr.appendChild(td3)
     tr.appendChild(td4)
+    /*
     tr.appendChild(td41)
     tr.appendChild(td42)
     tr.appendChild(td411)
@@ -324,6 +333,7 @@ function entracry(result,i){
     tr.appendChild(td431)
     tr.appendChild(td43)
     tr.appendChild(td44)
+    
     tr.appendChild(td441)
     tr.appendChild(td442)
     tr.appendChild(td443)
@@ -335,9 +345,11 @@ function entracry(result,i){
     tr.appendChild(td48)
     tr.appendChild(td4925)
     tr.appendChild(td4924)
+    
     tr.appendChild(td4923)
     tr.appendChild(td4922)
     tr.appendChild(td492)
+    */
     tr.appendChild(td491)
     tr.appendChild(td49)
     tr.appendChild(td4933)
@@ -356,6 +368,8 @@ function entracry(result,i){
     let campvoll= document.getElementById(`vol_${result[i].id}`)
     document.getElementById(`mo_${result[i].id}`).innerHTML= result[i].id;
     campvoll.innerHTML= voll
+
+    /*
     document.getElementById(`gelo240_${result[i].id}`).innerHTML= '0';
     document.getElementById(`gelo120_${result[i].id}`).innerHTML= '0';
     document.getElementById(`gelo60_${result[i].id}`).innerHTML= '0';
@@ -369,13 +383,17 @@ function entracry(result,i){
     document.getElementById(`percgel45_${result[i].id}`).innerHTML= '0';
     document.getElementById(`percgel30_${result[i].id}`).innerHTML= '0';
     document.getElementById(`auvol_${result[i].id}`).innerHTML= '0';
+    */
+
     document.getElementById(`in_${result[i].id}`).innerHTML= result[i].value;
     document.getElementById(`at_${result[i].id}`).innerHTML= '0';
     document.getElementById(`dif_${result[i].id}`).innerHTML= '0';
-    document.getElementById(`inv15_${result[i].id}`).innerHTML= '0';
+    //document.getElementById(`inv15_${result[i].id}`).innerHTML= '0';
     document.getElementById(`ope_${result[i].id}`).innerHTML= result[i].open;
     document.getElementById(`pe_${result[i].id}`).innerHTML= result[i].pro;
     document.getElementById(result[i].id).innerHTML= result[i].pro;
+
+    /*
     document.getElementById(`sup_${result[i].id}`).innerHTML= '0';
     document.getElementById(`difsup_${result[i].id}`).innerHTML= '999';
     document.getElementById(`res_${result[i].id}`).innerHTML= '0';
@@ -386,12 +404,10 @@ function entracry(result,i){
     document.getElementById(`classe_${result[i].id}`).innerHTML= '0';
     document.getElementById(`qualymes_${result[i].id}`).innerHTML= '0';
     document.getElementById(`rmaxtu_${result[i].id}`).innerHTML= '0';
-
     document.getElementById(`dep50pc_${result[i].id}`).innerHTML= '0';
     document.getElementById(`dep50rel_${result[i].id}`).innerHTML= '0';
     document.getElementById(`dep10pc_${result[i].id}`).innerHTML= '0';
     document.getElementById(`dep10rel_${result[i].id}`).innerHTML= '0';
-
     document.getElementById(`favor_${result[i].id}`).innerHTML= '0';
     document.getElementById(`volmom_${result[i].id}`).innerHTML= '000';
     document.getElementById(`relvolmom_${result[i].id}`).innerHTML= '0';
@@ -401,6 +417,9 @@ function entracry(result,i){
     document.getElementById(`trades3_${result[i].id}`).innerHTML= '0';
     document.getElementById(`trades2_${result[i].id}`).innerHTML= '0';
     document.getElementById(`trades_${result[i].id}`).innerHTML= '0';
+    */
+
+
     document.getElementById(`recup_${result[i].id}`).innerHTML= '0';
     document.getElementById(`perda_${result[i].id}`).innerHTML= '0';
     document.getElementById(`difperec_${result[i].id}`).innerHTML= '0';
@@ -1358,6 +1377,8 @@ function ativar(){
                     let aumgelo4=''
                     let aumgelo5=''
                     let aumgelo6=''
+
+                    /*
                     //1
                     if(document.getElementById(`gelo_${result[i].id}`)){
                         basgelo = document.getElementById(`gelo_${result[i].id}`).innerHTML
@@ -1492,7 +1513,7 @@ function ativar(){
                             verd6.style.backgroundColor="#9db541"
                         }
                     }
-
+                    */
                     //inv15
                     /*
                     if(document.getElementById(`inv15_${result[i].id}`)){
@@ -1522,10 +1543,15 @@ function ativar(){
 
 
                     //desde
+
+                    /*
                     let desde=''
                     let campdesde=document.getElementById(`desde_${result[i].id}`)
                     //let difag=document.getElementById(`dif_${result[i].id}`).innerHTML
-                    
+                    */
+
+
+                    /*
                     if(parseFloat(difer)>0){
                         desde='1'
                         if(parseFloat(aumgelo)>0){
@@ -1602,6 +1628,7 @@ function ativar(){
                     }else{
                         //campdesde.innerHTML=desde                        
                     }
+                    */
                 }
 
                 //enviando quantos % acumulado positivo
@@ -1644,10 +1671,12 @@ function ativar(){
             console.log(`Total: ${tottem} pares/USDT`)
 
             if(tottem>=320){
-                console.log(`Imprimindo chave com ${tottem} cryptos...`)
+                console.log(`Imprimindo chave com ${tottem} cryptos...linha 1674`)
+                /*
                 setTimeout(() => {
                     integrar()
                 }, 60000);
+                */
             }
         }
         
@@ -1823,7 +1852,7 @@ function quantcry(){
         if(total>=319){
             setTimeout(() => {
                 console.log(`Imprimindo chave com ${total} cryptos...`)
-                integrar()
+                //integrar()
             }, 60000);
         }
         
